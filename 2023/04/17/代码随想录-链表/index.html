@@ -526,39 +526,82 @@
 <li>定义好中间变量</li>
 <li>做好条件判断</li>
 </ul>
-<pre class="line-numbers language-none"><code class="language-none">#! &#x2F;usr&#x2F;bin&#x2F;python3
-# -*- coding: utf-8 -*-
-# @Time    : 2023&#x2F;4&#x2F;17 11:42
-# @Author  : Twistzz
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
+<span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># @Time    : 2023/4/17 11:42</span>
+<span class="token comment"># @Author  : Twistzz</span>
 
-# Definition for singly-linked list.
-from typing import Optional
-
-
-# Definition for singly-linked list.
-class ListNode:
-    def __init__(self, val&#x3D;0, next&#x3D;None):
-        self.val &#x3D; val
-        self.next &#x3D; next
+<span class="token comment"># Definition for singly-linked list.</span>
+<span class="token keyword">from</span> typing <span class="token keyword">import</span> Optional
 
 
-class Solution:
-    def swapPairs(self, head: Optional[ListNode]) -&gt; Optional[ListNode]:
-        if not head:
-            return
-        dummy_node &#x3D; ListNode()
-        dummy_node.next &#x3D; head
-        cur &#x3D; dummy_node
-        while cur.next and cur.next.next !&#x3D; None:
-            tmp_1 &#x3D; cur.next
-            tmp_2 &#x3D; cur.next.next
-            tmp_3 &#x3D; cur.next.next.next
-            cur.next &#x3D; tmp_2
-            cur.next.next &#x3D; tmp_1
-            cur.next.next.next &#x3D; tmp_3
-            cur &#x3D; cur.next.next
-        return dummy_node.next
+<span class="token comment"># Definition for singly-linked list.</span>
+<span class="token keyword">class</span> <span class="token class-name">ListNode</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> val<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">next</span><span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>val <span class="token operator">=</span> val
+        self<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> <span class="token builtin">next</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">swapPairs</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> head<span class="token punctuation">:</span>
+            <span class="token keyword">return</span>
+        dummy_node <span class="token operator">=</span> ListNode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        dummy_node<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> head
+        cur <span class="token operator">=</span> dummy_node
+        <span class="token keyword">while</span> cur<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token keyword">and</span> cur<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">!=</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            tmp_1 <span class="token operator">=</span> cur<span class="token punctuation">.</span><span class="token builtin">next</span>
+            tmp_2 <span class="token operator">=</span> cur<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span>
+            tmp_3 <span class="token operator">=</span> cur<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span>
+            cur<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> tmp_2
+            cur<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> tmp_1
+            cur<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> tmp_3
+            cur <span class="token operator">=</span> cur<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span>
+        <span class="token keyword">return</span> dummy_node<span class="token punctuation">.</span><span class="token builtin">next</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="19-删除链表的倒数第N个节点"><a href="#19-删除链表的倒数第N个节点" class="headerlink" title="19.删除链表的倒数第N个节点"></a>19.删除链表的倒数第N个节点</h2><h3 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
+<li>使用双指针</li>
+<li>最指针和右指针的距离差是n 也就是倒数第n个节点</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">[1,2,3,4,5]
+n&#x3D;2
+最开始左右指针指向虚拟节点 1前面
+右指针移动n+1 到达3 
+然后移动 到5的时候 此时左指针在2 因为当前节点还有 所以 继续移动 右指针到5的右边 左指针到3 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
+<span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># @Time    : 2023/4/17 13:15</span>
+<span class="token comment"># @Author  : Twistzz</span>
+
+
+<span class="token comment"># Definition for singly-linked list.</span>
+<span class="token keyword">from</span> typing <span class="token keyword">import</span> Optional
+
+
+<span class="token keyword">class</span> <span class="token class-name">ListNode</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> val<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">next</span><span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>val <span class="token operator">=</span> val
+        self<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> <span class="token builtin">next</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">removeNthFromEnd</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        dummy_node <span class="token operator">=</span> ListNode<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        dummy_node<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> head
+        left<span class="token punctuation">,</span> right <span class="token operator">=</span> dummy_node<span class="token punctuation">,</span> dummy_node
+        <span class="token keyword">while</span> n <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">:</span>
+            right <span class="token operator">=</span> right<span class="token punctuation">.</span><span class="token builtin">next</span>
+            n <span class="token operator">-=</span> <span class="token number">1</span>
+        <span class="token keyword">while</span> right <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            left <span class="token operator">=</span> left<span class="token punctuation">.</span><span class="token builtin">next</span>
+            right <span class="token operator">=</span> right<span class="token punctuation">.</span><span class="token builtin">next</span>
+        left<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> left<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span>
+        <span class="token keyword">return</span> dummy_node<span class="token punctuation">.</span><span class="token builtin">next</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
  
       </div>
