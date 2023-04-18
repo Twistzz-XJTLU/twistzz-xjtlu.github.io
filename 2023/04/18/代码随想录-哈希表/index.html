@@ -4,14 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="代码随想录数组篇, Twistzz&#39;Blog">
-    <meta name="description" content="数组篇704. 二分查找解题思路
-由于数组是已经排序的 可以使用二分查找 每次查找数组中间的数
-如果中间的数小于目标 则从[中间位置+1: 最后位置]继续查找
-如果中间的数小于目标 则从[开始位置: 中间位置-1]继续查找
-
-易错点
- wh">
+    <meta name="keywords" content="代码随想录-哈希表, Twistzz&#39;Blog">
+    <meta name="description" content="代码随想录-哈希表242.有效的字母异位词#! /usr/bin/python3
+# -*- coding: utf-8 -*-
+# @Time    : 2023/4/18 14:38
+# @Author  : Twistzz
+class">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -23,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>代码随想录数组篇 | Twistzz&#39;Blog</title>
+    <title>代码随想录-哈希表 | Twistzz&#39;Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -296,12 +294,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">代码随想录数组篇</h1>
+                    <h1 class="description center-align post-title">代码随想录-哈希表</h1>
                 </div>
             </div>
         </div>
@@ -337,8 +335,8 @@
               <span class="chip bg-color">代码随想录</span>
             </a>
             
-            <a href="/tags/%E6%95%B0%E7%BB%84/">
-              <span class="chip bg-color">数组</span>
+            <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
+              <span class="chip bg-color">哈希表</span>
             </a>
             
           </div>
@@ -365,7 +363,7 @@
       <div class="post-info">
         
         <div class="post-date info-break-policy">
-          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2023-04-16
+          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2023-04-18
         </div>
             
       </div>
@@ -382,165 +380,105 @@
 
     <div class="card-content article-card-content">
       <div id="articleContent">
-        <h1 id="数组篇"><a href="#数组篇" class="headerlink" title="数组篇"></a>数组篇</h1><h2 id="704-二分查找"><a href="#704-二分查找" class="headerlink" title="704. 二分查找"></a>704. 二分查找</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
-<li>由于数组是已经排序的 可以使用二分查找 每次查找数组中间的数</li>
-<li>如果中间的数小于目标 则从[中间位置+1: 最后位置]继续查找</li>
-<li>如果中间的数小于目标 则从[开始位置: 中间位置-1]继续查找</li>
-</ul>
-<h3 id="易错点"><a href="#易错点" class="headerlink" title="易错点"></a>易错点</h3><ul>
-<li><code> while left &lt;= right</code></li>
-</ul>
-<p>如果没有等于</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python">num<span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">]</span> targer<span class="token operator">=</span><span class="token number">5</span>
-<span class="token comment"># left是0 right也是0</span>
-<span class="token comment"># 这种情况 直接return 1了就 造成错误</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
+        <h1 id="代码随想录-哈希表"><a href="#代码随想录-哈希表" class="headerlink" title="代码随想录-哈希表"></a>代码随想录-哈希表</h1><h2 id="242-有效的字母异位词"><a href="#242-有效的字母异位词" class="headerlink" title="242.有效的字母异位词"></a>242.有效的字母异位词</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
 <span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/16 12:11</span>
+<span class="token comment"># @Time    : 2023/4/18 14:38</span>
+<span class="token comment"># @Author  : Twistzz</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">isAnagram</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> t<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+        <span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+            <span class="token keyword">def</span> <span class="token function">isAnagram</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> t<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+                <span class="token comment"># if len(s)!=len(t):</span>
+                <span class="token comment">#     return False</span>
+                <span class="token comment"># hash_map=&#123;&#125;</span>
+                <span class="token comment"># for char in s:</span>
+                <span class="token comment">#     if char not in hash_map:</span>
+                <span class="token comment">#         hash_map[char]=1</span>
+                <span class="token comment">#     else:</span>
+                <span class="token comment">#         hash_map[char]+=1</span>
+                <span class="token comment"># for char in t:</span>
+                <span class="token comment">#     if char not in hash_map:</span>
+                <span class="token comment">#         return False</span>
+                <span class="token comment">#     else:</span>
+                <span class="token comment">#         if hash_map[char]==1:</span>
+                <span class="token comment">#             hash_map.pop(char)</span>
+                <span class="token comment">#         else:</span>
+                <span class="token comment">#             hash_map[char]-=1</span>
+                <span class="token comment"># return len(hash_map)==0</span>
+
+                record <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">26</span>
+                <span class="token keyword">for</span> i <span class="token keyword">in</span> s<span class="token punctuation">:</span>
+                    <span class="token comment"># 并不需要记住字符a的ASCII，只要求出一个相对数值就可以了</span>
+                    record<span class="token punctuation">[</span><span class="token builtin">ord</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
+                <span class="token keyword">for</span> i <span class="token keyword">in</span> t<span class="token punctuation">:</span>
+                    record<span class="token punctuation">[</span><span class="token builtin">ord</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">-=</span> <span class="token number">1</span>
+                <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">26</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                    <span class="token keyword">if</span> record<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">:</span>
+                        <span class="token comment"># record数组如果有的元素不为零0，说明字符串s和t 一定是谁多了字符或者谁少了字符。</span>
+                        <span class="token keyword">return</span> <span class="token boolean">False</span>
+                <span class="token keyword">return</span> <span class="token boolean">True</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="349-两个数组的交集"><a href="#349-两个数组的交集" class="headerlink" title="349. 两个数组的交集"></a>349. 两个数组的交集</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
+<span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># @Time    : 2023/4/18 14:29</span>
 <span class="token comment"># @Author  : Twistzz</span>
 <span class="token keyword">from</span> typing <span class="token keyword">import</span> List
 
 
 <span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">search</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
-        left<span class="token punctuation">,</span> right <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>
-        <span class="token keyword">while</span> left <span class="token operator">&lt;=</span> right<span class="token punctuation">:</span> <span class="token comment">#这里一定要注意 有等于</span>
-            mid <span class="token operator">=</span> left <span class="token operator">+</span> <span class="token punctuation">(</span>right <span class="token operator">-</span> left<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
-            <span class="token keyword">if</span> nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">&lt;</span> target<span class="token punctuation">:</span>
-                left <span class="token operator">=</span> mid <span class="token operator">+</span> <span class="token number">1</span>
-            <span class="token keyword">elif</span> nums<span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">></span> target<span class="token punctuation">:</span>
-                right <span class="token operator">=</span> mid <span class="token operator">-</span> <span class="token number">1</span>
+    <span class="token keyword">def</span> <span class="token function">intersection</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums1<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> nums2<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        set1 <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> num <span class="token keyword">in</span> nums1<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> num <span class="token keyword">not</span> <span class="token keyword">in</span> set1<span class="token punctuation">:</span>
+                set1<span class="token punctuation">.</span>add<span class="token punctuation">(</span>num<span class="token punctuation">)</span>
             <span class="token keyword">else</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> mid
-        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="27-移除元素"><a href="#27-移除元素" class="headerlink" title="27. 移除元素"></a>27. 移除元素</h2><h3 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
-<li><p>使用双指针 核心思路 通过左右指针查找和添加元素 右指针负责遍历数组 左指针负责添加元素</p>
-</li>
-<li><p>开始的时候左右指针都指向数组 0 也就是第一个元素</p>
-</li>
-<li><p>每次首先移动右指针</p>
-</li>
-<li><p>如果右指针指向的不是要删除的元素 则把右指针的元素 赋值给左指针的元素</p>
-</li>
-<li><p>如果右指针指向的是要删除的元素 则右指针继续移动</p>
-</li>
-<li><p>最后返回 left 也就是数组的长度</p>
-</li>
-<li><p>为什么 left 就是数组的长度 因为添加一个合法的元素 left 就加一 left 是从零开始的</p>
-</li>
-</ul>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/16 12:29</span>
-<span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">from</span> typing <span class="token keyword">import</span> List
-
-
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">removeElement</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> val<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
-        left<span class="token punctuation">,</span> right <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span>
-        <span class="token keyword">while</span> right <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">!=</span> val<span class="token punctuation">:</span>
-                nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span>
-                left <span class="token operator">+=</span> <span class="token number">1</span>
-            right <span class="token operator">+=</span> <span class="token number">1</span>
-        <span class="token keyword">return</span> left
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="977-有序数组的平方"><a href="#977-有序数组的平方" class="headerlink" title="977.有序数组的平方"></a>977.有序数组的平方</h2><h3 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
-<li>使用双指针</li>
-<li>左右指针分别指向数组最左边和最右边</li>
-<li>判断这两个哪个平方大 谁大就把它放到结果最后边</li>
-<li>为什么可以真么判断</li>
-<li>[-4,-1,0,3,10] 因为数组已经是排好序的 平方最大的只可能是最左边或者最后右边的</li>
-</ul>
-<pre class="line-numbers language-none"><code class="language-none">class Solution:
-    def sortedSquares(self, nums: List[int]) -&gt; List[int]:
-        left, right, res_point &#x3D; 0, len(nums) - 1, len(nums) - 1
-        res &#x3D; [0] * len(nums)
-        while left &lt;&#x3D; right:
-            if nums[left] ** 2 &gt; nums[right] ** 2:
-                res[res_point] &#x3D; nums[left] ** 2
-                left +&#x3D; 1
-            else:
-                res[res_point] &#x3D; nums[right] ** 2
-                right -&#x3D; 1
-            res_point -&#x3D; 1
-        return res
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="209-长度最小的子数组"><a href="#209-长度最小的子数组" class="headerlink" title="209.长度最小的子数组"></a>209.长度最小的子数组</h2><h3 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
-<li>使用双指针法 滑动窗口</li>
-<li>初始状态 左右指针都指向数组最开始的元素</li>
-<li>每次先计算当前窗口内的和 是否满足要求</li>
-<li>如果满足要求则记录当前最小值 并且移动左指针 再继续判断当前窗口是否满足要求(while 循环 找出最小的长度) 然后移动右指针</li>
-</ul>
-<h3 id="易错点-1"><a href="#易错点-1" class="headerlink" title="易错点"></a>易错点</h3><p><code>target = 11, nums = [1,1,1,1,1,1,1,1]</code> 情况 就是没有符合的 要返回 1 最后 return 的时候需要考虑</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/16 13:54</span>
-<span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">from</span> typing <span class="token keyword">import</span> List
-
-
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">minSubArrayLen</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
-        left<span class="token punctuation">,</span> right <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span>
-        window_sum <span class="token operator">=</span> <span class="token number">0</span>
-        res <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token comment">#相当于一个最大数 因为答案不可能超过这个数</span>
-        <span class="token keyword">while</span> right <span class="token operator">&lt;</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            window_sum <span class="token operator">+=</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span>
-            <span class="token keyword">while</span> window_sum <span class="token operator">>=</span> target<span class="token punctuation">:</span>
-                res <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>res<span class="token punctuation">,</span> right <span class="token operator">-</span> left <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
-                window_sum <span class="token operator">-=</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span>
-                left <span class="token operator">+=</span> <span class="token number">1</span>
-            right <span class="token operator">+=</span> <span class="token number">1</span>
-        <span class="token keyword">return</span> <span class="token number">0</span> <span class="token keyword">if</span> res <span class="token operator">==</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span> <span class="token keyword">else</span> res
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="59-螺旋矩阵-II"><a href="#59-螺旋矩阵-II" class="headerlink" title="59.螺旋矩阵 II"></a>59.螺旋矩阵 II</h2><h3 id="解题思路-4"><a href="#解题思路-4" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
-<li>填充上行从左到右</li>
-<li>填充右列从上到下</li>
-<li>填充下行从右到左</li>
-<li>填充左列从下到上</li>
-<li>坚持<strong>循环不变量原则</strong> 左闭右开的原则</li>
-</ul>
-<p>由外向内一圈一圈这么画下去。</p>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/16 15:21</span>
-<span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">from</span> typing <span class="token keyword">import</span> List
-
-
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">generateMatrix</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-        res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> n <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">]</span>
-        start_x<span class="token punctuation">,</span> start_y <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span>
-        round_num<span class="token punctuation">,</span> mid <span class="token operator">=</span> n <span class="token operator">//</span> <span class="token number">2</span><span class="token punctuation">,</span> n <span class="token operator">//</span> <span class="token number">2</span>
-        count <span class="token operator">=</span> <span class="token number">1</span>
-        <span class="token keyword">for</span> offset <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> round_num <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>start_y<span class="token punctuation">,</span> n <span class="token operator">-</span> offset<span class="token punctuation">)</span><span class="token punctuation">:</span>
-                res<span class="token punctuation">[</span>start_x<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> count
-                count <span class="token operator">+=</span> <span class="token number">1</span>
-            <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>start_x<span class="token punctuation">,</span> n <span class="token operator">-</span> offset<span class="token punctuation">)</span><span class="token punctuation">:</span>
-                res<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>n <span class="token operator">-</span> offset<span class="token punctuation">]</span> <span class="token operator">=</span> count
-                count <span class="token operator">+=</span> <span class="token number">1</span>
-            <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n <span class="token operator">-</span> offset<span class="token punctuation">,</span> start_y<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-                res<span class="token punctuation">[</span>n <span class="token operator">-</span> offset<span class="token punctuation">]</span><span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">=</span> count
-                count <span class="token operator">+=</span> <span class="token number">1</span>
-            <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>n <span class="token operator">-</span> offset<span class="token punctuation">,</span> start_x<span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-                res<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">[</span>start_y<span class="token punctuation">]</span> <span class="token operator">=</span> count
-                count <span class="token operator">+=</span> <span class="token number">1</span>
-            start_x <span class="token operator">+=</span> <span class="token number">1</span>
-            start_y <span class="token operator">+=</span> <span class="token number">1</span>
-        <span class="token keyword">if</span> n <span class="token operator">%</span> <span class="token number">2</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">:</span>
-            res<span class="token punctuation">[</span>mid<span class="token punctuation">]</span><span class="token punctuation">[</span>mid<span class="token punctuation">]</span> <span class="token operator">=</span> count
+                <span class="token keyword">continue</span>
+        <span class="token keyword">for</span> num <span class="token keyword">in</span> nums2<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> num <span class="token keyword">in</span> set1<span class="token punctuation">:</span>
+                res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+                set1<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">continue</span>
         <span class="token keyword">return</span> res
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+
+<h2 id="第202题-快乐数"><a href="#第202题-快乐数" class="headerlink" title="第202题. 快乐数"></a>第202题. 快乐数</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
+<span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># @Time    : 2023/4/18 15:26</span>
+<span class="token comment"># @Author  : Twistzz</span>
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">isHappy</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+        <span class="token keyword">def</span> <span class="token function">cal_sum</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            res<span class="token operator">=</span><span class="token number">0</span>
+            <span class="token keyword">while</span> num<span class="token punctuation">:</span>
+                res<span class="token operator">+=</span><span class="token punctuation">(</span>num<span class="token operator">%</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span>
+                num<span class="token operator">=</span>num<span class="token operator">//</span><span class="token number">10</span>
+            <span class="token keyword">return</span> res
+        search_set<span class="token operator">=</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token comment"># while True:</span>
+        <span class="token comment">#     n=cal_sum(n)</span>
+        <span class="token comment">#     if n==1:</span>
+        <span class="token comment">#        return True</span>
+        <span class="token comment">#     if n not in search_set:</span>
+        <span class="token comment">#        search_set.add(n)</span>
+        <span class="token comment">#     else:</span>
+        <span class="token comment">#         return False</span>
+
+        <span class="token keyword">while</span> n<span class="token operator">!=</span><span class="token number">1</span><span class="token punctuation">:</span>
+            n<span class="token operator">=</span>cal_sum<span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> n <span class="token keyword">not</span> <span class="token keyword">in</span> search_set<span class="token punctuation">:</span>
+               search_set<span class="token punctuation">.</span>add<span class="token punctuation">(</span>n<span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> <span class="token boolean">False</span>
+        <span class="token keyword">return</span> <span class="token boolean">True</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
  
       </div>
       <hr />
@@ -566,7 +504,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://twistzz-xjtlu.github.io/2023/04/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%84/">https://twistzz-xjtlu.github.io/2023/04/16/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95_%E6%95%B0%E7%BB%84/</a>
+                    <a href="https://twistzz-xjtlu.github.io/2023/04/18/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%93%88%E5%B8%8C%E8%A1%A8/">https://twistzz-xjtlu.github.io/2023/04/18/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%93%88%E5%B8%8C%E8%A1%A8/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -616,8 +554,8 @@
               <span class="chip bg-color">代码随想录</span>
             </a>
             
-            <a href="/tags/%E6%95%B0%E7%BB%84/">
-              <span class="chip bg-color">数组</span>
+            <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
+              <span class="chip bg-color">哈希表</span>
             </a>
             
           </div>
@@ -687,9 +625,76 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/04/18/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%93%88%E5%B8%8C%E8%A1%A8/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="代码随想录-哈希表">
+                        
+                        <span class="card-title">代码随想录-哈希表</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Diary/" class="post-category">
+                                    Diary
+                                </a>
+                            
+                            <a href="/categories/Diary/Life1/" class="post-category">
+                                    Life1
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                    <a href="/tags/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/">
+                        <span class="chip bg-color">代码随想录</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
+                        <span class="chip bg-color">哈希表</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2023/04/17/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E9%93%BE%E8%A1%A8/">
                     <div class="card-image">
@@ -707,9 +712,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-17
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-17
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -739,63 +744,6 @@
                     
                     <a href="/tags/%E9%93%BE%E8%A1%A8/">
                         <span class="chip bg-color">链表</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/04/16/test3/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="test3">
-                        
-                        <span class="card-title">test3</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-16
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Diary/" class="post-category">
-                                    Diary
-                                </a>
-                            
-                            <a href="/categories/Diary/Life/" class="post-category">
-                                    Life
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
-                    </a>
-                    
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
                     </a>
                     
                 </div>
