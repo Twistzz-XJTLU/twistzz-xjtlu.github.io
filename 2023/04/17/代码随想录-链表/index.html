@@ -6,12 +6,12 @@
     <meta charset="utf-8">
     <meta name="keywords" content="代码随想录_链表, Twistzz&#39;Blog">
     <meta name="description" content="链表篇203.移除链表元素解题思路
-设置一个虚拟变量 在head之前
+设置一个虚拟变量 在 head 之前
 最后直接返回虚拟节点的下一个节点就可以了
 
 #! /usr/bin/python3
 # -*- coding: utf-8 -*-
-# @Time    : 2023/4">
+# @Time    : 2023">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -375,7 +375,7 @@
     <div class="card-content article-card-content">
       <div id="articleContent">
         <h1 id="链表篇"><a href="#链表篇" class="headerlink" title="链表篇"></a>链表篇</h1><h2 id="203-移除链表元素"><a href="#203-移除链表元素" class="headerlink" title="203.移除链表元素"></a>203.移除链表元素</h2><h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
-<li>设置一个虚拟变量 在head之前</li>
+<li>设置一个虚拟变量 在 head 之前</li>
 <li>最后直接返回虚拟节点的下一个节点就可以了</li>
 </ul>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
@@ -404,8 +404,6 @@
                 cur <span class="token operator">=</span> cur<span class="token punctuation">.</span><span class="token builtin">next</span>
         <span class="token keyword">return</span> dummy_node<span class="token punctuation">.</span><span class="token builtin">next</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
 
 <h2 id="707-设计链表"><a href="#707-设计链表" class="headerlink" title="707.设计链表"></a>707.设计链表</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
 <span class="token comment"># -*- coding: utf-8 -*-</span>
@@ -483,14 +481,12 @@
 <span class="token comment"># obj.deleteAtIndex(index)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-
 <h2 id="206-反转链表"><a href="#206-反转链表" class="headerlink" title="206.反转链表"></a>206.反转链表</h2><h2 id="解题思路-1"><a href="#解题思路-1" class="headerlink" title="解题思路"></a>解题思路</h2><ul>
-<li>使用双指针 </li>
-<li>左指针指向next元素 右指针负责遍历</li>
-<li>核心思路就是把右边的元素的下一个指向左边元素 </li>
+<li>使用双指针</li>
+<li>左指针指向 next 元素 右指针负责遍历</li>
+<li>核心思路就是把右边的元素的下一个指向左边元素</li>
 <li>注意要有一个中间变量存储一下</li>
-<li>为什么要保存一下这个节点呢，因为接下来要改变 cur-&gt;next 的指向了，将cur-&gt;next 指向pre ，此时已经反转了第一个节点了。</li>
+<li>为什么要保存一下这个节点呢，因为接下来要改变 cur-&gt;next 的指向了，将 cur-&gt;next 指向 pre ，此时已经反转了第一个节点了。</li>
 </ul>
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
 <span class="token comment"># -*- coding: utf-8 -*-</span>
@@ -518,8 +514,6 @@
             cur <span class="token operator">=</span> tmp_node
         <span class="token keyword">return</span> pre
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
 
 <h2 id="24-两两交换链表中的节点"><a href="#24-两两交换链表中的节点" class="headerlink" title="24. 两两交换链表中的节点"></a>24. 两两交换链表中的节点</h2><h3 id="解题思路-2"><a href="#解题思路-2" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
 <li>两两一组交换变量</li>
@@ -560,17 +554,15 @@
         <span class="token keyword">return</span> dummy_node<span class="token punctuation">.</span><span class="token builtin">next</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-
-<h2 id="19-删除链表的倒数第N个节点"><a href="#19-删除链表的倒数第N个节点" class="headerlink" title="19.删除链表的倒数第N个节点"></a>19.删除链表的倒数第N个节点</h2><h3 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
+<h2 id="19-删除链表的倒数第-N-个节点"><a href="#19-删除链表的倒数第-N-个节点" class="headerlink" title="19.删除链表的倒数第 N 个节点"></a>19.删除链表的倒数第 N 个节点</h2><h3 id="解题思路-3"><a href="#解题思路-3" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
 <li>使用双指针</li>
-<li>最指针和右指针的距离差是n 也就是倒数第n个节点</li>
+<li>最指针和右指针的距离差是 n 也就是倒数第 n 个节点</li>
 </ul>
 <pre class="line-numbers language-none"><code class="language-none">[1,2,3,4,5]
 n&#x3D;2
 最开始左右指针指向虚拟节点 1前面
-右指针移动n+1 到达3 
-然后移动 到5的时候 此时左指针在2 因为当前节点还有 所以 继续移动 右指针到5的右边 左指针到3 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+右指针移动n+1 到达3
+然后移动 到5的时候 此时左指针在2 因为当前节点还有 所以 继续移动 右指针到5的右边 左指针到3<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
 <pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
 <span class="token comment"># -*- coding: utf-8 -*-</span>
@@ -603,6 +595,109 @@ n&#x3D;2
         <span class="token keyword">return</span> dummy_node<span class="token punctuation">.</span><span class="token builtin">next</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h2 id="面试题-02-07-链表相交"><a href="#面试题-02-07-链表相交" class="headerlink" title="面试题 02.07. 链表相交"></a>面试题 02.07. 链表相交</h2><h3 id="解题思路-4"><a href="#解题思路-4" class="headerlink" title="解题思路"></a>解题思路</h3><h4 id="解法一"><a href="#解法一" class="headerlink" title="解法一:"></a>解法一:</h4><ul>
+<li>两次遍历 第一次遍历把节点存到 set 中</li>
+<li>第二次遍历第二个链表 如果有相等的 则返回 为什么?</li>
+<li>因为如果这个节点相等 不是值相等而是内存地址指向同一个 代表同一个节点 因此这个节点的下一个节点可以指向同一个节点 因此之后的都相等</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">getIntersectionNode</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> headA<span class="token punctuation">:</span> ListNode<span class="token punctuation">,</span> headB<span class="token punctuation">:</span> ListNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> ListNode<span class="token punctuation">:</span>
+
+        <span class="token comment"># 解法一 使用集合</span>
+        look_set <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">while</span> headA <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            look_set<span class="token punctuation">.</span>add<span class="token punctuation">(</span>headA<span class="token punctuation">)</span>
+            headA <span class="token operator">=</span> headA<span class="token punctuation">.</span><span class="token builtin">next</span>
+        <span class="token keyword">while</span> headB <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> headB <span class="token keyword">in</span> look_set<span class="token punctuation">:</span>
+                <span class="token keyword">return</span> headB
+            headB <span class="token operator">=</span> headB<span class="token punctuation">.</span><span class="token builtin">next</span>
+        <span class="token keyword">return</span> <span class="token boolean">None</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="解法二"><a href="#解法二" class="headerlink" title="解法二:"></a>解法二:</h4><ul>
+<li>使用双指针</li>
+<li>我们求出两个链表的长度，并求出两个链表长度的差值，然后让 curA 移动到，和 curB 末尾对齐的位置</li>
+<li>此时我们就可以比较 curA 和 curB 是否相同，如果不相同，同时向后移动 curA 和 curB，如果遇到 curA &#x3D;&#x3D; curB，则找到交点。</li>
+<li>否则循环退出返回空指针。</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
+<span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># @Time    : 2023/4/18 9:32</span>
+<span class="token comment"># @Author  : Twistzz</span>
+
+<span class="token comment"># Definition for singly-linked list.</span>
+<span class="token keyword">class</span> <span class="token class-name">ListNode</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>val <span class="token operator">=</span> x
+        self<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> <span class="token boolean">None</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">getIntersectionNode</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> headA<span class="token punctuation">:</span> ListNode<span class="token punctuation">,</span> headB<span class="token punctuation">:</span> ListNode<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> ListNode<span class="token punctuation">:</span>
+
+        <span class="token comment"># 解法二 使用双指针</span>
+        A <span class="token operator">=</span> headA
+        B <span class="token operator">=</span> headB
+        <span class="token keyword">while</span> A <span class="token operator">!=</span> B<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> A<span class="token punctuation">:</span>
+                A <span class="token operator">=</span> A<span class="token punctuation">.</span><span class="token builtin">next</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                A <span class="token operator">=</span> headB
+            <span class="token keyword">if</span> B<span class="token punctuation">:</span>
+                B <span class="token operator">=</span> B<span class="token punctuation">.</span><span class="token builtin">next</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                B <span class="token operator">=</span> headA
+        <span class="token keyword">return</span> A
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="142-环形链表-II"><a href="#142-环形链表-II" class="headerlink" title="142.环形链表 II"></a>142.环形链表 II</h2><h3 id="解题思路-5"><a href="#解题思路-5" class="headerlink" title="解题思路"></a>解题思路</h3><ul>
+<li>使用双指针快慢指针</li>
+<li>第一阶段 快指针和慢指针一直移动 直到到环内某个节点相遇</li>
+<li>相遇后定义一个新的节点指向头部 和另一个相遇节点(不定义直接用 fast 或者 slow 也可以)</li>
+<li>相遇节点和头结点同时移动 二者相遇的节点就是环的入口(别问为什么 问就是已经背会)</li>
+</ul>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
+<span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># @Time    : 2023/4/18 10:36</span>
+<span class="token comment"># @Author  : Twistzz</span>
+
+<span class="token comment"># Definition for singly-linked list.</span>
+<span class="token keyword">from</span> typing <span class="token keyword">import</span> Optional
+
+
+<span class="token keyword">class</span> <span class="token class-name">ListNode</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>val <span class="token operator">=</span> x
+        self<span class="token punctuation">.</span><span class="token builtin">next</span> <span class="token operator">=</span> <span class="token boolean">None</span>
+
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">detectCycle</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> head<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Optional<span class="token punctuation">[</span>ListNode<span class="token punctuation">]</span><span class="token punctuation">:</span>
+        <span class="token comment"># 集合法</span>
+        <span class="token comment"># set1=set()</span>
+        <span class="token comment"># cur=head</span>
+        <span class="token comment"># while cur:</span>
+        <span class="token comment">#     if cur not in set1:</span>
+        <span class="token comment">#         set1.add(cur)</span>
+        <span class="token comment">#         cur=cur.next</span>
+        <span class="token comment">#     else:</span>
+        <span class="token comment">#         return cur</span>
+        <span class="token comment"># return None</span>
+
+        <span class="token comment"># 快慢指针</span>
+        slow <span class="token operator">=</span> head
+        fast <span class="token operator">=</span> head
+        <span class="token keyword">while</span> fast <span class="token keyword">and</span> fast<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">:</span>
+            slow <span class="token operator">=</span> slow<span class="token punctuation">.</span><span class="token builtin">next</span>
+            fast <span class="token operator">=</span> fast<span class="token punctuation">.</span><span class="token builtin">next</span><span class="token punctuation">.</span><span class="token builtin">next</span>
+            <span class="token keyword">if</span> fast <span class="token operator">==</span> slow<span class="token punctuation">:</span>
+                new_head <span class="token operator">=</span> head
+                meet_point <span class="token operator">=</span> fast
+                <span class="token keyword">while</span> new_head <span class="token operator">!=</span> meet_point<span class="token punctuation">:</span>
+                    new_head <span class="token operator">=</span> new_head<span class="token punctuation">.</span><span class="token builtin">next</span>
+                    meet_point <span class="token operator">=</span> meet_point<span class="token punctuation">.</span><span class="token builtin">next</span>
+                <span class="token keyword">return</span> meet_point
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
  
       </div>
       <hr />
