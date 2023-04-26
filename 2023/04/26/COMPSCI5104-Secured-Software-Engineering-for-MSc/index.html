@@ -4,12 +4,10 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="代码随想录-哈希表, Twistzz&#39;Blog">
-    <meta name="description" content="代码随想录-哈希表242.有效的字母异位词#! /usr/bin/python3
-# -*- coding: utf-8 -*-
-# @Time    : 2023/4/18 14:38
-# @Author  : Twistzz
-class">
+    <meta name="keywords" content="COMPSCI5104 Secured Software Engineering for MSc, Twistzz&#39;Blog">
+    <meta name="description" content="COMPSCI5104 Secured Software Engineering for MScCourse Topics
+Week 1 Designing Secured Software Systems
+Week 2 Vulnerabi">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +19,7 @@ class">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>代码随想录-哈希表 | Twistzz&#39;Blog</title>
+    <title>COMPSCI5104 Secured Software Engineering for MSc | Twistzz&#39;Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -294,12 +292,12 @@ class">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">代码随想录-哈希表</h1>
+                    <h1 class="description center-align post-title">COMPSCI5104 Secured Software Engineering for MSc</h1>
                 </div>
             </div>
         </div>
@@ -323,20 +321,8 @@ class">
           
           <div class="article-tag">
             
-            <a href="/tags/%E7%AE%97%E6%B3%95/">
-              <span class="chip bg-color">算法</span>
-            </a>
-            
-            <a href="/tags/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/">
-              <span class="chip bg-color">代码随想录</span>
-            </a>
-            
-            <a href="/tags/python/">
-              <span class="chip bg-color">python</span>
-            </a>
-            
-            <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-              <span class="chip bg-color">哈希表</span>
+            <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+              <span class="chip bg-color">研究生</span>
             </a>
             
           </div>
@@ -347,12 +333,8 @@ class">
           <div class="post-cate">
             <i class="fas fa-bookmark fa-fw icon-category"></i>
             
-            <a href="/categories/LeetCode/" class="post-category">
-              LeetCode
-            </a>
-            
-            <a href="/categories/LeetCode/Learn/" class="post-category">
-              Learn
+            <a href="/categories/MSc/" class="post-category">
+              MSc
             </a>
             
           </div>
@@ -363,20 +345,20 @@ class">
       <div class="post-info">
         
         <div class="post-date info-break-policy">
-          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2023-04-18
+          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2023-04-26
         </div>
          
         <div class="post-date info-break-policy">
-          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-04-21
+          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-04-26
         </div>
          
         <div class="info-break-policy">
-          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 647
+          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 1.7k
         </div>
          
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          3 分
+          10 分
         </div>
          
         <div id="busuanzi_container_page_pv" class="info-break-policy">
@@ -398,182 +380,351 @@ class">
 
     <div class="card-content article-card-content">
       <div id="articleContent">
-        <h1 id="代码随想录-哈希表"><a href="#代码随想录-哈希表" class="headerlink" title="代码随想录-哈希表"></a>代码随想录-哈希表</h1><h2 id="242-有效的字母异位词"><a href="#242-有效的字母异位词" class="headerlink" title="242.有效的字母异位词"></a>242.有效的字母异位词</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/18 14:38</span>
-<span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">isAnagram</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> t<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
-        <span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-            <span class="token keyword">def</span> <span class="token function">isAnagram</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> t<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
-                <span class="token comment"># if len(s)!=len(t):</span>
-                <span class="token comment">#     return False</span>
-                <span class="token comment"># hash_map=&#123;&#125;</span>
-                <span class="token comment"># for char in s:</span>
-                <span class="token comment">#     if char not in hash_map:</span>
-                <span class="token comment">#         hash_map[char]=1</span>
-                <span class="token comment">#     else:</span>
-                <span class="token comment">#         hash_map[char]+=1</span>
-                <span class="token comment"># for char in t:</span>
-                <span class="token comment">#     if char not in hash_map:</span>
-                <span class="token comment">#         return False</span>
-                <span class="token comment">#     else:</span>
-                <span class="token comment">#         if hash_map[char]==1:</span>
-                <span class="token comment">#             hash_map.pop(char)</span>
-                <span class="token comment">#         else:</span>
-                <span class="token comment">#             hash_map[char]-=1</span>
-                <span class="token comment"># return len(hash_map)==0</span>
-
-                record <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">26</span>
-                <span class="token keyword">for</span> i <span class="token keyword">in</span> s<span class="token punctuation">:</span>
-                    <span class="token comment"># 并不需要记住字符a的ASCII，只要求出一个相对数值就可以了</span>
-                    record<span class="token punctuation">[</span><span class="token builtin">ord</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
-                <span class="token keyword">for</span> i <span class="token keyword">in</span> t<span class="token punctuation">:</span>
-                    record<span class="token punctuation">[</span><span class="token builtin">ord</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">-=</span> <span class="token number">1</span>
-                <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">26</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-                    <span class="token keyword">if</span> record<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">:</span>
-                        <span class="token comment"># record数组如果有的元素不为零0，说明字符串s和t 一定是谁多了字符或者谁少了字符。</span>
-                        <span class="token keyword">return</span> <span class="token boolean">False</span>
-                <span class="token keyword">return</span> <span class="token boolean">True</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="349-两个数组的交集"><a href="#349-两个数组的交集" class="headerlink" title="349. 两个数组的交集"></a>349. 两个数组的交集</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/18 14:29</span>
-<span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">from</span> typing <span class="token keyword">import</span> List
-
-
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">intersection</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums1<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> nums2<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-        set1 <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-        res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-        <span class="token keyword">for</span> num <span class="token keyword">in</span> nums1<span class="token punctuation">:</span>
-            <span class="token keyword">if</span> num <span class="token keyword">not</span> <span class="token keyword">in</span> set1<span class="token punctuation">:</span>
-                set1<span class="token punctuation">.</span>add<span class="token punctuation">(</span>num<span class="token punctuation">)</span>
-            <span class="token keyword">else</span><span class="token punctuation">:</span>
-                <span class="token keyword">continue</span>
-        <span class="token keyword">for</span> num <span class="token keyword">in</span> nums2<span class="token punctuation">:</span>
-            <span class="token keyword">if</span> num <span class="token keyword">in</span> set1<span class="token punctuation">:</span>
-                res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>num<span class="token punctuation">)</span>
-                set1<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>num<span class="token punctuation">)</span>
-            <span class="token keyword">else</span><span class="token punctuation">:</span>
-                <span class="token keyword">continue</span>
-        <span class="token keyword">return</span> res
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
-
-<h2 id="第202题-快乐数"><a href="#第202题-快乐数" class="headerlink" title="第202题. 快乐数"></a>第202题. 快乐数</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/18 15:26</span>
-<span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">isHappy</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
-        <span class="token keyword">def</span> <span class="token function">cal_sum</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            res<span class="token operator">=</span><span class="token number">0</span>
-            <span class="token keyword">while</span> num<span class="token punctuation">:</span>
-                res<span class="token operator">+=</span><span class="token punctuation">(</span>num<span class="token operator">%</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span>
-                num<span class="token operator">=</span>num<span class="token operator">//</span><span class="token number">10</span>
-            <span class="token keyword">return</span> res
-        search_set<span class="token operator">=</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token comment"># while True:</span>
-        <span class="token comment">#     n=cal_sum(n)</span>
-        <span class="token comment">#     if n==1:</span>
-        <span class="token comment">#        return True</span>
-        <span class="token comment">#     if n not in search_set:</span>
-        <span class="token comment">#        search_set.add(n)</span>
-        <span class="token comment">#     else:</span>
-        <span class="token comment">#         return False</span>
-
-        <span class="token keyword">while</span> n<span class="token operator">!=</span><span class="token number">1</span><span class="token punctuation">:</span>
-            n<span class="token operator">=</span>cal_sum<span class="token punctuation">(</span>n<span class="token punctuation">)</span>
-            <span class="token keyword">if</span> n <span class="token keyword">not</span> <span class="token keyword">in</span> search_set<span class="token punctuation">:</span>
-               search_set<span class="token punctuation">.</span>add<span class="token punctuation">(</span>n<span class="token punctuation">)</span>
-            <span class="token keyword">else</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token boolean">False</span>
-        <span class="token keyword">return</span> <span class="token boolean">True</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="第15题-三数之和"><a href="#第15题-三数之和" class="headerlink" title="第15题. 三数之和"></a>第15题. 三数之和</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/19 12:16</span>
-<span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">from</span> typing <span class="token keyword">import</span> List
-
-
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">threeSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-        res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-        l <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
-        <span class="token keyword">if</span> l <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">:</span>
-            <span class="token keyword">return</span> res
-        nums<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span>
-                <span class="token keyword">break</span>
-            <span class="token keyword">if</span> i <span class="token operator">></span> <span class="token number">0</span> <span class="token keyword">and</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                <span class="token keyword">continue</span>
-            left <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span>
-            right <span class="token operator">=</span> l <span class="token operator">-</span> <span class="token number">1</span>
-            <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>
-                total <span class="token operator">=</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-                <span class="token keyword">if</span> total <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
-                    left <span class="token operator">+=</span> <span class="token number">1</span>
-                <span class="token keyword">elif</span> total <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span>
-                    right <span class="token operator">-=</span> <span class="token number">1</span>
-                <span class="token keyword">else</span><span class="token punctuation">:</span>
-                    res<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-                    left <span class="token operator">+=</span> <span class="token number">1</span>
-                    right <span class="token operator">-=</span> <span class="token number">1</span>
-                    <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>left <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                        left <span class="token operator">+=</span> <span class="token number">1</span>
-                    <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>right <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                        right <span class="token operator">-=</span> <span class="token number">1</span>
-        <span class="token keyword">return</span> res
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="第18题-四数之和"><a href="#第18题-四数之和" class="headerlink" title="第18题. 四数之和"></a>第18题. 四数之和</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/19 14:03</span>
-<span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">from</span> typing <span class="token keyword">import</span> List
-
-
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">fourSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-        res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-        l <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
-        nums<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token keyword">if</span> l <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">:</span>
-            <span class="token keyword">return</span> res
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> i <span class="token operator">></span> <span class="token number">0</span> <span class="token keyword">and</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                <span class="token keyword">continue</span>
-            <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> l<span class="token punctuation">)</span><span class="token punctuation">:</span>
-                <span class="token keyword">if</span> j <span class="token operator">></span> i <span class="token operator">+</span> <span class="token number">1</span> <span class="token keyword">and</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>j <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                    <span class="token keyword">continue</span>
-                left <span class="token operator">=</span> j <span class="token operator">+</span> <span class="token number">1</span>
-                right <span class="token operator">=</span> l <span class="token operator">-</span> <span class="token number">1</span>
-                <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>
-                    total <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span>
-                    <span class="token keyword">if</span> total <span class="token operator">&lt;</span> target<span class="token punctuation">:</span>
-                        left <span class="token operator">+=</span> <span class="token number">1</span>
-                    <span class="token keyword">elif</span> total <span class="token operator">></span> target<span class="token punctuation">:</span>
-                        right <span class="token operator">-=</span> <span class="token number">1</span>
-                    <span class="token keyword">else</span><span class="token punctuation">:</span>
-                        res<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-                        left <span class="token operator">+=</span> <span class="token number">1</span>
-                        right <span class="token operator">-=</span> <span class="token number">1</span>
-                        <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>left <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                            left <span class="token operator">+=</span> <span class="token number">1</span>
-                        <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>right <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                            right <span class="token operator">-=</span> <span class="token number">1</span>
-        <span class="token keyword">return</span> res
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+        <h1 id="COMPSCI5104-Secured-Software-Engineering-for-MSc"><a href="#COMPSCI5104-Secured-Software-Engineering-for-MSc" class="headerlink" title="COMPSCI5104 Secured Software Engineering for MSc"></a>COMPSCI5104 Secured Software Engineering for MSc</h1><h1 id="Course-Topics"><a href="#Course-Topics" class="headerlink" title="Course Topics"></a>Course Topics</h1><ul>
+<li><strong>Week 1 Designing Secured Software Systems</strong></li>
+<li><strong>Week 2 Vulnerabilities &amp; Threats&#x2F; Supply Chain Attacks &#x2F; Operating and Dev Environment</strong></li>
+<li><strong>Week 3 Static Analysis</strong></li>
+<li><strong>Week 4 Confidentiality and Integrity</strong></li>
+<li><strong>Week 5 Security requirements planning &amp; Risk Management</strong></li>
+<li><strong>Week 6 Secure Patterns, SSD in SDLC and Wed app threats</strong></li>
+<li><strong>Week 7 Threat Modelling, Attacks Trees and OAuth</strong></li>
+<li><strong>Week 8 Vulnerability Mapping</strong></li>
+<li><strong>Week 9 Access Control and Network Security</strong></li>
+<li><strong>Week 10 Secure Software Engineering and Regulatory requirements (GDPR)</strong></li>
+</ul>
+<h1 id="Week1-Designing-Secured-Software-Systems"><a href="#Week1-Designing-Secured-Software-Systems" class="headerlink" title="Week1 Designing Secured Software Systems"></a>Week1 Designing Secured Software Systems</h1><h2 id="Outline"><a href="#Outline" class="headerlink" title="Outline"></a>Outline</h2><ul>
+<li>Design Ubiquity.</li>
+<li>The process of secured software design.</li>
+<li>Making design decisions.</li>
+<li>Why design?</li>
+<li>Double Diamond framework for structured secured design.</li>
+<li>Design stakeholders.</li>
+</ul>
+<h2 id="Process-of-Design"><a href="#Process-of-Design" class="headerlink" title="Process of Design"></a>Process of Design</h2><ul>
+<li>Top-down design – start with the architecture.</li>
+<li>Bottom-up design start with –start low level utilities</li>
+<li>Mix of top-down and bottom-up</li>
+<li>Justificatory frameworks</li>
+</ul>
+<h2 id="Software-Development-Principles"><a href="#Software-Development-Principles" class="headerlink" title="Software Development Principles"></a>Software Development Principles</h2><h3 id="Security-By-Design-Principles"><a href="#Security-By-Design-Principles" class="headerlink" title="Security-By-Design Principles"></a>Security-By-Design Principles</h3><ul>
+<li>Minimize attack surface area</li>
+<li>Don’t trust services</li>
+</ul>
+<h3 id="其他还有许多-principle-具体见-week1-page25"><a href="#其他还有许多-principle-具体见-week1-page25" class="headerlink" title="其他还有许多 principle 具体见 week1 page25"></a>其他还有许多 principle 具体见 week1 page25</h3><h2 id="Characteristics-of-Design-Decision-Making"><a href="#Characteristics-of-Design-Decision-Making" class="headerlink" title="Characteristics of Design Decision Making"></a>Characteristics of Design Decision Making</h2><ul>
+<li>Non-Deterministic</li>
+<li>Heuristic</li>
+<li>Emergent</li>
+</ul>
+<h2 id="Why-Design"><a href="#Why-Design" class="headerlink" title="Why Design"></a>Why Design</h2><h2 id="Double-Diamond-Design-Model"><a href="#Double-Diamond-Design-Model" class="headerlink" title="Double Diamond Design Model"></a>Double Diamond Design Model</h2><h2 id="Decision-Makers"><a href="#Decision-Makers" class="headerlink" title="Decision Makers"></a>Decision Makers</h2><h1 id="Week2-Vulnerabilities-amp-Threats-x2F-Supply-Chain-Attacks-x2F-Operating-and-Dev-Environment"><a href="#Week2-Vulnerabilities-amp-Threats-x2F-Supply-Chain-Attacks-x2F-Operating-and-Dev-Environment" class="headerlink" title="Week2 Vulnerabilities &amp; Threats&#x2F; Supply Chain Attacks &#x2F; Operating and Dev Environment"></a>Week2 Vulnerabilities &amp; Threats&#x2F; Supply Chain Attacks &#x2F; Operating and Dev Environment</h1><h2 id="Vulnerabilities-and-Threats"><a href="#Vulnerabilities-and-Threats" class="headerlink" title="Vulnerabilities and Threats"></a>Vulnerabilities and Threats</h2><ul>
+<li><p>Lack of input validation</p>
+</li>
+<li><p>Insecure configuration management</p>
+</li>
+<li><p>Lack of bounds checking on array and buffers</p>
+</li>
+<li><p>Unintentional disclosure</p>
+</li>
+</ul>
+<h3 id="Threat-Agents"><a href="#Threat-Agents" class="headerlink" title="Threat Agents"></a>Threat Agents</h3><ul>
+<li>Human or not?</li>
+<li>intentional or not?</li>
+<li>Understand the risk</li>
+<li>Understand the cost</li>
+</ul>
+<h3 id="Fire-Fighting"><a href="#Fire-Fighting" class="headerlink" title="Fire Fighting"></a>Fire Fighting</h3><ul>
+<li>Prevention</li>
+<li>Avoidance</li>
+<li>Detection</li>
+<li>Recovery</li>
+</ul>
+<h2 id="Supply-Chain-Attacks"><a href="#Supply-Chain-Attacks" class="headerlink" title="Supply Chain Attacks"></a>Supply Chain Attacks</h2><h3 id="Case-Study"><a href="#Case-Study" class="headerlink" title="Case Study"></a>Case Study</h3><h4 id="Preventions"><a href="#Preventions" class="headerlink" title="Preventions"></a>Preventions</h4><ul>
+<li>Content Security Policy: Inflow&#x2F;Outflow</li>
+<li>Sub-resource Integrity: Verify content hash on runtime</li>
+<li>Sandboxing: Isolate trusted content</li>
+<li>Firewall (server-side forgery)</li>
+<li>Data outflow checks</li>
+<li>TLS by default</li>
+<li>Verification of data integrity</li>
+<li>AES&#x2F;Encryption for job specification</li>
+</ul>
+<h3 id="Identification-amp-Prevention"><a href="#Identification-amp-Prevention" class="headerlink" title="Identification &amp; Prevention"></a>Identification &amp; Prevention</h3><ul>
+<li>Identify the vulnerable Web Assets</li>
+<li>Identify web asset with chain of trust with 3rd party</li>
+<li>Inventory of all 3rd party s&#x2F;w</li>
+<li>Apply defenses</li>
+<li>Minimize exposure of sensitive assets</li>
+<li>Extend to zero trust principle</li>
+</ul>
+<h2 id="Operating-and-Dev-Environment"><a href="#Operating-and-Dev-Environment" class="headerlink" title="Operating and Dev Environment"></a>Operating and Dev Environment</h2><h3 id="Development-Environment"><a href="#Development-Environment" class="headerlink" title="Development Environment"></a>Development Environment</h3><h3 id="Protect-your-code-repository"><a href="#Protect-your-code-repository" class="headerlink" title="Protect your code repository"></a>Protect your code repository</h3><h3 id="Continuous-integration"><a href="#Continuous-integration" class="headerlink" title="Continuous integration"></a>Continuous integration</h3><h1 id="Week3-Static-Analysis"><a href="#Week3-Static-Analysis" class="headerlink" title="Week3 Static Analysis"></a>Week3 Static Analysis</h1><h2 id="Learning-Outcome"><a href="#Learning-Outcome" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h2><ul>
+<li>Understand the architecture of static analysis systems.</li>
+<li>Demonstrate how static analysis can be used as a software engineering tool for identifying security vulnerabilities.</li>
+<li>Consider different trade-offs that concern aspects of static analysis.</li>
+<li>Static Analysis in CI&#x2F;CD Pipeline.</li>
+<li>Understand tainted information flow analysis as a form of static analysis.</li>
+<li>Know how to increase the precision of basic analysis by making it context, flow and path sensitive.</li>
+<li>Tainted information flow in security practice.</li>
+</ul>
+<h3 id="这周具体见-notability-的笔记"><a href="#这周具体见-notability-的笔记" class="headerlink" title="这周具体见 notability 的笔记"></a>这周具体见 notability 的笔记</h3><h1 id="Week4-Confidentiality-and-Integrity"><a href="#Week4-Confidentiality-and-Integrity" class="headerlink" title="Week4 Confidentiality and Integrity"></a>Week4 Confidentiality and Integrity</h1><h3 id="Outline-1"><a href="#Outline-1" class="headerlink" title="Outline"></a>Outline</h3><ul>
+<li>Information flow control.</li>
+<li>Bell-LaPadula Model.</li>
+<li>Reading writing information.</li>
+<li>Principles of information protection:</li>
+<li>Principles of least privilege.</li>
+<li>Need to know principle.</li>
+<li>Categories.</li>
+<li>Dominance relationships.</li>
+</ul>
+<h3 id="这周具体见-notability-的笔记-1"><a href="#这周具体见-notability-的笔记-1" class="headerlink" title="这周具体见 notability 的笔记"></a>这周具体见 notability 的笔记</h3><h1 id="Week5-Security-Requirements-Planning-amp-Risk-Management"><a href="#Week5-Security-Requirements-Planning-amp-Risk-Management" class="headerlink" title="Week5 Security Requirements Planning&amp; Risk Management"></a>Week5 Security Requirements Planning&amp; Risk Management</h1><h2 id="Objectives"><a href="#Objectives" class="headerlink" title="Objectives"></a>Objectives</h2><ul>
+<li>Role of security in requirements planning</li>
+<li>How to adapt the requirements process to incorporate security easily</li>
+<li>Stakeholder analysis and prioritization</li>
+<li>System scope</li>
+<li>Planning security goals for the system</li>
+<li>Security elements to enhance the software development lifecycle (SDLC)</li>
+</ul>
+<h2 id="Security-Requirements-Planning"><a href="#Security-Requirements-Planning" class="headerlink" title="Security Requirements Planning"></a>Security Requirements Planning</h2><h3 id="SDLC-software-development-lifecycle"><a href="#SDLC-software-development-lifecycle" class="headerlink" title="SDLC - software development lifecycle"></a>SDLC - software development lifecycle</h3><h3 id="Stakeholder-analysis"><a href="#Stakeholder-analysis" class="headerlink" title="Stakeholder analysis"></a>Stakeholder analysis</h3><h3 id="利益相关者具体图在-page19"><a href="#利益相关者具体图在-page19" class="headerlink" title="利益相关者具体图在 page19"></a>利益相关者具体图在 page19</h3><h3 id="Security-baseline"><a href="#Security-baseline" class="headerlink" title="Security baseline"></a>Security baseline</h3><ul>
+<li>confidentiality</li>
+<li>integrity</li>
+<li>availability</li>
+<li>Data privacy</li>
+<li>Strict authentication and access control</li>
+<li>Uptime&#x2F;reliability</li>
+<li>Failing safely</li>
+<li>Nonrepudiation</li>
+</ul>
+<h3 id="Requirements-gathering"><a href="#Requirements-gathering" class="headerlink" title="Requirements gathering"></a>Requirements gathering</h3><h2 id="Security-Risk-Management"><a href="#Security-Risk-Management" class="headerlink" title="Security Risk Management"></a>Security Risk Management</h2><h3 id="Step-of-a-risk-management-plan"><a href="#Step-of-a-risk-management-plan" class="headerlink" title="Step of a risk management plan"></a>Step of a risk management plan</h3><ul>
+<li>Identify Risk</li>
+<li>Asses Risk</li>
+<li>Control Risk</li>
+</ul>
+<h3 id="计算题-page-51"><a href="#计算题-page-51" class="headerlink" title="计算题 page 51"></a>计算题 page 51</h3><p>SLE&#x3D; AV* EF</p>
+<p>ALE&#x3D;SLE*ARO</p>
+<p>SLE - single loss expectancy</p>
+<p>EF - exposure factor</p>
+<p>ALE - Annual loss expectancy</p>
+<p>CBA – Cost benefit analysis</p>
+<p>ARO - Annualized rate of occurrence</p>
+<p>Risk control Strategies</p>
+<ul>
+<li>Defense</li>
+<li>Transferal</li>
+<li>Mitigation</li>
+<li>Acceptance(Abandonment)</li>
+<li>Termination</li>
+</ul>
+<h1 id="Week6-Secure-Patterns-SSD-in-SDLC-and-Wed-app-threats"><a href="#Week6-Secure-Patterns-SSD-in-SDLC-and-Wed-app-threats" class="headerlink" title="Week6 Secure Patterns, SSD in SDLC and Wed app threats"></a>Week6 Secure Patterns, SSD in SDLC and Wed app threats</h1><h2 id="Security-Patterns"><a href="#Security-Patterns" class="headerlink" title="Security Patterns"></a>Security Patterns</h2><h2 id="Incorporating-SSD-with-the-SDLC"><a href="#Incorporating-SSD-with-the-SDLC" class="headerlink" title="Incorporating SSD with the SDLC"></a>Incorporating SSD with the SDLC</h2><ul>
+<li>Creating an Incident Response Plan</li>
+<li>The final security review of a system and the expected outcomes</li>
+<li>Periodic security reviews and archiving</li>
+<li>Planning system retirement and evaluating security at the end of the system lifespan</li>
+<li>Integrating security into the entire SDLC with both cultural awareness and available tools</li>
+</ul>
+<h2 id="Web-Application-Threats"><a href="#Web-Application-Threats" class="headerlink" title="Web Application Threats"></a>Web Application Threats</h2><h3 id="The-Client-at-Risk"><a href="#The-Client-at-Risk" class="headerlink" title="The Client at Risk"></a>The Client at Risk</h3><ul>
+<li>Never trust the client at the server side</li>
+<li>Never trust the browser on the client side</li>
+<li>Never execute client input as code</li>
+<li>Never allow client input to pass into the system without validation internally</li>
+<li>Scrub client for any known exploits and suspect characters</li>
+<li>Keep a layer of indirection between the client input receiver and the system</li>
+<li>Manage a session from inside the trust boundary and not on the client</li>
+<li>Configure your internal system well and exclude by default</li>
+<li>Never encode secrets or functional variables in information sent to the client</li>
+</ul>
+<h3 id="The-biggest-threat-to-Web-Apps"><a href="#The-biggest-threat-to-Web-Apps" class="headerlink" title="The biggest threat to Web Apps"></a>The biggest threat to Web Apps</h3><ul>
+<li>Attack surface is higher</li>
+<li>Cross-site scripting (XSS)</li>
+<li>Cross-site request forgeries (CSRF)</li>
+<li>Remote file uploads • Buffer overflow</li>
+<li>SQL injection</li>
+</ul>
+<p><strong>具体的解决方法在课件 week6 page83</strong></p>
+<h1 id="week7-Threat-Modelling"><a href="#week7-Threat-Modelling" class="headerlink" title="week7 Threat Modelling"></a>week7 Threat Modelling</h1><h2 id="Threat-Modelling"><a href="#Threat-Modelling" class="headerlink" title="Threat Modelling"></a>Threat Modelling</h2><h3 id="Learning-Outcome-1"><a href="#Learning-Outcome-1" class="headerlink" title="Learning Outcome"></a>Learning Outcome</h3><ul>
+<li>Understand the basis of threat modelling.</li>
+<li>Describe the four step framework to threat modelling.</li>
+<li>Apply STRIDE to software design</li>
+</ul>
+<h3 id="Reasons-to-Threat-Model"><a href="#Reasons-to-Threat-Model" class="headerlink" title="Reasons to Threat Model"></a>Reasons to Threat Model</h3><ul>
+<li>Find security issues early.</li>
+<li>Understand your security requirements.</li>
+<li>Engineer and deliver better products.</li>
+<li>Address issues that other techniques won’t</li>
+</ul>
+<h3 id="The-Four-Step-Framework"><a href="#The-Four-Step-Framework" class="headerlink" title="The Four-Step Framework"></a>The Four-Step Framework</h3><ul>
+<li>Model System</li>
+<li>Find Threats</li>
+<li>Address Threats</li>
+<li>Validate</li>
+</ul>
+<h3 id="STRIDE-解决措施在-Page27"><a href="#STRIDE-解决措施在-Page27" class="headerlink" title="STRIDE(解决措施在 Page27)"></a>STRIDE(解决措施在 Page27)</h3><ul>
+<li>Spoofing.</li>
+<li>Tampering.</li>
+<li>Repudiation.</li>
+<li>Information Disclosure.</li>
+<li>Denial of Service</li>
+<li>Elevation of Privilege</li>
+</ul>
+<h3 id="take-against-a-threat"><a href="#take-against-a-threat" class="headerlink" title="take against a threat"></a>take against a threat</h3><ul>
+<li>Mitigate it</li>
+<li>Eliminate it</li>
+<li>Transfer it</li>
+<li>Accept it</li>
+</ul>
+<h2 id="Attack-Trees"><a href="#Attack-Trees" class="headerlink" title="Attack Trees"></a>Attack Trees</h2><h2 id="OAuth-Case-Study"><a href="#OAuth-Case-Study" class="headerlink" title="OAuth Case Study"></a>OAuth Case Study</h2><h3 id="Security-of-a-Web-Based-Application"><a href="#Security-of-a-Web-Based-Application" class="headerlink" title="Security of a Web Based Application"></a>Security of a Web Based Application</h3><p>There are three main points of concern to unpack with Oauth.</p>
+<ul>
+<li>Client</li>
+<li>Authentication Server</li>
+<li>Resource Server</li>
+</ul>
+<h4 id="Threats-Client"><a href="#Threats-Client" class="headerlink" title="Threats: Client"></a>Threats: Client</h4><ul>
+<li>Attack Surface: HTTP requests.</li>
+<li>Attack Surface: Downloadable information</li>
+<li>Attack Surface: Caching</li>
+<li>Attack Surface: user input.</li>
+<li>Attack Surface: forms</li>
+</ul>
+<h4 id="Threats-Authentication-Server"><a href="#Threats-Authentication-Server" class="headerlink" title="Threats: Authentication Server"></a>Threats: Authentication Server</h4><ul>
+<li>Attack Surface: login sessions</li>
+<li>Attack Surface: Non HTTP traffic</li>
+<li>Attack Surface: Denial of Service</li>
+<li>Attack Surface: Software Vulnerabilities</li>
+<li>Attack Surface: Phishing</li>
+</ul>
+<h4 id="Threats-Resource-Server"><a href="#Threats-Resource-Server" class="headerlink" title="Threats: Resource Server"></a>Threats: Resource Server</h4><ul>
+<li>Attack Surface: Illegitimate Requests</li>
+<li>Attack Surface: Database tools can be used by an insider.</li>
+</ul>
+<h4 id="以上的具体的解决措施-countermeasure-在-Week7-page100"><a href="#以上的具体的解决措施-countermeasure-在-Week7-page100" class="headerlink" title="以上的具体的解决措施 countermeasure 在 Week7 page100"></a>以上的具体的解决措施 countermeasure 在 Week7 page100</h4><h3 id=""><a href="#" class="headerlink" title=""></a></h3><h1 id="Week8-Vulnerability-Mapping"><a href="#Week8-Vulnerability-Mapping" class="headerlink" title="Week8 Vulnerability Mapping"></a>Week8 Vulnerability Mapping</h1><h2 id="Objectives-1"><a href="#Objectives-1" class="headerlink" title="Objectives"></a>Objectives</h2><ul>
+<li>Constructing use cases and misuse cases for the system</li>
+<li>How to document the system and identify security issues at a high level</li>
+<li>Mapping system vulnerability according to the design</li>
+<li>Identifying where mitigation and security techniques are needed from the design perspective</li>
+<li>Finalising the complete business specification of the system</li>
+</ul>
+<h2 id="Learning-outcome"><a href="#Learning-outcome" class="headerlink" title="Learning outcome"></a>Learning outcome</h2><ul>
+<li>Construct use case and misuse case diagrams</li>
+<li>Identifying overlapping security concerns in a use case overview diagram</li>
+<li>Construct supporting documents in UML with the addition of security concerns</li>
+<li>Identify and prioritize system vulnerabilities</li>
+<li>Manage the required documentation to provide a complete business specification of the system</li>
+</ul>
+<h2 id="Use-Case"><a href="#Use-Case" class="headerlink" title="Use Case"></a>Use Case</h2><h2 id="Mapping-Misuse-Cases"><a href="#Mapping-Misuse-Cases" class="headerlink" title="Mapping Misuse Cases"></a>Mapping Misuse Cases</h2><h2 id="Knowing-your-boundaries"><a href="#Knowing-your-boundaries" class="headerlink" title="Knowing your boundaries"></a>Knowing your boundaries</h2><h2 id="Case-study"><a href="#Case-study" class="headerlink" title="Case study"></a>Case study</h2><h3 id="Threats"><a href="#Threats" class="headerlink" title="Threats"></a>Threats</h3><ul>
+<li>A1. The customer is an impostor and opens an account in the name of another person</li>
+<li>A2. The customer provides false information and opens an spurious account</li>
+<li>A3. The manager is an impostor and collects data illegally</li>
+<li>A4. The manager collects customer information to use illegally</li>
+<li>A5. The manager creates a spurious account with the customer’s information</li>
+<li>A6. The manager creates a spurious authorization card to access the account</li>
+<li>A7. An attacker tries to prevent the customers to access their accounts (denial of service)</li>
+<li>A8. An attacker tries to move money from an account to her own account</li>
+</ul>
+<h3 id="Threats-Mitigation"><a href="#Threats-Mitigation" class="headerlink" title="Threats Mitigation"></a>Threats Mitigation</h3><ul>
+<li>A1. A3: Mutual authentication. Every interaction across system nodes is authenticated. •</li>
+<li>A2: Verify source of information. •</li>
+<li>A4: Logging. Since the manager is using his legitimate rights we can only log his actions for auditing at a later time.</li>
+<li>A5. A6: Separation of administration from use of data. For example, a manager can create accounts but should have no rights to withdraw or deposit money in the account.</li>
+<li>A7: Protection against denial of service. We need some redundancy in the system to increase its availability. Intrusion detection and filtering policies should also be useful.</li>
+<li>A8: Authorisation. If the user is not explicitly authorised he&#x2F;she should not be able to move money from any account</li>
+</ul>
+<h1 id="Week9-Access-Control-amp-Network-Security"><a href="#Week9-Access-Control-amp-Network-Security" class="headerlink" title="Week9 Access Control &amp; Network Security"></a>Week9 Access Control &amp; Network Security</h1><h2 id="Outline-2"><a href="#Outline-2" class="headerlink" title="Outline"></a>Outline</h2><ul>
+<li>Access control</li>
+<li>CAPTCHA</li>
+<li>Multi-factor Authentication</li>
+<li>Firewalls</li>
+<li>Http ACK Scan</li>
+<li>Packet Filter</li>
+<li>Signature-based detection</li>
+<li>IDS etc</li>
+</ul>
+<h2 id="CAPTCHA"><a href="#CAPTCHA" class="headerlink" title="CAPTCHA"></a>CAPTCHA</h2><p>Types of CAPTCHAs</p>
+<ul>
+<li>Visual<ul>
+<li>Like previous example</li>
+<li>Many others</li>
+</ul>
+</li>
+<li>Audio<ul>
+<li>Distorted words or music</li>
+</ul>
+</li>
+</ul>
+<h2 id="Multi-factor-Authentication"><a href="#Multi-factor-Authentication" class="headerlink" title="Multi-factor Authentication"></a>Multi-factor Authentication</h2><h3 id="Cons"><a href="#Cons" class="headerlink" title="Cons"></a>Cons</h3><ul>
+<li>Inconvenient</li>
+<li>Extra time to log in</li>
+<li>Can’t log in without device (dead battery&#x2F; forgot)</li>
+<li>Can cause issues with applications depending on implementation</li>
+</ul>
+<h3 id="Some-other-Access-Controls"><a href="#Some-other-Access-Controls" class="headerlink" title="Some other Access Controls"></a>Some other Access Controls</h3><ul>
+<li>Finger-Print (Biometric)</li>
+<li>Face recognition</li>
+<li>Iris</li>
+<li>Behavioural Biometrics (Speech, movements)</li>
+<li>Ear-shaped Biometrics</li>
+</ul>
+<h2 id="Firewalls"><a href="#Firewalls" class="headerlink" title="Firewalls"></a>Firewalls</h2><ul>
+<li>Firewall must determine what to let into internal network and&#x2F;or what to let out</li>
+<li>Access control for the network</li>
+</ul>
+<h3 id="Types-of-firewalls"><a href="#Types-of-firewalls" class="headerlink" title="Types of firewalls"></a>Types of firewalls</h3><ul>
+<li>Packet filter — works at network layer</li>
+<li>Stateful packet filter — transport layer</li>
+<li>Application proxy — application layer</li>
+<li>Personal firewall — for single user, home network, etc</li>
+</ul>
+<h2 id="Intrusion-Detection-Systems-IDS"><a href="#Intrusion-Detection-Systems-IDS" class="headerlink" title="Intrusion Detection Systems(IDS)"></a>Intrusion Detection Systems(IDS)</h2><h3 id="Intrusion-detection-approaches"><a href="#Intrusion-detection-approaches" class="headerlink" title="Intrusion detection approaches"></a>Intrusion detection approaches</h3><ul>
+<li>Signature(Pattern)-based IDS</li>
+<li>Anomaly-based IDS</li>
+</ul>
+<h3 id="Intrusion-detection-architectures"><a href="#Intrusion-detection-architectures" class="headerlink" title="Intrusion detection architectures"></a>Intrusion detection architectures</h3><ul>
+<li>Host-based IDS</li>
+<li>Network-based IDS</li>
+</ul>
+<h3 id="Signature-Detection"><a href="#Signature-Detection" class="headerlink" title="Signature Detection"></a>Signature Detection</h3><h3 id="Anomaly-Detection"><a href="#Anomaly-Detection" class="headerlink" title="Anomaly Detection"></a>Anomaly Detection</h3><h1 id="Week10-GDPR"><a href="#Week10-GDPR" class="headerlink" title="Week10 GDPR"></a>Week10 GDPR</h1><h2 id="Biometric-Recognition-Multi-factor-Authentication"><a href="#Biometric-Recognition-Multi-factor-Authentication" class="headerlink" title="Biometric Recognition Multi-factor Authentication"></a>Biometric Recognition Multi-factor Authentication</h2><h3 id="Types-of-Biometrics"><a href="#Types-of-Biometrics" class="headerlink" title="Types of Biometrics"></a>Types of Biometrics</h3><ul>
+<li>Biological (Physical)<ul>
+<li>Finger</li>
+<li>Face</li>
+<li>Iris</li>
+</ul>
+</li>
+<li>Behavioural</li>
+</ul>
+<h3 id="Benefits"><a href="#Benefits" class="headerlink" title="Benefits"></a>Benefits</h3><ul>
+<li>Convenient</li>
+<li>No tokens, cards or fobs to lose or misplace</li>
+<li>No memorization required</li>
+<li>Difficult to lend</li>
+<li>High user acceptance (touch ID, face ID)</li>
+<li>Secure enough for authentication</li>
+</ul>
+<h2 id="What-CISO-Need-to-know-before-Adopting-Biometrics"><a href="#What-CISO-Need-to-know-before-Adopting-Biometrics" class="headerlink" title="What CISO Need to know before Adopting Biometrics"></a>What CISO Need to know before Adopting Biometrics</h2><ul>
+<li>Risk assessment, policy, GDPR compliance</li>
+<li>Architectural decisions i.e., is fingerprint reader installed on location or passed over a network?</li>
+<li>Secure devices will store biometrics through measures.. <strong>What measures?</strong></li>
+<li>Biometric is a personally identifiable information</li>
+<li>complexity</li>
+<li>Compliance i.e., US 1974 ACT PII Management practices</li>
+<li><strong>Use as single primary factor?</strong></li>
+</ul>
+<h2 id="issues-of-health-insurance-on-line-website"><a href="#issues-of-health-insurance-on-line-website" class="headerlink" title="issues of health insurance on-line website"></a>issues of health insurance on-line website</h2><ul>
+<li>Special category data need extra approval, e.g. ethnic group and health data</li>
+<li>Data Consent needs to be separate</li>
+<li>Not all staff need to see data, only specific roles, more chance of conflict</li>
+<li>No time specified for how long to keep</li>
+<li>No clear purpose for sharing data, can’t be shared outside the EU</li>
+<li>No details of reason for keeping personal data</li>
+<li>No mention of keep accurate</li>
+</ul>
+<h2 id="How-to-Fix"><a href="#How-to-Fix" class="headerlink" title="How to Fix"></a>How to Fix</h2><ul>
+<li>Move consent to separate page</li>
+<li>Create user roles with access to only the data required</li>
+<li>Determine a retention period (how long to keep data after customer leaves)</li>
+<li>No clear purpose for sharing data, can’t be shared outside the EU -Review partners are in EU</li>
+<li>Determine reason for use of personal data</li>
+<li>Create process to keep accurate</li>
+</ul>
+<h1 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h1><h2 id="Vulnerabilities-and-Threats-1"><a href="#Vulnerabilities-and-Threats-1" class="headerlink" title="Vulnerabilities and Threats"></a>Vulnerabilities and Threats</h2><p>Lack of input validation</p>
+<p>Insecure configuration management</p>
+<p>Lack of bounds checking on array and buffers</p>
+<p>Unintentional disclosure</p>
  
       </div>
       <hr />
@@ -599,7 +750,7 @@ class">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://twistzz-xjtlu.github.io/2023/04/18/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%93%88%E5%B8%8C%E8%A1%A8/">https://twistzz-xjtlu.github.io/2023/04/18/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%93%88%E5%B8%8C%E8%A1%A8/</a>
+                    <a href="https://twistzz-xjtlu.github.io/2023/04/26/COMPSCI5104-Secured-Software-Engineering-for-MSc/">https://twistzz-xjtlu.github.io/2023/04/26/COMPSCI5104-Secured-Software-Engineering-for-MSc/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -637,20 +788,8 @@ class">
           
           <div class="article-tag">
             
-            <a href="/tags/%E7%AE%97%E6%B3%95/">
-              <span class="chip bg-color">算法</span>
-            </a>
-            
-            <a href="/tags/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/">
-              <span class="chip bg-color">代码随想录</span>
-            </a>
-            
-            <a href="/tags/python/">
-              <span class="chip bg-color">python</span>
-            </a>
-            
-            <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-              <span class="chip bg-color">哈希表</span>
+            <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+              <span class="chip bg-color">研究生</span>
             </a>
             
           </div>
@@ -720,17 +859,18 @@ class">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/04/20/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                <a href="/2023/04/26/COMPSCI5104-Secured-Software-Engineering-for-MSc/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="代码随想录-字符串">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="COMPSCI5104 Secured Software Engineering for MSc">
                         
-                        <span class="card-title">代码随想录-字符串</span>
+                        <span class="card-title">COMPSCI5104 Secured Software Engineering for MSc</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -740,42 +880,27 @@ class">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-26
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/LeetCode/" class="post-category">
-                                    LeetCode
-                                </a>
-                            
-                            <a href="/categories/LeetCode/Learn/" class="post-category">
-                                    Learn
+                            <a href="/categories/MSc/" class="post-category">
+                                    MSc
                                 </a>
                             
                             
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">算法</span>
-                    </a>
-                    
-                    <a href="/tags/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95/">
-                        <span class="chip bg-color">代码随想录</span>
-                    </a>
-                    
-                    <a href="/tags/python/">
-                        <span class="chip bg-color">python</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                        <span class="chip bg-color">字符串</span>
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                        <span class="chip bg-color">研究生</span>
                     </a>
                     
                 </div>
@@ -789,13 +914,13 @@ class">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/04/17/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E9%93%BE%E8%A1%A8/">
+                <a href="/2023/04/21/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%8F%8C%E6%8C%87%E9%92%88/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="代码随想录_链表">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="代码随想录-双指针">
                         
-                        <span class="card-title">代码随想录_链表</span>
+                        <span class="card-title">代码随想录-双指针</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -806,7 +931,7 @@ class">
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-21
                             </span>
                         <span class="publish-author">
                             
@@ -839,8 +964,8 @@ class">
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E9%93%BE%E8%A1%A8/">
-                        <span class="chip bg-color">链表</span>
+                    <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
+                        <span class="chip bg-color">双指针</span>
                     </a>
                     
                 </div>
