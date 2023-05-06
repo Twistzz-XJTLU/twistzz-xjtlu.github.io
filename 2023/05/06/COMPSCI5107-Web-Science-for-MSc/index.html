@@ -1,0 +1,2103 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="COMPSCI5107 Web Science for MSc, Twistzz&#39;Blog">
+    <meta name="description" content="web scienceL1 Twitter DataImportance of Twitter dataTwitter Data AccessSocial sensor
+If we can remove noise, then we can">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>COMPSCI5107 Web Science for MSc | Twistzz&#39;Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Twistzz&#39;Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Twistzz&#39;Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">COMPSCI5107 Web Science for MSc</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+  <div class="card">
+    <div class="card-content article-info">
+      <div class="row tag-cate">
+        <div class="col s7">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+              <span class="chip bg-color">研究生</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div class="col s5 right-align">
+          
+          <div class="post-cate">
+            <i class="fas fa-bookmark fa-fw icon-category"></i>
+            
+            <a href="/categories/MSc/" class="post-category">
+              MSc
+            </a>
+            
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="post-info">
+        
+        <div class="post-date info-break-policy">
+          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2023-05-06
+        </div>
+         
+        <div class="post-date info-break-policy">
+          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-05-06
+        </div>
+         
+        <div class="info-break-policy">
+          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 15k
+        </div>
+         
+        <div class="info-break-policy">
+          <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+          67 分
+        </div>
+         
+        <div id="busuanzi_container_page_pv" class="info-break-policy">
+          <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+          <span id="busuanzi_value_page_pv"></span>
+        </div>
+        
+      </div>
+    </div>
+    <hr class="clearfix" />
+
+    
+    <!-- 是否加载使用自带的 prismjs. -->
+    <link
+      rel="stylesheet"
+      href="/libs/prism/prism.min.css"
+    />
+     
+
+    <div class="card-content article-card-content">
+      <div id="articleContent">
+        <h1 id="web-science"><a href="#web-science" class="headerlink" title="web science"></a>web science</h1><h1 id="L1-Twitter-Data"><a href="#L1-Twitter-Data" class="headerlink" title="L1 Twitter Data"></a>L1 Twitter Data</h1><h2 id="Importance-of-Twitter-data"><a href="#Importance-of-Twitter-data" class="headerlink" title="Importance of Twitter data"></a>Importance of Twitter data</h2><h2 id="Twitter-Data-Access"><a href="#Twitter-Data-Access" class="headerlink" title="Twitter Data Access"></a>Twitter Data Access</h2><p><strong>Social sensor</strong></p>
+<p>If we can remove noise, then we can use Tweets as social sensors</p>
+<h2 id="Twitter-Data-Structure"><a href="#Twitter-Data-Structure" class="headerlink" title="Twitter Data Structure"></a>Twitter Data Structure</h2><h3 id="User-Profile"><a href="#User-Profile" class="headerlink" title="User Profile"></a>User Profile</h3><h3 id="Tweet-Object"><a href="#Tweet-Object" class="headerlink" title="Tweet Object"></a>Tweet Object</h3><ul>
+<li><p><strong>Tweet object</strong></p>
+</li>
+<li><p><strong>User object</strong></p>
+</li>
+<li><p><strong>Entities object</strong>: Arrays of hashtags, user mentions, URLs, and native media</p>
+</li>
+<li><p><strong>Extended entities object</strong></p>
+</li>
+<li><p><strong>Geo object: geo information if enable</strong></p>
+</li>
+</ul>
+<p>User location can be extracted from the user field of the user profile</p>
+<h3 id="Type-of-location-information"><a href="#Type-of-location-information" class="headerlink" title="Type of location information"></a>Type of location information</h3><ul>
+<li>Location information given by the user</li>
+<li>Location information inferred by Twitter software</li>
+<li>Geo-Location captured from the devices</li>
+</ul>
+<p><strong>User location can be extracted from the user field of the user profile</strong></p>
+<p>Gazetter – get a location string as input and returns the coordinates of the location that best correspond to the string</p>
+<p>Online Gazetteers – Bing, Google, MapQuest</p>
+<h1 id="L2-Data-Clustering"><a href="#L2-Data-Clustering" class="headerlink" title="L2 Data Clustering"></a>L2 Data Clustering</h1><h2 id="Twitter-Data-Access-1"><a href="#Twitter-Data-Access-1" class="headerlink" title="Twitter Data Access"></a>Twitter Data Access</h2><ul>
+<li>Streaming API</li>
+<li>REST API</li>
+</ul>
+<h3 id="tweepy"><a href="#tweepy" class="headerlink" title="tweepy"></a>tweepy</h3><h2 id="Content-processing"><a href="#Content-processing" class="headerlink" title="Content processing"></a>Content processing</h2><p>Non-ascii removal</p>
+<h3 id="Processing-data"><a href="#Processing-data" class="headerlink" title="Processing data"></a>Processing data</h3><h4 id="Grouping-tweets"><a href="#Grouping-tweets" class="headerlink" title="Grouping tweets"></a>Grouping tweets</h4><p>Based on content analysis like</p>
+<ul>
+<li>Clustering, locality sensitive hashing</li>
+<li>Or through content indexes</li>
+</ul>
+<h4 id="Once-we-know-the-groups"><a href="#Once-we-know-the-groups" class="headerlink" title="Once we know the groups"></a>Once we know the groups</h4><ul>
+<li>We could analyse the words, user mentions, hashtags in these groups</li>
+<li>We can add these terms to a list with a priority</li>
+<li>This is possibly for identifying more tweets of this type<ul>
+<li>Aim is data gathering</li>
+</ul>
+</li>
+</ul>
+<h4 id="We-can-also-look-at-proficient-tweeters"><a href="#We-can-also-look-at-proficient-tweeters" class="headerlink" title="We can also look at proficient tweeters"></a>We can also look at proficient tweeters</h4><ul>
+<li>What are their total tweets</li>
+</ul>
+<h3 id="analysing-tweets-–-content-processing"><a href="#analysing-tweets-–-content-processing" class="headerlink" title="analysing tweets – content processing"></a>analysing tweets – content processing</h3><h4 id="tokenization"><a href="#tokenization" class="headerlink" title="tokenization"></a>tokenization</h4><ul>
+<li>Separate each token</li>
+<li>Remove stopwords</li>
+</ul>
+<h4 id="Vector-representation"><a href="#Vector-representation" class="headerlink" title="Vector representation"></a>Vector representation</h4><h2 id="Finding-similar-tweets"><a href="#Finding-similar-tweets" class="headerlink" title="Finding similar tweets"></a>Finding similar tweets</h2><h3 id="Similar-document"><a href="#Similar-document" class="headerlink" title="Similar document"></a>Similar document</h3><ul>
+<li>The most relevant documents for a query are expected to be those represented by the vectors closest to the query, that is documents that use similar words to the query.</li>
+<li>Closeness is often calculated by just looking at angles between document vector and query vector</li>
+</ul>
+<h3 id="similarity-measure"><a href="#similarity-measure" class="headerlink" title="similarity measure"></a>similarity measure</h3><ul>
+<li><p>Cosine Similarity Measure</p>
+</li>
+<li><p>Dice coefficient</p>
+</li>
+<li><p>Jaccard coefficient</p>
+</li>
+</ul>
+<h3 id="normalised-vector"><a href="#normalised-vector" class="headerlink" title="normalised vector"></a>normalised vector</h3><h3 id="what-we-have"><a href="#what-we-have" class="headerlink" title="what we have"></a>what we have</h3><ul>
+<li>Large stream of tweet</li>
+<li>Short in length</li>
+<li>Noisy in nature</li>
+</ul>
+<p>So the processing should be</p>
+<ul>
+<li>Fast</li>
+<li>robus</li>
+</ul>
+<h3 id="Single-pass-clustering"><a href="#Single-pass-clustering" class="headerlink" title="Single-pass clustering"></a>Single-pass clustering</h3><p>At every stage, the algorithm decides on whether a newly seen document should become a member of an already defined cluster or the centre of a new one.</p>
+<h3 id="How-to-group-tweets"><a href="#How-to-group-tweets" class="headerlink" title="How to group tweets"></a>How to group tweets</h3><p><strong>具体的在 L2 42 页</strong></p>
+<h2 id="Cluster-centroids"><a href="#Cluster-centroids" class="headerlink" title="Cluster centroids"></a>Cluster centroids</h2><h1 id="L3-Credibility-amp-Newsworthiness"><a href="#L3-Credibility-amp-Newsworthiness" class="headerlink" title="L3 Credibility &amp; Newsworthiness"></a>L3 Credibility &amp; Newsworthiness</h1><h2 id="How-to-identify-them-automatically"><a href="#How-to-identify-them-automatically" class="headerlink" title="How to identify them automatically?"></a>How to identify them automatically?</h2><p><strong>Distant supervision approach</strong></p>
+<p>远程监督是一个高效的标注方法，可以自动标注大量的语料库。它通常用于自然语言处理任务，例如命名实体识别、关系提取、情感分析等。然而，远程监督也存在一些缺点，例如标注的噪声问题，即算法可能会将一些与实体无关的句子错误地标注为与实体相关。</p>
+<p>为了自动识别新闻价值，研究人员和从业者开发了各种技术和方法。一种流行的方法是远程监督，它涉及使用现有的新闻来源或元数据作为监督来源，以自动将其他文档标记为具有新闻价值或不具有新闻价值。</p>
+<p>远程监督（Distant Supervision）是一种自动化机器学习方法，它使用外部标记信息来训练模型，从而避免了手动标记数据的复杂和费用时。远程监督可以应用于各种自然语言处理任务，如命名实体识别、情感分析、关系提取等。</p>
+<p>在远程监控中，外部标记信息通常是从外部知识库或数据源中自动提取的。物理关系作用为外部标记信息，从而避免免手动标记大量的训练数据。</p>
+<h2 id="remove-noisy-text"><a href="#remove-noisy-text" class="headerlink" title="remove noisy text"></a>remove noisy text</h2><ul>
+<li><p>Spammers</p>
+</li>
+<li><p>Marketers</p>
+</li>
+<li><p>No substance</p>
+</li>
+<li><p>Helps in downstream applications like event detection</p>
+</li>
+<li><p>Event detection approaches (future lecture) will work on</p>
+<ul>
+<li>require fewer tweets</li>
+</ul>
+</li>
+</ul>
+<h2 id="challenge"><a href="#challenge" class="headerlink" title="challenge"></a>challenge</h2><ul>
+<li>Unstructured tweets</li>
+<li>Informal nature</li>
+<li>Unpredictable nature of news</li>
+</ul>
+<h2 id="Newsworthy"><a href="#Newsworthy" class="headerlink" title="Newsworthy"></a>Newsworthy</h2><p>A tweet is newsworthy If it discusses a topic that is of interest to news media</p>
+<h3 id="Key-characteristics-of-newsworthy-score"><a href="#Key-characteristics-of-newsworthy-score" class="headerlink" title="Key characteristics of newsworthy score"></a>Key characteristics of newsworthy score</h3><ul>
+<li>Real-time</li>
+<li>Generalizability</li>
+<li>Adaptive</li>
+</ul>
+<h3 id="How-do-we-do-this"><a href="#How-do-we-do-this" class="headerlink" title="How do we do this"></a>How do we do this</h3><ul>
+<li>Classification approach<ul>
+<li>If we have a manually annotated data set, ..</li>
+</ul>
+</li>
+<li>Distant supervision<ul>
+<li>Training data is identified in real-time using a set of heuristics</li>
+</ul>
+</li>
+</ul>
+<h3 id="Heuristic-Labelling"><a href="#Heuristic-Labelling" class="headerlink" title="Heuristic Labelling"></a>Heuristic Labelling</h3><p>Semi-automatic labelling approach</p>
+<ul>
+<li>Using a set of heuristics to label<ul>
+<li>High quality (newsworthy) and low quality (noisy) content</li>
+</ul>
+</li>
+<li>This will not label majority of the content</li>
+</ul>
+<h4 id="Advantages"><a href="#Advantages" class="headerlink" title="Advantages"></a>Advantages</h4><ul>
+<li>Minimal effort in creating a data set</li>
+<li>Real-life data set – incremental and generalizable</li>
+<li>Easily built as part of an algorithm for example event detection</li>
+</ul>
+<h3 id="Overall-approach"><a href="#Overall-approach" class="headerlink" title="Overall approach"></a>Overall approach</h3><ul>
+<li>Collect a set of high-quality sets and low-quality sets of data</li>
+<li>Use this dataset to potentially score a newsworthy tweet</li>
+</ul>
+<h2 id="Features-to-use"><a href="#Features-to-use" class="headerlink" title="Features to use"></a>Features to use</h2><ul>
+<li><p>profile: descriptionWeight</p>
+</li>
+<li><p>Account Age: accountAgeWeight</p>
+</li>
+<li><p>Number of Followers: followersWeight</p>
+</li>
+<li><p>User verified status: verifiedWeight</p>
+</li>
+<li><p>Has default profile Image : profileWeight</p>
+</li>
+</ul>
+<h3 id="Quality-Score"><a href="#Quality-Score" class="headerlink" title="Quality Score"></a>Quality Score</h3><p>qualityScore &#x3D; (profileWeight + verifiedWeight + followersWeight + accountAgeWeight + descriptionWeight)&#x2F;5</p>
+<p>Range is [0 to 1]</p>
+<p>How to select high quality scores - thresholding</p>
+<p>If qualityScore &gt; 0.65 ?</p>
+<ul>
+<li>High quality text</li>
+</ul>
+<p>If qualityScore &lt; 0.45?</p>
+<ul>
+<li>Low-quality text</li>
+</ul>
+<h2 id="Scoring-model"><a href="#Scoring-model" class="headerlink" title="Scoring model"></a>Scoring model</h2><h3 id="Newsworthiness-scoring"><a href="#Newsworthiness-scoring" class="headerlink" title="Newsworthiness scoring"></a>Newsworthiness scoring</h3><ul>
+<li>Documents are arriving sequentially<ul>
+<li>Background document model &#x3D; a set of randomly created documents</li>
+</ul>
+</li>
+<li>High quality Model<ul>
+<li>all documents in high quality text</li>
+</ul>
+</li>
+<li>Low quality Model<ul>
+<li>All documents in low quality text</li>
+</ul>
+</li>
+<li>Let us define likelihood ratio for each term •</li>
+<li>R(t) &#x3D; relative importance of term in the particular quality model when compared to random background model •</li>
+<li>&gt; 1 • Term is more common in the model than random</li>
+<li>&lt; 1 • Term is less common in the model than random</li>
+</ul>
+<pre class="line-numbers language-none"><code class="language-none">这段文本描述了一种场景，其中文档是按顺序到达的，而且有两个不同的文档质量模型：高质量文本模型和低质量文本模型。这些文本模型是事先随机生成的，其中高质量模型中的所有文档都是高质量文本，低质量模型中的所有文档都是低质量文本。
+
+此外，每个术语都有一个相对于随机背景模型的似然比值（likelihood ratio），表示该术语在特定质量模型中的相对重要性。如果一个术语的似然比大于1，则该术语在该模型中比随机模型中更常见，反之亦然。换句话说，这个值可以用来衡量一个术语在特定质量模型中的特异性或独特性，以及它在随机背景模型中的一般性或普遍性。
+
+在文档到达时，可以使用这些似然比值来评估文档中的术语相对于两个模型的重要性或相关性，以确定文档是高质量文本还是低质量文本。例如，如果一个文档包含很多在高质量模型中具有较高似然比的术语，则可以假定该文档是高质量文本。反之，如果一个文档包含很多在低质量模型中具有较高似然比的术语，则可以假定该文档是低质量文本。<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="Newsworthiness-score"><a href="#Newsworthiness-score" class="headerlink" title="Newsworthiness score"></a>Newsworthiness score</h4><p><strong>documents are newsworthy if we have a positive nScore</strong></p>
+<p><strong>qualityScore 就是用来分类 分出来高质量和低质量</strong></p>
+<p><strong>然后再根据高质量和低质量数据集和模型计算 newsworthiness score 看看是否有价值</strong></p>
+<h1 id="L4-Geo-Localisation"><a href="#L4-Geo-Localisation" class="headerlink" title="L4- Geo Localisation"></a>L4- Geo Localisation</h1><h2 id="Geo-location-of-a-tweet"><a href="#Geo-location-of-a-tweet" class="headerlink" title="Geo-location of a tweet"></a>Geo-location of a tweet</h2><ul>
+<li>Profile of the user<ul>
+<li>User location can be extracted from the location field of the user profile</li>
+</ul>
+</li>
+<li>If geo_enabled &#x3D;true<ul>
+<li>Coordinates &#x3D; {long, Lat}</li>
+</ul>
+</li>
+</ul>
+<h3 id="If-we-know-the-location-of-a-tweet-we-could"><a href="#If-we-know-the-location-of-a-tweet-we-could" class="headerlink" title="If we know the location of a tweet, we could"></a>If we know the location of a tweet, we could</h3><ul>
+<li><p>Better understanding of an urban area</p>
+<ul>
+<li>Tracking the way virus spreads</li>
+<li>The identification of people that need help in case of disaster</li>
+<li>better understanding the dynamics of a major event</li>
+</ul>
+</li>
+<li><p>mainly to gather <strong>Actionable insights!</strong></p>
+<ul>
+<li>Application and requirements<ul>
+<li>Transport tweets vs. financial tweets</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Location of the user</p>
+<ul>
+<li>Location that has to be estimated is the location of origin of the user •<ul>
+<li>Benefits - marketing</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Location of the tweet</p>
+<ul>
+<li>From where a particular tweet was posted<ul>
+<li>Benefits – what is happening?</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="applications"><a href="#applications" class="headerlink" title="applications"></a>applications</h3><ul>
+<li>Topic detection<ul>
+<li>journalism</li>
+</ul>
+</li>
+<li>Disaster and emergency response<ul>
+<li>Security and emergency services</li>
+</ul>
+</li>
+</ul>
+<h3 id="Fine-grained-vs-coarse-grained"><a href="#Fine-grained-vs-coarse-grained" class="headerlink" title="Fine grained vs coarse grained"></a>Fine grained vs coarse grained</h3><h3 id="approach"><a href="#approach" class="headerlink" title="approach"></a>approach</h3><p>Train a model on a geo-tagged data set</p>
+<ul>
+<li>Validate and test on geo-tagged data</li>
+<li>Test on non-geo tagged data as well</li>
+</ul>
+<h2 id="Grid-based-Geo-localisation"><a href="#Grid-based-Geo-localisation" class="headerlink" title="Grid based Geo-localisation"></a>Grid based Geo-localisation</h2><p>In fact, we see a tweet without any coordinate information</p>
+<p>Can we predict its location</p>
+<p>Given a tweet</p>
+<ul>
+<li>Search for similar tweets<ul>
+<li>As in Google, Bing etc</li>
+</ul>
+</li>
+<li>Then we will assign location of its closest tweet(s)</li>
+</ul>
+<h3 id="Grid-based-approach"><a href="#Grid-based-approach" class="headerlink" title="Grid based approach"></a>Grid based approach</h3><ul>
+<li>Divide geographical space<ul>
+<li>areas&#x2F;grids</li>
+</ul>
+</li>
+<li>Represent tweets in those area as a concatenated vector<ul>
+<li>Consider it as a document</li>
+<li>Vector representation?</li>
+</ul>
+</li>
+<li>Given a tweet to localise, rank the grouped tweets</li>
+<li>Assign location of the most similar area</li>
+</ul>
+<h3 id="Vector-representation-for-a-tweet-amp-weighting"><a href="#Vector-representation-for-a-tweet-amp-weighting" class="headerlink" title="Vector representation for a tweet &amp; weighting"></a>Vector representation for a tweet &amp; weighting</h3><ul>
+<li>For each tweet,</li>
+<li>We create a vector representation<ul>
+<li>[‘#ReadForEmpathy’, ‘books’, ‘brilliant’, ‘excellent’, ‘idea’, ‘utterly’]</li>
+</ul>
+</li>
+<li>Term weighting</li>
+<li>Weighting</li>
+</ul>
+<p>具体的 TF-IDF 在 L4 38 页</p>
+<h2 id="Distance-between-points"><a href="#Distance-between-points" class="headerlink" title="Distance between points"></a>Distance between points</h2><p>Euclidean distance between two points</p>
+<p>Haversine distance</p>
+<h2 id="Geo-localization-technique"><a href="#Geo-localization-technique" class="headerlink" title="Geo-localization technique"></a>Geo-localization technique</h2><p><strong>An information retrieval approach</strong></p>
+<p>Overall approach</p>
+<ul>
+<li>Divide geographical area of interest into a grid of 1km squared areas and</li>
+<li>associate each geo-tagged tweet to an area based on its location</li>
+<li>Top-N content-based most similar geo-tagged tweet<ul>
+<li>Use retrieval models&#x2F;retrieval engine&#x2F;ranking engine</li>
+</ul>
+</li>
+<li>Combine evidence based on majority voting algorithm</li>
+</ul>
+<p>具体过程在 L04 56 页</p>
+<h3 id="When-you-get-a-new-tweet"><a href="#When-you-get-a-new-tweet" class="headerlink" title="When you get a new tweet"></a>When you get a new tweet</h3><h4 id="Given-a-new-tweet-to-geo-tag"><a href="#Given-a-new-tweet-to-geo-tag" class="headerlink" title="Given a new tweet to geo-tag"></a>Given a new tweet to geo-tag</h4><ul>
+<li>Find similar tweets</li>
+<li>Top document and the associated grid</li>
+<li>Assign that grid as tweets location</li>
+</ul>
+<h2 id="Granular-approach"><a href="#Granular-approach" class="headerlink" title="Granular approach"></a>Granular approach</h2><p>Instead of aggregating all the tweets in a grid, just consider all tweets individually</p>
+<h3 id="Given-a-tweet"><a href="#Given-a-tweet" class="headerlink" title="Given a tweet"></a>Given a tweet</h3><ul>
+<li>extract the text features</li>
+<li>Retrieve similar tweets<ul>
+<li>Not the document for a grid location !</li>
+</ul>
+</li>
+<li>Consider top-k tweets<ul>
+<li>They are the most similar ones to the given tweet based on the content</li>
+<li>Look at their geo -coordinates</li>
+<li>If they all point to same grid, assign that grid centroid as tweets location</li>
+<li>Otherwise<ul>
+<li>Just use the top ranked the tweet – assign its coordinates</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Voting-algorithms"><a href="#Voting-algorithms" class="headerlink" title="Voting algorithms"></a>Voting algorithms</h3><h3 id="Credibility-of-tweets"><a href="#Credibility-of-tweets" class="headerlink" title="Credibility of tweets"></a>Credibility of tweets</h3><h2 id="Evaluation-methodology"><a href="#Evaluation-methodology" class="headerlink" title="Evaluation methodology"></a>Evaluation methodology</h2><h3 id="Data-sets"><a href="#Data-sets" class="headerlink" title="Data sets"></a>Data sets</h3><p>Ground truth of English geo-tagged tweets</p>
+<h3 id="Data-split"><a href="#Data-split" class="headerlink" title="Data split"></a>Data split</h3><h3 id="Measures"><a href="#Measures" class="headerlink" title="Measures"></a>Measures</h3><ul>
+<li>Average Error distance – smaller the better!<ul>
+<li>Predicted location and the actual coordinates of the tweet in our ground truth</li>
+<li>Harvesine formula is used!</li>
+</ul>
+</li>
+<li>Accuracy@1km – higher the better</li>
+<li>Recall&#x2F;Coverage<ul>
+<li>Fraction of tweets in the test set that was geo-localised</li>
+</ul>
+</li>
+</ul>
+<h2 id="Bias"><a href="#Bias" class="headerlink" title="Bias"></a>Bias</h2><p>Let us pretend that</p>
+<ul>
+<li>we don’t know the ground truth for portion of such ground truth data</li>
+<li>Use that to compute measures</li>
+</ul>
+<p>we should use non-geo tagged tweets too</p>
+<h3 id="Distribution-of-tweets-over-the-grids"><a href="#Distribution-of-tweets-over-the-grids" class="headerlink" title="Distribution of tweets over the grids"></a>Distribution of tweets over the grids</h3><h3 id="Other-forms-of-inference"><a href="#Other-forms-of-inference" class="headerlink" title="Other forms of inference"></a>Other forms of inference</h3><p>Gazetter – get a location string as input and returns the coordinates of the location that best correspond to the string</p>
+<h1 id="L5-Topic-Modelling"><a href="#L5-Topic-Modelling" class="headerlink" title="L5 Topic Modelling"></a>L5 Topic Modelling</h1><h2 id="Background-x2F-motivation"><a href="#Background-x2F-motivation" class="headerlink" title="Background&#x2F;motivation"></a>Background&#x2F;motivation</h2><p>Each topic is a distribution over words</p>
+<p>Each document is a mixture of corpus-wide topic</p>
+<p>Each word is drawn from one of those topics</p>
+<p>Probabilistic topic models</p>
+<h3 id="latent"><a href="#latent" class="headerlink" title="latent"></a>latent</h3><p>a suite of algorithms that aim to discover and annotate large archives of documents of thematic information</p>
+<h2 id="Latent-Dirichlet-Allocation"><a href="#Latent-Dirichlet-Allocation" class="headerlink" title="Latent Dirichlet Allocation"></a>Latent Dirichlet Allocation</h2><p>An unsupervised generative probabilistic models</p>
+<h3 id="Our-goal-in-topic-modelling"><a href="#Our-goal-in-topic-modelling" class="headerlink" title="Our goal in topic modelling"></a>Our goal in topic modelling</h3><p>The goal of topic modelling is to automatically discover the topics in a collection of documents</p>
+<p>The central computation problem for topic modelling is to use the observed documents to infer hidden topic structure</p>
+<h3 id="Latent-Dirichlet-Allocation-LDA"><a href="#Latent-Dirichlet-Allocation-LDA" class="headerlink" title="Latent Dirichlet Allocation (LDA)"></a>Latent Dirichlet Allocation (LDA)</h3><p>Each document can be described by a distribution of topics and each topic can be described by a distribution of words</p>
+<p>具体过程在 L5 23 页</p>
+<h3 id="Topic-Modelling-Approaches"><a href="#Topic-Modelling-Approaches" class="headerlink" title="Topic Modelling Approaches"></a>Topic Modelling Approaches</h3><ul>
+<li>Number of possible topic structures is exponentially large</li>
+<li>Approximate the posterior distribution</li>
+<li>Topic modelling algorithms form an approximation of equation,<ul>
+<li>by adapting an alternative distribution over latent topic structure to be close to the true posterior</li>
+</ul>
+</li>
+</ul>
+<p>Two approaches</p>
+<ul>
+<li><p>Sampling based!</p>
+<ul>
+<li>Attempt to collect samples from the posterior to approximate it with an empirical distribution – Gibbs sampling!</li>
+</ul>
+</li>
+<li><p>Variational methods!</p>
+<ul>
+<li>Deterministic alternative to sampling based methods</li>
+<li>Posit a parametrised family of distributions over the hidden structure and then find the member of that family that is closest to the posterior</li>
+</ul>
+</li>
+</ul>
+<h3 id="Gibbs-Sampling"><a href="#Gibbs-Sampling" class="headerlink" title="Gibbs Sampling"></a>Gibbs Sampling</h3><h3 id="LDA-Process"><a href="#LDA-Process" class="headerlink" title="LDA Process"></a>LDA Process</h3><h2 id="Quality-of-Topics"><a href="#Quality-of-Topics" class="headerlink" title="Quality of Topics"></a>Quality of Topics</h2><ul>
+<li><p>Topic Models</p>
+</li>
+<li><p>Tag Clouds</p>
+</li>
+<li><p>Coherence – known as Umass Coherence score</p>
+</li>
+<li><p>K-L divergence</p>
+</li>
+</ul>
+<h3 id="Model-Selection"><a href="#Model-Selection" class="headerlink" title="Model Selection"></a>Model Selection</h3><h4 id="Perplexity"><a href="#Perplexity" class="headerlink" title="Perplexity"></a>Perplexity</h4><p>benchmarking</p>
+<h2 id="LDA-short-text-problems"><a href="#LDA-short-text-problems" class="headerlink" title="LDA short text problems"></a>LDA short text problems</h2><h3 id="Applying-LDA"><a href="#Applying-LDA" class="headerlink" title="Applying LDA"></a>Applying LDA</h3><h3 id="Short-text-topic-models"><a href="#Short-text-topic-models" class="headerlink" title="Short text topic models"></a>Short text topic models</h3><h3 id="Why-not-LDA"><a href="#Why-not-LDA" class="headerlink" title="Why not LDA?"></a>Why not LDA?</h3><ul>
+<li>LDA needs to be trained on the entire data sets<ul>
+<li>Memory requirements for the model</li>
+</ul>
+</li>
+<li>LDA is trained and tested on a data set<ul>
+<li>Time-sensitive nature of Twitter</li>
+</ul>
+</li>
+</ul>
+<h3 id="How-to-address-this-issue-…"><a href="#How-to-address-this-issue-…" class="headerlink" title="How to address this issue …?"></a>How to address this issue …?</h3><ul>
+<li>Enrich the word co -occurrence information<ul>
+<li>To enrich the limited word co -occurrence information contained in a single short text</li>
+</ul>
+</li>
+<li>Make larger texts by grouping short texts (tweets)<ul>
+<li>Grouping tweets by the authors</li>
+<li>However, this aggregation method highly depends on the meta -information of each text<ul>
+<li>which may not always be available for many kinds of short texts</li>
+</ul>
+</li>
+<li>Another strategy models the similarity between texts to aggregate similar texts into a long pseudo -document</li>
+</ul>
+</li>
+<li>Explicit text similarity</li>
+</ul>
+<h3 id="Tweet-Aggregation"><a href="#Tweet-Aggregation" class="headerlink" title="Tweet Aggregation"></a>Tweet Aggregation</h3><p>Assumption</p>
+<ul>
+<li>Aggregate all tweets<ul>
+<li>published by the same user in the same slice</li>
+</ul>
+</li>
+<li>Calculate cosine similarity between the document vectors – tf-idf vector</li>
+<li>Aggregate the documents whose similarity is greater than a pre-defined threshold</li>
+</ul>
+<h1 id="L6Network-Analysis"><a href="#L6Network-Analysis" class="headerlink" title="L6Network Analysis"></a>L6Network Analysis</h1><h2 id="Graph-approaches"><a href="#Graph-approaches" class="headerlink" title="Graph approaches"></a>Graph approaches</h2><p>Centrality Measures</p>
+<ul>
+<li>Degree centrality</li>
+<li>Closeness centrality</li>
+<li>Graph centrality</li>
+<li>Betweenness centrality</li>
+<li>Page-rank centrality</li>
+</ul>
+<h2 id="Graph-modelling"><a href="#Graph-modelling" class="headerlink" title="Graph modelling"></a>Graph modelling</h2><h3 id="Why-graph-analysis"><a href="#Why-graph-analysis" class="headerlink" title="Why graph analysis"></a>Why graph analysis</h3><p>By analyzing tweet data, we can ask many questions</p>
+<ul>
+<li>Who is most important in a network?</li>
+<li>How did the information flow?</li>
+<li>How could we reach 50% of the graph?</li>
+<li>Who is more influential?</li>
+<li>What are people talking about?</li>
+<li>How are they responding to a product</li>
+</ul>
+<h3 id="Centrality-measures"><a href="#Centrality-measures" class="headerlink" title="Centrality measures"></a>Centrality measures</h3><ul>
+<li>In-Degree Centrality</li>
+<li>Eigenvector centrality</li>
+<li>Betweenness Centrality</li>
+</ul>
+<h1 id="L7-Retweet-Graph-Trend-amp-Influencers"><a href="#L7-Retweet-Graph-Trend-amp-Influencers" class="headerlink" title="L7 Retweet Graph - Trend &amp; Influencers"></a>L7 Retweet Graph - Trend &amp; Influencers</h1><h3 id="Information-diffusion"><a href="#Information-diffusion" class="headerlink" title="Information diffusion"></a>Information diffusion</h3><p>in online communities, tracking the information diffusion is useful for many applications, for example</p>
+<ul>
+<li>such as early warning systems,</li>
+<li>social bot and community detection,</li>
+<li>user location prediction,</li>
+<li>financial recommendations,</li>
+<li>marketing campaign effectiveness</li>
+<li>political mobilization and protests</li>
+</ul>
+<h2 id="Hashtags-amp-mentions"><a href="#Hashtags-amp-mentions" class="headerlink" title="Hashtags &amp; mentions"></a>Hashtags &amp; mentions</h2><p>Hash tags tend to travel to more distant parts of the network and</p>
+<p>URLs travel shorter distances.</p>
+<h2 id="Modelling-trends"><a href="#Modelling-trends" class="headerlink" title="Modelling trends"></a>Modelling trends</h2><h3 id="Largest-connected-component-LCC"><a href="#Largest-connected-component-LCC" class="headerlink" title="Largest connected component - LCC"></a>Largest connected component - LCC</h3><p>具体 L7 20 页</p>
+<h2 id="Information-diffusion-amp-influencers"><a href="#Information-diffusion-amp-influencers" class="headerlink" title="Information diffusion &amp; influencers"></a>Information diffusion &amp; influencers</h2><h4 id="influencer"><a href="#influencer" class="headerlink" title="influencer"></a>influencer</h4><h3 id="Approach-Generating-Retweet-Cascade-Graphs"><a href="#Approach-Generating-Retweet-Cascade-Graphs" class="headerlink" title="Approach - Generating Retweet Cascade Graphs"></a>Approach - Generating Retweet Cascade Graphs</h3><h1 id="L8-Health-Analytics"><a href="#L8-Health-Analytics" class="headerlink" title="L8 Health Analytics"></a>L8 Health Analytics</h1><h2 id="Graph-modelling-1"><a href="#Graph-modelling-1" class="headerlink" title="Graph modelling"></a>Graph modelling</h2><p>WHAT IS INTERACTION GRAPH</p>
+<h3 id="ANALYSIS-amp-MEASUREMENTS"><a href="#ANALYSIS-amp-MEASUREMENTS" class="headerlink" title="ANALYSIS &amp; MEASUREMENTS"></a>ANALYSIS &amp; MEASUREMENTS</h3><h2 id="Z-score"><a href="#Z-score" class="headerlink" title="Z score"></a>Z score</h2><h1 id="L8-Prediction-Models-–-Stock-prices"><a href="#L8-Prediction-Models-–-Stock-prices" class="headerlink" title="L8 Prediction Models – Stock prices"></a>L8 Prediction Models – Stock prices</h1><p>Stock prices are quite difficult to forecast due to their extreme volatility</p>
+<h2 id="Actionable-insights-from-unstructured-social-media-data"><a href="#Actionable-insights-from-unstructured-social-media-data" class="headerlink" title="Actionable insights from unstructured social media data"></a>Actionable insights from unstructured social media data</h2><h2 id="Fundamental-vs-technical-factors"><a href="#Fundamental-vs-technical-factors" class="headerlink" title="Fundamental vs technical factors"></a>Fundamental vs technical factors</h2><h3 id="Fundamental-Analysis"><a href="#Fundamental-Analysis" class="headerlink" title="Fundamental Analysis"></a>Fundamental Analysis</h3><h3 id="Technical-Analysis"><a href="#Technical-Analysis" class="headerlink" title="Technical Analysis"></a>Technical Analysis</h3><p>future price movements can be predicted based on historical financial asset trading information.</p>
+<h3 id="efficient-market-hypothesis-EMH"><a href="#efficient-market-hypothesis-EMH" class="headerlink" title="efficient market hypothesis (EMH)"></a>efficient market hypothesis (EMH)</h3><h2 id="Exploiting-actionable-insights"><a href="#Exploiting-actionable-insights" class="headerlink" title="Exploiting actionable insights"></a>Exploiting actionable insights</h2><h3 id="Social-media-as-a-social-sensor"><a href="#Social-media-as-a-social-sensor" class="headerlink" title="Social media as a social sensor"></a>Social media as a social sensor</h3><h3 id="Stock-Movement-Prediction-from-Tweets-and-Historical-Prices"><a href="#Stock-Movement-Prediction-from-Tweets-and-Historical-Prices" class="headerlink" title="Stock Movement Prediction from Tweets and Historical Prices"></a>Stock Movement Prediction from Tweets and Historical Prices</h3><p>Stock trend prediction relying on</p>
+<ul>
+<li>text mining and sentiment analysis with tweets were proposed</li>
+<li>is a deep learning solution</li>
+<li>Called Stock-net</li>
+</ul>
+<h3 id="Stock-Prediction-Using-Event-Based-Sentiment-Analysis"><a href="#Stock-Prediction-Using-Event-Based-Sentiment-Analysis" class="headerlink" title="Stock Prediction Using Event-Based Sentiment Analysis"></a>Stock Prediction Using Event-Based Sentiment Analysis</h3><h2 id="Data-Collection"><a href="#Data-Collection" class="headerlink" title="Data Collection"></a>Data Collection</h2><h2 id="Models"><a href="#Models" class="headerlink" title="Models"></a>Models</h2><h3 id="Deep-learning-models"><a href="#Deep-learning-models" class="headerlink" title="Deep learning models"></a>Deep learning models</h3><p>LSTM&#x2F;BiLSTM</p>
+<p>BERT model</p>
+<p>Baseline Model – distilled BERT model</p>
+<p>TP &amp;TN</p>
+<p>FP &amp; FN</p>
+<p>Confusion matrix</p>
+<p>The Mathews correlation coefficient (MCC)</p>
+<h1 id="L9-emotion-Detection"><a href="#L9-emotion-Detection" class="headerlink" title="L9 emotion Detection"></a>L9 emotion Detection</h1><h2 id="Sentiment-analysis-amp-variants"><a href="#Sentiment-analysis-amp-variants" class="headerlink" title="Sentiment analysis &amp; variants"></a>Sentiment analysis &amp; variants</h2><ul>
+<li>Sentiment classification<ul>
+<li>positive, negative or neutral</li>
+<li>Degree of intensity<ul>
+<li>[-100,100]</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Opinion analysis<ul>
+<li>Determining from text, the speaker’s opinion and target of the opinion</li>
+</ul>
+</li>
+<li>Stance<ul>
+<li>• Author of text is in favour of, against of, or neutral towards a proposition or target</li>
+<li>For example, Brexit agreement<ul>
+<li>Is people supportive?</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Emotion<ul>
+<li>What are the emotion expressed in the text?</li>
+</ul>
+</li>
+</ul>
+<h3 id="Aspect-Based-Sentiment-Analysis-ABSA"><a href="#Aspect-Based-Sentiment-Analysis-ABSA" class="headerlink" title="Aspect Based Sentiment Analysis (ABSA)"></a>Aspect Based Sentiment Analysis (ABSA)</h3><ul>
+<li>A sentence contains one or more entities,<ul>
+<li>each of which has a different polarity of emotion.</li>
+</ul>
+</li>
+<li>Compared to sentence level sentiment analysis, ABSA can present<ul>
+<li>users with more precise and fine-grained sentiment information of entities</li>
+</ul>
+</li>
+</ul>
+<h3 id="Categorical-approach"><a href="#Categorical-approach" class="headerlink" title="Categorical approach"></a>Categorical approach</h3><p>Ekman Universal emotion</p>
+<ul>
+<li><p>Known as universal emotions</p>
+</li>
+<li><p>happiness, surprise, fear, sadness, disgust and anger</p>
+</li>
+</ul>
+<h3 id="OCC-model"><a href="#OCC-model" class="headerlink" title="OCC model"></a>OCC model</h3><ul>
+<li><p>6 universal Paul Ekman emotions</p>
+</li>
+<li><p>16 additional emotions were</p>
+</li>
+</ul>
+<h3 id="Sentiment-vs-emotion"><a href="#Sentiment-vs-emotion" class="headerlink" title="Sentiment vs emotion"></a>Sentiment vs emotion</h3><ul>
+<li>Sentiments are target centred •<ul>
+<li>Hence directed</li>
+</ul>
+</li>
+<li>Emotions are not target centred</li>
+<li>Multiple emotions are possible for a text •<ul>
+<li>Only single sentiment<ul>
+<li>Positive, negative or neutral</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Emotion-detection"><a href="#Emotion-detection" class="headerlink" title="Emotion detection"></a>Emotion detection</h4><h2 id="Text-emotion-detection"><a href="#Text-emotion-detection" class="headerlink" title="Text emotion detection"></a>Text emotion detection</h2><h3 id="emotion-classification"><a href="#emotion-classification" class="headerlink" title="emotion classification"></a>emotion classification</h3><h4 id="sentiment-analysis"><a href="#sentiment-analysis" class="headerlink" title="sentiment analysis"></a>sentiment analysis</h4><ul>
+<li>lexicon-based methods</li>
+<li>machine learning</li>
+<li>a reule-based approach</li>
+</ul>
+<h4 id="emotion-recognition-task"><a href="#emotion-recognition-task" class="headerlink" title="emotion recognition task"></a>emotion recognition task</h4><ul>
+<li>Keyword-based detection<ul>
+<li>Seed opinion words and find synonyms &amp; antonyms in WordNet •</li>
+<li>WordNet</li>
+</ul>
+</li>
+<li>Lexical affinity</li>
+<li>hybrid</li>
+<li>Learning based detection</li>
+</ul>
+<h2 id="Datasets-for-evaluation"><a href="#Datasets-for-evaluation" class="headerlink" title="Datasets for evaluation"></a>Datasets for evaluation</h2><p>First issue to consider is what emotional representation to use!</p>
+<h3 id="How-do-we-develop-models"><a href="#How-do-we-develop-models" class="headerlink" title="How do we develop models"></a>How do we develop models</h3><ul>
+<li>Capture ground truth<ul>
+<li>Data with corresponding annotations</li>
+<li>We need quite large sets</li>
+</ul>
+</li>
+<li>Manually doing is difficult!</li>
+<li>Automatic methods<ul>
+<li>Labels from users</li>
+</ul>
+</li>
+</ul>
+<h3 id="Data-Collection-1"><a href="#Data-Collection-1" class="headerlink" title="Data Collection"></a>Data Collection</h3><ul>
+<li>Label ambiguity</li>
+<li>Cross-label interference</li>
+<li>Data collection objectives</li>
+</ul>
+<h3 id="distant-supervision"><a href="#distant-supervision" class="headerlink" title="distant supervision"></a>distant supervision</h3><p>Can we exploit such techniques for creating a dataset for emotion analysis?</p>
+<h4 id="Emotion-oriented-hashtags"><a href="#Emotion-oriented-hashtags" class="headerlink" title="Emotion oriented hashtags"></a>Emotion oriented hashtags</h4><ul>
+<li>Could we exploit such hashtags?</li>
+<li>If we were to use such hashtags, what rule(s) to use?</li>
+</ul>
+<h4 id="Hashtag-based-data-collection"><a href="#Hashtag-based-data-collection" class="headerlink" title="Hashtag based data collection"></a>Hashtag based data collection</h4><h4 id=""><a href="#" class="headerlink" title=""></a><img src="/IV%E5%A4%8D%E4%B9%A0/dbdb152dd76e22edefbab6bb5238a71.png" alt="dbdb152dd76e22edefbab6bb5238a71"></h4><h3 id="NRC-lexicon"><a href="#NRC-lexicon" class="headerlink" title="NRC lexicon"></a>NRC lexicon</h3><p>NRC lexicon</p>
+<h3 id="Compute-overall-score"><a href="#Compute-overall-score" class="headerlink" title="Compute overall score"></a>Compute overall score</h3><ul>
+<li><p>Hashtag at the end</p>
+<ul>
+<li>Assign the label</li>
+</ul>
+</li>
+<li><p>Emoticon at the end</p>
+<ul>
+<li>Assign the label</li>
+</ul>
+</li>
+<li><p>Lexicon score</p>
+<ul>
+<li>For each feature (word&#x2F;hashtag&#x2F;emoticon)</li>
+<li>Compute lexicon score</li>
+</ul>
+</li>
+<li><p>Select the label correspondingly</p>
+<ul>
+<li>Based on overall score</li>
+</ul>
+<p><img src="/IV%E5%A4%8D%E4%B9%A0/92563beb3bfa96daf1066f33d7ce022.png" alt="92563beb3bfa96daf1066f33d7ce022"></p>
+</li>
+</ul>
+<h2 id="Deep-Learning-Models"><a href="#Deep-Learning-Models" class="headerlink" title="Deep Learning Models"></a>Deep Learning Models</h2><ul>
+<li>Create large datasets</li>
+<li>Label them</li>
+<li>Train a classifier<ul>
+<li>80% of data</li>
+</ul>
+</li>
+<li>Validate the model<ul>
+<li>10% of data</li>
+</ul>
+</li>
+<li>Test the model<ul>
+<li>10% of data</li>
+</ul>
+</li>
+</ul>
+<h3 id="Deep-learning-models-1"><a href="#Deep-learning-models-1" class="headerlink" title="Deep learning models"></a>Deep learning models</h3><ul>
+<li>LSTM&#x2F;BiLSTM</li>
+<li>BERT</li>
+</ul>
+<h2 id="Evaluation"><a href="#Evaluation" class="headerlink" title="Evaluation"></a>Evaluation</h2><ul>
+<li>We will use the annotated data •</li>
+<li>80% - for training</li>
+<li>20% for testing</li>
+<li>Do this 10 Mmes (cross-validation)<ul>
+<li>10 fold cross-validation</li>
+</ul>
+</li>
+</ul>
+<h3 id="How-do-we-use-it"><a href="#How-do-we-use-it" class="headerlink" title="How do we use it"></a>How do we use it</h3><ul>
+<li>Binary classificaMon<ul>
+<li>Positive or negative</li>
+<li>Anger vs rest</li>
+<li>Happiness vs rest</li>
+</ul>
+</li>
+<li>Multiclass classification<ul>
+<li>Anger, happiness, ….</li>
+</ul>
+</li>
+<li>Can we create an end-to-end model</li>
+</ul>
+<p><strong>具体在 L09 emotion detection 95 页</strong></p>
+<h1 id="L9-User-Modelling"><a href="#L9-User-Modelling" class="headerlink" title="L9 User Modelling"></a>L9 User Modelling</h1><h2 id="What-is-user-modelling-x2F-profiling"><a href="#What-is-user-modelling-x2F-profiling" class="headerlink" title="What is user modelling&#x2F; profiling?"></a>What is user modelling&#x2F; profiling?</h2><p>A user model is the collection and categorization of personal data associated with a specific use</p>
+<h2 id="Social-media-amp-making-sense"><a href="#Social-media-amp-making-sense" class="headerlink" title="Social media &amp; making sense"></a>Social media &amp; making sense</h2><p>Modelling real user behaviour is extremely important and challenging in news recommendation systems.</p>
+<ul>
+<li>Users’ personal interests</li>
+<li>Choice habits</li>
+<li>Reading multiple articles on the same topic before switching on</li>
+<li>Exploratory behaviours</li>
+<li>Dynamic and diverse user interests</li>
+</ul>
+<h2 id="news"><a href="#news" class="headerlink" title="news"></a>news</h2><h3 id="News-recommendation-Challenges"><a href="#News-recommendation-Challenges" class="headerlink" title="News recommendation - Challenges"></a>News recommendation - Challenges</h3><ul>
+<li>provide access to news readers anytime, anywhere so they<ul>
+<li>browse through the latest news using online portals.</li>
+</ul>
+</li>
+<li>To attract more traffic to their websites, these online portals are increasingly adopting recommender systems to improve user experience on their sites.</li>
+<li>highly dynamic user behaviours.<ul>
+<li>News readers may have long-term or short-term preferences that evolve over time, either gradually or abruptly.</li>
+</ul>
+</li>
+</ul>
+<h3 id="components"><a href="#components" class="headerlink" title="components"></a>components</h3><h3 id="Over-personalisation"><a href="#Over-personalisation" class="headerlink" title="Over-personalisation"></a>Over-personalisation</h3><h2 id="User-personas"><a href="#User-personas" class="headerlink" title="User personas"></a>User personas</h2><h3 id="A-data-driven-approach"><a href="#A-data-driven-approach" class="headerlink" title="A data driven approach!"></a>A data driven approach!</h3><h3 id="issues-in-user-profiling"><a href="#issues-in-user-profiling" class="headerlink" title="issues in user profiling"></a>issues in user profiling</h3><h3 id="Methodology-for-Automatic-persona-generation"><a href="#Methodology-for-Automatic-persona-generation" class="headerlink" title="Methodology for Automatic persona generation"></a>Methodology for Automatic persona generation</h3><ul>
+<li>Identifying distinct user interaction patterns from the data,</li>
+<li>Linking these distinct user interaction patterns to user demographic groups</li>
+<li>Identifying impactful user demographic groups from the data<ul>
+<li>Identifying a user to these groups than with his&#x2F;her personal interests</li>
+<li>To an extent protect from privacy violations</li>
+</ul>
+</li>
+<li>Creating skeletal personas visa demographic attributes, and</li>
+<li>Enriching these skeletal personas to create rich persona description</li>
+</ul>
+<h3 id="Non-negative-matrix-factorization-NMF"><a href="#Non-negative-matrix-factorization-NMF" class="headerlink" title="Non-negative matrix factorization (NMF)"></a>Non-negative matrix factorization (NMF)</h3><h3 id="NMF-pipeline"><a href="#NMF-pipeline" class="headerlink" title="NMF pipeline"></a>NMF pipeline</h3><ul>
+<li>Data Collection and Preprocessing</li>
+<li>Structure of User Item Matrix X</li>
+<li>Non Negative Matrix Factorization of X</li>
+<li>Assign Topics to Users</li>
+<li>Assign Topics to User</li>
+<li>Clustering users with similar interests to model User Personas</li>
+<li>Recommend twitter posts to new users</li>
+</ul>
+<h1 id="L10-Hate-detection"><a href="#L10-Hate-detection" class="headerlink" title="L10 Hate detection"></a>L10 Hate detection</h1><h2 id="Consequences-of-Negative-Interaction"><a href="#Consequences-of-Negative-Interaction" class="headerlink" title="Consequences of Negative Interaction"></a>Consequences of Negative Interaction</h2><h2 id="Defining-Hate"><a href="#Defining-Hate" class="headerlink" title="Defining Hate"></a>Defining Hate</h2><h2 id="How-do-we-detect-hate"><a href="#How-do-we-detect-hate" class="headerlink" title="How do we detect hate?"></a>How do we detect hate?</h2><p><strong>Hate Detection</strong></p>
+<ul>
+<li>Dictionary based classification<ul>
+<li>Assigning values to words within a dictionary depending on their relevance to the classification problem</li>
+</ul>
+</li>
+<li>Machine learning classification<ul>
+<li>Algorithms are used to recognise patterns in labelled data based on identified features.</li>
+</ul>
+</li>
+<li>Deep learning classification<ul>
+<li>A subset of machine learning, similar functionality but performs the task with less human input.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Hate-Detection-–-Dictionary-Based-Algorithms"><a href="#Hate-Detection-–-Dictionary-Based-Algorithms" class="headerlink" title="Hate Detection – Dictionary Based Algorithms"></a>Hate Detection – Dictionary Based Algorithms</h3><ul>
+<li>Pre-defined list of words with values that have been assigned prior to the classification task</li>
+<li>Each piece of text is then processed and allocated an overall prediction&#x2F;score based on the values of the dictionary words that are present in the text.</li>
+<li>Reasonably accurate with large pieces of text but very inaccurate with smaller pieces of text.</li>
+<li>For robust results a domain specific dictionary is required, the creation of which can be time consuming</li>
+</ul>
+<h3 id="Hate-Detection-–-Machine-Learning-Algorithms"><a href="#Hate-Detection-–-Machine-Learning-Algorithms" class="headerlink" title="Hate Detection – Machine Learning Algorithms"></a>Hate Detection – Machine Learning Algorithms</h3><h3 id="Hate-Detection-–-Deep-Learning-Algorithms"><a href="#Hate-Detection-–-Deep-Learning-Algorithms" class="headerlink" title="Hate Detection – Deep Learning Algorithms"></a>Hate Detection – Deep Learning Algorithms</h3><h3 id="Hate-Detection-–-Dataset-Formation"><a href="#Hate-Detection-–-Dataset-Formation" class="headerlink" title="Hate Detection – Dataset Formation"></a>Hate Detection – Dataset Formation</h3><p><strong>Large domain specific datasets required</strong></p>
+<ul>
+<li>Eliminate dataset bias</li>
+<li>Increase coverage of classification problem</li>
+<li>Increased classifier performance</li>
+</ul>
+<p><strong>How can we form datasets?</strong></p>
+<ul>
+<li>Crowd sourcing</li>
+<li>Automation of text annotation<ul>
+<li>Semi-supervised text annotation to fully unsupervised text annotation</li>
+</ul>
+</li>
+</ul>
+<h3 id="Hate-Detection-Sentiment"><a href="#Hate-Detection-Sentiment" class="headerlink" title="Hate Detection - Sentiment"></a>Hate Detection - Sentiment</h3><h3 id="Hate-Detection-Emotion"><a href="#Hate-Detection-Emotion" class="headerlink" title="Hate Detection - Emotion"></a>Hate Detection - Emotion</h3><h3 id="Hate-Detection-–-Hate-Classifiers"><a href="#Hate-Detection-–-Hate-Classifiers" class="headerlink" title="Hate Detection – Hate Classifiers"></a>Hate Detection – Hate Classifiers</h3><h2 id="Classification-Analysis"><a href="#Classification-Analysis" class="headerlink" title="Classification Analysis"></a>Classification Analysis</h2><p>Classification Measures</p>
+<ul>
+<li>Accuracy</li>
+<li>Recall</li>
+<li>Precision</li>
+<li>F1 Score</li>
+<li>Matthews Correlation Coefficient</li>
+</ul>
+<p>具体解释在 最后一个课件 28 页</p>
+<p>We could then use precision, recall and accuracy as measures for comparison. Precision will allow us to verify the effectiveness of the retrieved results list; Recall, however incomplete still could potentially tell us what proportion of identified events will be detected Accuracy will also reveal the effectiveness as a combined measure</p>
+<h1 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h1><h2 id="bias"><a href="#bias" class="headerlink" title="bias"></a>bias</h2><p><strong>demography bias</strong></p>
+<p>data from only a certain population might be included.</p>
+<p><strong>data biases</strong></p>
+<p>your crawling could be limited to certain areas, hence not complete reaction to topics is captured.</p>
+<ul>
+<li>First data will be skewed, leading to geographical bias; often in a city geo-graphically skewed data distribution exist; one approach is to strive to collect a balanced data across the area; for example, identifying business in those area and following it and assigning them to that location (3 marks) We can also use PlaceObject, which may have slightly coarser coverage but can then be added to right location using organizational accounts. (2 marks)</li>
+<li>Second, the population who may use social media may be skewed and potentially associated data set (demographical Bias) -this is one of the drawbacks of using social media systems – so for example using nongeo tagged data may give a better coverage. Non-geo tagged data could be placed based on content similarity to data from a location and then verify through crowd sourcing. (3 marks)</li>
+</ul>
+<p>首先数据会出现倾斜，导致地理上的偏差；在一个城市中经常会有 存在着地理上的倾斜数据分布；一种方法是 努力收集整个地区的平衡数据；例如、 识别这些地区的企业，并对其进行跟踪，将其分配到 到那个位置 (3 分) 我们也可以使用 PlaceObject，它的覆盖面可能稍显粗糙 覆盖范围，但可以使用组织账户将其添加到正确的位置。账户。(2 分)</p>
+<p>第二，可能使用社交媒体的人群可能是倾斜的，并且 潜在的相关数据集（demographical Bias）–这是使用社交媒体系统的缺点之一。这是使用社交媒体系统的缺点之一，因此，例如，使用非地理标记的数据可能会提供更好的覆盖面。非地理标志的数据 可以根据与某地数据的内容相似性来放置，然后通过众包来验证。然后通过众包进行验证。(3 分)</p>
+<h2 id="如何证明系统的有效性"><a href="#如何证明系统的有效性" class="headerlink" title="如何证明系统的有效性"></a>如何证明系统的有效性</h2><p>We will collect geo-coded data for a month, at least.</p>
+<p>Use 80% of data collected to build the system for building the model.</p>
+<p>10% of the data for validating and fine-tuning the system.</p>
+<p>10% of the data for testing the system effectiveness.</p>
+<p>The data collected are geo-tagged; hence we know the actual location of the tweet. Our aim is to see how close we could assign the tweet to its actual location. So ignoring its actual location, we check which location the system will assign it. Then we calculate the distance between the actual location and the assigned location (3 marks) We will use the following measures to show the effectiveness of the system</p>
+<p>Accuracy@1Km – since the system is fine grained, it is important to show how close to the original location we can assign the tweet</p>
+<p>Recall – what proportion of tweets we can assign a location–we should show we can cover reasonable proportion of the data set</p>
+<p>Average error distance – this will give a measure of actual distances in assignment. (3 marks)</p>
+<h3 id="大部分的数据都是非地理标记的。你如何测试-模型的有效性？"><a href="#大部分的数据都是非地理标记的。你如何测试-模型的有效性？" class="headerlink" title="大部分的数据都是非地理标记的。你如何测试 模型的有效性？"></a>大部分的数据都是非地理标记的。你如何测试 模型的有效性？</h3><p>我们不会有非地理标记的推文的地面真相。因此，我们可以使用众包来验证这种方法的唯一方法是从非地理标记的数据集中收集样本数据（比如 1000 个数据点）。这是因为使用整个非地理标记的数据集是不可行的。然后我们应该设计一个基于众包的评估系统来研究该方法的有效性。对于这条推文，我们将使用每条推文并从各自的城市找来工人，要求他们。分配到一个网格点上；我们也可以给一组线索，以帮助指导群众工作者。</p>
+<h2 id="众包的好坏-crowdsourcing-based-evaluation"><a href="#众包的好坏-crowdsourcing-based-evaluation" class="headerlink" title="众包的好坏 crowdsourcing based evaluation."></a>众包的好坏 crowdsourcing based evaluation.</h2><p>Crowdsourcing allows us to collect data faster especially to see how a certain system is acceptable to population. It gives an indication of what people think about the system and can be used as the base system for example and often prior to A&#x2F;B testing. (2 marks)<br>Design issues – given the complexity of the system, design can be laborious.<br>Population maybe divergent from the actual population use the system. In crowdsourcing there are spamming issues that need to be addressed. (any two issues 2 marks)</p>
+<p>众包使我们能够更快地收集数据，特别是看到某个系统如何被人们接受。某个系统是可以被人们接受的。它可以显示出人们对该系统的看法，并可以作为基础系统来使用。例如，在进行 A&#x2F;B 测试之前，可以使用基础系统。(2 分)<br>设计问题 - 鉴于系统的复杂性，设计可能是费力的。<br>人口可能与实际使用该系统的人口有差异。在众包中，有需要解决的垃圾邮件问题。(任何两个问题 2 分）</p>
+<h2 id="定位数据方法"><a href="#定位数据方法" class="headerlink" title="定位数据方法"></a>定位数据方法</h2><ul>
+<li>Profile of the user user 里面的 location 属性<ul>
+<li>User location can be extracted from the location field of the user profile</li>
+</ul>
+</li>
+<li>If geo_enabled &#x3D;true<ul>
+<li>Coordinates &#x3D; {long, Lat}</li>
+</ul>
+</li>
+<li>从推文中推测获取</li>
+<li>Search for similar tweets Then we will assign location of its closest tweet(s)</li>
+<li>Granular approach</li>
+</ul>
+<h2 id="数据预处理"><a href="#数据预处理" class="headerlink" title="数据预处理"></a>数据预处理</h2><p>数据预处理：</p>
+<p>通过标记化、转换为小写字母以及删除特殊字符、URL 和停用词来清理和预处理社交媒体文本数据。</p>
+<p>通过应用基于关键字的过滤、情感分析或实体识别来过滤掉不相关的内容。</p>
+<h2 id="模型评估"><a href="#模型评估" class="headerlink" title="模型评估"></a>模型评估</h2><p>The Mathews correlation coefficient (MCC)</p>
+<p>Define the evaluation metrics: The first step is to define the metrics that will be used to evaluate the system. Some possible metrics for evaluating the system’s effectiveness could include precision, recall, accuracy, and F1-score.</p>
+<h2 id="Heuristic-Labelling-1"><a href="#Heuristic-Labelling-1" class="headerlink" title="Heuristic Labelling"></a>Heuristic Labelling</h2><p>如何将自动标记正面和负面推文</p>
+<p>使用大型数据集 使用预训练情感分析模型</p>
+<p>深度学习模型</p>
+<p>BERT (Bidirectional Encoder Representation with Transformers)</p>
+<p><strong>具体在 L09 69 页</strong></p>
+<p>NRC hashtag Lexicon 可以用于基于词典的情感分析</p>
+<p>自动 :label from user</p>
+<h2 id="推特数据的问题"><a href="#推特数据的问题" class="headerlink" title="推特数据的问题"></a>推特数据的问题</h2><ul>
+<li>Document level and word co-occurrence patterns in the document<ul>
+<li>Implicitly captured</li>
+</ul>
+</li>
+<li>Sparsity problem in tweets<ul>
+<li>Short documents (280 characters)</li>
+<li>Word co-occurrence information is missing</li>
+</ul>
+</li>
+<li>Seasonality of data (time-sensitivity)<ul>
+<li>Christmas, new year, other festivals</li>
+</ul>
+</li>
+<li>Data volume</li>
+</ul>
+<h1 id="2022"><a href="#2022" class="headerlink" title="2022"></a>2022</h1><h2 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h2><h3 id="a"><a href="#a" class="headerlink" title="(a)"></a>(a)</h3><p>Assume that the BBC recruited you to develop a social media application. The BBC is interested in knowing their readers’ feelings on the news and other events covered by the broadcaster. Your job is to develop a classifier. In this context, answer the following questions:</p>
+<p>假设 BBC 招募你去开发一个社交媒体应用程序。BBC 很想知道他们的读者对广播公司报道的新闻和其他事件的感受。你的工作是开发一个分类器。在这种情况下，请回答以下问题：</p>
+<h4 id="i"><a href="#i" class="headerlink" title="(i)"></a>(i)</h4><p>Your first task is to create Twitter datasets with positive and negative statements so that they can be used for estimating the probabilities for words in the respective classes. [Hint: Assuming that you have a social media crawler, discuss how you will automatically label positive and negative tweets; how will you avoid spurious data]</p>
+<p>你的第一个任务是创建带有正面和负面声明的推特数据集，这样就可以用来估计各自类别中的词语的概率。[提示：假设你有一个社交媒体爬虫，讨论一下你将如何自动标记正面和负面的推文；你将如何避免虚假的数据] 。</p>
+<p>To develop a classifier for the BBC’s social media application, we will first need to create a labeled dataset consisting of positive and negative tweets. Here’s a step-by-step process to achieve this:</p>
+<ol>
+<li>Data Collection: Using a social media crawler, we will gather tweets that mention the BBC or contain relevant hashtags, such as #BBCNews, #BBCTrending, etc. The data should be representative of various news topics and events covered by the broadcaster.</li>
+<li>Preprocessing: Before labeling the tweets, we will perform data preprocessing, which includes removing special characters, URLs, numbers, and other irrelevant information. We will also convert all text to lowercase and tokenize the tweets into individual words.</li>
+<li>Sentiment Analysis-based Labeling: To automatically label positive and negative tweets, we will use a pre-trained sentiment analysis model, such as OpenAI’s GPT-based model or a model trained on a large sentiment analysis dataset like the Stanford Sentiment Treebank (SST). We will feed each tweet to the model and obtain a sentiment score or class (positive&#x2F;negative).</li>
+<li>Filtering Spurious Data: To avoid spurious data, we can implement a few strategies:</li>
+</ol>
+<ul>
+<li>Confidence threshold: Set a threshold for the sentiment scores, and only include tweets with scores above this threshold in the final labeled dataset. This will help filter out ambiguous tweets.</li>
+<li>Manual review: Randomly sample a subset of the labeled tweets and have human annotators review the labels for accuracy. If the error rate is high, you may need to adjust the confidence threshold or modify the sentiment analysis model.</li>
+<li>Balance classes: Ensure that the dataset has a balanced distribution of positive and negative tweets to avoid biases in the classifier.</li>
+</ul>
+<ol>
+<li>Data Augmentation (Optional): To increase the size of the dataset and improve the classifier’s performance, we can use data augmentation techniques, such as synonym replacement, back translation, or text generation using a language model.</li>
+<li>Dataset Splitting: Split the labeled dataset into training, validation, and test sets to train and evaluate the classifier.</li>
+</ol>
+<p>With this labeled dataset in place, we can proceed to train a machine learning model to classify tweets as positive or negative based on their content, and then use this classifier in the BBC’s social media application to analyze their readers’ feelings on news and events.</p>
+<ol>
+<li>定义情绪类别：第一步是定义我们要使用的情绪类别。在这种情况下，我们想要创建包含正面和负面陈述的数据集，因此我们需要定义什么构成正面和负面情绪。这可以基于预定义的正面和负面词语列表，或者基于考虑到陈述的上下文和语气的更全面的情绪分析框架。</li>
+<li>收集 Twitter 数据：下一步是收集与我们的任务相关的 Twitter 数据。这可以使用社交媒体爬虫来完成，该爬虫根据与 BBC 报道的新闻和事件相关的关键字或主题标签检索推文。我们还可以根据语言、位置和用户配置文件过滤数据，以确保我们从不同的来源收集数据。</li>
+<li>预处理数据：一旦我们收集了 Twitter 数据，我们需要对其进行预处理以去除噪音和不相关的信息。这可能包括删除 URL、提及、主题标签和特殊字符，以及将文本数据标准化为小写并删除停用词。</li>
+<li>自动标记推文：要将推文标记为正面或负面，我们可以结合使用监督和非监督学习技术。一种可能的方法是使用预训练的情绪分析模型自动将推文分为正面和负面类别。然后我们可以手动审查分类推文的样本，以确保它们被正确标记并根据需要改进模型。另一种方法是使用基于关键字的方法，我们手动定义正面和负面关键字的列表，并使用它们来标记推文。</li>
+<li>避免虚假数据：为避免虚假数据，我们需要确保带标签的推文代表更广泛人群的情绪。一种方法是从不同的来源收集数据，包括具有不同人口统计、位置和观点的用户。我们还可以使用统计方法来识别异常值并将其从数据集中删除，或者通过对少数类进行过采样或欠采样来平衡数据集。</li>
+<li>估计词概率：一旦我们将推文标记为正面或负面，我们就可以使用词袋或词嵌入等方法估计各个类别中词的概率。这涉及计算正面和负面推文中每个词的频率，并计算给定情感类别的每个词的条件概率。然后可以使用这些概率来训练情绪分析模型或执行其他文本分析任务。</li>
+</ol>
+<h4 id="ii"><a href="#ii" class="headerlink" title="(ii)"></a>(ii)</h4><p>Your second task is to develop a lexicon-based automatic sentiment analysis method, which assigns sentiment intensity between [-100,100]. Describe an algorithm that also uses the dataset you created in (i). [Hint: identify a suitable lexicon; identify linguistic cases you may handle; specify a scoring method]</p>
+<p>你的第二个任务是开发一个基于词库的自动情感分析方法，该方法在[-100,100]之间分配情感强度。描述一种算法，该算法也使用你在（一）中创建的数据集。[提示：确定一个合适的词库；确定你可能处理的语言情况；指定一个评分方法] 。</p>
+<p>要开发基于词典的自动情感分析方法，我们可以使用在先前任务中创建的数据集来训练词典或使用将单词映射到相应情感强度的预先存在的词典。这是一个可能的算法：</p>
+<ol>
+<li>定义词典：第一步是定义我们要使用的词典。这可以基于现有的情感词典，例如 AFINN 或 SentiWordNet 词典，或者基于我们使用上一个任务中创建的数据集创建的自定义词典。词典应包含一系列单词或短语及其相应的情绪强度，范围从 -100（最消极）到 100（最积极）。</li>
+<li>预处理文本：下一步是通过去除停用词、标点符号和其他噪音，并将文本规范化为小写来预处理文本数据。我们还可以将文本标记为单个单词或短语，并应用其他语言处理技术，例如词干提取或词形还原。</li>
+<li>识别语言案例：在进行情感分析时，我们需要处理几种语言案例，例如否定、强化和惯用表达。为了处理否定，我们可以使用诸如向被否定的词（例如，“不开心”）添加否定标志，或者通过反转出现在否定语境中的词的情感得分极性的技术。为了处理强化词，我们可以根据强化词（例如“非常”或“极度”）的存在来调整情绪得分。对于惯用语表达，我们可能需要在词典中创建特殊规则或映射来处理与单个词具有不同情感的常见表达（例如，“踢桶”）。</li>
+<li>评分方法：要为文本分配情感强度分数，我们可以使用考虑文本中单个单词或短语的情感分数的评分方法。一种可能的方法是使用简单的平均方法，我们计算文本中所有单词的平均情感分数。另一种方法是使用加权平均值，我们会为与文本情感更相关或信息量更大的词赋予更多权重，例如形容词或情绪激动的词。</li>
+<li>分配情绪强度：一旦我们计算出文本的情绪强度得分，我们就可以根据预定义的阈值或得分范围将其分配给情绪类别，例如正面、负面或中性。例如，0 到 50 之间的分数可以被认为是积极的，-50 到 0 之间的分数可以被认为是消极的，0 分可以被认为是中立的。</li>
+<li>评估：为了评估基于词典的情感分析方法的性能，我们可以使用准确性、精确度、召回率和 F1 分数等指标，通过将预测的情感类别与先前任务中创建的数据集中的真实情感标签进行比较. 我们还可以执行交叉验证并根据性能指标微调词典和评分方法。</li>
+</ol>
+<h4 id="iii"><a href="#iii" class="headerlink" title="(iii)"></a>(iii)</h4><p>Now that you created a sentiment analysis method, you want to verify the method’s validity from a user’s perspective. Design a scalable user-based study to ensure your sentiment scoring method is appropriate.</p>
+<p>现在你已经创建了一个情感分析方法，你想从用户的角度来验证这个方法的有效性。设计一个可扩展的基于用户的研究，以确保你的情感评分方法是合适的。</p>
+<p>为了从用户的角度验证情感分析方法的有效性并设计可扩展的基于用户的研究，我们可以按照以下步骤进行：</p>
+<ol>
+<li>样本选择：从测试集中随机选择推文子集，代表 BBC 报道的各种情绪强度、新闻主题和事件。确保此样本足够大以获得具有统计显着性的结果，但又足够小以方便基于用户的研究进行管理。</li>
+<li>用户招募：招募多元化的参与者群体以避免人口统计偏差。参与者应熟悉示例推文中讨论的新闻和事件的背景。您可以通过 Amazon Mechanical Turk、Prolific 或其他在线研究平台等平台招募用户。</li>
+<li>用户说明：向用户提供有关任务的明确说明。说明他们将对所选推文的情绪强度进行评分，评分范围从 -100（强烈负面）到 100（强烈正面），0 表示中性。鼓励用户仔细阅读每条推文并考虑发布推文的背景。</li>
+<li>界面设计：为研究开发一个用户友好的界面，允许参与者阅读和评价推文。一次显示一条推文，并为情绪强度评级提供滑块或输入字段。确保界面在不同的设备和屏幕尺寸上都能正常工作。</li>
+<li>数据收集：收集用户对每条推文的情绪强度评级，以及任何相关的人口统计信息或任务的定性反馈。</li>
+<li>分析比较：</li>
+</ol>
+<ul>
+<li>从基于用户的研究中计算每条推文的平均情绪强度评级。</li>
+<li>将平均用户评分与基于词典的情感分析方法产生的情感分数进行比较。</li>
+<li>计算基于用户的评分与情感分析方法得分之间的相关性，以评估两者之间的一致性。</li>
+</ul>
+<ol start="7">
+<li><p>迭代和细化：如果相关性不强或用户提供反馈建议改进情感分析方法，请考虑重新访问词典、处理额外的语言案例或调整评分方法。使用更新的情感分析方法重复基于用户的研究，直到获得满意的结果。</p>
+</li>
+<li><p>可扩展性：为确保研究保持可扩展性，尽可能自动化用户招募、数据收集和数据分析的过程。利用基于云的平台和 API 来简化数据管理和接口部署。</p>
+</li>
+</ol>
+<p>通过进行这种基于用户的研究，您可以从用户的角度验证情绪分析方法，并确保情绪评分方法适用于 BBC 的社交媒体应用程序。</p>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><h3 id="a-1"><a href="#a-1" class="headerlink" title="(a)"></a>(a)</h3><p>Create a vector representation for the following text. Identify and remove potential stop words. “@AlanStainer @takeitev It’s mad isn’t it. In the UK there are 8k petrol stations with multiple pumps and 25k chargers (increasing by 300 pm). They do know the climate emergency is now right? Not in 30 years’ time, Just asking”</p>
+<p>为以下文本创建一个矢量表示。识别并删除潜在的停顿词。”@AlanStainer @takeitev 这很疯狂，不是吗。在英国，有 8 千座加油站有多个油泵和 2.5 万个充电桩（下午增加 300 个）。他们知道现在是气候紧急情况吧？不是在 30 年后，只是问问”</p>
+<h3 id="b"><a href="#b" class="headerlink" title="(b)"></a>(b)</h3><p>Create all biterms from the following text, “In the UK there are 8k petrol stations with multiple pumps and 25k chargers”</p>
+<p>从以下文本中创建所有位元，”在英国，有 8k 个带有多个泵的加油站和 25k 个充电桩”</p>
+<h3 id="c"><a href="#c" class="headerlink" title="(c)"></a>(c)</h3><p>Assume you have developed a topic model on a collection with all your university communications for the last academic year. Design a user-centred experiment to evaluate the interpretability of the model. [Hint: design tasks and justify, selection of subjects, number of users, what will you measure, how do you prove the results]</p>
+<p>假设你已经在一个集合上开发了一个主题模型，包含了你上一学年的所有大学通讯。设计一个以用户为中心的实验来评估该模型的可解释性。[提示：设计任务和理由，选择对象，用户的数量，你将测量什么，你如何证明结果] 。</p>
+<h3 id="d"><a href="#d" class="headerlink" title="(d)"></a>(d)</h3><p>You have collected tweets and newspaper articles from Scotland for the last month. Identify three issues in developing topic models from this dataset. Describe a method to develop topic models from these datasets.</p>
+<p>你已经收集了苏格兰上个月的推文和报纸文章。指出从这个数据集开发话题模型的三个问题。描述一种从这些数据集中开发话题模型的方法。</p>
+<p>从收集的苏格兰推文和报纸文章数据集开发主题模型的三个问题是：</p>
+<ol>
+<li>简短而嘈杂的文本：推文通常很短，可能包含非正式语言、俚语、表情符号或缩写，这使得提取有意义的主题变得困难。另一方面，报纸文章的语言通常更长、更正式。</li>
+<li>多样化的数据来源：推文和报纸文章在结构、风格和内容方面都不同。将这些不同的数据源组合在一个主题模型中可能会导致主题定义不明确或不能代表底层主题。</li>
+<li>时间动态：数据集是在一个月内收集的，一些主题可能会随着时间的推移而演变或变化。静态主题模型可能无法捕获这些时间动态，从而导致主题表示不太准确。</li>
+</ol>
+<p>要从这些数据集开发主题模型，您可以按照以下步骤操作：</p>
+<ol>
+<li>数据预处理：清理和预处理来自两个来源的文本数据。这包括删除特殊字符、URL 和停用词，以及将文本转换为小写。对于推文，您可能还想扩展缩写并删除用户名或主题标签。</li>
+<li>特征提取：将预处理后的文本转换为合适的表示形式，例如词袋 (BoW) 或词频-逆文档频率 (TF-IDF)。这将创建一个文档术语矩阵，可用作主题建模算法的输入。</li>
+<li>数据集成：为了解决不同数据源的问题，考虑对推文和报纸文章的特征进行不同的加权，以更加重视更长、信息量更大的文章。或者，您可以为每个数据源开发单独的主题模型，然后根据它们的相似性或相关性组合主题。</li>
+<li>主题建模：将主题建模算法（如 Latent Dirichlet Allocation (LDA) 或 Non-negative Matrix Factorization (NMF)）应用于集成数据集或单独的数据集。根据领域知识、模型性能指标或使用肘部方法或主题连贯性等技术来选择主题数量。</li>
+<li>时间分析（可选）：要考虑数据的时间动态，请考虑使用动态主题模型，如动态主题模型 (DTM) 或随时间变化的主题 (ToT) 模型。这些模型可以捕获主题随时间的演变，并提供有关主题在整个月内如何变化的见解。</li>
+<li>模型评估：通过检查与每个主题相关的关键字并评估它们的连贯性来评估生成主题的质量和可解释性。或者，您可以进行用户研究以进一步评估主题的可解释性和相关性。</li>
+</ol>
+<p>按照这种方法，您可以根据收集到的来自苏格兰的推文和报纸文章开发主题模型，同时考虑到不同数据源、简短而嘈杂的文本以及时间动态所带来的挑战。</p>
+<h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><h3 id="a-2"><a href="#a-2" class="headerlink" title="(a)"></a>(a)</h3><p>Applying clustering (e.g., Single-pass clustering) on Twitter data stream will create groups of similar tweets of varying sizes. Design an algorithm to detect events from such groups. Specifically, answer the following questions.</p>
+<p>在 Twitter 数据流上应用聚类（例如，单程聚类）将创建不同大小的类似推文组。设计一个算法来检测这些组中的事件。具体来说，请回答以下问题。</p>
+<h4 id="i-1"><a href="#i-1" class="headerlink" title="(i)"></a>(i)</h4><p>What role do entities play in detecting events? How would you reduce the cost of detecting entities?</p>
+<p>实体在检测事件中发挥什么作用？你将如何降低检测实体的成本？</p>
+<p>命名实体（例如，人名、位置、组织）和其他类型的实体（例如，主题标签、URL）等实体可以在从 Twitter 数据检测事件中发挥关键作用。通过分析一组推文中提到的实体，我们可以了解这些推文在谈论什么，并可能识别正在发生的事件。通过识别和分析实体，我们可以更好地理解推文中讨论的话题和主题，从而实现更准确的事件检测。</p>
+<p>为了降低检测实体的成本，我们可以遵循以下步骤：</p>
+<ol>
+<li>使用预训练模型：利用来自流行 NLP 库（如 Spacy 或 Hugging Face Transformers）的预训练命名实体识别 (NER) 模型。这些模型通常针对性能进行了优化，有助于减少实体检测所需的时间和计算资源。</li>
+<li>应用过滤：根据与感兴趣领域相关的特定关键字或主题标签过滤推文。这有助于减少要处理的数据量，从而降低实体检测的成本。</li>
+<li>实现缓存：缓存数据流中频繁出现的实体，避免冗余的实体识别任务，从而节省时间和计算资源。</li>
+<li>执行增量更新：不是一次处理整个数据流，而是处理小批量的推文并增量更新检测到的实体。这有助于减少整体处理时间。</li>
+<li>选择近似方法：使用近似 NER 方法，如基于字典的方法或基于规则的技术，与基于深度学习的方法相比，它们可以更快并且需要更少的计算资源。但是，这可能会以降低准确性为代价。</li>
+</ol>
+<p>通过结合这些策略，您可以有效地检测 Twitter 数据流中的实体，从而实现更准确、更及时的事件检测。</p>
+<h4 id="ii-1"><a href="#ii-1" class="headerlink" title="(ii)"></a>(ii)</h4><p>If you were to use tf-idf concepts for representation, how would you capture them?</p>
+<p>如果你要使用 tf-idf 概念来表示，你将如何捕捉它们？</p>
+<h4 id="iii-1"><a href="#iii-1" class="headerlink" title="(iii)"></a>(iii)</h4><p>How do you remove noisy or spam groups?</p>
+<p>如何删除嘈杂的或垃圾的群组？</p>
+<h4 id="iv"><a href="#iv" class="headerlink" title="(iv)"></a>(iv)</h4><p>How would you identify categories of events?</p>
+<p>你将如何识别事件的类别？</p>
+<p>要从数据集中识别事件类别，您可以按照以下步骤操作：</p>
+<ol>
+<li>数据预处理：清理和预处理文本数据，这可能包括标记化、去除特殊字符、URL 和停用词，以及将文本转换为小写。</li>
+<li>特征提取：将预处理后的文本转换为合适的表示形式，例如词袋 (BoW) 或词频-逆文档频率 (TF-IDF)。这将创建一个文档术语矩阵，可用作聚类或分类算法的输入。</li>
+<li>主题建模或聚类：应用主题建模算法（如 Latent Dirichlet Allocation (LDA)）或聚类算法（如 K-means 或 DBSCAN）根据提取的特征对文档（事件）进行分组。这些组将代表不同类别的事件。</li>
+<li>确定类别数：根据领域知识、模型性能指标或使用肘部方法、剪影得分或主题连贯性等技术来选择类别数（主题或集群）。</li>
+<li>解释类别：检查与每个类别关联的关键字、实体或短语，以解释并为类别分配有意义的标签。您还可以使用词云或其他可视化技术来更好地理解每个类别的内容。</li>
+<li>验证类别：可选地，使用外部数据源、专家知识或用户研究来验证已识别的类别，以确保类别准确地表示基础事件类型。</li>
+</ol>
+<p>通过执行这些步骤，您可以识别数据集中的事件类别。该过程包括预处理数据、提取特征、应用聚类或主题建模技术、确定适当数量的类别、解释类别以及验证结果。</p>
+<h4 id="v"><a href="#v" class="headerlink" title="(v)"></a>(v)</h4><p>Provide an algorithm for combining similar groups of tweets (e.g., tweets containing same entities).</p>
+<p>提供一种算法来组合类似的推文组（例如，包含相同实体的推文）。</p>
+<h4 id="vi"><a href="#vi" class="headerlink" title="(vi)"></a>(vi)</h4><p>In the context of event detection, how would we find bursting clusters? Provide an algorithm&#x2F;pseudo-code</p>
+<p>在事件检测的背景下，我们将如何找到爆裂的集群？提供一个算法&#x2F;伪代码</p>
+<h3 id="b-1"><a href="#b-1" class="headerlink" title="(b)"></a>(b)</h3><p>Describe a methodology to predict stock trend prediction from social media data.</p>
+<p>描述一种从社交媒体数据中预测股票趋势的方法。</p>
+<h1 id="2021"><a href="#2021" class="headerlink" title="2021"></a>2021</h1><h2 id="1-1"><a href="#1-1" class="headerlink" title="1"></a>1</h2><p>Assume that you are hired by the Transport for London (TfL). TfL manages the London’s buses, London Underground, Docklands Light Railway, London Overground and London Trams. Your first task is to create a transport alert system exploiting Twitter data. It is assumed that there are enough social media data discussing transport related issues. Given this context, answer the following questions</p>
+<p>假设你受雇于伦敦交通局（TfL）。TfL 管理着伦敦的巴士、伦敦地铁、码头区轻轨、伦敦地铁和伦敦电车。你的第一个任务是创建一个利用 Twitter 数据的交通警报系统。假设有足够的社交媒体数据来讨论交通相关问题。鉴于这一背景，请回答以下问题</p>
+<h3 id="i-2"><a href="#i-2" class="headerlink" title="(i)"></a>(i)</h3><p>Assume that you are starting from scratch, describe the steps involved in developing a geo-localisation system for TfL. In your answer highlight what kind of approach you will use for geolocalisation and justify. [Hint: Describe the high-level components of your method and justify]</p>
+<p>假设你从零开始，描述为 TfL 开发地理定位系统的步骤。在你的答案中强调你将使用什么样的方法来实现地理定位，并说明理由。[提示：描述你的方法的高级组成部分，并说明理由。］</p>
+<h3 id="ii-2"><a href="#ii-2" class="headerlink" title="(ii)"></a>(ii)</h3><p>Assume that your manager is not happy with the effectiveness of the system you developed. How would you show the effectiveness of the system? [Hint: Describe the step-by-step procedure for evaluation you may use; measures you may use and justify.]</p>
+<p>假设你的经理对你开发的系统的有效性不满意。你将如何显示该系统的有效性？[提示：描述你可能使用的分步评估程序；你可能使用的措施并说明理由。］</p>
+<h3 id="iii-2"><a href="#iii-2" class="headerlink" title="(iii)"></a>(iii)</h3><p>Identify the biases you may encounter in developing an approach like above and how are you going to address them?</p>
+<p>找出你在制定类似上述方法时可能遇到的偏见，你打算如何解决这些偏见？</p>
+<h3 id="iv-1"><a href="#iv-1" class="headerlink" title="(iv)"></a>(iv)</h3><p>How would you demonstrate the skewness of data?</p>
+<p>你将如何证明数据的偏斜性？</p>
+<h3 id="v-1"><a href="#v-1" class="headerlink" title="(v)"></a>(v)</h3><p>Majority of tweet data is non-geo tagged. How do you test the effectiveness of the model for non-geo tagged data set? [Hint: nongeo tagged tweets have no coordinate information; so, you need to procure it externally]</p>
+<p>大部分的推特数据是没有地理标记的。你如何测试模型对非地理标签数据集的有效性？[提示：非地理标记的推文没有坐标信息；因此，你需要从外部获得这些信息] 。</p>
+<h2 id="2-1"><a href="#2-1" class="headerlink" title="2"></a>2</h2><p>Assume that you are hired by the BBC news division and your task is to develop innovative social media analytic techniques. BBC news division is interested in understanding the public reaction to emerging events in UK and potentially on their coverage of news. Given this context, answer the following questions.</p>
+<p>假设你受雇于 BBC 新闻部门，你的任务是开发创新的社会媒体分析技术。BBC 新闻部门有兴趣了解公众对英国新出现的事件的反应以及对其新闻报道的潜在影响。鉴于这一背景，请回答以下问题。</p>
+<h3 id="i-3"><a href="#i-3" class="headerlink" title="(i)"></a>(i)</h3><p>How would you identify and crawl tweets with public reaction to the BBC news or other emerging events? How would you organise these for the use of the BBC? [Hint: focus on news links and social media; mention how you will identify useful words to crawl; How would you group such data into relevant activities&#x2F;themes?]</p>
+<p>你将如何识别和抓取公众对 BBC 新闻或其他新兴事件的反应的推文？你将如何组织这些内容供 BBC 使用？[提示：关注新闻链接和社会媒体；提到你将如何识别有用的词来抓取；你将如何把这些数据归入相关活动&#x2F;主题？］</p>
+<h3 id="ii-3"><a href="#ii-3" class="headerlink" title="(ii)"></a>(ii)</h3><p>Consider that you gathered a stream of tweets, what problems you may face if you were to use clustering (e.g., single pass clustering)?</p>
+<p>考虑到你收集了一串推文，如果你要使用聚类（如单次聚类），你可能会面临什么问题？</p>
+<h3 id="iii-3"><a href="#iii-3" class="headerlink" title="(iii)"></a>(iii)</h3><p>Assume that you were asked to develop an event detection system for tweets from UK. Assuming that you have developed a fullfledged event detection system, how would you show the effectiveness of your detection system? [Hint: discuss data collection; generating ground truths; what level of annotation process will be used? What measures will be used for comparison and why?]</p>
+<p>假设你被要求为英国的推文开发一个事件检测系统。假设你已经开发了一个成熟的事件检测系统，你将如何显示你的检测系统的有效性？[提示：讨论数据收集；生成基础真理；将使用什么级别的注释过程？将使用什么措施进行比较，为什么？］</p>
+<h3 id="iv-2"><a href="#iv-2" class="headerlink" title="(iv)"></a>(iv)</h3><p>Given that you have crawled tweets for a week, you were asked to analyse the topics discussed in them. How would you identify the themes that appear in this data? In your answer identify the models you may use; the assumptions you may make; and the process you may follow. How would you address the data sparsity issues? How would you examine the effectiveness of the themes?</p>
+<p>鉴于你已经抓取了一周的 tweets，你被要求分析其中讨论的主题。你将如何确定这些数据中出现的主题？在你的答案中确定你可能使用的模型；你可能做出的假设；以及你可能遵循的过程。你将如何解决数据稀少的问题？你将如何检查主题的有效性？</p>
+<h3 id="v-2"><a href="#v-2" class="headerlink" title="(v)"></a>(v)</h3><p>Based on your analysis BBC made a statement that people perceive their news favourably. Describe the biases your analysis might have created in making such a statement.</p>
+<p>根据你的分析，BBC 做出了一个声明，即人们对他们的新闻持有利的看法。描述一下你的分析在做出这样的声明时可能产生的偏见。</p>
+<h2 id="3-1"><a href="#3-1" class="headerlink" title="3"></a>3</h2><h3 id="a-3"><a href="#a-3" class="headerlink" title="(a)"></a>(a)</h3><p>Assume that you have been hired by the BBC at Scotland. Your job is to create a combined news and social media system, where you want to present news along with relevant tweets on the news topic. Assume that you have created one such feature and your job is to test the effectiveness of the system. Given this context, how would you answer the following questions?</p>
+<p>假设你受雇于苏格兰的 BBC。你的工作是创建一个结合了新闻和社交媒体的系统，你要把新闻和关于新闻主题的相关推文一起呈现出来。假设你已经创建了一个这样的功能，你的工作是测试该系统的有效性。鉴于这种情况，你将如何回答以下问题？</p>
+<h4 id="i-4"><a href="#i-4" class="headerlink" title="(i)"></a>(i)</h4><p>Describe the benefits of A&#x2F;B testing in this scenario. What are the important issues to consider in A&#x2F;B testing?</p>
+<p>描述在这种情况下 A&#x2F;B 测试的好处。在 A&#x2F;B 测试中需要考虑的重要问题是什么？</p>
+<h4 id="ii-4"><a href="#ii-4" class="headerlink" title="(ii)"></a>(ii)</h4><p>How would you design an A&#x2F;B testing procedure for incremental development of the system mentioned above? [Hint – identify hypotheses, design and measures? Discuss internal and external validity issues]</p>
+<p>你将如何为上述系统的增量开发设计一个 A&#x2F;B 测试程序？[提示–确定假设、设计和措施？讨论内部和外部的有效性问题] 。</p>
+<h4 id="iii-4"><a href="#iii-4" class="headerlink" title="(iii)"></a>(iii)</h4><p>Describe the benefits and drawbacks, if you were to do a crowdsourcing based evaluation.</p>
+<p>如果你要做一个基于众包的评估，请描述其好处和坏处。</p>
+<h3 id="b-2"><a href="#b-2" class="headerlink" title="(b)"></a>(b)</h3><p>Serious mental health issues originated during COVID. Reddit channels (known as subreddits) discuss mental health issues. You have been recruited by the NHS to collect and analyze such data and identify mental health issues. Given this context answer the following questions.</p>
+<p>严重的心理健康问题起源于 COVID 期间。Reddit 频道（被称为 subreddits）讨论心理健康问题。你被 NHS 招募来收集和分析此类数据，并识别心理健康问题。鉴于这一背景，请回答下列问题。</p>
+<h4 id="i-5"><a href="#i-5" class="headerlink" title="(i)"></a>(i)</h4><p>How do we study the role of social support in Reddit channels?</p>
+<p>我们如何研究 Reddit 频道中社会支持的作用？</p>
+<p>Social Support is an exchange of resources between two individuals, perceived by the provider or the recipient to be intended to enhance the well-being of the recipient</p>
+<p>We can create an interaction graph, from the messages on a channel. From it we can study the role of super users. We can also do sensitivity analysis.</p>
+<p>社会支持是两个人之间的资源交换，提供者或接受者都认为是为了提高接受者的福利。</p>
+<p>我们可以从一个频道的信息中创建一个互动图。从中我们可以研究超级用户的作用。我们还可以做敏感性分析。</p>
+<p>Sensitivity analysis methods measures the network’s capacity to diffuse information as you move nodes based on certain property. This will allow us to measure the importance of super users. The procedure is to sort all the nodes in the graph in order of their degrees. (Degree of a node- Is proportional to the diverse set of users that node has communicated with over the lifetime). Then remove nodes progressively; that is removing nodes in increments of 1%and compute the size of the largest connected component. If say top 10% of activity are responsible for most of the cohesive connectivity in the community, then this means this 10% have the most diverse connections in terms of the number of users contacted!. This means – if we want to diffuse information, we focus on these users.</p>
+<p>敏感性分析方法衡量网络在你根据某些属性移动节点时的信息扩散能力。这将使我们能够衡量超级用户的重要性。程序是将图中的所有节点按其度数排序。 一个节点的度数–与该节点在生命周期内与之交流的不同用户集成正比）。然后逐步删除节点；也就是以 1%的增量删除节点，并计算最大的连接部分的大小。如果说前 10%的活动负责社区中大部分的凝聚性连接，那么这意味着这 10%的活动在联系的用户数量上拥有最多样化的连接 这意味着–如果我们想扩散信息，我们要关注这些用户。</p>
+<h4 id="ii-5"><a href="#ii-5" class="headerlink" title="(ii)"></a>(ii)</h4><p>Design an experimental study where you can identify mental health issues in the population. [Hint: identify research hypotheses, data collection method; analytics techniques- what kind of graphs you create and what kind of measures you use.]</p>
+<p>设计一个实验性研究，你可以在人群中识别心理健康问题。[提示：确定研究假设，数据收集方法；分析技术–你创建什么样的图表，你使用什么样的措施。］</p>
+<p>Open question</p>
+<p>Research Hypotheses were discussed in the class; they have to chose one they prefer to use. (2 marks)</p>
+<p>Data collection – we will crawl certain Reddit channels (like suicide, anxiety, ..) for pre pandemic and post-pandemic data. (1 mark)</p>
+<p>Design of the study is to analyse various behaviors of the people and network- One design is to study the roles people play in providing community support (other schemes are also possible) (2 marks)</p>
+<p>开放性问题</p>
+<p>课堂上讨论了研究假设；他们必须选择一个他们喜欢使用的假设。(2 分)</p>
+<p>数据收集–我们将抓取某些红网渠道（如自杀、焦虑……）的大流行前和大流行后数据。(1 分)</p>
+<p>研究的设计是分析人们和网络的各种行为–一种设计是研究人们在提供社区支持方面的作用（其他方案也可以）（2 分）</p>
+<h1 id="2020"><a href="#2020" class="headerlink" title="2020"></a>2020</h1><h2 id="1-2"><a href="#1-2" class="headerlink" title="1"></a>1</h2><h3 id="a-4"><a href="#a-4" class="headerlink" title="(a)"></a>(a)</h3><p>Assume that you are hired by the Future Health company to build a knowledge graph on COVID-19, including social media, news, publications, and report data. This knowledge graph would allow users to explore every aspect of coronaviruses and real-time updates. Given this context, answer the following questions.</p>
+<p>假设你受雇于未来健康公司，建立一个关于 COVID-19 的知识图谱，包括社会媒体、新闻、出版物和报告数据。这个知识图谱将允许用户探索冠状病毒的每一个方面和实时更新。鉴于这一背景，请回答以下问题。</p>
+<h4 id="i-6"><a href="#i-6" class="headerlink" title="(i)"></a>(i)</h4><p>The dataset contains vast amounts of unstructured data generated on a daily basis. Your first task is to automatically scan entire articles for information extraction of entities, including people, organisations, and locations. Describe the steps involved to identify entity mentions in text and convert them into knowledge.</p>
+<p>数据集包含每天产生的大量非结构化数据。你的第一个任务是自动扫描整个文章以提取实体信息，包括人物、组织和地点。描述一下识别文本中提到的实体并将其转化为知识所涉及的步骤。</p>
+<h4 id="ii-6"><a href="#ii-6" class="headerlink" title="(ii)"></a>(ii)</h4><p>You have been given the following sample article: f</p>
+<p>“Boris Johnson is responding to treatment for coronavirus as he spends his third day in hospital. The prime minister was being kept in St Thomas’ Hospital in London for close monitoring and remained clinically stable, Downing Street said. No 10 said a review of lockdown rules would go ahead as planned next week, but the public must stick with the measures at what was a critical time.”</p>
+<p>Illustrate how your entity recogniser works on the article. List three example entities and relationships from the extracted knowledge of the given paragraph, in which nodes are entities and typed edges between two nodes depict a relationship between entities.</p>
+<p>你已经得到了以下的文章样本：</p>
+<p>“鲍里斯-约翰逊对冠状病毒的治疗有反应，因为他在医院度过了第三天。唐宁街说，这位首相被留在伦敦的圣托马斯医院进行密切监测，并保持临床稳定。10 号厅说，对封锁规则的审查将按计划在下周进行，但公众必须在关键时刻坚持这些措施。”</p>
+<p>说明你的实体识别器如何在文章中工作。从给定段落的提取知识中列出三个实体和关系的例子，其中节点是实体，两个节点之间的键入边缘描述了实体之间的关系。</p>
+<h3 id="b-3"><a href="#b-3" class="headerlink" title="(b)"></a>(b)</h3><p>NHS Scotland has tasked you to automatically discover topics discussed by social media users in their data set. It is observed that the collected tweets are noisy with overly common words, ideograms, and spelling errors. Twitter users also often use different forms of words, infrequent words, and short sentences. Moreover, there are high numbers of words with high frequency but low relevancy. Describe detailed steps for pre-processing and topic modelling of collected tweets. In your answer, highlight the key challenge of noisy topic modelling and how to address it.</p>
+<p>苏格兰国家医疗服务体系委托你在他们的数据集中自动发现社交媒体用户讨论的话题。据观察，收集到的推文是有噪音的，有过于常见的单词、表意文字和拼写错误。推特用户还经常使用不同形式的单词、不常见的单词和短句。此外，还有大量的高频率但低相关度的词。描述对收集到的推文进行预处理和主题建模的详细步骤。在你的回答中，请强调噪声主题建模的关键挑战以及如何解决这个问题。</p>
+<h2 id="2-2"><a href="#2-2" class="headerlink" title="2"></a>2</h2><h3 id="a-5"><a href="#a-5" class="headerlink" title="(a)"></a>(a)</h3><p>Assume that you are hired by the Public Health Department (PHD) to analyse social media data (Twitter) to understand how people cope with the COVID-19 scenario. The aim is to automatically analyse the data and identify the emotions expressed in such data. However, you realised that they don’t have an emotion labelled data set to develop a classifier. Your first task is to develop a ground truth data set with emotion labels, so that a classifier can be developed. Describe a methodology for collecting and labelling emotion annotated data set. Specifically, address the following points.</p>
+<p>假设你受雇于公共卫生部门（PHD），分析社会媒体数据（Twitter），以了解人们如何应对 COVID-19 的情况。目的是自动分析数据并识别这些数据中所表达的情绪。然而，你意识到他们没有一个情绪标记的数据集来开发一个分类器。你的第一个任务是开发一个带有情绪标签的基础真实数据集，这样就可以开发一个分类器。描述一种收集和标记情感注释数据集的方法。具体来说，要解决以下几点。</p>
+<h4 id="i-7"><a href="#i-7" class="headerlink" title="(i)"></a>(i)</h4><p>First describe and justify the set of emotion labels you will consider for labelling.</p>
+<p>首先描述并论证你将考虑用于标记的情感标签集。</p>
+<h4 id="ii-7"><a href="#ii-7" class="headerlink" title="(ii)"></a>(ii)</h4><p>Your task is to develop a ground truth data set with the proposed emotion labels. Describe an approach and step-by-step implementation to annotate a large-scale data set from social media. Where possible illustrate your answer with pseudo-code and&#x2F;or concrete examples.</p>
+<p>你的任务是用提议的情感标签开发一个基础真实数据集。描述一种方法和分步实施，以注释来自社交媒体的大规模数据集。在可能的情况下，用伪代码和&#x2F;或具体例子来说明你的答案。</p>
+<h4 id="iii-5"><a href="#iii-5" class="headerlink" title="(iii)"></a>(iii)</h4><p>How do we process the emotion labelling of PHD data? Describe the steps involved.</p>
+<p>我们如何处理 PHD 数据的情感标签？描述一下其中的步骤。</p>
+<h3 id="b-4"><a href="#b-4" class="headerlink" title="(b)"></a>(b)</h3><p>Social media play an essential role in sharing good and bad practices during the COVID-19 lockdown period. You have been tasked to analyse the structure and dynamics of Scotland-based dataset from Twitter from the beginning of March to the end of April 2020. Propose an analytical approach to identify influential social media users and their activities. Describe how you form a mention based interaction graph, data structure, and graph analysis technique in details.</p>
+<p>在 COVID-19 封锁期间，社交媒体在分享好的和坏的做法方面发挥了重要作用。你的任务是分析从 2020 年 3 月初到 4 月底的基于苏格兰的 Twitter 数据集的结构和动态。提出一种分析方法来确定有影响力的社交媒体用户及其活动。详细描述你如何形成一个基于提及的互动图、数据结构和图分析技术。</p>
+<h2 id="3-2"><a href="#3-2" class="headerlink" title="3"></a>3</h2><h3 id="a-6"><a href="#a-6" class="headerlink" title="(a)"></a>(a)</h3><p>Assume that you are hired by the Scottish Police Department to develop a suite of social media based solutions. Your initial focus is on Twitter due to its popularity. Given this context, answer the following questions.</p>
+<p>假设你受雇于苏格兰警察局，开发一套基于社交媒体的解决方案。由于 Twitter 的流行，你最初的重点是在 Twitter 上。鉴于这一背景，请回答以下问题。</p>
+<h4 id="i-8"><a href="#i-8" class="headerlink" title="(i)"></a>(i)</h4><p>Twitter user profile contains many useful fields. Identify three significant user profile fields and argue for their significance by identifying application scenarios.</p>
+<p>Twitter 的用户资料包含许多有用的字段。找出三个重要的用户资料字段，并通过确定应用场景来论证其重要性。</p>
+<h4 id="ii-8"><a href="#ii-8" class="headerlink" title="(ii)"></a>(ii)</h4><p>John Smith is a Glasgow resident with his Twitter field “geo_ enabled”: true condition. He recently retweeted a tweet from President Obama. How do we derive Mr Smith’s location information from the retweet? In your answer identify top level objects of the retweet.</p>
+<p>约翰-史密斯是格拉斯哥的居民，他的 Twitter 字段 “geo_ enabled”：真实情况。他最近转发了奥巴马总统的一条推特。我们如何从转发的推文中推导出史密斯先生的位置信息？在你的答案中确定转发的最高级别对象。</p>
+<h3 id="b-5"><a href="#b-5" class="headerlink" title="(b)"></a>(b)</h3><p>Assume that you are hired by the National Health Services (NHS) Scotland to conduct analytics of large amounts of social media posts about coronavirus updates. NHS administrators want to gather Twitter data from Scotland. They are aware of the limitations of collecting just geotagged tweets. You need to come up with a solution to gather as much data as possible from Scotland. Develop and describe an effective solution for collecting data for a month. In your answer, elaborate API mechanisms, crawling method, and relevant keywords you will use in detail. Provide a pseudo-code of your solution</p>
+<p>假设你受雇于苏格兰国家卫生服务局（NHS），对大量关于冠状病毒更新的社交媒体帖子进行分析。NHS 的管理人员希望收集苏格兰的 Twitter 数据。他们意识到仅仅收集有地理标记的推特的局限性。你需要想出一个解决方案，从苏格兰收集尽可能多的数据。开发并描述一个有效的解决方案来收集一个月的数据。在你的答案中，详细阐述 API 机制、抓取方法和你将使用的相关关键词。提供一个你的解决方案的伪代码</p>
+ 
+      </div>
+      <hr />
+
+      
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Twistzz</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://twistzz-xjtlu.github.io/2023/05/06/COMPSCI5107-Web-Science-for-MSc/">https://twistzz-xjtlu.github.io/2023/05/06/COMPSCI5107-Web-Science-for-MSc/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Twistzz</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+      <div class="tag_share" style="display: block">
+        <div class="post-meta__tag-list" style="display: inline-block">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+              <span class="chip bg-color">研究生</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div
+          class="post_share"
+          style="
+            zoom: 80%;
+            width: fit-content;
+            display: inline-block;
+            float: right;
+            margin: -0.15rem 0;
+          "
+        >
+          <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+        </div>
+      </div>
+       <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">老板大气 老板身体健康</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+ 
+    </div>
+  </div>
+
+          
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2023/05/06/COMPSCI5099-Information-Visualisation/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="COMPSCI5099 Information Visualisation">
+                        
+                        <span class="card-title">COMPSCI5099 Information Visualisation</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-06
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MSc/" class="post-category">
+                                    MSc
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                        <span class="chip bg-color">研究生</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/04/26/COMPSCI5104-Secured-Software-Engineering-for-MSc/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="COMPSCI5104 Secured Software Engineering for MSc">
+                        
+                        <span class="card-title">COMPSCI5104 Secured Software Engineering for MSc</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-26
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MSc/" class="post-category">
+                                    MSc
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                        <span class="chip bg-color">研究生</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+ <!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023</span>
+            
+            <a href="/about" target="_blank">Twistzz</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">22.4k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2023";
+                        var startMonth = "4";
+                        var startDate = "14";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Twistzz-XJTLU" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:twistzz963@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3027656718" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3027656718" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
