@@ -1,0 +1,2184 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="COMPSCI5063 Cyber Security Fundamentals, Twistzz&#39;Blog">
+    <meta name="description" content="Week1 IntroductionINTRO TO CYBER SECURITYName some cyber attacks
+Phishing attacks
+Ransomware
+Malware Attacks
+Insider Thr">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>COMPSCI5063 Cyber Security Fundamentals | Twistzz&#39;Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Twistzz&#39;Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Twistzz&#39;Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/7.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">COMPSCI5063 Cyber Security Fundamentals</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+  <div class="card">
+    <div class="card-content article-info">
+      <div class="row tag-cate">
+        <div class="col s7">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+              <span class="chip bg-color">研究生</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div class="col s5 right-align">
+          
+          <div class="post-cate">
+            <i class="fas fa-bookmark fa-fw icon-category"></i>
+            
+            <a href="/categories/MSc/" class="post-category">
+              MSc
+            </a>
+            
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="post-info">
+        
+        <div class="post-date info-break-policy">
+          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2023-05-21
+        </div>
+         
+        <div class="post-date info-break-policy">
+          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-05-21
+        </div>
+         
+        <div class="info-break-policy">
+          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 7.3k
+        </div>
+         
+        <div class="info-break-policy">
+          <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+          45 分
+        </div>
+         
+        <div id="busuanzi_container_page_pv" class="info-break-policy">
+          <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+          <span id="busuanzi_value_page_pv"></span>
+        </div>
+        
+      </div>
+    </div>
+    <hr class="clearfix" />
+
+    
+    <!-- 是否加载使用自带的 prismjs. -->
+    <link
+      rel="stylesheet"
+      href="/libs/prism/prism.min.css"
+    />
+     
+
+    <div class="card-content article-card-content">
+      <div id="articleContent">
+        <h1 id="Week1-Introduction"><a href="#Week1-Introduction" class="headerlink" title="Week1 Introduction"></a>Week1 Introduction</h1><h2 id="INTRO-TO-CYBER-SECURITY"><a href="#INTRO-TO-CYBER-SECURITY" class="headerlink" title="INTRO TO CYBER SECURITY"></a>INTRO TO CYBER SECURITY</h2><h3 id="Name-some-cyber-attacks"><a href="#Name-some-cyber-attacks" class="headerlink" title="Name some cyber attacks"></a>Name some cyber attacks</h3><ul>
+<li>Phishing attacks</li>
+<li>Ransomware</li>
+<li>Malware Attacks</li>
+<li>Insider Threats</li>
+<li>Weak Passwords</li>
+<li>Trade secrets and insider data theft</li>
+<li>Sensitive data leaks and breaches</li>
+</ul>
+<h3 id="High-level-plan-for-secure-system"><a href="#High-level-plan-for-secure-system" class="headerlink" title="High-level plan for secure system"></a>High-level plan for secure system</h3><p><strong>Systematic thought is required for successful defense</strong></p>
+<ul>
+<li>Goal: Protect assets<ul>
+<li>only legible entity&#x2F;authorized users could receive a file or use the system</li>
+</ul>
+</li>
+<li>Aspects of Cyber Security (asset protection)<ul>
+<li>Confidentiality, Integrity, Availability, Authenticity, Accountability, Non-repudiation</li>
+</ul>
+</li>
+<li>Threat model: assumptions about what the attacker can do<ul>
+<li>e.g., can guess the password, cannot physically steal our server</li>
+</ul>
+</li>
+<li>Policy: Some plan (rules) that will get your system to achieve the goal<ul>
+<li>e.g., set permissions on a file so it’s only readable by Alice</li>
+<li>Policy must include human components (e.g., do not share passwords)</li>
+</ul>
+</li>
+<li>Mechanism: Software&#x2F;hardware that your system uses to enforces policy<ul>
+<li>user accounts, passwords, encryption</li>
+</ul>
+</li>
+<li>Often layered: mechanism of one layer is policy of next level down</li>
+</ul>
+<h3 id="Why-need-Cyber-Security"><a href="#Why-need-Cyber-Security" class="headerlink" title="Why need Cyber Security?"></a>Why need Cyber Security?</h3><p>To protect</p>
+<ul>
+<li>Assets<ul>
+<li>Assets are things that need protection and are usually digital, such as files.</li>
+</ul>
+</li>
+<li>Some assets, such as keys and passwords, are important for cyber security but are not stored as files.</li>
+</ul>
+<p>Aspects of Cyber Security (asset protection):</p>
+<ul>
+<li>Confidentiality, Integrity, Availability, Authenticity, Accountability, Non-repudiation</li>
+</ul>
+<h3 id="Confidentiality"><a href="#Confidentiality" class="headerlink" title="Confidentiality"></a>Confidentiality</h3><p>The protection of information in the system so that an unauthorized person cannot access it</p>
+<p>This implies an access control mechanism.</p>
+<ul>
+<li>Users must be identified.</li>
+<li>Users are then authenticated.</li>
+<li>Users are then authorised to access various assets.</li>
+<li>The access can be controlled, for example, with read, write and execute permissions.</li>
+</ul>
+<p>Privacy is the confidentiality of personal information.</p>
+<p>Examples</p>
+<ul>
+<li>Using a password to control access.</li>
+<li>Encrypting files</li>
+</ul>
+<h3 id="Integrity"><a href="#Integrity" class="headerlink" title="Integrity"></a>Integrity</h3><ul>
+<li>Ensure nothing is lost or deleted.<ul>
+<li>Either accidentally or deliberately.</li>
+</ul>
+</li>
+<li>Make sure nothing is changed.</li>
+</ul>
+<p>Examples.</p>
+<ul>
+<li>Use a message digest to detect if a file has been changed.</li>
+<li>Use a public key certificate for network communications.</li>
+</ul>
+<h3 id="Availability"><a href="#Availability" class="headerlink" title="Availability"></a>Availability</h3><ul>
+<li>Have capacity to meet demands.</li>
+<li>Resources are allocated fairly.</li>
+<li>Fault tolerance and recovery from failure.</li>
+</ul>
+<p>Examples</p>
+<ul>
+<li>Protect against denial of service attacks.</li>
+</ul>
+<h3 id="Authenticity"><a href="#Authenticity" class="headerlink" title="Authenticity"></a>Authenticity</h3><ul>
+<li>The property of being genuine and being able to be verified and trusted; confidence in the validity of a transmission, a message, or message originator.</li>
+<li>It validates the source or origin of data and other file transfers through proof of identity<ul>
+<li>This ensures that the message (email, payment transaction, digital file, etc.) was not corrupted or intercepted during transmission</li>
+</ul>
+</li>
+</ul>
+<h3 id="Accountability"><a href="#Accountability" class="headerlink" title="Accountability"></a>Accountability</h3><ul>
+<li>a crucial element of Building Integrity (BI) initiatives and one of the key principles of Good Governance. A responsible, responsive, and democratic security sector cannot be conceived without accountable personnel, institutions, and procedures.</li>
+<li>an essential part of an information security plan</li>
+<li>Pointed towards who is responsible for each cyber role in an organization</li>
+</ul>
+<h3 id="Non-repudiation"><a href="#Non-repudiation" class="headerlink" title="Non- repudiation"></a>Non- repudiation</h3><ul>
+<li>The author &#x2F; owner of a document cannot say it was not them.</li>
+<li>Assurance that the sender of information is provided with proof of delivery and the recipient is provided with proof of the sender’s identity, so neither can later deny having processed the information.</li>
+<li>Non-repudiation provides evidence of data’s origin, authenticity, and integrity</li>
+<li>Digital file is properly tracked and users’ action are logged</li>
+</ul>
+<h3 id="Threats"><a href="#Threats" class="headerlink" title="Threats"></a>Threats</h3><ul>
+<li>What are we protecting assets from? Threats</li>
+<li>Different types of asset security are subjects to different threats.<ul>
+<li>A threat against confidentiality will be different from a threat against availability.</li>
+</ul>
+</li>
+<li>When protecting an asset, we need to consider all possible threats.</li>
+<li>There are many different techniques to make sure we have considered all threats.<ul>
+<li>Standard lists of threats.</li>
+<li>Standard techniques for dealing with them.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Vulnerabilities"><a href="#Vulnerabilities" class="headerlink" title="Vulnerabilities"></a>Vulnerabilities</h3><ul>
+<li>Different ways of protecting assets lead to different vulnerabilities.</li>
+<li>We can check the security of a system in two different ways.<ul>
+<li>– From the viewpoint of an attacker. What are the attackers goals? How can they achieve them?</li>
+<li>From the viewpoint of the defender. What are the system’s vulnerabilities?</li>
+</ul>
+</li>
+<li>All the vulnerabilities collected together are called the attack surface.<ul>
+<li>As a defender, we want to reduce the attack surface.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Protection-and-Risk"><a href="#Protection-and-Risk" class="headerlink" title="Protection and Risk"></a>Protection and Risk</h3><ul>
+<li>Protecting our assets from threats leads to a discussion of risks.<ul>
+<li>Protection has a costs.</li>
+<li>The value of an asset might be less than the cost of protecting it.</li>
+<li>Some forms of protection may be cheaper than others.</li>
+</ul>
+</li>
+<li>Risks involve the probability of something happening, together with the effect of the attack succeeding.</li>
+</ul>
+<h3 id="Technical-Solutions-are-Essential"><a href="#Technical-Solutions-are-Essential" class="headerlink" title="Technical Solutions are Essential"></a>Technical Solutions are Essential</h3><ul>
+<li>Unbreakable encryption to keep secrets and ensure data is not changed.<ul>
+<li>The algorithm can’t be broken without the key.</li>
+<li>Keys must be kept secret.</li>
+</ul>
+</li>
+<li>Digital signatures to allow legally enforceable contracts.<ul>
+<li>So that signatures can’t be forged.</li>
+</ul>
+</li>
+<li>Secure message digests to provide document fingerprints without revealing the document content.<ul>
+<li>So that two different documents can’t have the same message digest.</li>
+</ul>
+</li>
+<li>Secure protocols to make sure the basic building blocks of encryption signatures and message digests are used correctly.<ul>
+<li>So that it is not possible to bypass the use of a key.</li>
+</ul>
+</li>
+</ul>
+<h3 id="but-Not-Enough"><a href="#but-Not-Enough" class="headerlink" title="but Not Enough"></a>but Not Enough</h3><ul>
+<li>People!</li>
+<li>Users may not comply with security policies.</li>
+<li>Organizations may develop policies that users find very difficult to use.</li>
+<li>Developers may not adhere to security guidelines when building systems.</li>
+<li>Regulatory bodies may not provide appropriate policies and rules and then may not enforce them.</li>
+<li>Need to consider socio-technical systems.<ul>
+<li>Consider people as well as the technical aspects of any system</li>
+</ul>
+</li>
+</ul>
+<h1 id="Week2-Cyber-Attacks-and-Security-Protocols"><a href="#Week2-Cyber-Attacks-and-Security-Protocols" class="headerlink" title="Week2 Cyber Attacks and Security Protocols"></a>Week2 Cyber Attacks and Security Protocols</h1><h2 id="NETWORK-STRUCTURES"><a href="#NETWORK-STRUCTURES" class="headerlink" title="NETWORK STRUCTURES"></a>NETWORK STRUCTURES</h2><h3 id="Network-Types"><a href="#Network-Types" class="headerlink" title="Network Types"></a>Network Types</h3><ul>
+<li>Local Area Network (LAN)<ul>
+<li>Wireless Local Area Network (WLAN)</li>
+</ul>
+</li>
+<li>Personal Area Network (PAN)</li>
+<li>Metropolitan Area Network (MAN)</li>
+<li>Wide Area Network (WAN)</li>
+<li>Virtual Private Network (VPN)</li>
+</ul>
+<h3 id="A-Typical-Network"><a href="#A-Typical-Network" class="headerlink" title="A Typical Network"></a>A Typical Network</h3><h3 id="Open-Systems-Interconnection-model-OSI-model"><a href="#Open-Systems-Interconnection-model-OSI-model" class="headerlink" title="Open Systems Interconnection model (OSI model)"></a>Open Systems Interconnection model (OSI model)</h3><ul>
+<li>Application<ul>
+<li>Serves as a window for users and application processes to access network service.</li>
+</ul>
+</li>
+<li>Presentation<ul>
+<li>Concerned with the syntax and semantics of the information exchanged between the two systems</li>
+</ul>
+</li>
+<li>Session<ul>
+<li>Establish, maintain and synchronizes the interaction between communicating devices (authentication &amp; Authorization)</li>
+</ul>
+</li>
+<li>Transport<ul>
+<li>Reliable transmission of data segments between points on a network (TCP, UDP protocols)</li>
+</ul>
+</li>
+<li>Network<ul>
+<li>Structuring and managing a multi-node network, including addressing, routing and traffic control</li>
+</ul>
+</li>
+<li>Data link<ul>
+<li>Transmission of data frames between two nodes connected by a physical layer (media access control)</li>
+</ul>
+</li>
+<li>Physical<ul>
+<li>Transmission and reception of raw bit streams over a physical medium (e.g., optical fibre, cable, wireless radio)</li>
+</ul>
+</li>
+</ul>
+<h2 id="CYBERATTACKS"><a href="#CYBERATTACKS" class="headerlink" title="CYBERATTACKS"></a>CYBERATTACKS</h2><h3 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h3><p>A cyberattack is any offensive maneuver that targets computer information systems, computer networks, infrastructures, or personal computer devices</p>
+<h2 id="Types-of-attack"><a href="#Types-of-attack" class="headerlink" title="Types of attack"></a>Types of attack</h2><ul>
+<li>Active attack<ul>
+<li>attempts to alter system resources or affect their operation, e.g., Denial-of-service attack, Spoofing, Man-in-the-middle attack, ARP poisoning (Layer 2)</li>
+</ul>
+</li>
+<li>Passive attack<ul>
+<li>attempts to learn or make use of information from the system but does not affect system resources, e.g., wiretapping, fiber tapping</li>
+</ul>
+</li>
+</ul>
+<h3 id="Forms-of-Cyber-Threats"><a href="#Forms-of-Cyber-Threats" class="headerlink" title="Forms of Cyber Threats"></a>Forms of Cyber Threats</h3><ul>
+<li>Environmental<ul>
+<li>Break-in, physical damage, natural disaster, etc.</li>
+</ul>
+</li>
+<li>Unintentional<ul>
+<li>Human error, poor training, insufficient documentation, etc.</li>
+</ul>
+</li>
+<li>Intentional<ul>
+<li>Internal, e.g., Staff</li>
+</ul>
+</li>
+<li>External<ul>
+<li>Intelligence agencies, hackers, terrorists, crackers, criminals, industrial intelligence, etc.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Common-Security-Problems"><a href="#Common-Security-Problems" class="headerlink" title="Common Security Problems"></a>Common Security Problems</h3><ul>
+<li>Snooping<ul>
+<li>Unauthorized reading or interception of information</li>
+</ul>
+</li>
+<li>Modification<ul>
+<li>Unauthorized change of information</li>
+</ul>
+</li>
+<li>Masquerading or spoofing<ul>
+<li>Impersonation of one entity by another</li>
+</ul>
+</li>
+<li>Repudiation<ul>
+<li>False denial of sending or creating information</li>
+</ul>
+</li>
+<li>Denial of receipt<ul>
+<li>False denial of receiving information</li>
+</ul>
+</li>
+<li>Delay<ul>
+<li>Temporary inhibition of access to services or information</li>
+</ul>
+</li>
+<li>Denial of service<ul>
+<li>Long-term or permanent inhibition of access to services or information</li>
+</ul>
+</li>
+</ul>
+<h3 id="Denial-of-service-attack"><a href="#Denial-of-service-attack" class="headerlink" title="Denial-of-service attack"></a>Denial-of-service attack</h3><p>A denial-of-service (DoS) attack is an attempt to compromise availability by hindering or blocking completely the provision of some service</p>
+<ul>
+<li>Exhaust some critical resources associated with the service</li>
+<li>Example: flooding a Web server with so many spurious requests that it is unable to respond to valid requests from users in a timely manner</li>
+</ul>
+<p>The resources could be attacked:</p>
+<ul>
+<li>Network bandwidth</li>
+<li>System resources</li>
+<li>Application resources</li>
+</ul>
+<h3 id="SYN-Spoofing"><a href="#SYN-Spoofing" class="headerlink" title="SYN Spoofing"></a>SYN Spoofing</h3><ul>
+<li>SYN spoofing attack targets the table of TCP connections on the server (Layer 4)</li>
+<li>A type of DoS attack</li>
+</ul>
+<h4 id="TCP’s-SYN-Spoofing-Attack"><a href="#TCP’s-SYN-Spoofing-Attack" class="headerlink" title="TCP’s SYN Spoofing Attack"></a>TCP’s SYN Spoofing Attack</h4><ul>
+<li>Cause resources on the server binding on the malicious use</li>
+<li>Legitimate clients couldn’t use the resource</li>
+</ul>
+<h3 id="UDP-Flood"><a href="#UDP-Flood" class="headerlink" title="UDP Flood"></a>UDP Flood</h3><p>A type of DoS</p>
+<h3 id="Distributed-DoS"><a href="#Distributed-DoS" class="headerlink" title="Distributed DoS"></a>Distributed DoS</h3><ul>
+<li>Application layer attacks</li>
+<li>Protocol attacks</li>
+<li>Volumetric attacks</li>
+</ul>
+<h3 id="Defense-Against-DOS-Attacks"><a href="#Defense-Against-DOS-Attacks" class="headerlink" title="Defense Against DOS Attacks"></a>Defense Against DOS Attacks</h3><ul>
+<li>Anticipate the potential attacks in different situations and prepared enough resource<ul>
+<li>High traffic situation, e.g. sporting events like the Olympics or Soccer World Cup match</li>
+</ul>
+</li>
+<li>Attack prevention and preemption (Before the attack)</li>
+<li>Attack detection and filtering (during the attack)</li>
+<li>Attack resource traceback and identification (during and after the attack)</li>
+<li>Attack reaction (after the attack)</li>
+</ul>
+<p><strong>These attacks cannot be prevented entirely.</strong></p>
+<h3 id="Man-in-the-middle-Attack"><a href="#Man-in-the-middle-Attack" class="headerlink" title="Man-in-the middle Attack"></a>Man-in-the middle Attack</h3><h3 id="Types-of-MITM-Attack"><a href="#Types-of-MITM-Attack" class="headerlink" title="Types of MITM Attack"></a>Types of MITM Attack</h3><ul>
+<li>Wifi Eavesdropping<ul>
+<li>Public wifi</li>
+</ul>
+</li>
+<li>DNS Spoofing<ul>
+<li>A Fraudulent web server, redirect a targeted user to a malicious website under attacker control</li>
+</ul>
+</li>
+<li>IP spoofing<ul>
+<li>The attackers imitate an approved console’s IP address</li>
+</ul>
+</li>
+<li>ARP spoofing<ul>
+<li>fraudulent response, usually happens to a LAN with ARP protocol</li>
+</ul>
+</li>
+<li>E-mail Hacking</li>
+</ul>
+<h3 id="Defending-MITM"><a href="#Defending-MITM" class="headerlink" title="Defending MITM"></a>Defending MITM</h3><ul>
+<li>Wireless Access Point Encryption</li>
+<li>Use a VPN</li>
+<li>Strong user Credentials</li>
+<li>Public Key Pair Authentication</li>
+</ul>
+<h2 id="SECURITY-PROTOCOLS-KEEPING-A-SECRET"><a href="#SECURITY-PROTOCOLS-KEEPING-A-SECRET" class="headerlink" title="SECURITY PROTOCOLS -KEEPING A SECRET"></a>SECURITY PROTOCOLS -KEEPING A SECRET</h2><h3 id="Keeping-A-Secret-Memorise"><a href="#Keeping-A-Secret-Memorise" class="headerlink" title="Keeping A Secret: Memorise"></a>Keeping A Secret: Memorise</h3><ul>
+<li>We will start with the simplest cyber security problem, keeping a secret.</li>
+<li>Our first protocol is to memorise the secret.</li>
+<li>This is only appropriate if the secret is fairly short and easy to remember.<ul>
+<li>It could be a password or an encryption key.</li>
+<li>It should not be a BitCoin ID!</li>
+</ul>
+</li>
+</ul>
+<p>Keeping A Secret: Paper</p>
+<ul>
+<li>If the secret is too long to remember, the next protocol is to write it down on a piece of paper<ul>
+<li>There is a limit to how long the secret can be.</li>
+<li>It can be inconvenient to use if it has to be entered into a computer.</li>
+</ul>
+</li>
+<li>The confidentiality threat relies on the attacker having physical access.<ul>
+<li>They can search our home or office.</li>
+</ul>
+</li>
+<li>An availability threat is losing the piece of paper.<ul>
+<li>This can be mitigates by backups, making a copy.</li>
+<li>All copies now need to be secured.</li>
+<li>We must keep track of all copies</li>
+<li>destroy all copies when they are no longer needed</li>
+</ul>
+</li>
+</ul>
+<h3 id="Keeping-A-Secret-Computer-File"><a href="#Keeping-A-Secret-Computer-File" class="headerlink" title="Keeping A Secret: Computer File"></a>Keeping A Secret: Computer File</h3><ul>
+<li>Most documents are prepared on a computer, which introduces a number of vulnerabilities that can be exploited by attackers.</li>
+<li>The program used to create the document may make periodic backups, and so there are many different versions of the file that need to be protected.</li>
+<li>It is easy to create copies of the file.</li>
+<li>Deleted files can be recovered.</li>
+</ul>
+<h3 id="Computer-File-Encryption"><a href="#Computer-File-Encryption" class="headerlink" title="Computer File: Encryption"></a>Computer File: Encryption</h3><ul>
+<li>An encryption program takes plaintext as input and produces ciphertext as output.</li>
+<li>A decryption program takes ciphertext as input and produces plaintext as output.</li>
+<li>Decryption must undo encryption.</li>
+<li>Encryption followed by decryption must produce the same output as the original input.</li>
+<li>The original plaintext document must be erased.<ul>
+<li>Including all copies and backups.</li>
+</ul>
+</li>
+<li>This protocol has a time limited vulnerability.<ul>
+<li>While the plaintext document is in the file system</li>
+</ul>
+</li>
+</ul>
+<h3 id="Protocol-Secret-Encryption-Algorithm"><a href="#Protocol-Secret-Encryption-Algorithm" class="headerlink" title="Protocol: Secret Encryption Algorithm"></a>Protocol: Secret Encryption Algorithm</h3><ul>
+<li>The details of the encryption and decryption algorithms are kept secret.</li>
+<li>Threat: finding the algorithms.<ul>
+<li>The algorithms will be computer programs.</li>
+<li>They cannot be encrypted because they must be run on the computer.</li>
+</ul>
+</li>
+</ul>
+<h2 id="SECURITY-PROTOCOLS-COMMUNICATING-A-SECRET"><a href="#SECURITY-PROTOCOLS-COMMUNICATING-A-SECRET" class="headerlink" title="SECURITY PROTOCOLS COMMUNICATING A SECRET"></a>SECURITY PROTOCOLS COMMUNICATING A SECRET</h2><h3 id="Problem-Communicating-a-Secret"><a href="#Problem-Communicating-a-Secret" class="headerlink" title="Problem: Communicating a Secret"></a>Problem: Communicating a Secret</h3><ul>
+<li>Alice wants to send secret information to Bob without Eve finding out.</li>
+<li>This is usually a confidentiality problem.</li>
+<li>It can also be an integrity problem.<ul>
+<li>If Eve changes the message before forwarding it to Bob</li>
+</ul>
+</li>
+<li>It can also be an availability problem.<ul>
+<li>If Eve prevents Bob from receiving the message.</li>
+<li>How does Bob know that Alice has sent a message?</li>
+</ul>
+</li>
+</ul>
+<h3 id="Protocol-Secure-Transmission-Medium"><a href="#Protocol-Secure-Transmission-Medium" class="headerlink" title="Protocol: Secure Transmission Medium"></a>Protocol: Secure Transmission Medium</h3><ul>
+<li>Alice and Bob meet in a secure room or location.<ul>
+<li>The only secure transmission medium.</li>
+</ul>
+</li>
+<li>Electronic transmissions are easy to intercept.<ul>
+<li>Transponders can be attached to Ethernet cables and the traffic analysed.</li>
+<li>Email is stored and can be analysed later.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Protocol-Secure-Preparation"><a href="#Protocol-Secure-Preparation" class="headerlink" title="Protocol: Secure Preparation"></a>Protocol: Secure Preparation</h3><ul>
+<li>Alice encrypts the message in a secure area</li>
+<li>It is transmitted by an insecure medium<ul>
+<li>We assume that Eve can intercept, see and replace it.</li>
+</ul>
+</li>
+<li>Bob decrypts the message in a secure area.</li>
+<li>Encryption followed by decryption cancel each other out.</li>
+</ul>
+<h3 id="Using-Encryption"><a href="#Using-Encryption" class="headerlink" title="Using Encryption"></a>Using Encryption</h3><h3 id="Protocol-Use-a-Secret-Algorithm"><a href="#Protocol-Use-a-Secret-Algorithm" class="headerlink" title="Protocol: Use a Secret Algorithm"></a>Protocol: Use a Secret Algorithm</h3><ul>
+<li>Keep the details of the algorithm secret.</li>
+<li>This is bad for two reasons.</li>
+<li>The algorithm designers know the secret and may be physically at risk.<ul>
+<li>Threat of coercion.</li>
+</ul>
+</li>
+<li>Peer review of a public algorithm reduces flaws.<ul>
+<li>It is easy to fool oneself that an algorithm is more secure than it really is.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Protocol-Public-Algorithm-Secret-Key-Private-Key"><a href="#Protocol-Public-Algorithm-Secret-Key-Private-Key" class="headerlink" title="Protocol: Public Algorithm, Secret Key (Private Key)"></a>Protocol: Public Algorithm, Secret Key (Private Key)</h3><ul>
+<li>Details of the encryption and decryption algorithms are public.</li>
+<li>They have a parameter, the key, which is kept secret.</li>
+<li>Knowledge of the algorithm is useless without the key.</li>
+<li>Also called a <strong>one key</strong> system.</li>
+<li>Also called <strong>symmetric encryption</strong>.</li>
+</ul>
+<h3 id="Using-a-Secret-Key"><a href="#Using-a-Secret-Key" class="headerlink" title="Using a Secret Key"></a>Using a Secret Key</h3><h1 id="Week2-TTL"><a href="#Week2-TTL" class="headerlink" title="Week2 TTL"></a>Week2 TTL</h1><h2 id="1-What-is-the-difference-between-Threat-Vulnerability-and-Risk"><a href="#1-What-is-the-difference-between-Threat-Vulnerability-and-Risk" class="headerlink" title="1 What is the difference between Threat, Vulnerability, and Risk?"></a>1 What is the difference between Threat, Vulnerability, and Risk?</h2><ul>
+<li><strong>Threat</strong>: Someone with the potential to cause harm by damaging or destroying the official data of a system or organization<ul>
+<li><strong>Ex</strong>: Phishing attack</li>
+</ul>
+</li>
+<li><strong>Vulnerability</strong>: It refers to weaknesses in a system that makes threat outcomes more possible and even more dangerous.<ul>
+<li><strong>Ex</strong>: SQL injections, cross-site scripting</li>
+</ul>
+</li>
+<li><strong>Risk</strong>: It refers to a combination of threat probability and impact&#x2F;loss. In simple terms, it is related to potential damage or loss when a threat exploits the vulnerability</li>
+</ul>
+<h2 id="2-What-is-a-three-way-handshake-process"><a href="#2-What-is-a-three-way-handshake-process" class="headerlink" title="2 What is a three-way handshake process?"></a>2 What is a three-way handshake process?</h2><p>A three-way handshake process is used in TCP (Transmission Control Protocol) network for the transmission of data in a reliable way between the host and the client.</p>
+<p>It’s called a three-way handshake because three segments are exchanged between the server and the client.</p>
+<ul>
+<li>SYN: The client wants to establish a connection with the server, and sends a segment with SYN (Synchronize Sequence Number) to the server if the server is up and has open ports.</li>
+<li>SYN + ACK: The server responds to the client request with SYN-ACK signal bits set if it has open ports.</li>
+<li>ACK: The client acknowledges the response of a server and sends an ACK(Acknowledgment) packet back to the server.</li>
+</ul>
+<h2 id="3-How-to-prevent-‘Man-in-the-Middle-Attack’"><a href="#3-How-to-prevent-‘Man-in-the-Middle-Attack’" class="headerlink" title="3 How to prevent ‘Man-in-the-Middle Attack’?"></a>3 How to prevent ‘Man-in-the-Middle Attack’?</h2><p>The following practices prevent the ‘Man-in-the-Middle Attacks’:</p>
+<ul>
+<li>Have stronger WAP&#x2F;WEP Encryption on wireless access points avoids unauthorized users.</li>
+<li>Use a VPN for a secure environment to protect sensitive information. It uses key-based encryption.</li>
+<li>Public key pair-based authentication must be used in various layers of a stack for ensuring whether you are communicating the right things are not.</li>
+<li>HTTPS must be employed for securely communicating over HTTP through the public-private key exchange</li>
+</ul>
+<h2 id="4-What-is-a-DDOS-attack-and-how-to-stop-and-prevent-them"><a href="#4-What-is-a-DDOS-attack-and-how-to-stop-and-prevent-them" class="headerlink" title="4 What is a DDOS attack and how to stop and prevent them?"></a>4 What is a DDOS attack and how to stop and prevent them?</h2><p>A DDOS (distributed denial-of-service ) is a malicious attempt of disrupting regular traffic of a network by flooding with a large number of requests and making the server unavailable to the appropriate requests. The requests come from several unauthorized sources and hence called distributed denial of service attacks.</p>
+<p>The following methods will help you to stop and prevent DDOS attacks:</p>
+<ul>
+<li>Build a denial-of-service response plan</li>
+<li>Protect your network infrastructure</li>
+<li>Employ basic network security</li>
+<li>Maintain strong network architecture</li>
+<li>Understand the Warning Signs</li>
+<li>Consider DDoS as a service</li>
+</ul>
+<h2 id="5-What-are-the-seven-layers-of-the-OSI-model-Explain-their-functions-in-each-layer"><a href="#5-What-are-the-seven-layers-of-the-OSI-model-Explain-their-functions-in-each-layer" class="headerlink" title="5 What are the seven layers of the OSI model? Explain their functions in each layer."></a>5 What are the seven layers of the OSI model? Explain their functions in each layer.</h2><p>The main objective of the OSI model is to process the communication between two endpoints in a network.</p>
+<p>The seven open systems interconnection layers are listed below:</p>
+<ul>
+<li>Application layer (layer 7) - It allows users to communicate with network&#x2F;application whenever required to perform network-related operations.</li>
+<li>Presentation layer (layer 6) - It manages encryption and decryption of data required for the application layer. It translates or formats data for the application layer based on the syntax of the application that accepts. • Session layer (layer 5) - It determines the period of a system that waits for other applications to respond.</li>
+<li>Transport layer (layer 4) - It is used for sending data across a network and also offers error checking practices and data flow controls.</li>
+<li>Network layer (layer 3) - It is used to transfer data to and through another network.</li>
+<li>Data-link layer (layer 2) - It handles the flow of data to and from a network. It also controls problems that occur due to bit transmission errors.</li>
+<li>• Physical layer (layer 1) - It transfers the computer bits from one device to another through the network. It also controls how physical connections are set up to the network and also bits represented into signals while transmitting either optically (via fibre), electrically (via cable), or radio waves (via wireless radio).</li>
+</ul>
+<p>For each layer, there’re potential attacks and security techniques to protect it.</p>
+<h2 id="6-Give-some-examples-of-a-secure-transmission-medium-Please-discuss-why-it-is-secure"><a href="#6-Give-some-examples-of-a-secure-transmission-medium-Please-discuss-why-it-is-secure" class="headerlink" title="6 Give some examples of a secure transmission medium. Please discuss why it is secure."></a>6 Give some examples of a secure transmission medium. Please discuss why it is secure.</h2><p>The most secure medium is optical fibre, as the signal&#x2F;information transmit via light. it is the hardest to tap and intercept. The next is cable, as signal&#x2F;information transmit via electricity, which can be tapped with a device (e.g., Wiretapping attack).</p>
+<h1 id="Week3-Access-Control"><a href="#Week3-Access-Control" class="headerlink" title="Week3 Access Control"></a>Week3 Access Control</h1><h2 id="Concept-of-Access-Control"><a href="#Concept-of-Access-Control" class="headerlink" title="Concept of Access Control"></a>Concept of Access Control</h2><h3 id="Definition-1"><a href="#Definition-1" class="headerlink" title="Definition"></a>Definition</h3><p>Access control implements a security policy that specifies who or what (e.g., in the case of a process) may have access to each specific system resource and the type of access that is permitted in each instance.</p>
+<h3 id="Access-control-in-a-broader-context"><a href="#Access-control-in-a-broader-context" class="headerlink" title="Access control in a broader context"></a>Access control in a broader context</h3><h3 id="Basic-Elements-of-Access-Control"><a href="#Basic-Elements-of-Access-Control" class="headerlink" title="Basic Elements of Access Control"></a>Basic Elements of Access Control</h3><ul>
+<li><strong>Object</strong>: a resource to which access is controlled; an entity used to contain and&#x2F;or receive information (e.g., pages, files, mailboxes…)</li>
+<li><strong>Subject</strong>: an entity capable accessing objects<ul>
+<li>Owner (e.g., creator of a resource, system administrator)</li>
+<li>Group (membership in the group is sufficient to exercise the access rights)</li>
+<li>World (granted the least amount of access, not included in owner&#x2F;group)</li>
+</ul>
+</li>
+<li><strong>Access right</strong>: describes the way in which a subject may access an object<ul>
+<li>Read: view information in a system resources, including ability to copy or print</li>
+<li>Write: add, modify, or delete data; including read access</li>
+<li>Execute: execute specified programs</li>
+<li>Delete: delete certain system resources (e.g., files, records, programs)</li>
+<li>Create: create new files, records, or fields</li>
+<li>Search: list the files in a directory or otherwise search the directory</li>
+</ul>
+</li>
+</ul>
+<h2 id="Access-Control-Policies"><a href="#Access-Control-Policies" class="headerlink" title="Access Control Policies"></a>Access Control Policies</h2><ul>
+<li>Discretionary access control (DAC)</li>
+<li>Mandatory access control (MAC)</li>
+<li>Role-based access control (RBAM)</li>
+<li>Attribute-based access control (ABAC)</li>
+</ul>
+<p>Not mutually exclusive. An access control mechanism can employ two or even all three of these policies to cover different classes of system resources.</p>
+<h3 id="Discretionary-Access-Control-DAC"><a href="#Discretionary-Access-Control-DAC" class="headerlink" title="Discretionary Access Control (DAC)"></a>Discretionary Access Control (DAC)</h3><ul>
+<li>DAC controls access based on the identity of the requestor and on access rules (authorizations) stating what requestors are (or are not) allowed to do.</li>
+<li>An entity may be granted access rights that permit the entity, by its own volition, to enable another entity to access some resources</li>
+</ul>
+<h3 id="DAC-Access-Matrix"><a href="#DAC-Access-Matrix" class="headerlink" title="DAC: Access Matrix"></a>DAC: Access Matrix</h3><p>Dimension 1: Identified subjects that may attempt data access to the resources</p>
+<p>Dimension 2: objects that may be accessed</p>
+<h3 id="DAC-Access-Matrix-to-ACL"><a href="#DAC-Access-Matrix-to-ACL" class="headerlink" title="DAC: Access Matrix to ACL"></a>DAC: Access Matrix to ACL</h3><h3 id="DAC-Access-Control-List"><a href="#DAC-Access-Control-List" class="headerlink" title="DAC: Access Control List"></a>DAC: Access Control List</h3><ul>
+<li>Advantage<ul>
+<li>Contain a default, or public, entry (e.g. read-only access) that users are not explicitly listed</li>
+<li>For a given resources, it is convenient for determining which subjects have which rights</li>
+</ul>
+</li>
+<li>Disadvantage<ul>
+<li>Not convenient for determining the access rights available to a specific user</li>
+</ul>
+</li>
+</ul>
+<h3 id="DAC-Access-Matrix-to-Capability-Tickets"><a href="#DAC-Access-Matrix-to-Capability-Tickets" class="headerlink" title="DAC: Access Matrix to Capability Tickets"></a>DAC: Access Matrix to Capability Tickets</h3><ul>
+<li>Advantages<ul>
+<li>Given a user, it is easy to determine the set of access rights</li>
+</ul>
+</li>
+<li>Disadvantages<ul>
+<li>Given a specific resource, it is difficult to determine the list of users with specific access rights</li>
+<li>Tickets may be authorized to loan or given to others, dispersed around the system —&gt; security problem</li>
+</ul>
+</li>
+</ul>
+<p><strong>Solution</strong></p>
+<p>Key idea: Make the ticket protected, guaranteed, and unforgeable</p>
+<p>Solution 1: The operating system hold all tickets on behalf of users, but in a region of memory inaccessible to users</p>
+<p>Solution 2: Include an unforgeable token (e.g., a large random pass word, or a cryptographic message authentication code) in the capability</p>
+<h3 id="DAC-Other-Forms"><a href="#DAC-Other-Forms" class="headerlink" title="DAC: Other Forms"></a>DAC: Other Forms</h3><h3 id="DAC-Model"><a href="#DAC-Model" class="headerlink" title="DAC: Model"></a>DAC: Model</h3><ul>
+<li>Subjects, Objects, Rules</li>
+<li>Protection state: set of information, at a given point in time, that specifies the access rights for each subject with respect to each object.</li>
+<li>Three requirements<ul>
+<li>Representing the protection state</li>
+<li>Enforcing access rights</li>
+<li>Allowing subjects to alter the protection state in certain ways.</li>
+</ul>
+</li>
+</ul>
+<p>How to represent the protection state?</p>
+<p>Extended access control matrix</p>
+<ul>
+<li>Processes: The ability to delete, stop(block), and wake up a process</li>
+<li>Devices: The ability to read&#x2F;write the devices, to control its operation, and to block&#x2F;unblock the device for use</li>
+<li>Memory locations&#x2F;regions: The ability to read&#x2F;write certain regions of memory that are protected such that the default is to disallow access</li>
+<li>Subjects: The ability to grant or delete rights of that subject to other objects</li>
+</ul>
+<h3 id="Role-Based-Access-Control-RBAC"><a href="#Role-Based-Access-Control-RBAC" class="headerlink" title="Role-Based Access Control (RBAC)"></a>Role-Based Access Control (RBAC)</h3><ul>
+<li>RBAC controls access based on the roles that users have within the system and on rules stating what accesses are allowed to users in given roles (rather than user’s identity in DAC).</li>
+<li>Users are assigned to different roles, either statically or dynamically, according to their responsibilities.</li>
+<li>The relationship of users to roles is many to many, as is the relationship of roles to resources, or system objects.</li>
+</ul>
+<h3 id="RBAC-Access-Control-Matrix"><a href="#RBAC-Access-Control-Matrix" class="headerlink" title="RBAC: Access Control Matrix"></a>RBAC: Access Control Matrix</h3><h3 id="RBAC-Models"><a href="#RBAC-Models" class="headerlink" title="RBAC: Models"></a>RBAC: Models</h3><h3 id="RBAC0-Base-Model"><a href="#RBAC0-Base-Model" class="headerlink" title="RBAC0: Base Model"></a>RBAC0: Base Model</h3><ul>
+<li>User: An individual that has access to this computer system. Each individual has an associated user ID</li>
+<li>Role: A name of job function within the organization that controls this computer system. Typically, associated with each role is a description if the authority and responsibility conferred on this role, and on any user who assumes this role.</li>
+<li>Permission: An approval of a particular mode of access to one or more objects. Equivalent terms are access right, privilege, and authorization.</li>
+<li>Session: A mapping between a user and an activated subset of the set of roles to which the user is assigned.</li>
+</ul>
+<p>Many-to-many between users and roles</p>
+<p>Many-to-many between roles and permissions</p>
+<p><strong>Flexibility and Granularity</strong></p>
+<p>Without flexibility and granularity, there is a greater risk that a user may be granted more access to resources than is needed because of the limited control over the types of access that can be allowed</p>
+<h3 id="RBAC1-Role-Hierarchies"><a href="#RBAC1-Role-Hierarchies" class="headerlink" title="RBAC1: Role Hierarchies"></a>RBAC1: Role Hierarchies</h3><ul>
+<li>Job functions with greater responsibility have greater authority to access resources</li>
+<li>Role hierarchies make use of the concept of inheritance to enable one role to implicitly include access rights associated with a subordinate role</li>
+</ul>
+<h3 id="RBAC2-Constraints"><a href="#RBAC2-Constraints" class="headerlink" title="RBAC2: Constraints"></a>RBAC2: Constraints</h3><ul>
+<li><p>Constraints provide a means of adapting RBAC to the specifics of administrative and security policies in an organization.</p>
+<ul>
+<li><p>Mutually Exclusive Roles</p>
+</li>
+<li><p>Cardinality</p>
+</li>
+<li><p>Prerequisite Roles</p>
+</li>
+</ul>
+</li>
+<li><p>Mutually Exclusive Roles</p>
+<ul>
+<li>A user can only be assigned to one role in the set</li>
+<li>Any permission (access right) can be granted to only one role in the set</li>
+</ul>
+</li>
+</ul>
+<p>Separation of duties and capabilities within an organization</p>
+<p><strong>Purpose</strong>: To increase difficulty of collusion among individuals of different skills or divergent job functions to thwart security policies</p>
+<ul>
+<li><p>Cardinality</p>
+<ul>
+<li><p>Set a maximum number of users that can be assigned to a given role</p>
+</li>
+<li><p>Constraint on the number of roles that is a user assigned to</p>
+</li>
+<li><p>Set a maximum number of roles that can be granted a particular permission</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>Set a maximum number with respect to roles</p>
+<ul>
+<li><p>Prerequisite role</p>
+<p>A user can only be assigned to a particular role if it is already assigned to some other specified roles</p>
+<p>Example: In a hierarchy, a user assigned to a Project Lead role must also be assigned to at the subordinate Production Engineer and Quality Engineer roles.</p>
+</li>
+</ul>
+<h3 id="Attribute-Based-Access-Control-ABAC"><a href="#Attribute-Based-Access-Control-ABAC" class="headerlink" title="Attribute-Based Access Control (ABAC)"></a>Attribute-Based Access Control (ABAC)</h3><ul>
+<li>ABAC controls access based on attributes of the users, the resources to be accessed, and current environmental conditions.</li>
+<li>Flexibility and expressive power</li>
+<li>Three key elements<ul>
+<li>Attributes</li>
+<li>Architecture Model</li>
+<li>Policies</li>
+</ul>
+</li>
+</ul>
+<h3 id="ABAC-Attributes"><a href="#ABAC-Attributes" class="headerlink" title="ABAC: Attributes"></a>ABAC: Attributes</h3><p>It defines specific aspects of the subject, object, environment conditions, and&#x2F;or requested operations that are predefined or preassigned by an authority</p>
+<ul>
+<li>Subject attributes: Define the identity and characteristics of the subject (e.g., the subject’s identifier, name, organization, job titles…)</li>
+<li>Object attributes: Can be extracted from the metadata of the object and leveraged to make access control decisions (e.g. title, date, author of a Microsoft Word document )</li>
+<li>Environment attributes (ignored in most access control policies): Describe the operational, technical, and even situational environment or context in which the information access occurs; not associated with a particular subject nor a object&#x2F;resource (e.g., current data and time, virus&#x2F;hacker activities, and the network’s security level)</li>
+</ul>
+<h3 id="ABAC-Logical-Architecture"><a href="#ABAC-Logical-Architecture" class="headerlink" title="ABAC: Logical Architecture"></a>ABAC: Logical Architecture</h3><p>Use four independent sources for the access control decision — powerful and flexible</p>
+<p>Complexity and Performance Trade off</p>
+<h3 id="ABAC-Policies"><a href="#ABAC-Policies" class="headerlink" title="ABAC: Policies"></a>ABAC: Policies</h3><h3 id="ABAC-Example"><a href="#ABAC-Example" class="headerlink" title="ABAC: Example"></a>ABAC: Example</h3><h1 id="Week4"><a href="#Week4" class="headerlink" title="Week4"></a>Week4</h1><h2 id="见-notability"><a href="#见-notability" class="headerlink" title="见 notability"></a>见 notability</h2><h1 id="Week5"><a href="#Week5" class="headerlink" title="Week5"></a>Week5</h1><h2 id="见-notability-1"><a href="#见-notability-1" class="headerlink" title="见 notability"></a>见 notability</h2><h1 id="Week6"><a href="#Week6" class="headerlink" title="Week6"></a>Week6</h1><h2 id="见-notability-2"><a href="#见-notability-2" class="headerlink" title="见 notability"></a>见 notability</h2><h1 id="Week7"><a href="#Week7" class="headerlink" title="Week7"></a>Week7</h1><h2 id="见-notability-3"><a href="#见-notability-3" class="headerlink" title="见 notability"></a>见 notability</h2><h1 id="Week8-Web-application-security"><a href="#Week8-Web-application-security" class="headerlink" title="Week8 Web application security"></a>Week8 Web application security</h1><h2 id="Web-Application"><a href="#Web-Application" class="headerlink" title="Web Application"></a>Web Application</h2><p>Web Application</p>
+<ul>
+<li>an application program that is stored on a remote server and delivered over the internet through a browser interface</li>
+<li>Interactive</li>
+<li>Examples?</li>
+</ul>
+<p>Webpage</p>
+<ul>
+<li>A document which can be displayed in a web browser such as Firefox, Google Chrome, Microsoft Edge, or Apple Safari</li>
+</ul>
+<p>The HTTP protocol</p>
+<ul>
+<li>HTTP is the carrier protocol which allows our browsers and applications to receive content such as HTML (“Hyper Text Markup Language”), CSS (“Cascading Style Sheets”), images and videos from a server</li>
+</ul>
+<p>FTP: a standard communication protocol used for the transfer of computer files from a server to a client on a computer</p>
+<ul>
+<li>does not encrypt its traffic; all transmissions are in clear text, and usernames, passwords, commands and data can be read by anyone able to perform packet capture (sniffing) on the network</li>
+</ul>
+<p>HTTPS: An extension of HTTP. It uses encryption for the secure communication over a computer network</p>
+<ul>
+<li>The HTTP protocol does not support encryption for data-in- transit, hence a wrapper around HTTP is added for encryption support. This is indicated with a S following HTTP, i.e. HTTPS</li>
+<li>The encryption used to be SSL (“Secure Sockets Layer”), but has since been deprecated. Instead TLS (“Transport Layer Security”) is typically used to enforce encryption</li>
+<li>All major web browsers today will show a lock icon in the URL address bar if HTTPS is used</li>
+<li>A warning will display if TLS&#x2F;SSL connections are compromised</li>
+</ul>
+<p>URLs, Query Parameters and Scheme</p>
+<ul>
+<li>To access a web application, we use a URL</li>
+</ul>
+<p>Sessions &amp; State</p>
+<ul>
+<li>A session cookie contains is a random number identifier (key) used to index the server’s session cache.</li>
+</ul>
+<h2 id="Web-Application-Attacks"><a href="#Web-Application-Attacks" class="headerlink" title="Web Application Attacks"></a>Web Application Attacks</h2><h2 id="Three-main-web-application-vulnerabilities"><a href="#Three-main-web-application-vulnerabilities" class="headerlink" title="Three main web application vulnerabilities"></a>Three main web application vulnerabilities</h2><ul>
+<li>SQL Injection<ul>
+<li>Browser sends malicious input to server</li>
+<li>Bad input checking leads to malicious SQL query</li>
+<li>Uses SQL to change meaning of database command</li>
+</ul>
+</li>
+<li>CSRF-Cross-site request Forgery<ul>
+<li>Bad web site sends browser request to good web site, using credentials of an innocent victim</li>
+<li>Leverage user’s session at victim sever</li>
+</ul>
+</li>
+<li>XSS - Cross-site scripting<ul>
+<li>Bad web site sends innocent victim a script that steals information from an honest web site</li>
+<li>Inject malicious script into trusted context</li>
+</ul>
+</li>
+</ul>
+<h2 id="SQL-injection"><a href="#SQL-injection" class="headerlink" title="SQL injection"></a>SQL injection</h2><ol>
+<li>Hacker identifies vulnerable, SQL- driven website &amp; injects malicious SQL query via input data</li>
+<li>Malicious SQL query is validated &amp; Command is executed by database</li>
+<li>Hacker is granted access to view and alter records or potentially act as database administrator</li>
+</ol>
+<h2 id="Command-Injection"><a href="#Command-Injection" class="headerlink" title="Command Injection"></a>Command Injection</h2><ul>
+<li>Attack goal: execute arbitrary code on the server</li>
+<li>Example: Code injection using system ()<ul>
+<li>Normal: PHP server-side code for sending email</li>
+<li>Attacker can post</li>
+</ul>
+</li>
+<li>PHP: Hypertext Preprocessor” PHP is a widely-used, open source scripting language. PHP scripts are executed on the server.</li>
+<li>Different from HTML<ul>
+<li>PHP is a scripting language | HTML is a markup language.</li>
+<li>PHP code is executed on the server | HTML code is parsed by the client browser.</li>
+<li>PHP creates dynamic web pages | HTML creates static web pages.</li>
+<li>PHP can access a database | Database cannot be accessed using HTML</li>
+</ul>
+</li>
+</ul>
+<h2 id="Database-queries-with-PHP"><a href="#Database-queries-with-PHP" class="headerlink" title="Database queries with PHP"></a>Database queries with PHP</h2><p>Sample PHP</p>
+<p>Problem</p>
+<ul>
+<li>What if ‘Recipient’ is malicious string that changes the meaning of the query?</li>
+</ul>
+<h2 id="Normal-Query"><a href="#Normal-Query" class="headerlink" title="Normal Query"></a>Normal Query</h2><p>Bad input</p>
+<ul>
+<li>Suppose user &#x3D; “‘or 1&#x3D;1 – “ (URL encoded)</li>
+<li>Then scripts does:</li>
+<li>The “–” causes rest of line to be ignored</li>
+<li>Now the login always succeeds</li>
+</ul>
+<h2 id="CardSystem-Attack"><a href="#CardSystem-Attack" class="headerlink" title="CardSystem Attack"></a>CardSystem Attack</h2><ul>
+<li>CardSystems<ul>
+<li>Credit card payment processing company</li>
+<li>SQL injection attack in June 2005</li>
+<li>Put out of business</li>
+</ul>
+</li>
+<li>The Attack<ul>
+<li>263,000 credit card numbers stolen from database</li>
+<li>Credit card numbers stored unencrypted</li>
+<li>43 million credit card numbers exposed</li>
+</ul>
+</li>
+</ul>
+<h2 id="Preventing-SQL-Injection"><a href="#Preventing-SQL-Injection" class="headerlink" title="Preventing SQL Injection"></a>Preventing SQL Injection</h2><ul>
+<li>Never build SQL commands yourself!<ul>
+<li>User parameterized&#x2F;prepared SQL</li>
+<li>Use (Object Relational Mapping) ORM framework<ul>
+<li>Provide a layer of abstraction between the application code and the database</li>
+<li>Allow developers to interact with the database using high-level object-oriented code instead of raw SQL queries</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Cross-Site-Request-Forgery"><a href="#Cross-Site-Request-Forgery" class="headerlink" title="Cross Site Request Forgery"></a>Cross Site Request Forgery</h2><ul>
+<li>Cross-site request forgery (also known as XSRF or CSRF) is an attack against webhosted apps</li>
+<li>Web browsers send some types of authentication tokens automatically with every request to a website.</li>
+<li>Also known as a one-click attack or session riding because the attack takes advantage of the user’s previously authenticated session.</li>
+</ul>
+<h2 id="Recall-Session-using-cookies"><a href="#Recall-Session-using-cookies" class="headerlink" title="Recall: Session using cookies"></a>Recall: Session using cookies</h2><h2 id="CSRF"><a href="#CSRF" class="headerlink" title="CSRF"></a>CSRF</h2><ol>
+<li>A user signs into <a target="_blank" rel="noopener" href="http://www.good-bankingsite.example.com/">www.good-bankingsite.example.com</a> using with authentication credentials</li>
+<li>The server authenticates the user and issues a response that includes an authentication cookie</li>
+<li>The user visits a malicious site, (e.g. <a target="_blank" rel="noopener" href="http://www.bad-crooksite.example.com/">www.bad-crooksite.example.com</a>.) Which contains an HTML form similar to this</li>
+<li>Hacker sends forged request disguised as legitimate communication from the bank</li>
+<li>Forged request is executed by the bank using previously assigned validation token (authentication cookie)</li>
+</ol>
+<h2 id="HTML-form"><a href="#HTML-form" class="headerlink" title="HTML form"></a>HTML form</h2><p>Notice that the form’s action posts to the vulnerable site, not to the malicious site. This is the “cross-site” part of CSR</p>
+<h2 id="CSRF-defense"><a href="#CSRF-defense" class="headerlink" title="CSRF defense"></a>CSRF defense</h2><ul>
+<li>Not click malicious links<ul>
+<li>Be able to identify malicious link</li>
+<li>Especially a http url</li>
+<li>Use https is more secure</li>
+</ul>
+</li>
+<li>Use a CSRF session token<ul>
+<li>Token needs to be unique per user session and should be of large random value to make it difficult to guess</li>
+</ul>
+</li>
+</ul>
+<h2 id="Cross-Site-Scripting-XSS"><a href="#Cross-Site-Scripting-XSS" class="headerlink" title="Cross Site Scripting (XSS)"></a>Cross Site Scripting (XSS)</h2><p>An XSS vulnerability is present when an attacker can inject scripting code into pages generated by a web application</p>
+<ol>
+<li>Attacker send script-injected link to victim (e.g., email scam</li>
+<li>Victim clicks on link and requests legitimate website</li>
+<li>Victim’s browser loads legitimate site, but also executes malicious script</li>
+<li>Send valuable data</li>
+</ol>
+<h2 id="Two-different-XSS-attacks"><a href="#Two-different-XSS-attacks" class="headerlink" title="Two different XSS attacks"></a>Two different XSS attacks</h2><ul>
+<li>Reflected XSS (“type 1”)<ul>
+<li>The attacker script is reflected back to the user as part of a page from the victim site</li>
+</ul>
+</li>
+<li>Stored XSS (“type 2”)<ul>
+<li>The attacker is able to inject malicious code into a web application that is stored permanently on the server, such as in a database. This code is then served to users who view the affected page.</li>
+</ul>
+</li>
+</ul>
+<h2 id="XSS-defenses"><a href="#XSS-defenses" class="headerlink" title="XSS defenses"></a>XSS defenses</h2><ul>
+<li><strong>Proxy-based:</strong> analyze the HTTP traffic exchanged between user’s web browser and the target web server by scanning for special HTML characters and encoding them before executing the page on the user’s web browser</li>
+<li><strong>Application level firewall</strong>: anaylze browsed HTML pages for hyperlinks that might lead to leakage of sensitive information</li>
+<li><strong>Auditing system</strong>: monitor execution of JavaScript code and compare the operations against high level policies to detect malicious behaviour</li>
+</ul>
+<h1 id="Week9-Digital-Forensics"><a href="#Week9-Digital-Forensics" class="headerlink" title="Week9 Digital Forensics"></a>Week9 Digital Forensics</h1><h2 id="Digital-Forensics"><a href="#Digital-Forensics" class="headerlink" title="Digital Forensics"></a>Digital Forensics</h2><p>is a digital investigation focuses on a digital device</p>
+<ul>
+<li>Computer</li>
+<li>Router</li>
+<li>Switch</li>
+<li>Cell-phone</li>
+<li>SIM-card</li>
+</ul>
+<p>Focuses on a digital device involved in an incident or crime</p>
+<ul>
+<li>Computer intrusion</li>
+<li>Generic criminal activity<ul>
+<li>Perpetrator uses internet to gather information used in the perpetration of a crime</li>
+</ul>
+</li>
+<li>Digital device is an instrument of a crime<ul>
+<li>Perpetrator uses cell-phone to set-off a bomb</li>
+<li>Email scams</li>
+<li>Internet auction fraud</li>
+<li>Computer is used for intrusion of another system</li>
+</ul>
+</li>
+</ul>
+<p>Digital Investigation has different goals</p>
+<ul>
+<li><p>Prevention of further intrusions</p>
+<ul>
+<li>Goal is to reconstruct modus operandi of intruder to predict and prevent further intrusions</li>
+</ul>
+</li>
+<li><p>Assessment of damage</p>
+<ul>
+<li>Goal is to certify system for safe use</li>
+</ul>
+</li>
+<li><p>Reconstruction of an incident</p>
+<ul>
+<li>For criminal proceeding</li>
+<li>For organization-internal proceedings</li>
+</ul>
+</li>
+<li><p>Process where we develop and test hypotheses that answer questions about digital events</p>
+<ul>
+<li>We can use an adaptation of the scientific method where we establish hypotheses based on findings and then (if possible) test our hypotheses against findings resulting from additional investigations</li>
+</ul>
+</li>
+<li><p>Evidence</p>
+</li>
+<li><p>Procedural notion</p>
+</li>
+<li><p>That on what our findings are based</p>
+</li>
+<li><p>Legal notion • Defined by the “rules of evidence”</p>
+</li>
+<li><p>Differ by legislation</p>
+</li>
+<li><p>“hear-say” is procedurally evidence, but excluded (under many circumstances) as legal evidence</p>
+</li>
+</ul>
+<h2 id="Types-of-digital-forensics"><a href="#Types-of-digital-forensics" class="headerlink" title="Types of digital forensics"></a>Types of digital forensics</h2><ul>
+<li><p>Computer Forensics</p>
+</li>
+<li><p>Network Forensics</p>
+</li>
+<li><p>Mobile Forensics</p>
+</li>
+<li><p>Forensic Data Analysis (FDA)</p>
+</li>
+<li><p>Digital Forensics is a procedure of acquiring and processing data found in digital devices. Digital Forensics was used as a synonym of computer forensics in early years but now there are different categories depending on the type of the digital evidence and procedures.</p>
+</li>
+<li><p>Computer Forensics is the procedure of acquiring a snapshot of the internal state of a computer system (cloning the hard drive&#x2F;memory) and moving on in analysing the acquired copy.</p>
+</li>
+<li><p>Network forensics is focusing on the communication aspect of the device and it captures the traffic as data for further analysis; helps in intrusion detection.</p>
+</li>
+<li><p>Mobile Forensics is representing practices employed for recovering data from a mobile device.</p>
+</li>
+<li><p>Forensic data analysis is another branch which focuses on structured data analysis relevant to financial crimes.</p>
+</li>
+<li><p>Most of the time these practices are used in digital crime investigations and the goal is to lead into successful prosecution</p>
+</li>
+</ul>
+<h2 id="Who-should-know-about-digital-forensics"><a href="#Who-should-know-about-digital-forensics" class="headerlink" title="Who should know about digital forensics"></a>Who should know about digital forensics</h2><ul>
+<li>Those involved in legal proceedings that might use digital evidence<ul>
+<li>Judges, prosecutors, attorneys, law enforcement, expert witnesses</li>
+</ul>
+</li>
+<li>Those involve in systems administration<ul>
+<li>Systems administrators, network administrators, security officers</li>
+<li>Those writing procedures</li>
+<li>Managers</li>
+</ul>
+</li>
+</ul>
+<h2 id="Is-computer-Forensics-Important"><a href="#Is-computer-Forensics-Important" class="headerlink" title="Is computer Forensics Important?"></a>Is computer Forensics Important?</h2><ul>
+<li>Need to know how to recover data</li>
+<li>What if you work as an investigator in the Law enforcement?</li>
+<li>Be able to discover malicious activities</li>
+</ul>
+<h2 id="Computer-Forensics-Steps"><a href="#Computer-Forensics-Steps" class="headerlink" title="Computer Forensics Steps"></a>Computer Forensics Steps</h2><ol>
+<li>Seizure</li>
+<li>Acquisition</li>
+<li>Analysis: Physical searching + whitelist + registry examination + Browser Analysis + Timeline Reconstruction</li>
+<li>Reporting</li>
+</ol>
+<h3 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h3><ul>
+<li>Upon arriving at a crime scene a forensic investigator should be cautious. The forensic investigator must search the crime scene extensively, label and register in a formal form all the hardware equipment found and place them safely in antistatic bags. The hard drive must be removed if a desktop is discovered powered off and placed in a safe box. If a desktop is powered on an investigator needs to decide if he&#x2F;she will proceed with a live forensics procedure.</li>
+<li>All these steps will be analysed in the following slides.</li>
+<li>Taking pictures and screenshots for supporting evidence is essential in the investigation.</li>
+</ul>
+<h3 id="Step-1-Seizure-1-x2F-2"><a href="#Step-1-Seizure-1-x2F-2" class="headerlink" title="Step 1: Seizure (1&#x2F;2)"></a>Step 1: Seizure (1&#x2F;2)</h3><ul>
+<li>Purpose: prevent digital devices being used and data getting changed</li>
+<li>Inspection of equipment – labelling – Registry – Bagging – Bios Time (F10) &amp; Hard Drive details</li>
+<li>Be prepared for a tower bomb or even USBs hidden inside a plug</li>
+<li>Equipment is on; What now?</li>
+</ul>
+<h3 id="Step-1-Seizure-2-x2F-2"><a href="#Step-1-Seizure-2-x2F-2" class="headerlink" title="Step 1: Seizure (2&#x2F;2)"></a>Step 1: Seizure (2&#x2F;2)</h3><p>Note</p>
+<ul>
+<li>Getting the time from BIOS is important as if this is set wrongly some evidence might be pointing us in the wrong direction.</li>
+<li>A registry table example</li>
+</ul>
+<h3 id="Step-2-Acquisition"><a href="#Step-2-Acquisition" class="headerlink" title="Step 2: Acquisition"></a>Step 2: Acquisition</h3><ul>
+<li><p>Creating a digital forensic copy! A forensic copy can have different types of format but we will just concentrate on the raw format. Use of write blockers is important!</p>
+</li>
+<li><p>Bit-by-bit copy of the data using a tool like Data Duplication or FKT imager to create a forensic image of the device</p>
+</li>
+<li><p>After the seizure has taken place the forensic investigator will take the hard drive or laptop and generate a clone copy of its content.</p>
+</li>
+<li><p>For this clone a specific hash value will be generated and kept safely; in this way the forensic examiner will ensure that while analysing the data he\she will not make any changes in the copy and use it as a proof that can be presented in court.</p>
+</li>
+<li><p>It is a good practice for an investigator to work on a second copy; so if anything goes wrong he&#x2F;she does not have to re-do this step.</p>
+<p>Tools can be used (e.g., FTK Imager) to acquire a copy of a forensic image.</p>
+</li>
+<li><p>There’re the different types of format that exist; raw format is a bit by bit copy often accompanied with metadata of the suspect drive.</p>
+</li>
+<li><p>Write blockers ensure that nothing can be written on the suspect drive which helps in eliminating the possibility of contaminating evidence</p>
+</li>
+</ul>
+<h3 id="Step-3-Analysis-–-Physical-Searching-1-x2F-3"><a href="#Step-3-Analysis-–-Physical-Searching-1-x2F-3" class="headerlink" title="Step 3: Analysis – Physical Searching (1&#x2F;3)"></a>Step 3: Analysis – Physical Searching (1&#x2F;3)</h3><p>Creating a case using Autopsy</p>
+<ul>
+<li>First thing is to make a hash check</li>
+<li>String commands, indexing, grep search via index &amp; foremost, file carving</li>
+<li>Use of foremost for extracting all the files<ul>
+<li>Foremost is command-line tool to recover deleted files from disk images</li>
+</ul>
+</li>
+</ul>
+<h3 id="Step-3-Analysis-–-Physical-Searching-2-x2F-3"><a href="#Step-3-Analysis-–-Physical-Searching-2-x2F-3" class="headerlink" title="Step 3: Analysis – Physical Searching (2&#x2F;3)"></a>Step 3: Analysis – Physical Searching (2&#x2F;3)</h3><h4 id="Notes"><a href="#Notes" class="headerlink" title="Notes"></a>Notes</h4><ul>
+<li>In the analysis step the forensics investigator searches for evidence in the acquired copy. There are multiple searching techniques that can be employed that will result in different types of information.</li>
+<li>List of users, emails, documents, and pictures are some of the files that can be fully recovered and examined.</li>
+<li>Always make a hash comparison to ensure your copy has not been compromised in any way. A good tool that can be used for loading an image and moving into the analysis is called Autopsy</li>
+<li>There are different commands that can be used upon searching for evidence in a forensic copy. Keyword searching reminds a bit of google searching. Depending on what type of investigation you have different relevant words that can be “good” candidates.</li>
+<li>The grep command is used for specific files that you want to be extracted. Foremost is one of the most useful ones as it can extract from our copy all the recovered data and separate them in different folders depending on their file type; one for .doc, .pdf etc.</li>
+<li>Metacam is specifically used for getting into the .jpeg directory. As you dig deeper you might find information also about the type of the camera that was used to take these photos</li>
+</ul>
+<h3 id="Step-3-Analysis-–-Whitelist-Production"><a href="#Step-3-Analysis-–-Whitelist-Production" class="headerlink" title="Step 3: Analysis – Whitelist Production"></a>Step 3: Analysis – Whitelist Production</h3><p>Creation of Windows XP image (qemu) containing known “good” hashes for filtering</p>
+<ul>
+<li>Use of md5deep for creating lists</li>
+<li>Use of cut and grep commands for comparing the lists</li>
+</ul>
+<h4 id="Notes-1"><a href="#Notes-1" class="headerlink" title="Notes"></a>Notes</h4><p>Depending on the suspect’s operating system in this case Windows XP you will have to load and create a good hashing list (whitelist) and then compare it with the list that you can extract from your forensic copy</p>
+<h3 id="Step-3-Analysis-Registry-Examination-1-x2F-2"><a href="#Step-3-Analysis-Registry-Examination-1-x2F-2" class="headerlink" title="Step 3: Analysis - Registry Examination (1&#x2F;2)"></a>Step 3: Analysis - Registry Examination (1&#x2F;2)</h3><p>Identifying the users and all the installed applications and devices on the suspect OS</p>
+<ul>
+<li>Copy the registry files from the suspect image file</li>
+<li>Use of regviewer for the registry examination</li>
+</ul>
+<h3 id="Step-3-Analysis-Registry-Examination-2-x2F-2"><a href="#Step-3-Analysis-Registry-Examination-2-x2F-2" class="headerlink" title="Step 3: Analysis - Registry Examination (2&#x2F;2)"></a>Step 3: Analysis - Registry Examination (2&#x2F;2)</h3><ul>
+<li>User Activity Tracking</li>
+<li>Malware Analysis</li>
+<li>Network Activity Analysis</li>
+<li>Recovery of Deleted Data</li>
+<li>User Authentication Analysis</li>
+</ul>
+<h4 id="Note-1"><a href="#Note-1" class="headerlink" title="Note"></a>Note</h4><p>You have to examine all the registry files in order to identify all the users and the applications which were part of the system. RegViewer is a tool that will help you examine registry files and it gives the data in a structured</p>
+<h3 id="Step-3-Analysis-Browser-Analysis-1-x2F-2"><a href="#Step-3-Analysis-Browser-Analysis-1-x2F-2" class="headerlink" title="Step 3: Analysis - Browser Analysis (1&#x2F;2)"></a>Step 3: Analysis - Browser Analysis (1&#x2F;2)</h3><p>Analysis of Browser activities</p>
+<ul>
+<li>Use of Autopsy for discovering the browser files and also the history index.dat file from the browser</li>
+<li>Analysis of bookmarks and recent items</li>
+</ul>
+<h3 id="Step-3-Analysis-Browser-Analysis-2-x2F-2"><a href="#Step-3-Analysis-Browser-Analysis-2-x2F-2" class="headerlink" title="Step 3: Analysis - Browser Analysis (2&#x2F;2)"></a>Step 3: Analysis - Browser Analysis (2&#x2F;2)</h3><p>Notice that the suspect has installed a windows update and has been accessing some photos saved on their device</p>
+<h3 id="Step-3-Analysis-amp-Reconstruction"><a href="#Step-3-Analysis-amp-Reconstruction" class="headerlink" title="Step 3: Analysis &amp; Reconstruction"></a>Step 3: Analysis &amp; Reconstruction</h3><ul>
+<li>Creation of .fls file and use of Zeitline for examining all the events</li>
+<li>Creation of events’ timeline by using Zeitline;</li>
+<li>Filtering and dig further</li>
+</ul>
+<h3 id="Notes-2"><a href="#Notes-2" class="headerlink" title="Notes"></a>Notes</h3><ul>
+<li>Identification of current user at a certain time is really important as this can be used as evidence. •</li>
+<li>So establishing a timeline is one of the most crucial parts of the investigation</li>
+</ul>
+<h3 id="Step-4-Report"><a href="#Step-4-Report" class="headerlink" title="Step 4: Report"></a>Step 4: Report</h3><ul>
+<li>Job Description and Instructions</li>
+<li>Description of recovered&#x2F;examined items</li>
+<li>Analysis of methodology</li>
+<li>Production list and associated description</li>
+</ul>
+<h4 id="Note-2"><a href="#Note-2" class="headerlink" title="Note"></a>Note</h4><ul>
+<li>Once the analysis is complete the forensic investigator will need to prepare a report with all the findings and prepare to testify if needed in court. The report should be extensive containing a register of evidence not biased by any personal opinions.</li>
+<li>In the report a specific structure should be followed and all evidence should be referenced and presenting with not any personal opinions emerging</li>
+</ul>
+<h2 id="Interesting-hot-topics"><a href="#Interesting-hot-topics" class="headerlink" title="Interesting hot topics"></a>Interesting hot topics</h2><ul>
+<li>Main “Computer crime” acts?</li>
+<li>Is there any difference between England’s and Scotland’s legislation?</li>
+<li>What is a Trojan defense?</li>
+<li>What if someone used your wireless broadband for illegal activities?</li>
+</ul>
+<h1 id="Quiz"><a href="#Quiz" class="headerlink" title="Quiz"></a>Quiz</h1><h2 id="Quiz-1"><a href="#Quiz-1" class="headerlink" title="Quiz 1"></a>Quiz 1</h2><h4 id="1-An-extremely-large-number-can-be-a-secret-Key-True-or-False-True"><a href="#1-An-extremely-large-number-can-be-a-secret-Key-True-or-False-True" class="headerlink" title="1 An extremely large number can be a secret Key (True or False). True"></a>1 An extremely large number can be a secret Key (True or False). True</h4><p>In symmetric cryptography a secret key (or “private key”) is a piece of information, usually a string of numbers or letters that is used to decrypt and encrypt messages. It could be an extremely large number and hard to guess.</p>
+<h4 id="2-What-is-CIA-in-Cyber-security"><a href="#2-What-is-CIA-in-Cyber-security" class="headerlink" title="2 What is CIA in Cyber security?"></a>2 What is CIA in Cyber security?</h4><p>The CIA in Cyber security is confidentiality, integrity, and availability.</p>
+<ul>
+<li>Confidentiality makes sure that only authorized personnel are given access or permission to modify data</li>
+<li>Integrity helps maintain the trustworthiness of data by having it in the correct state and immune to any improper modifications</li>
+<li>Availability means that the authorized users should be able to access data whenever required</li>
+</ul>
+<p>Example of where CIA is used.</p>
+<ul>
+<li>The two-factor authentication (debit card with the PIN code) provides confidentiality before authorizing access to sensitive data.</li>
+<li>The ATM and bank software ensure data integrity by maintaining all transfer and withdrawal records made via the ATM in the user’s bank accounting.</li>
+<li>The ATM provides availability as it is for public use and is accessible at all times.</li>
+</ul>
+<h4 id="3-SYN-Spoofing-happens-when-UDP-is-used-for-data-transmission-False"><a href="#3-SYN-Spoofing-happens-when-UDP-is-used-for-data-transmission-False" class="headerlink" title="3 SYN Spoofing happens when UDP is used for data transmission (False)"></a>3 SYN Spoofing happens when UDP is used for data transmission (False)</h4><p>SYN Spoofing happens when TCP is used for data transmission. This is a type of Deniel-ofService attack. Please see the lecture for more information</p>
+<h4 id="4-Confidential-information-is-asset-True-or-False-True"><a href="#4-Confidential-information-is-asset-True-or-False-True" class="headerlink" title="4 Confidential information is asset. (True or False?) True"></a>4 Confidential information is asset. (True or False?) True</h4><p>In cyber security, assets are digital files (data, property, financial information and other credential information, etc.), hardware, and software that needs to be protected from malicious attacks.</p>
+<h4 id="5-What’s-the-purpose-of-Man-in-the-middle-attack"><a href="#5-What’s-the-purpose-of-Man-in-the-middle-attack" class="headerlink" title="5 What’s the purpose of Man-in-the-middle attack?"></a>5 What’s the purpose of Man-in-the-middle attack?</h4><p>To collect personal information and manipulate data transmission. Please check slides for more information.</p>
+<p>What’s the purpose of Man-in-the-middle attack? (answer should be all of the three highlighted choices )</p>
+<p>Select one or more: <strong>bcd</strong></p>
+<p>a. render a service inaccessible</p>
+<p><strong>b. manipulate transmitted content</strong></p>
+<p><strong>c. collect information</strong></p>
+<p><strong>d. collect personal data</strong></p>
+<h2 id="Quiz-2"><a href="#Quiz-2" class="headerlink" title="Quiz 2"></a>Quiz 2</h2><h4 id="1-For-basic-elements-of-access-control-which-of-the-following-can-be-an-object"><a href="#1-For-basic-elements-of-access-control-which-of-the-following-can-be-an-object" class="headerlink" title="1 For basic elements of access control, which of the following can be an object?"></a>1 For basic elements of access control, which of the following can be an object?</h4><p>Select one or more: <strong>abce</strong></p>
+<p><strong>a. Records</strong></p>
+<p><strong>b. Segments</strong></p>
+<p><strong>c. Directory trees</strong></p>
+<p>d. Administrators</p>
+<p><strong>e. Mailboxes</strong></p>
+<h4 id="2-In-discretionary-access-control-the-subjects-can-change-the-access-matrix"><a href="#2-In-discretionary-access-control-the-subjects-can-change-the-access-matrix" class="headerlink" title="2 In discretionary access control, the subjects can change the access matrix."></a>2 In discretionary access control, the subjects can change the access matrix.</h4><p><strong>True</strong></p>
+<h4 id="3-In-discretionary-access-control-the-access-matrix-can-be-decomposed-by-columns-yielding-capability-tickets"><a href="#3-In-discretionary-access-control-the-access-matrix-can-be-decomposed-by-columns-yielding-capability-tickets" class="headerlink" title="3 In discretionary access control, the access matrix can be decomposed by columns, yielding capability tickets."></a>3 In discretionary access control, the access matrix can be decomposed by columns, yielding capability tickets.</h4><p><strong>False</strong></p>
+<h4 id="4-In-role-based-access-control-each-user-can-be-assigned-to-multiple-roles"><a href="#4-In-role-based-access-control-each-user-can-be-assigned-to-multiple-roles" class="headerlink" title="4 In role-based access control, each user can be assigned to multiple roles."></a>4 In role-based access control, each user can be assigned to multiple roles.</h4><p><strong>True</strong></p>
+<h4 id="5-Which-of-the-following-are-ignored-in-most-access-control-policies-b"><a href="#5-Which-of-the-following-are-ignored-in-most-access-control-policies-b" class="headerlink" title="5 Which of the following are ignored in most access control policies? b"></a>5 Which of the following are ignored in most access control policies? b</h4><p>a. Subject attributes</p>
+<p><strong>b. Environment attributes</strong></p>
+<p>c. Object attributes</p>
+<h2 id="Quiz-3"><a href="#Quiz-3" class="headerlink" title="Quiz 3"></a>Quiz 3</h2><h4 id="1-Consider-a-stream-cipher-with-key-stream-0110-1001-and-plaintext-1100-1100-what’s-cipher-text"><a href="#1-Consider-a-stream-cipher-with-key-stream-0110-1001-and-plaintext-1100-1100-what’s-cipher-text" class="headerlink" title="1 Consider a stream cipher, with key stream 0110 1001, and plaintext 1100 1100, what’s cipher text?"></a>1 Consider a stream cipher, with key stream 0110 1001, and plaintext 1100 1100, what’s cipher text?</h4><p><strong>a. 1010 0101</strong></p>
+<h4 id="2-Suppose-the-attacker-has-knowledge-of-the-encryption-algorithm-is-it-possible-to-decrypt-the-cipher-text"><a href="#2-Suppose-the-attacker-has-knowledge-of-the-encryption-algorithm-is-it-possible-to-decrypt-the-cipher-text" class="headerlink" title="2 Suppose the attacker has knowledge of the encryption algorithm, is it possible to decrypt the cipher text?"></a>2 Suppose the attacker has knowledge of the encryption algorithm, is it possible to decrypt the cipher text?</h4><p><strong>Yes</strong></p>
+<h4 id="3-Which-of-the-cipher-block-modes-supports-the-multiple-blocks-processing-in-parallel-a"><a href="#3-Which-of-the-cipher-block-modes-supports-the-multiple-blocks-processing-in-parallel-a" class="headerlink" title="3 Which of the cipher block modes supports the multiple blocks processing in parallel? a"></a>3 Which of the cipher block modes supports the multiple blocks processing in parallel? a</h4><p><strong>a. Counter</strong></p>
+<p>b. Cipher Feedback</p>
+<p>c. Cipher Block Chaining</p>
+<h4 id="4-Can-triple-DES-reduce-to-single-DES"><a href="#4-Can-triple-DES-reduce-to-single-DES" class="headerlink" title="4 Can triple DES reduce to single DES?"></a>4 Can triple DES reduce to single DES?</h4><p><strong>Yes</strong></p>
+<h4 id="5-Advanced-encryption-standard-AES-uses-Feistel-structure"><a href="#5-Advanced-encryption-standard-AES-uses-Feistel-structure" class="headerlink" title="5 Advanced encryption standard (AES) uses Feistel structure"></a>5 Advanced encryption standard (AES) uses Feistel structure</h4><p><strong>False</strong></p>
+<h2 id="Quiz-4"><a href="#Quiz-4" class="headerlink" title="Quiz 4"></a>Quiz 4</h2><h4 id="1-In-Diffie-Hellman-key-exchange-the-shared-secret-key-can-be-used-for-a-symmetric-cipher"><a href="#1-In-Diffie-Hellman-key-exchange-the-shared-secret-key-can-be-used-for-a-symmetric-cipher" class="headerlink" title="1 In Diffie-Hellman key exchange, the shared secret key can be used for a symmetric cipher."></a>1 In Diffie-Hellman key exchange, the shared secret key can be used for a symmetric cipher.</h4><p><strong>True</strong></p>
+<h4 id="2-Is-symmetric-encryption-always-more-secure-than-asymmetric-encryption"><a href="#2-Is-symmetric-encryption-always-more-secure-than-asymmetric-encryption" class="headerlink" title="2 Is symmetric encryption always more secure than asymmetric encryption?"></a>2 Is symmetric encryption always more secure than asymmetric encryption?</h4><p><strong>No</strong></p>
+<h4 id="3-In-Diffie-Hellman-Key-Exchange-the-man-in-the-middle-attack-can-only-eavesdrop-but-not-alter-the-message-transmitted-by-the-sender"><a href="#3-In-Diffie-Hellman-Key-Exchange-the-man-in-the-middle-attack-can-only-eavesdrop-but-not-alter-the-message-transmitted-by-the-sender" class="headerlink" title="3 In Diffie-Hellman Key Exchange, the man-in-the-middle attack can only eavesdrop but not alter the message transmitted by the sender."></a>3 In Diffie-Hellman Key Exchange, the man-in-the-middle attack can only eavesdrop but not alter the message transmitted by the sender.</h4><p><strong>False</strong></p>
+<h4 id="4-In-Asymmetric-encryption-using-a-private-key-for-encryption-and-a-public-key-for-decryption-can-provide-confidentiality"><a href="#4-In-Asymmetric-encryption-using-a-private-key-for-encryption-and-a-public-key-for-decryption-can-provide-confidentiality" class="headerlink" title="4 In Asymmetric encryption, using a private key for encryption and a public key for decryption can provide confidentiality."></a>4 In Asymmetric encryption, using a private key for encryption and a public key for decryption can provide confidentiality.</h4><p><strong>False</strong></p>
+<h4 id="5-In-RSA-we-have-p-x3D-7-q-x3D-2-e-x3D-5-which-of-the-following-can-be-a-value-of-d"><a href="#5-In-RSA-we-have-p-x3D-7-q-x3D-2-e-x3D-5-which-of-the-following-can-be-a-value-of-d" class="headerlink" title="5 In RSA, we have p&#x3D;7, q&#x3D;2, e&#x3D;5, which of the following can be a value of d?"></a>5 In RSA, we have p&#x3D;7, q&#x3D;2, e&#x3D;5, which of the following can be a value of d?</h4><p><strong>11</strong></p>
+<h2 id="Quiz-5"><a href="#Quiz-5" class="headerlink" title="Quiz 5"></a>Quiz 5</h2><h4 id="1-Can-a-wireless-network-be-a-distribution-system"><a href="#1-Can-a-wireless-network-be-a-distribution-system" class="headerlink" title="1 Can a wireless network be a distribution system?"></a>1 Can a wireless network be a distribution system?</h4><p><strong>Yes</strong></p>
+<h4 id="2-What-is-the-basic-building-block-of-an-802-11-WLAN-c"><a href="#2-What-is-the-basic-building-block-of-an-802-11-WLAN-c" class="headerlink" title="2 What is the basic building block of an 802.11 WLAN? c"></a>2 What is the basic building block of an 802.11 WLAN? c</h4><p>a. Station</p>
+<p>b. Distribution system</p>
+<p><strong>c. Basic service set</strong></p>
+<p>d. Access point</p>
+<h4 id="3-What-security-area-s-is-are-addressed-by-IEEE-802-11i-abc"><a href="#3-What-security-area-s-is-are-addressed-by-IEEE-802-11i-abc" class="headerlink" title="3 What security area(s) is (are) addressed by IEEE 802.11i? abc"></a>3 What security area(s) is (are) addressed by IEEE 802.11i? abc</h4><p><strong>a. Data transfer privacy</strong></p>
+<p><strong>b. Key Management</strong></p>
+<p><strong>c. Authentication</strong></p>
+<p>d. Data Integrity</p>
+<h4 id="4-Which-of-the-following-key-factor-incurs-a-higher-risk-of-DoS-d"><a href="#4-Which-of-the-following-key-factor-incurs-a-higher-risk-of-DoS-d" class="headerlink" title="4 Which of the following key factor incurs a higher risk of DoS? d"></a>4 Which of the following key factor incurs a higher risk of DoS? d</h4><p>a. Remote location</p>
+<p>b. Mobility</p>
+<p>c. Wireless channel</p>
+<p><strong>d. Limited resources on mobile devices</strong></p>
+<h4 id="5-What-protocols-comprise-SSL-x2F-TLS-abde"><a href="#5-What-protocols-comprise-SSL-x2F-TLS-abde" class="headerlink" title="5 What protocols comprise SSL&#x2F;TLS? abde"></a>5 What protocols comprise SSL&#x2F;TLS? abde</h4><p><strong>a. change cipher spec protocol</strong></p>
+<p><strong>b. record protocol</strong></p>
+<p>c. HTTP</p>
+<p><strong>d. handshake protocol</strong></p>
+<p><strong>e. alert protocol</strong></p>
+<p>f. heartbeat protocol</p>
+ 
+      </div>
+      <hr />
+
+      
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Twistzz</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://twistzz-xjtlu.github.io/2023/05/21/COMPSCI5063-Cyber-Security-Fundamentals/">https://twistzz-xjtlu.github.io/2023/05/21/COMPSCI5063-Cyber-Security-Fundamentals/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Twistzz</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+      <div class="tag_share" style="display: block">
+        <div class="post-meta__tag-list" style="display: inline-block">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+              <span class="chip bg-color">研究生</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div
+          class="post_share"
+          style="
+            zoom: 80%;
+            width: fit-content;
+            display: inline-block;
+            float: right;
+            margin: -0.15rem 0;
+          "
+        >
+          <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+        </div>
+      </div>
+       <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">老板大气 老板身体健康</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+ 
+    </div>
+  </div>
+
+          
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/2023/05/21/COMPSCI5060-Human-Centred-Security/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="COMPSCI5060 Human Centred Security">
+                        
+                        <span class="card-title">COMPSCI5060 Human Centred Security</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2023-05-21
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MSc/" class="post-category">
+                                    MSc
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                        <span class="chip bg-color">研究生</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/05/06/COMPSCI5099-Information-Visualisation/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/20.jpg" class="responsive-img" alt="COMPSCI5099 Information Visualisation">
+                        
+                        <span class="card-title">COMPSCI5099 Information Visualisation</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MSc/" class="post-category">
+                                    MSc
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                        <span class="chip bg-color">研究生</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+ <!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023</span>
+            
+            <a href="/about" target="_blank">Twistzz</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">37.9k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2023";
+                        var startMonth = "4";
+                        var startDate = "14";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Twistzz-XJTLU" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:twistzz963@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3027656718" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3027656718" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>

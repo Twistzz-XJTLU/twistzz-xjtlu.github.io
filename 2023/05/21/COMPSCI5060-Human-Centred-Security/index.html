@@ -1,0 +1,2707 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="COMPSCI5060 Human Centred Security, Twistzz&#39;Blog">
+    <meta name="description" content="Contentweek1
+What is Human-Centered Security
+The main themes and challenges of Human-Centered Security
+What is Security
+">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>COMPSCI5060 Human Centred Security | Twistzz&#39;Blog</title>
+    <link rel="icon" type="image/png" href="/favicon.png">
+    
+
+
+    <!-- bg-cover style     -->
+
+
+
+<link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+<link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+<link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+<link rel="stylesheet" type="text/css" href="/css/matery.css">
+<link rel="stylesheet" type="text/css" href="/css/my.css">
+<link rel="stylesheet" type="text/css" href="/css/dark.css" media="none" onload="if(media!='all')media='all'">
+
+
+
+
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+    <link rel="stylesheet" href="/css/post.css">
+
+
+
+
+    
+        <link rel="stylesheet" type="text/css" href="/css/reward.css">
+    
+
+
+
+    <script src="/libs/jquery/jquery-3.6.0.min.js"></script>
+
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Twistzz&#39;Blog</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+  <li>
+    <a href="javascript:;" class="waves-effect waves-light" onclick="switchNightMode()" title="深色/浅色模式" >
+      <i id="sum-moon-icon" class="fas fa-sun" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Twistzz&#39;Blog</div>
+        <div class="logo-desc">
+            
+            Never really desperate, only the lost of the soul.
+            
+        </div>
+    </div>
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/blinkfox/hexo-theme-matery" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/blinkfox/hexo-theme-matery" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">COMPSCI5060 Human Centred Security</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+  <div class="card">
+    <div class="card-content article-info">
+      <div class="row tag-cate">
+        <div class="col s7">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+              <span class="chip bg-color">研究生</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div class="col s5 right-align">
+          
+          <div class="post-cate">
+            <i class="fas fa-bookmark fa-fw icon-category"></i>
+            
+            <a href="/categories/MSc/" class="post-category">
+              MSc
+            </a>
+            
+          </div>
+          
+        </div>
+      </div>
+
+      <div class="post-info">
+        
+        <div class="post-date info-break-policy">
+          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2023-05-21
+        </div>
+         
+        <div class="post-date info-break-policy">
+          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-05-21
+        </div>
+         
+        <div class="info-break-policy">
+          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 8.2k
+        </div>
+         
+        <div class="info-break-policy">
+          <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+          50 分
+        </div>
+         
+        <div id="busuanzi_container_page_pv" class="info-break-policy">
+          <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+          <span id="busuanzi_value_page_pv"></span>
+        </div>
+        
+      </div>
+    </div>
+    <hr class="clearfix" />
+
+    
+    <!-- 是否加载使用自带的 prismjs. -->
+    <link
+      rel="stylesheet"
+      href="/libs/prism/prism.min.css"
+    />
+     
+
+    <div class="card-content article-card-content">
+      <div id="articleContent">
+        <h1 id="Content"><a href="#Content" class="headerlink" title="Content"></a>Content</h1><h2 id="week1"><a href="#week1" class="headerlink" title="week1"></a>week1</h2><ul>
+<li>What is Human-Centered Security</li>
+<li>The main themes and challenges of Human-Centered Security</li>
+<li>What is Security</li>
+<li>The CIA triad</li>
+<li>Understanding and modelling security threats</li>
+<li>Basics of cryptography</li>
+</ul>
+<h2 id="Week2"><a href="#Week2" class="headerlink" title="Week2"></a>Week2</h2><ul>
+<li>The significance of interaction design</li>
+<li>Basics of HCI</li>
+<li>User-centered design</li>
+<li>Prototyping<ul>
+<li>Low- to high-fidelity prototypes</li>
+<li>Think aloud protocol</li>
+<li>Wizard of Oz experiments</li>
+<li>Strategies and guidelines</li>
+</ul>
+</li>
+<li>Basics of prototype evaluation (more next lecture)</li>
+<li>Usability factors</li>
+<li>The 10 Usability Heuristics</li>
+<li>Usable Security and the Usability Security trade-off (more in Lecture 6)</li>
+</ul>
+<h2 id="Week3"><a href="#Week3" class="headerlink" title="Week3"></a>Week3</h2><ul>
+<li>Behavioral Research<ul>
+<li>Descriptive research</li>
+<li>Relational research</li>
+<li>Experimental research</li>
+</ul>
+</li>
+<li>Defining study goals and hypothesis</li>
+<li>Threat modelling</li>
+<li>Dependent and independent variables</li>
+<li>Study design structures</li>
+<li>How to define a procedure and conduct a user study</li>
+</ul>
+<h2 id="Week4"><a href="#Week4" class="headerlink" title="Week4"></a>Week4</h2><ul>
+<li>History of passwords</li>
+<li>Types of password attacks</li>
+<li>Hashing and password strength</li>
+<li>Password policies</li>
+<li>Password meters</li>
+<li>Two-factor authentication</li>
+</ul>
+<h2 id="Week5"><a href="#Week5" class="headerlink" title="Week5"></a>Week5</h2><ul>
+<li>Authentication factors<ul>
+<li>Knowledge-based authentication</li>
+<li>Possession-based authentication</li>
+<li>Inherence-based (biometric) authentication<ul>
+<li>Physiological biometrics</li>
+<li>Behavioral biometrics</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Multi-factor authentication</li>
+<li>Fall back authentication</li>
+<li>Context-based authentication</li>
+</ul>
+<h2 id="Week6"><a href="#Week6" class="headerlink" title="Week6"></a>Week6</h2><ul>
+<li>What happens after authentication?</li>
+<li>Access control</li>
+<li>Usable and secure authorization</li>
+<li>Usable and secure communication</li>
+<li>Usable and secure interface design</li>
+<li>How to design a usable and secure system</li>
+</ul>
+<h2 id="Week7"><a href="#Week7" class="headerlink" title="Week7"></a>Week7</h2><ul>
+<li>Social Engineering Techniques</li>
+<li>How social engineers think</li>
+<li>Vulnerabilities social engineers exploit</li>
+<li>Steps social engineers undertake</li>
+<li>Future of Social Engineering</li>
+<li>Mitigation techniques</li>
+</ul>
+<h2 id="Week8"><a href="#Week8" class="headerlink" title="Week8"></a>Week8</h2><ul>
+<li>What is Privacy?</li>
+<li>Privacy Policies</li>
+<li>Informed consent by design</li>
+<li>5 pitfalls in designing for privacy</li>
+<li>Privacy space framework</li>
+<li>Privacy tools and their challenges</li>
+</ul>
+<h1 id="Week1-Introduction-and-Course-Overview"><a href="#Week1-Introduction-and-Course-Overview" class="headerlink" title="Week1 Introduction and Course Overview"></a>Week1 Introduction and Course Overview</h1><h2 id="content"><a href="#content" class="headerlink" title="content"></a>content</h2><ul>
+<li>What is Human-Centered Security</li>
+<li>The main themes and challenges of Human-Centered Security</li>
+<li>What is Security</li>
+<li>The CIA triad</li>
+<li>Understanding and modelling security threats</li>
+<li>Basics of cryptography</li>
+</ul>
+<h2 id="What-is-Human-Centered-Security"><a href="#What-is-Human-Centered-Security" class="headerlink" title="What is Human-Centered Security?"></a>What is Human-Centered Security?</h2><p>Aim of Human-Centered Security: To make privacy and security an integrated, natural, unburdened part of Human-Computer interaction</p>
+<h3 id="Key-challenges"><a href="#Key-challenges" class="headerlink" title="Key challenges:"></a>Key challenges:</h3><ul>
+<li>Security concepts are complicated for the average user</li>
+<li>Security is a secondary task</li>
+<li>Human capabilities are limited</li>
+<li>Misaligned priorities</li>
+<li>Habituation</li>
+<li>New threats everyday</li>
+</ul>
+<h2 id="Introduction-to-Security"><a href="#Introduction-to-Security" class="headerlink" title="Introduction to Security"></a>Introduction to Security</h2><h3 id="What-is-Computer-Security"><a href="#What-is-Computer-Security" class="headerlink" title="What is Computer Security?"></a>What is Computer Security?</h3><p>Protecting systems against misuse and interference in order to preserve confidentiality, integrity, and availability of system resources.</p>
+<h4 id="Confidentiality"><a href="#Confidentiality" class="headerlink" title="Confidentiality"></a>Confidentiality</h4><p>Confidentiality: covers two concepts</p>
+<ul>
+<li><strong>Data confidentiality</strong>: private or confidential information is not made available or disclosed to unauthorized individuals.<ul>
+<li>E.g., Universities keep grades confidential.</li>
+</ul>
+</li>
+<li><strong>Privacy</strong>: an individual’s data is used&#x2F;disclosed according to a set of rules.<ul>
+<li>E.g., Mobile app can access user’s location but not camera feed.</li>
+</ul>
+</li>
+<li>Other related concepts:<ul>
+<li>Secrecy: keep data hidden.<ul>
+<li>E.g., lawyer keeps communications with his client secret.</li>
+</ul>
+</li>
+<li>Anonymity: keep identity hidden.<ul>
+<li>E.g., person uses Mr_Smurf as a nickname and refrains from uploading a personal photo on an online forum.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="Integrity"><a href="#Integrity" class="headerlink" title="Integrity"></a>Integrity</h4><ul>
+<li><strong>Data integrity</strong>: information and programs can only be changed via an authorized operation.<ul>
+<li>E.g., no one can change your Facebook profile picture except you.</li>
+</ul>
+</li>
+<li><strong>System integrity</strong>: systems consistently perform their meant function, without intended or unintended unauthorized manipulation.<ul>
+<li>E.g., deleting a tweet does not result in deleting another tweet</li>
+</ul>
+</li>
+</ul>
+<h4 id="Availability"><a href="#Availability" class="headerlink" title="Availability"></a>Availability</h4><p><strong>Availability</strong>: systems and data are promptly usable to authorized users.</p>
+<ul>
+<li>E.g., the system shouldn’t prevent a lecturer from entering student grades</li>
+</ul>
+<h3 id="What-do-attackers-do"><a href="#What-do-attackers-do" class="headerlink" title="What do attackers do?"></a>What do attackers do?</h3><ul>
+<li>They exploit bugs to:<ul>
+<li>disclose data to breach confidentiality</li>
+<li>alter data to breach integrity</li>
+<li>deny services to breach availability</li>
+</ul>
+</li>
+<li>How do they exploit bugs?<ul>
+<li>Software and Hardware bugs (e.g., backdoor, network vulnerability)</li>
+<li>Humans (e.g., social engineering)</li>
+<li>Side channels (e.g., observations, heat traces, smudges)</li>
+</ul>
+</li>
+</ul>
+<h3 id="Threat-Modelling"><a href="#Threat-Modelling" class="headerlink" title="Threat Modelling"></a>Threat Modelling</h3><p>Perfect security is not possible</p>
+<p>Attempting to protect against everything is too expensive, too inconvenient, and sometimes not worth the effort → prioritize!</p>
+<p>Identify most likely ways system will be attacked</p>
+<ul>
+<li>Identify likely attackers and their resources, e.g., lone wolf, organized hackers, nation-sponsored?</li>
+<li>Identify consequences of the attack, e.g., embarrassment, bankruptcy, fatal?</li>
+<li>Attackers will exploit the weakest link in the system</li>
+</ul>
+<h2 id="Cryptography-can-help-achieve-many-security-properties"><a href="#Cryptography-can-help-achieve-many-security-properties" class="headerlink" title="Cryptography can help achieve many security properties"></a>Cryptography can help achieve many security properties</h2><h3 id="Cryptography-basics"><a href="#Cryptography-basics" class="headerlink" title="Cryptography basics"></a>Cryptography basics</h3><h3 id="Why-use-ciphers"><a href="#Why-use-ciphers" class="headerlink" title="Why use ciphers?"></a>Why use ciphers?</h3><ul>
+<li>Protect confidentiality<ul>
+<li>Encrypt files (e.g., photos, documents).</li>
+<li>Encrypt emails, personal messages, and chat logs.</li>
+<li>Encrypt all data that is sent and received when browsing the internet.</li>
+</ul>
+</li>
+<li>Verify integrity<ul>
+<li>Verify that the message was not tampered.</li>
+</ul>
+</li>
+<li>Authenticity<ul>
+<li>Verify source of information (e.g., email sender, website owner).</li>
+</ul>
+</li>
+<li>Ensure secrecy<ul>
+<li>Only the receiver can decrypt the message.</li>
+</ul>
+</li>
+</ul>
+<h1 id="Week2-Usability-and-User-Centered-Design"><a href="#Week2-Usability-and-User-Centered-Design" class="headerlink" title="Week2 Usability and User-Centered Design"></a>Week2 Usability and User-Centered Design</h1><h2 id="Content-1"><a href="#Content-1" class="headerlink" title="Content"></a>Content</h2><ul>
+<li>The significance of interaction design</li>
+<li>Basics of HCI</li>
+<li>User-centered design</li>
+<li>Prototyping<ul>
+<li>Low- to high-fidelity prototypes</li>
+<li>Think aloud protocol</li>
+<li>Wizard of Oz experiments</li>
+<li>Strategies and guidelines</li>
+</ul>
+</li>
+<li>Basics of prototype evaluation (more next lecture)</li>
+<li>Usability factors</li>
+<li>The 10 Usability Heuristics</li>
+<li>Usable Security and the Usability Security trade-off (more in Lecture 6)</li>
+</ul>
+<h2 id="Humans"><a href="#Humans" class="headerlink" title="Humans"></a>Humans</h2><h2 id="Why-do-Humans-use-computers"><a href="#Why-do-Humans-use-computers" class="headerlink" title="Why do Humans use computers?"></a>Why do Humans use computers?</h2><ul>
+<li>Interfaces should stay as invisible as possible so users can focus on the task rather on the interface.</li>
+<li>How?<ul>
+<li>User’s side: understand the abilities and limitations of users, and then build technologies that leverage their capabilities, and also avoid things they are incapable of doing.</li>
+<li>Technology side: design with what we’ve learned about the users’ in mind, and then evaluate how well this technology works.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Bad-design-costs-time-money-and-lives"><a href="#Bad-design-costs-time-money-and-lives" class="headerlink" title="Bad design costs time, money and lives!"></a>Bad design costs time, money and lives!</h2><h2 id="Human-Computer-Interaction"><a href="#Human-Computer-Interaction" class="headerlink" title="Human-Computer Interaction"></a>Human-Computer Interaction</h2><p>Human-computer interaction is a discipline concerned with the design, evaluation, and implementation of interactive computing systems for human use and with the study of major phenomena surrounding them</p>
+<h4 id="There-are-many-methodologies-and-approaches-for-designing-interaction"><a href="#There-are-many-methodologies-and-approaches-for-designing-interaction" class="headerlink" title="There are many methodologies and approaches for designing interaction:"></a>There are many methodologies and approaches for designing interaction:</h4><ul>
+<li>User-centered Design</li>
+<li>Particpatory Design</li>
+<li>Value Sensitive Design</li>
+<li>Activity-centered Design</li>
+<li>Process-centered Design</li>
+</ul>
+<h3 id="User-centered-Design"><a href="#User-centered-Design" class="headerlink" title="User-centered Design"></a>User-centered Design</h3><p>An iterative design process that puts the user at its center.</p>
+<ul>
+<li>Understand the Context of use</li>
+<li>Understand the Requirements</li>
+<li>Design Solutions</li>
+<li>Evaluate the Solutions</li>
+</ul>
+<h2 id="Prototyping"><a href="#Prototyping" class="headerlink" title="Prototyping"></a>Prototyping</h2><ul>
+<li>Prototyping refers to rapidly creating an approximation of a design.</li>
+<li>Prototypes embody design hypotheses and enable designers to test their hypotheses.</li>
+<li>It structures innovation, collaboration and creativity in design.</li>
+<li>The goal in prototyping is not the artefact – it’s feedback and iteration</li>
+</ul>
+<h3 id="Why-prototype"><a href="#Why-prototype" class="headerlink" title="Why prototype"></a>Why prototype</h3><ul>
+<li>Gain insights into user behavior.</li>
+<li>Communicate ideas to other teammates and stakeholders</li>
+<li>Collect initial data to support design choice.</li>
+<li>Reflect on the product</li>
+</ul>
+<h3 id="Lessons-from-those-prototypes"><a href="#Lessons-from-those-prototypes" class="headerlink" title="Lessons from those prototypes"></a>Lessons from those prototypes</h3><ul>
+<li>Prototypes are almost never complete</li>
+<li>Goal is to simulate specific aspects of the design in order to improve our understanding of those aspects</li>
+</ul>
+<p>Prototypes help you find:</p>
+<ul>
+<li>Known unknowns: aspects that you know you don’t understand and want to learn about.<ul>
+<li>E.g., is this warning message intuitive?</li>
+</ul>
+</li>
+<li>Unknown unknowns: aspects that you don’t know are open issues.<ul>
+<li>E.g., why aren’t older adults using password managers?</li>
+</ul>
+</li>
+</ul>
+<h3 id="Prototyping-allows-collecting-feedback-from"><a href="#Prototyping-allows-collecting-feedback-from" class="headerlink" title="Prototyping allows collecting feedback from.."></a>Prototyping allows collecting feedback from..</h3><ul>
+<li>Colleagues</li>
+<li>Clients (Company)</li>
+<li>Yourself</li>
+<li>Users</li>
+</ul>
+<h3 id="How-to-prototype"><a href="#How-to-prototype" class="headerlink" title="How to prototype?"></a>How to prototype?</h3><ul>
+<li>Determine the fidelity of the prototype</li>
+<li>The fidelity of a prototype refers to how it conveys the look-and-feel of the final product (basically, its level of detail and realism).</li>
+<li>Fidelity can vary in the areas of:<ul>
+<li>Visual design</li>
+<li>Content</li>
+<li>Interactivity</li>
+</ul>
+</li>
+<li>Prototypes can range between two extremes:<ul>
+<li>Low-Fidelity</li>
+<li>High-Fidelity</li>
+</ul>
+</li>
+</ul>
+<h3 id="Low-fidelity-prototypes"><a href="#Low-fidelity-prototypes" class="headerlink" title="Low-fidelity prototypes"></a>Low-fidelity prototypes</h3><ul>
+<li><p>Paper-based or using wireframe software (e.g., moqups.com).</p>
+</li>
+<li><p>Can also be made of cardboard if form factor is important.</p>
+</li>
+<li><p>A human simulates interactivity (we’ll discuss the Wizard of Oz approach in a bit).</p>
+</li>
+<li><p>Faster to build</p>
+<ul>
+<li>Sketching is faster than programming</li>
+</ul>
+</li>
+<li><p>Easier to Change</p>
+<ul>
+<li>Easy to make changes between tests (sometimes during tests)</li>
+<li>No code investments</li>
+</ul>
+</li>
+<li><p>Focus attention on big picture</p>
+<ul>
+<li>Designer doesn’t waste time on detail</li>
+<li>Customer can make some creative suggestions</li>
+</ul>
+</li>
+</ul>
+<p>+ Inexpensive</p>
+<p>+ Fast</p>
+<p>+ Allows changes even during experiments</p>
+<p>- Uncertainty about technical feasibility</p>
+<p>- Limited and unnatural interactivity</p>
+<h3 id="High-fidelity-prototypes"><a href="#High-fidelity-prototypes" class="headerlink" title="High-fidelity prototypes"></a>High-fidelity prototypes</h3><ul>
+<li>Involve programming</li>
+<li>Gives the user the impression that it is a real system</li>
+<li>Many hardcoded details</li>
+<li>Interactive</li>
+</ul>
+<p>+ Meaningful feedback for usability evaluation</p>
+<p>+ Allows testing UI elements and&#x2F;or interactions</p>
+<p>+ More convincing to clients</p>
+<p>- Higher cost</p>
+<p>- Relatively slower to build</p>
+<p>- Iterations can be costly</p>
+<h3 id="Medium-fidelity-prototypes"><a href="#Medium-fidelity-prototypes" class="headerlink" title="Medium-fidelity prototypes"></a>Medium-fidelity prototypes</h3><p>Somewhere in between</p>
+<h3 id="Prototyping-guidelines"><a href="#Prototyping-guidelines" class="headerlink" title="Prototyping guidelines"></a>Prototyping guidelines</h3><ul>
+<li>Prototypes should be disposable</li>
+<li>They are not required to be complete</li>
+<li>They do not need to be updated</li>
+<li>Should be easy to change</li>
+<li>During prototyping, “possibility to change” narrow as fidelity increases</li>
+<li>Build LOTS of prototypes</li>
+</ul>
+<h2 id="How-do-we-evaluate-the-prototypes"><a href="#How-do-we-evaluate-the-prototypes" class="headerlink" title="How do we evaluate the prototypes?"></a>How do we evaluate the prototypes?</h2><h3 id="Evaluating-prototypes"><a href="#Evaluating-prototypes" class="headerlink" title="Evaluating prototypes"></a>Evaluating prototypes</h3><ol>
+<li>Define tasks for participants</li>
+<li>Plan ahead the procedure of the study</li>
+<li>Plan ahead which information will be gathered (more about this in the next lecture)</li>
+</ol>
+<p>Roles of team members:</p>
+<ul>
+<li>A member will be a Facilitator: this member will introduce the system and introduce the tasks to the participant.</li>
+<li>In case of paper prototypes: Another member will be a Computer, their job will be to simulate how the system would react to the user’s actions. Fun fact: this type of experiments is called Wizard of Oz experiment</li>
+</ul>
+<p><strong>Guidelines</strong>:</p>
+<ul>
+<li>Give clear concise tasks</li>
+<li>Don’t tell the participant how to do the task, focus on what they need to do.</li>
+<li>Don’t give any hints, object, or criticize the participant.</li>
+<li>Don’t prime participants (e.g., oh I worked so hard on this prototype, now tell me what you think  this is wrong).</li>
+<li>Observe the participant, take notes, even record a video and take pictures if the participant consents.</li>
+<li>Encourage think aloud to know why the participant is doing what they’re doing, and ask questions to better understand.</li>
+</ul>
+<h2 id="Usability"><a href="#Usability" class="headerlink" title="Usability"></a>Usability</h2><h3 id="What-makes-something-usable"><a href="#What-makes-something-usable" class="headerlink" title="What makes something usable?"></a>What makes something usable?</h3><ul>
+<li>Effectiveness: how completely and accurately the task is completed.</li>
+<li>Error tolerance: how well the system prevents errors and can help users recover from them.</li>
+<li>Transparency: how prominent the system is. Ideally, an interface to a task should be as invisible as possible.</li>
+<li>Efficiency (speed): how quickly can the user complete the task.</li>
+<li>Learnability: how easy&#x2F;fast can users learn how to use the system. Ideally systems are intuitive and do not require learning.</li>
+<li>Memorability: this extends learnability – users should be able to remember how to use the system without high demand.</li>
+<li>User preference: how much users like the system – do they enjoy using it?</li>
+</ul>
+<p>Often times you cannot achieve all of that at the same time. You can have good usability on some factors but not others. Sometimes there is even a trade off.</p>
+<p>Make the system among us as many of these factors as possible</p>
+<h3 id="Usability-of-Android-Patterns"><a href="#Usability-of-Android-Patterns" class="headerlink" title="Usability of Android Patterns"></a>Usability of Android Patterns</h3><ul>
+<li>Effectiveness: how completely and accurately the task is completed. <strong>very low</strong></li>
+<li>Error tolerance: how well the system prevents errors and can help users recover from them. <strong>very low</strong></li>
+<li>Transparency: how prominent the system is. Ideally, an interface to a task should be as invisible as possible. very low</li>
+<li>Efficiency (speed): how quickly can the user complete the task. <strong>high</strong></li>
+<li>Learnability: how easy&#x2F;fast can users learn how to use the system. Ideally systems are intuitive and do not require learning. very high</li>
+<li>Memorability: this extends learnability – users should be able to remember how to use the system without high demand. <strong>very high</strong></li>
+<li>User preference: how much users like the system – do they enjoy using it? <strong>high</strong></li>
+</ul>
+<h3 id="The-10-Usability-Heuristics-for-User-Interface-Design-by-Jakob-Nielsen"><a href="#The-10-Usability-Heuristics-for-User-Interface-Design-by-Jakob-Nielsen" class="headerlink" title="The 10 Usability Heuristics for User Interface Design by Jakob Nielsen"></a>The 10 Usability Heuristics for User Interface Design by Jakob Nielsen</h3><ol>
+<li>Visibility of system status</li>
+<li>Match between system and the real world</li>
+<li>User control and freedom</li>
+<li>Consistency and standards</li>
+<li>Error prevention</li>
+<li>Recognition rather than recall</li>
+<li>Flexibility and efficiency of use</li>
+<li>Aesthetic and minimalist design</li>
+<li>Help users recognize, diagnose, and recover from errors</li>
+<li>Help and documentation</li>
+</ol>
+<h3 id="How-to-use-all-of-that"><a href="#How-to-use-all-of-that" class="headerlink" title="How to use all of that"></a>How to use all of that</h3><ul>
+<li>The heuristics can be used for evaluating existing systems</li>
+<li>They can also be used when designing a new system, to check the compliance of the designs</li>
+</ul>
+<h3 id="Why-is-usable-security-challenging"><a href="#Why-is-usable-security-challenging" class="headerlink" title="Why is usable security challenging?"></a>Why is usable security challenging?</h3><ul>
+<li>It is very common that usability improvements result in less security.</li>
+<li>It is very common that security improvements result in less usability.</li>
+<li>This led to a long discussion among researchers and practitioners on the trade-off between Usability and Security.</li>
+<li>IMPORTANT: While the trade-off is sometimes unavoidable, we should not take it for granted that security will reduce usability.</li>
+<li>Remember last lecture: if a security system is not usable, people will not use it, ultimately leading to less security.</li>
+<li>Both usability and security should be integrated from the beginning of the design process.</li>
+</ul>
+<h3 id="Usability-of-Security-Systems"><a href="#Usability-of-Security-Systems" class="headerlink" title="Usability of Security Systems"></a>Usability of Security Systems</h3><p>Whitten and Tygar argue that security software is usable if the people who are expected to use it:</p>
+<ul>
+<li>are reliably made aware of the security tasks they need to perform</li>
+<li>are able to figure out how to successfully perform those tasks;</li>
+<li>don’t make dangerous errors; and</li>
+<li>are sufficiently comfortable with the interface to continue using it.</li>
+</ul>
+<h1 id="Week3-Research-Methods-in-Usable-Security"><a href="#Week3-Research-Methods-in-Usable-Security" class="headerlink" title="Week3 Research Methods in Usable Security"></a>Week3 Research Methods in Usable Security</h1><h2 id="Content-2"><a href="#Content-2" class="headerlink" title="Content"></a>Content</h2><ul>
+<li>Behavioral Research<ul>
+<li>Descriptive research</li>
+<li>Relational research</li>
+<li>Experimental research</li>
+</ul>
+</li>
+<li>Defining study goals and hypothesis</li>
+<li>Threat modelling</li>
+<li>Dependent and independent variables</li>
+<li>Study design structures</li>
+<li>How to define a procedure and conduct a user study</li>
+</ul>
+<h2 id="Behavioral-Research"><a href="#Behavioral-Research" class="headerlink" title="Behavioral Research"></a>Behavioral Research</h2><ul>
+<li>Early research in Human-Centered Security and Human-Computer Interaction borrowed concepts from behavioral sciences (e.g., psychology, cognitive science, etc.)</li>
+<li>Types of behavioral research<ul>
+<li>Descriptive research</li>
+<li>Relational research</li>
+<li>Experimental research</li>
+</ul>
+</li>
+</ul>
+<h3 id="Descriptive-behavioral-research"><a href="#Descriptive-behavioral-research" class="headerlink" title="Descriptive behavioral research"></a>Descriptive behavioral research</h3><ul>
+<li>Aim: describe a situation or set of events</li>
+<li>Claim: X is happening</li>
+<li>Example: In a group of 10 users, 8 of which play games on their mobile phones and authenticate by PIN, and 2 of which do not play games and authenticate by lock patterns</li>
+<li>Interesting observation, but does not establish a relationship between playing games and authentication</li>
+<li>Does not explain why this happens</li>
+<li>Output is often qualitative</li>
+</ul>
+<h4 id="Methods"><a href="#Methods" class="headerlink" title="Methods:"></a>Methods:</h4><ul>
+<li>Interviews</li>
+<li>Focus groups</li>
+<li>Observations</li>
+<li>Field studies</li>
+</ul>
+<h3 id="Relational-behavioral-research"><a href="#Relational-behavioral-research" class="headerlink" title="Relational behavioral research"></a>Relational behavioral research</h3><ul>
+<li>Aim: Identify relations between multiple variables</li>
+<li>Methods: observations, field studies, surveys</li>
+<li>Claim: X is related to Y</li>
+<li>Example: a relationship exists between number of hours spent playing an online game, and typing speed (confirmed with a statistical test such as Pearson correlation)</li>
+<li>What can we learn from that?<ul>
+<li>It is possible that playing this online game increases typing speed</li>
+<li>It is possible that users who type quickly tend to enjoy the online game</li>
+<li>It is possible that there’s a different third factor, that causes users to both: type quickly and play online games</li>
+</ul>
+</li>
+<li>Relational research does not explain causality (why this happens)</li>
+<li>Output can be qualitative or quantitative</li>
+</ul>
+<h4 id="Methods-1"><a href="#Methods-1" class="headerlink" title="Methods"></a>Methods</h4><p>Interviews, focus groups, field studies, observations, and also questionnaires:</p>
+<h3 id="Experimental-research"><a href="#Experimental-research" class="headerlink" title="Experimental research"></a>Experimental research</h3><ul>
+<li>Aim: Identify causes of a situation or event</li>
+<li>Methods: controlled experiments</li>
+<li>Claim: X is responsible for Y</li>
+<li>Example: a group of users enters 20 PINs, another group of users enters 20 Patterns. The mean authenticate time is shorter for the group that used Patterns (confirmed by statistical tests).</li>
+<li>What can we learn from that?<ul>
+<li>Authentication using Patterns is faster than when using PINs</li>
+</ul>
+</li>
+<li>Output can be qualitative or quantitative</li>
+</ul>
+<h3 id="Case-Study-Evaluating-GazeTouchPIN"><a href="#Case-Study-Evaluating-GazeTouchPIN" class="headerlink" title="Case Study: Evaluating GazeTouchPIN"></a>Case Study: Evaluating GazeTouchPIN</h3><h2 id="How-to-design-and-run-a-user-study"><a href="#How-to-design-and-run-a-user-study" class="headerlink" title="How to design and run a user study?"></a>How to design and run a user study?</h2><ol>
+<li>Define the goal of the study</li>
+<li>Define a threat model</li>
+<li>Identify the measures (aka dependent variables)</li>
+<li>Identify the independent variables</li>
+<li>Identify the design structure: between-, within-, or mixed-subjects</li>
+<li>Define the procedure and user tasks</li>
+<li>Plan ahead for the analysis</li>
+<li>Conduct the [pilot-]study</li>
+<li>Analyze the results</li>
+</ol>
+<h3 id="Defining-the-Goal-of-the-Experiment"><a href="#Defining-the-Goal-of-the-Experiment" class="headerlink" title="Defining the Goal of the Experiment"></a>Defining the Goal of the Experiment</h3><ul>
+<li><p>Define a clear goal for the study</p>
+<ul>
+<li>Example: evaluate the usability of an authentication scheme</li>
+<li>Example: evaluate the security of an authentication scheme</li>
+</ul>
+</li>
+<li><p>Define a hypothesis</p>
+<ul>
+<li>Example: PINs are more secure against shoulder surfing compared to Patterns</li>
+</ul>
+</li>
+</ul>
+<h3 id="Defining-a-Threat-Model"><a href="#Defining-a-Threat-Model" class="headerlink" title="Defining a Threat Model"></a>Defining a Threat Model</h3><ul>
+<li><p>A threat model is a sample scenario for an attack</p>
+</li>
+<li><p>Assume best case scenario for the attacker, and worst case scenario for the user</p>
+</li>
+<li><p>Be as detailed as possible</p>
+</li>
+<li><p>Why do we define a threat model?</p>
+<ul>
+<li>Set the scene</li>
+<li>Set the focus of the evaluation (sometimes it is impossible to consider all possible threats)</li>
+<li>Inform the design decisions of the security evaluation</li>
+</ul>
+</li>
+<li><p>Thermal attacks</p>
+</li>
+<li><p>Smudge attacks</p>
+</li>
+<li><p>Shoulder surfing</p>
+</li>
+</ul>
+<p><strong>Sample threat model:</strong></p>
+<p>A smartphone user enters her PIN in a public setting. An observer (attacker) standing in the user’s vicinity has perfect sight on the display (no reflections, no occlusions) […] After observing the PIN-entry, the attacker gets in possession of the device and tries to replicate the observed input. The observation attack takes place without additional equipment (e.g. camcorder).</p>
+<h4 id="Insider-Threat-Model"><a href="#Insider-Threat-Model" class="headerlink" title="Insider Threat Model"></a>Insider Threat Model</h4><ul>
+<li>Insiders are on the inside, with access privileges.</li>
+<li>They are trusted.</li>
+<li>Aware of certain details (e.g., policies, procedures &amp; technology).</li>
+<li>Know where the valuable data is and how to access it.</li>
+</ul>
+<h5 id="Three-categories"><a href="#Three-categories" class="headerlink" title="Three categories"></a>Three categories</h5><ul>
+<li>Malicious insider: someone taking advantage of their access to inflict harm, examples:<ul>
+<li>Family member spies on another family member’s phone.</li>
+<li>Employee in an organization exploits their access rights to do something malicious.</li>
+</ul>
+</li>
+<li>Negligent insiders: someone inadvertently makes errors and&#x2F;or disregards policies, which place others at risk, examples:<ul>
+<li>Family member lets a burglar into their house.</li>
+<li>Employee does not follow security policies, resulting in a security breach.</li>
+</ul>
+</li>
+<li>Infiltrators: external attacker that obtains legitimate access credentials without authorization, examples:<ul>
+<li>A visitor to an organization retrieve an employee’s credentials and uses them to access the organization’s data.</li>
+<li>A former employee leaves malicious code in the network before leaving a company to allow him to infiltrate the company’s network after he leaves.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Dependent-variables"><a href="#Dependent-variables" class="headerlink" title="Dependent variables"></a>Dependent variables</h3><ul>
+<li>What do you need to measure in order to achieve your goal?</li>
+<li>Dependent variables are things that you can measure or collect, such as:</li>
+</ul>
+<h4 id="Standard-Questionnaires"><a href="#Standard-Questionnaires" class="headerlink" title="Standard Questionnaires"></a>Standard Questionnaires</h4><ul>
+<li>NASA-TLX (Task Load Index)</li>
+<li>SUS (System Usability Scale)</li>
+<li>Or you can make your own questionnaire!</li>
+</ul>
+<h4 id="Common-Dependent-variables-in-Usable-Security"><a href="#Common-Dependent-variables-in-Usable-Security" class="headerlink" title="Common Dependent variables in Usable Security"></a>Common Dependent variables in Usable Security</h4><ul>
+<li>Usability<ul>
+<li>Efficiency &#x3D;&#x3D; entry time</li>
+<li>Effectiveness &#x3D;&#x3D; error rate</li>
+<li>Memorability → how easy can people remember the password</li>
+</ul>
+</li>
+<li>Security<ul>
+<li>Theoretical password space Influenced by the design of the scheme</li>
+<li>Practical password space Influenced by the design of the scheme</li>
+<li>Observation resistance</li>
+</ul>
+</li>
+</ul>
+<h4 id="Password-Space"><a href="#Password-Space" class="headerlink" title="Password Space"></a>Password Space</h4><ul>
+<li>Theoretical password space</li>
+<li>Practical password space</li>
+</ul>
+<h4 id="Measuring-Observation-Resistance"><a href="#Measuring-Observation-Resistance" class="headerlink" title="Measuring Observation Resistance"></a>Measuring Observation Resistance</h4><h4 id="Evaluating-biometric-authentication"><a href="#Evaluating-biometric-authentication" class="headerlink" title="Evaluating biometric authentication"></a>Evaluating biometric authentication</h4><ul>
+<li>The previous metrics are relevant to knowledge-based authentication schemes</li>
+<li>Biometric schemes have different metrics<ul>
+<li>True positives → authenticating the correct user</li>
+<li>False positives → authenticating the wrong user</li>
+<li>True negatives →rejecting the wrong user</li>
+<li>False negative → rejecting the correct user</li>
+</ul>
+</li>
+</ul>
+<h3 id="Independent-variables"><a href="#Independent-variables" class="headerlink" title="Independent variables"></a>Independent variables</h3><ul>
+<li>Often they are technologies, users, the context in which a technology is used, etc..</li>
+<li>It is something that you expect to influence the dependent variable when changed.</li>
+<li>An independent variable consists of conditions</li>
+<li>Examples:</li>
+<li>Why have independent variables in the first place?</li>
+</ul>
+<h4 id="Independent-variables-in-Usable-Security"><a href="#Independent-variables-in-Usable-Security" class="headerlink" title="Independent variables in Usable Security"></a>Independent variables in Usable Security</h4><h4 id="Baseline-conditions"><a href="#Baseline-conditions" class="headerlink" title="Baseline conditions"></a>Baseline conditions</h4><ul>
+<li>It is very important to have a baseline condition in any experiment</li>
+<li>A baseline condition is a condition whose performance is already known</li>
+<li>Comparing your work to a baseline allows you to make claims about the advantages of your approach</li>
+<li>What would be a baseline condition for GazeTouchPIN?</li>
+</ul>
+<h4 id="Baseline-conditions-in-GazeTouchPIN"><a href="#Baseline-conditions-in-GazeTouchPIN" class="headerlink" title="Baseline conditions in GazeTouchPIN"></a>Baseline conditions in GazeTouchPIN</h4><ul>
+<li>PIN method (baseline)</li>
+<li>Random layout</li>
+<li>GazeTouchPIN</li>
+</ul>
+<h3 id="Experiment-Design-Structure"><a href="#Experiment-Design-Structure" class="headerlink" title="Experiment Design Structure"></a>Experiment Design Structure</h3><p>There are different ways to design experiments:</p>
+<ul>
+<li>Between-subject design</li>
+<li>Within-subject design</li>
+<li>Mixed-subject design (combination of the above two)</li>
+</ul>
+<h4 id="Between-subject-design"><a href="#Between-subject-design" class="headerlink" title="Between subject design"></a>Between subject design</h4><p><strong>Advantages</strong></p>
+<ul>
+<li>Users do not learn from different conditions</li>
+<li>The experiment requires less time per participant</li>
+<li>Issues such as fatigue and frustration are minimal</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>Susceptible to individual differences (can introduce noise to the collected data)</li>
+<li>It requires a larger number of participants in order to eliminate the noise (e.g., 20 participants per condition)</li>
+</ul>
+<h4 id="Within-subject-design"><a href="#Within-subject-design" class="headerlink" title="Within subject design"></a>Within subject design</h4><p><strong>Advantages</strong></p>
+<ul>
+<li>Requires a smaller sample size (e.g., 20 participants in total)</li>
+<li>Easier to conduct</li>
+<li>More economical</li>
+</ul>
+<p><strong>Disadvantages</strong></p>
+<ul>
+<li>The results might be biased due to learning effects</li>
+<li>The results might be biased due to fatigue</li>
+</ul>
+<h4 id="Counterbalancing-conditions"><a href="#Counterbalancing-conditions" class="headerlink" title="Counterbalancing conditions"></a>Counterbalancing conditions</h4><ul>
+<li>If all participants go through the conditions in the same order, there might be biases</li>
+<li>Solution: counter balance the conditions; i.e. change the order of conditions for each participant</li>
+</ul>
+<h4 id="How-to-counter-balance"><a href="#How-to-counter-balance" class="headerlink" title="How to counter balance?"></a>How to counter balance?</h4><ul>
+<li>Randomize the order of conditions (not always a good idea)</li>
+<li>Use an NxN Latin Square (where N is the number of conditions)</li>
+</ul>
+<h3 id="Defining-a-procedure"><a href="#Defining-a-procedure" class="headerlink" title="Defining a procedure"></a>Defining a procedure</h3><ul>
+<li>A study procedure is a walkthrough the study</li>
+<li>It is always better to write the procedure before doing the study<ul>
+<li>This allows you to spot any problems in your procedure or design</li>
+<li>It acts like a todo list for what you need to do during the study</li>
+</ul>
+</li>
+</ul>
+<h4 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h4><h3 id="Planning-ahead-for-the-analysis"><a href="#Planning-ahead-for-the-analysis" class="headerlink" title="Planning ahead for the analysis"></a>Planning ahead for the analysis</h3><ul>
+<li>Make sure you log all the data needed for the analysis</li>
+<li>It is always safer to:<ul>
+<li>Store fine-grained data (e.g., instead of calculating the entry time in real time and logging it, log the start time, and the end time, then calculate the entry time post hoc)</li>
+<li>Store the data in the lowest magnitude possible (e.g., entry time in milliseconds rather than in seconds)</li>
+</ul>
+</li>
+<li>Do a pilot test, and analyze the data.</li>
+</ul>
+<h4 id="User-study-Dos-and-Don’ts"><a href="#User-study-Dos-and-Don’ts" class="headerlink" title="User study Dos and Don’ts"></a>User study Dos and Don’ts</h4><ul>
+<li>Get the participant’s consent</li>
+<li>Do not expose them to any risks greater than those encountered in their normal working life</li>
+<li>Allow them to withdraw at any time</li>
+<li>Allow them to ask questions</li>
+<li>Do a pilot study first</li>
+<li>Do not influence them</li>
+<li>Store data securely and anonymously</li>
+</ul>
+<h3 id="Conduct-the-pilot-study"><a href="#Conduct-the-pilot-study" class="headerlink" title="Conduct the [pilot-]study"></a>Conduct the [pilot-]study</h3><h3 id="Analyzing-the-results"><a href="#Analyzing-the-results" class="headerlink" title="Analyzing the results"></a>Analyzing the results</h3><ul>
+<li>Descriptive analysis<ul>
+<li>Start by calculating the means, and the standard deviation</li>
+<li>When dealing with ordinal data, it is better to use medians</li>
+<li>However comparing means does not tell us much<ul>
+<li>Example: if the mean running speed of 3 Italians is higher than the mean running speed of 3 Austrians → this does not mean that Italians are always faster</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Statistical analysis<ul>
+<li>Statistical tests tell us the probability that the difference between the means occurs by chance</li>
+<li>If the probability is less than 5% (p &lt; 0.05) then we can assume that the difference between the two means is statistically significant. And only then we can generalize our claims.</li>
+</ul>
+</li>
+</ul>
+<h4 id="How-to-do-statistical-analysis"><a href="#How-to-do-statistical-analysis" class="headerlink" title="How to do statistical analysis?"></a>How to do statistical analysis?</h4><h1 id="Week4-Passwords"><a href="#Week4-Passwords" class="headerlink" title="Week4 Passwords"></a>Week4 Passwords</h1><h2 id="Content-3"><a href="#Content-3" class="headerlink" title="Content"></a>Content</h2><ul>
+<li>History of passwords</li>
+<li>Types of password attacks</li>
+<li>Hashing and password strength</li>
+<li>Password policies</li>
+<li>Password meters</li>
+<li>Two-factor authentication</li>
+</ul>
+<h2 id="History-of-Passwords"><a href="#History-of-Passwords" class="headerlink" title="History of Passwords"></a>History of Passwords</h2><h2 id="Passwords-are-staying-for-a-while"><a href="#Passwords-are-staying-for-a-while" class="headerlink" title="Passwords are staying for a while"></a>Passwords are staying for a while</h2><h3 id="Benefits"><a href="#Benefits" class="headerlink" title="Benefits"></a>Benefits</h3><p><strong>Service providers</strong></p>
+<ul>
+<li>Low costs</li>
+<li>Easy to implement</li>
+<li>Replaceable when compromised</li>
+<li>Revocable by administrator</li>
+<li>Enforceable policies</li>
+</ul>
+<p><strong>User</strong></p>
+<ul>
+<li>Fast entry on desktops</li>
+<li>Most users already familiarized</li>
+<li>Easy to learn</li>
+<li>Shareable with others</li>
+<li>High degree of control&#x2F;freedom</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>Independent of identification</li>
+</ul>
+<h3 id="Drawbacks"><a href="#Drawbacks" class="headerlink" title="Drawbacks"></a>Drawbacks</h3><p><strong>Service providers</strong></p>
+<ul>
+<li>Large number of attack vectors</li>
+<li>Anomaly detection is costly</li>
+<li>Attacks are simple to carry out</li>
+<li>Attack automation is simple</li>
+<li>Attacks can have severe consequences</li>
+</ul>
+<p><strong>User</strong></p>
+<ul>
+<li>Memory overload from too many passwords</li>
+<li>Suboptimal coping strategies</li>
+<li>Stronger passwords difficult to memorize</li>
+<li>Entry on mobile devices is difficult</li>
+<li>Disliked by users &#x2F; perceived as a burden</li>
+</ul>
+<p><strong>Others</strong></p>
+<ul>
+<li>Weak passwords are a risk for users and service providers</li>
+</ul>
+<h3 id="Why-do-we-use-passwords"><a href="#Why-do-we-use-passwords" class="headerlink" title="Why do we use passwords?"></a>Why do we use passwords?</h3><ul>
+<li>Security: to protect access to a system</li>
+<li>User: to access a system</li>
+</ul>
+<h3 id="The-users’-preferences-are"><a href="#The-users’-preferences-are" class="headerlink" title="The users’ preferences are"></a>The users’ preferences are</h3><ul>
+<li>Pick passwords that are easy to remember</li>
+<li>Force them to come up with something hard to remember, and they’ll forget them, reset them too often, or write them down.</li>
+</ul>
+<h2 id="List-of-most-common-passwords"><a href="#List-of-most-common-passwords" class="headerlink" title="List of most common passwords"></a>List of most common passwords</h2><h2 id="Large-number-of-passwords-was-leaked"><a href="#Large-number-of-passwords-was-leaked" class="headerlink" title="Large number of passwords was leaked"></a>Large number of passwords was leaked</h2><h2 id="People-reuse-passwords-across-platforms-and-don’t-change-them-after-leaks"><a href="#People-reuse-passwords-across-platforms-and-don’t-change-them-after-leaks" class="headerlink" title="People reuse passwords across platforms, and don’t change them after leaks!"></a>People reuse passwords across platforms, and don’t change them after leaks!</h2><h2 id="How-are-passwords-typically-attacked"><a href="#How-are-passwords-typically-attacked" class="headerlink" title="How are passwords typically attacked?"></a>How are passwords typically attacked?</h2><ul>
+<li>Offline attacks</li>
+<li>Online attacks</li>
+<li>Side channel attacks</li>
+<li>Social engineering</li>
+<li>Malwares and eavesdropping</li>
+</ul>
+<h2 id="Offline-attacks"><a href="#Offline-attacks" class="headerlink" title="Offline attacks"></a>Offline attacks</h2><ul>
+<li>Usually large scale attacks.</li>
+<li>Attackers retrieve a database of passwords (e.g., by exploiting backdoors, network vulnerabilities, insider attacks, or malware), and then they analyse it offline.</li>
+</ul>
+<h3 id="How-are-passwords-stored"><a href="#How-are-passwords-stored" class="headerlink" title="How are passwords stored?"></a>How are passwords stored?</h3><h4 id="Hashing"><a href="#Hashing" class="headerlink" title="Hashing"></a>Hashing</h4><ul>
+<li><p>Takes an input (e.g., password) and turns it into a string of text that always has the same length.</p>
+</li>
+<li><p>There are many hashing functions e.g., MD5, SHA1, SHA2, SHA3, etc..</p>
+</li>
+<li><p>You never need the passwords in plain text.</p>
+</li>
+<li><p>Once the user provides their password, hash it using the same function used to hash the password on creation.</p>
+</li>
+<li><p>Then compare the input hash with the stored hash.</p>
+</li>
+<li><p>You can further improve hashing by using salts!</p>
+</li>
+</ul>
+<h3 id="How-attackers-break-Hashes-x2F-password-dumps"><a href="#How-attackers-break-Hashes-x2F-password-dumps" class="headerlink" title="How attackers break Hashes&#x2F;password dumps?"></a>How attackers break Hashes&#x2F;password dumps?</h3><ul>
+<li>Brute force guesses → try all combinations</li>
+<li>Rainbow tables → tables that contain previously hashed texts</li>
+<li>Common word attacks</li>
+<li>Dictionary word attacks</li>
+</ul>
+<h3 id="How-can-we-get-passwords-for-analysis"><a href="#How-can-we-get-passwords-for-analysis" class="headerlink" title="How can we get passwords for analysis?"></a>How can we get passwords for analysis?</h3><ul>
+<li>Real leaked databases (yes many of them are online, and no, not only on the dark web).</li>
+<li>User studies (very tricky due to ethical concerns and responsibility to protect passwords).</li>
+</ul>
+<h2 id="Online-attacks"><a href="#Online-attacks" class="headerlink" title="Online attacks"></a>Online attacks</h2><ul>
+<li>Usually limited because the attacker is blocked after many failed attempts.</li>
+<li>Exploiting fall back authentication (e.g., secret questions).</li>
+</ul>
+<h2 id="Side-channel-attacks"><a href="#Side-channel-attacks" class="headerlink" title="Side channel attacks"></a>Side channel attacks</h2><ul>
+<li>Shoulder surfing</li>
+<li>Thermal attacks</li>
+<li>Smudge attacks</li>
+</ul>
+<h2 id="Social-engineering"><a href="#Social-engineering" class="headerlink" title="Social engineering"></a>Social engineering</h2><ul>
+<li>Asking people for their passwords</li>
+<li>Phishing attacks</li>
+</ul>
+<h2 id="Malwares-and-eavesdropping"><a href="#Malwares-and-eavesdropping" class="headerlink" title="Malwares and eavesdropping"></a>Malwares and eavesdropping</h2><ul>
+<li>Install a keylogger</li>
+<li>Sniff packets exchanged on a network</li>
+</ul>
+<h2 id="How-can-we-make-passwords-stronger"><a href="#How-can-we-make-passwords-stronger" class="headerlink" title="How can we make passwords stronger?"></a>How can we make passwords stronger?</h2><ul>
+<li>Password policies</li>
+<li>Password meters</li>
+<li>Passphrases</li>
+<li>DO NOT REUSE PASSWORDS!</li>
+<li>Make your passwords long and unpredictable.</li>
+<li>Use password managers.</li>
+<li>Two-factor authentication</li>
+<li>Multi-factor authentication</li>
+</ul>
+<h1 id="Week5-Authentication-beyond-Passwords"><a href="#Week5-Authentication-beyond-Passwords" class="headerlink" title="Week5 Authentication beyond Passwords"></a>Week5 Authentication beyond Passwords</h1><h2 id="Content-4"><a href="#Content-4" class="headerlink" title="Content"></a>Content</h2><ul>
+<li>Authentication factors<ul>
+<li>Knowledge-based authentication</li>
+<li>Possession-based authentication</li>
+<li>Inherence-based (biometric) authentication<ul>
+<li>Physiological biometrics</li>
+<li>Behavioral biometrics</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Multi-factor authentication</li>
+<li>Fall back authentication</li>
+<li>Context-based authentication</li>
+</ul>
+<h2 id="What-is-user-authentication-and-why-do-we-need-it"><a href="#What-is-user-authentication-and-why-do-we-need-it" class="headerlink" title="What is user authentication and why do we need it?"></a>What is user authentication and why do we need it?</h2><ul>
+<li>User Authentication is the process of proving a Human User’s identity to a computer system.</li>
+<li>Is there anything better than passwords for authentication?</li>
+</ul>
+<h2 id="Authentication-Factors"><a href="#Authentication-Factors" class="headerlink" title="Authentication Factors"></a>Authentication Factors</h2><ul>
+<li>Knowledge factor<ul>
+<li>Authenticate using something you know</li>
+<li>Examples: PINs, Text passwords, Android lock patterns</li>
+</ul>
+</li>
+<li>Possession factor<ul>
+<li>Authenticate using something you have</li>
+<li>Examples: Keys, Smart IDs, ATM cards</li>
+</ul>
+</li>
+<li>Inherence factor (i.e., biometric)<ul>
+<li>Authenticate using something you are</li>
+<li>Examples: Fingerprint, facial recognition, iris scaning</li>
+</ul>
+</li>
+</ul>
+<h3 id="Knowledge-based-Authentication"><a href="#Knowledge-based-Authentication" class="headerlink" title="Knowledge-based Authentication"></a>Knowledge-based Authentication</h3><ul>
+<li>Alphanumeric passwords</li>
+<li>Graphical passwords</li>
+</ul>
+<p>Graphical passwords can be classified to</p>
+<ul>
+<li>Recall: Drawing a picture, tracing a pattern, tapping specific points</li>
+<li>Cued-recall: Drawing or taping on top of an image cue</li>
+<li>Recognition: Recognizing images.</li>
+</ul>
+<p><strong>Graphical passwords</strong></p>
+<ul>
+<li>Advantages<ul>
+<li>Images and visual patterns may be easier to remember than characters</li>
+<li>Pointing&#x2F;clicking&#x2F;tapping&#x2F;drawing can sometimes be easier&#x2F;faster than typing</li>
+<li>Sometimes more appealing&#x2F;fun than text passwords</li>
+<li>May be harder to store or share password</li>
+<li>Less susceptible to phishing attacks</li>
+</ul>
+</li>
+<li>Disadvantages<ul>
+<li>Doesn’t work for vision impaired</li>
+<li>Requires a screen (sometimes of high resolution and color)</li>
+<li>Some types particularly vulnerable to shoulder surfing</li>
+<li>May have very small password space</li>
+<li>User chosen systems vulnerable to predictable user behavior</li>
+</ul>
+</li>
+</ul>
+<p><strong>Knowledge-based Authentication</strong></p>
+<ul>
+<li>Requires memorizing&#x2F;remembering something</li>
+<li>Might separate identification and verification</li>
+<li>What are its advantages?<ul>
+<li>Humans are capable of remembering things, but not complicated things.</li>
+<li>Usually inexpensive (e.g. does not require special sensors).</li>
+<li>Changeable.</li>
+<li>Usually easy to learn.</li>
+<li>Nothing to carry.</li>
+<li>Familiar.</li>
+<li>Relatively easy to deploy.</li>
+</ul>
+</li>
+<li>What are its disadvantages?<ul>
+<li>If the user can remember it, so can the adversary.</li>
+<li>Demand a high level of memorability.</li>
+<li>Potentially guessable without computers.</li>
+</ul>
+</li>
+<li>Usually these authentication schemes need to be sufficiently random to resist guesses, but at the same time not too difficult for users to generate and remember</li>
+</ul>
+<h3 id="Possession-based-Authentication"><a href="#Possession-based-Authentication" class="headerlink" title="Possession-based Authentication"></a>Possession-based Authentication</h3><ul>
+<li>Requires carrying something</li>
+<li>Requires a mechanism to verify the token</li>
+<li>What are its advantages?<ul>
+<li>Easily explainable to users.</li>
+<li>Sometimes can be remotely deactivated.</li>
+</ul>
+</li>
+<li>What are its disadvantages?<ul>
+<li>Might be expensive to replace.</li>
+<li>Can be lost.</li>
+<li>Might take time to realize it was lost.</li>
+<li>It can be stolen.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Biometric-Authentication"><a href="#Biometric-Authentication" class="headerlink" title="Biometric Authentication"></a>Biometric Authentication</h3><ul>
+<li>Relies on something in the user’s biology</li>
+<li>Further classification<ul>
+<li>Physiological</li>
+<li>Behavioral</li>
+</ul>
+</li>
+</ul>
+<h4 id="Physiological-Biometric-Authentication"><a href="#Physiological-Biometric-Authentication" class="headerlink" title="Physiological Biometric Authentication"></a>Physiological Biometric Authentication</h4><ul>
+<li>Relies on passive features in the human.</li>
+<li>A bodily measurement that is taken from users, which does not necessarily require an action by the user.</li>
+</ul>
+<h5 id="Fingerprint"><a href="#Fingerprint" class="headerlink" title="Fingerprint"></a>Fingerprint</h5><ul>
+<li>Advantages<ul>
+<li>Reasonably unique.</li>
+<li>Very fast and easy to use&#x2F;learn.</li>
+<li>No need to memorize or carry anything.</li>
+</ul>
+</li>
+<li>Disadvantages<ul>
+<li>Cannot be changed.</li>
+<li>Doesn’t work when your finger is wet or dirty.</li>
+<li>Users can authenticate without their consent.’</li>
+</ul>
+</li>
+<li>Readers can be optical</li>
+<li>or capacitive</li>
+</ul>
+<p><strong>Face recognition</strong></p>
+<ul>
+<li>Same advantages as fingerprint.</li>
+<li>Similar disadvantages, but might not work well with certain clothing, accessories and make up.</li>
+<li>Can be detected using RGB (i.e., video) cameras<ul>
+<li>Example: Face unlock on older Android phones</li>
+<li>Relies on face identifiers (e.g. distance between the eyes or between your nose and upper lips).</li>
+<li>Can be fooled with pictures!</li>
+<li>Doesn’t work when face is hidden or in dark areas.</li>
+</ul>
+</li>
+<li>Can also be detected using Depth cameras<ul>
+<li>Example: FaceID on iPhone X.</li>
+<li>Projects infrared patterns on your face.</li>
+<li>Works in the dark and through eye wear.</li>
+</ul>
+</li>
+</ul>
+<h5 id="Voice-recognition"><a href="#Voice-recognition" class="headerlink" title="Voice recognition"></a>Voice recognition</h5><ul>
+<li>Doesn’t work well when it is noisy.</li>
+<li>Doesn’t work well if you sound different.</li>
+</ul>
+<h4 id="Behavioral-Biometric-Authentication"><a href="#Behavioral-Biometric-Authentication" class="headerlink" title="Behavioral Biometric Authentication"></a>Behavioral Biometric Authentication</h4><ul>
+<li>Relies on active continuous features in the human’s behaviour</li>
+<li>The user has to be actively doing something.</li>
+</ul>
+<p>Behavioral biometric authentication relies on distinguishing the user’s unique behaviour.</p>
+<ul>
+<li>Touch behavior</li>
+<li>Gaze behaviour</li>
+<li>Typing behavior</li>
+<li>Ways people perform gestures</li>
+<li>Lip movement behaviour</li>
+<li>Gait</li>
+<li>Handwriting</li>
+<li>Heart rhythm</li>
+<li>High level behaviour (e.g., how hard you press the car’s pedals, which apps do you launch first, etc.)</li>
+</ul>
+<h5 id="Advantages-of-behavioural-biometrics"><a href="#Advantages-of-behavioural-biometrics" class="headerlink" title="Advantages of behavioural biometrics"></a>Advantages of behavioural biometrics</h5><ul>
+<li>Continuous, seamless.</li>
+<li>Very effective against insider and shoulder surfing attacks</li>
+</ul>
+<h5 id="Disadvantages"><a href="#Disadvantages" class="headerlink" title="Disadvantages"></a>Disadvantages</h5><ul>
+<li>Doesn’t work that well yet e.g., might lock you out</li>
+</ul>
+<h3 id="Biometric-Authentication-1"><a href="#Biometric-Authentication-1" class="headerlink" title="Biometric Authentication"></a>Biometric Authentication</h3><p><strong>General advantages of biometric authentication:</strong></p>
+<ul>
+<li>Fast.</li>
+<li>Easy to use.</li>
+<li>Easy to learn.</li>
+<li>Reasonably unique.</li>
+<li>No need to memorize or carry anything.</li>
+<li>People like it and perceive it to be secure.</li>
+<li>[Cannot be written down or shared].</li>
+</ul>
+<p><strong>General disadvantages of biometric authentication:</strong></p>
+<ul>
+<li>It is challenging to balance usability and security (false positives vs false negatives).</li>
+<li>May be difficult to change.</li>
+<li>Often results in trusting third party companies with biometric data.</li>
+<li>High accuracy requires expensive and large special equipment (today).</li>
+<li>Some biometrics are difficult to capture under some conditions (low light, dry skin, injury, etc.).</li>
+<li>Some biometrics change over time.</li>
+<li>May increase value of a person’s body parts to an attacker.</li>
+<li>May be difficult cancel (no explicit consent from the user).</li>
+<li>May leak personal information.</li>
+<li>Can be leaked from companies (see Zhang et al. Fingerprints On Mobile Devices: Abusing and leaking)</li>
+<li>They cannot be invalidated.</li>
+</ul>
+<h2 id="Multi-factor-Authentication"><a href="#Multi-factor-Authentication" class="headerlink" title="Multi-factor Authentication"></a>Multi-factor Authentication</h2><ul>
+<li>Adds a second layer of protection e.g., you must have the ATM card, and you must know the PIN.</li>
+<li>Usually does not rely on human memory</li>
+<li>Examples</li>
+<li>Disadvantages<ul>
+<li>There is some evidence that if u give users a second means of authentication beside passwords, they’ll choose weaker passwords.</li>
+<li>Slows down login process – some are slower than others.</li>
+<li>Hardware tokens cost money, and are inconvenient to carry</li>
+<li>Prone to some attacks like social engineering, man-in-the-middle attacks, and phone hijacking.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Fall-back-authentication"><a href="#Fall-back-authentication" class="headerlink" title="Fall back authentication"></a>Fall back authentication</h2><ul>
+<li>A mechanism to avoid locking you out in case you forget your password.</li>
+<li>Sometimes it is needed if you use a system infrequently, or if you recently changed your password.</li>
+<li>Needed in case admin password resets are essential.</li>
+<li>Examples<ul>
+<li>Reset link sent via email or SMS</li>
+<li>IT Help desk</li>
+<li>Secret question<ul>
+<li>Very bad idea!</li>
+<li>Has low entropy (e.g., what’s your favorite color?).</li>
+<li>Can be leaked through social media (e.g., where is your grandmother’s birthplace?).</li>
+<li>Acquaintances can often guess answers to secret questions.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Lock out users who make incorrect but popular guesses</li>
+<li>Remove most easily guessed questions</li>
+<li>Disallow popular answers</li>
+<li>Occasionally ask secret questions after user has logged in successfully</li>
+<li>NIST recommends not to use secret questions!</li>
+<li>Other ways<ul>
+<li>Requiring PIN when fingerprint is not working.</li>
+<li>Reduces security to PINs (i.e., observable, guessable, etc.)</li>
+</ul>
+</li>
+</ul>
+<h2 id="Context-based-authentication"><a href="#Context-based-authentication" class="headerlink" title="Context-based authentication"></a>Context-based authentication</h2><ul>
+<li>The ubiquity of sensors allows us to track many things about the user</li>
+<li>Authentication can be customized based on the context.</li>
+</ul>
+<h2 id="That’s-quite-a-bunch-authentication-methods-Now-which-should-we-use"><a href="#That’s-quite-a-bunch-authentication-methods-Now-which-should-we-use" class="headerlink" title="That’s quite a bunch authentication methods.. Now which should we use?"></a>That’s quite a bunch authentication methods.. Now which should we use?</h2><p>It depends on what you’re optimizing against!</p>
+<h3 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h3><ul>
+<li>If you’re worried that these types of attacks could occur, then do not use knowledge-based authentication.</li>
+<li>If you’re worried if someone could forcibly authenticate you against your will, then do not use biometric authentication.</li>
+<li>If encouraging usage is more important than security, then focus on usability (e.g., contactless payments offered by credit card companies).</li>
+<li>If security is prioritized over costs, then focus on usable security (e.g., Software Engineers in Fortune 500 companies use 2-factor authentication).</li>
+</ul>
+<h1 id="Week6-Guidelines-for-Usable-Security"><a href="#Week6-Guidelines-for-Usable-Security" class="headerlink" title="Week6 Guidelines for Usable Security"></a>Week6 Guidelines for Usable Security</h1><h2 id="Content-5"><a href="#Content-5" class="headerlink" title="Content"></a>Content</h2><ul>
+<li>What happens after authentication?</li>
+<li>Access control</li>
+<li>Usable and secure authorization</li>
+<li>Usable and secure communication</li>
+<li>Usable and secure interface design</li>
+<li>How to design a usable and secure system</li>
+</ul>
+<h2 id="What-happens-after-authentication"><a href="#What-happens-after-authentication" class="headerlink" title="What happens after authentication?"></a>What happens after authentication?</h2><ul>
+<li>Authentication aims to keep unauthorized people out.</li>
+<li>But even after a user has authenticated, the system still needs to maintain security</li>
+<li>A secure system should:<ul>
+<li>Allow users to do what they need to accomplish their tasks.</li>
+<li>Do so while protecting the security of the user’s computer and the larger system they are interacting with.</li>
+</ul>
+</li>
+<li>After a user is properly authenticated, there are still many security issues that could come up: e.g., phishing, viruses and spyware, etc. all of these can compromise the system by bypassing authentication.</li>
+<li>A core contributor to these problems is when computers fail to behave in a way that the user expects or understands.</li>
+<li>Designing secure systems that are usable can prevent this from happening</li>
+</ul>
+<h3 id="Answer"><a href="#Answer" class="headerlink" title="Answer"></a>Answer</h3><ul>
+<li><p>Authorization, permissions and access control</p>
+</li>
+<li><p>Maintaining usability and security</p>
+</li>
+<li><p>Identification</p>
+<ul>
+<li>Claim identity, e.g., ask for username</li>
+</ul>
+</li>
+<li><p>Authentication</p>
+<ul>
+<li>Verify identity, e.g., ask for password</li>
+</ul>
+</li>
+<li><p>Authorization</p>
+<ul>
+<li>Give access to resource, e.g., read&#x2F;delete own messages, but not messages of other users</li>
+</ul>
+</li>
+</ul>
+<h2 id="What-is-authorization"><a href="#What-is-authorization" class="headerlink" title="What is authorization?"></a>What is authorization?</h2><ul>
+<li>Authorization is the process of establishing if an entity (e.g., a user that has already authenticated, or a system), is permitted to have access to a resource.</li>
+<li>Authorization determines what a subject is and is not allowed to do.</li>
+<li>Access control: the process of enforcing the required security for a particular resource.</li>
+</ul>
+<h2 id="Access-Control"><a href="#Access-Control" class="headerlink" title="Access Control"></a>Access Control</h2><ul>
+<li>Selectively allowing and restricting subjects to access objects<ul>
+<li>Subject: the entity requesting access to a resource (e.g., user, program, system)</li>
+<li>Object: the resource that the subject attempts to access (e.g., access to a data, permission to modify a file, etc.)</li>
+</ul>
+</li>
+<li>Aims to protect Confidentiality and Integrity</li>
+<li>Examples of access control in the real world?<ul>
+<li>File permissions: the right to create, read, edit or delete a file.</li>
+<li>Program permissions: the right to execute a program.</li>
+<li>Social networks: who sees what.</li>
+<li>Smartphone app permissions: which sensor data can this app access.</li>
+</ul>
+</li>
+<li>Least privilege philosophy: a subject is granted permissions that are needed to accomplish required tasks and nothing more.</li>
+<li>Information leak: Lack of controls results in giving access to people that do not need access.<ul>
+<li>Example: a nurse needs data about a patient’s health, but not about the insurance.</li>
+<li>Example: a file can only be viewed, but not copied.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Access-Control-Patterns"><a href="#Access-Control-Patterns" class="headerlink" title="Access Control Patterns"></a>Access Control Patterns</h3><ul>
+<li>Mandatory access control<ul>
+<li>Resources are assigned labels. Labels of subjects are matched with labels of objects to determine access. Example: Military information.</li>
+</ul>
+</li>
+<li>Discretionary access control<ul>
+<li>Resource owners assign access permissions to individuals and groups. Example: file systems in Windows and MacOS.</li>
+</ul>
+</li>
+<li>Role-based access control<ul>
+<li>Individuals assigned roles, and permissions assigned to roles. Example: employees of a company have privileges according to their job responsibilities</li>
+</ul>
+</li>
+<li>Rule-based access control<ul>
+<li>Properties of the access request are checked against rules. Example: block specific IP addresses from accessing a port.</li>
+</ul>
+</li>
+<li>Distributed access control<ul>
+<li>Certificates used to grant access and delegate the ability to grant access, certificates must be presented to construct proof that access is permitted</li>
+</ul>
+</li>
+</ul>
+<h3 id="A-priori-policy-not-good-enough"><a href="#A-priori-policy-not-good-enough" class="headerlink" title="A-priori policy not good enough"></a>A-priori policy not good enough</h3><ul>
+<li>People don’t feel as much in control when they set policy up front</li>
+<li>People like to be asked permission<ul>
+<li>“I’m very willing to be open with people, I think I’d just like the courtesy of someone asking me.”</li>
+</ul>
+</li>
+<li>People want to know both who is accessing files and why</li>
+<li>People want to review accesses, revise policy</li>
+</ul>
+<h2 id="Guidelines-for-Usable-and-Secure-Authorization-by-Ka-Ping-Yee"><a href="#Guidelines-for-Usable-and-Secure-Authorization-by-Ka-Ping-Yee" class="headerlink" title="Guidelines for Usable and Secure Authorization by Ka-Ping Yee"></a>Guidelines for Usable and Secure Authorization by Ka-Ping Yee</h2><ul>
+<li><p>Match the most comfortable way to do tasks with the least granting of authority</p>
+</li>
+<li><p>Grant authority to others in accordance with user actions indicating consent.</p>
+</li>
+<li><p>Offer the user ways to reduce others’ authority to access the user’s resources.</p>
+</li>
+<li><p>Maintain accurate awareness of others’ authority as relevant to user decisions.</p>
+</li>
+<li><p>Maintain accurate awareness of the user’s own authority to access resources.</p>
+</li>
+</ul>
+<h2 id="Guidelines-for-Usable-and-Secure-Communication-by-Ka-Ping-Yee"><a href="#Guidelines-for-Usable-and-Secure-Communication-by-Ka-Ping-Yee" class="headerlink" title="Guidelines for Usable and Secure Communication by Ka-Ping Yee"></a>Guidelines for Usable and Secure Communication by Ka-Ping Yee</h2><ul>
+<li>Protect the user’s channels to agents that manipulate authority on the user’s behalf.</li>
+</ul>
+<h2 id="Guidelines-for-Usable-and-Secure-Interfaces-by-Ka-Ping-Yee"><a href="#Guidelines-for-Usable-and-Secure-Interfaces-by-Ka-Ping-Yee" class="headerlink" title="Guidelines for Usable and Secure Interfaces by Ka-Ping Yee"></a>Guidelines for Usable and Secure Interfaces by Ka-Ping Yee</h2><ul>
+<li><p>Enable the user to express safe security policies in terms that fit the user’s task.</p>
+</li>
+<li><p>Draw distinctions among objects and actions along boundaries relevant to the task.</p>
+</li>
+<li><p>Present objects and actions using distinguishable, truthful appearances.</p>
+</li>
+<li><p>Indicate clearly the consequences of decisions that the user is expected to make.</p>
+</li>
+</ul>
+<h3 id="Guideline-1-Match-the-most-comfortable-way-to-do-tasks-with-the-least-granting-of-authority"><a href="#Guideline-1-Match-the-most-comfortable-way-to-do-tasks-with-the-least-granting-of-authority" class="headerlink" title="Guideline 1. Match the most comfortable way to do tasks with the least granting of authority."></a>Guideline 1. Match the most comfortable way to do tasks with the least granting of authority.</h3><p>Goal: create a system where the easiest, most natural, and most comfortable way the user would do a task, is also the way that is most secure.</p>
+<h2 id="How-to-Design-a-Usable-and-Secure-System"><a href="#How-to-Design-a-Usable-and-Secure-System" class="headerlink" title="How to Design a Usable and Secure System?"></a>How to Design a Usable and Secure System?</h2><ul>
+<li>Security and Usability diverge when security is presented as a secondary task to the user.<ul>
+<li>Example: No one ever gets a computer with the idea of bringing it home, sitting on the couch and installing a patch</li>
+</ul>
+</li>
+<li>Security should be integrated into the normal workflow of the user to make the system more usable.</li>
+<li>Usability and Security should both be included in software from the very beginning of the design process.</li>
+</ul>
+<h2 id="Other-guidelines-to-keep-in-mind"><a href="#Other-guidelines-to-keep-in-mind" class="headerlink" title="Other guidelines to keep in mind"></a>Other guidelines to keep in mind</h2><p>According to Whitten and Tygar, security software is usable if the people using it..</p>
+<ul>
+<li>are reliably made aware of the security tasks they need to perform</li>
+<li>are able to figure out how to successfully perform those tasks</li>
+<li>don’t make dangerous errors</li>
+<li>are sufficiently comfortable with the interface to continue using it</li>
+</ul>
+<h1 id="Week7-Social-Engineering"><a href="#Week7-Social-Engineering" class="headerlink" title="Week7 Social Engineering"></a>Week7 Social Engineering</h1><h2 id="Content-6"><a href="#Content-6" class="headerlink" title="Content"></a>Content</h2><ul>
+<li>Social Engineering Techniques</li>
+<li>How social engineers think</li>
+<li>Vulnerabilities social engineers exploit</li>
+<li>Steps social engineers undertake</li>
+<li>Future of Social Engineering</li>
+<li>Mitigation techniques</li>
+</ul>
+<h2 id="What-is-Social-Engineering"><a href="#What-is-Social-Engineering" class="headerlink" title="What is Social Engineering?"></a>What is Social Engineering?</h2><h2 id="Social-Engineers-focus-on"><a href="#Social-Engineers-focus-on" class="headerlink" title="Social Engineers focus on"></a>Social Engineers focus on</h2><ul>
+<li>Goal: what do they want to achieve?</li>
+<li>Receiver: Who are they going to targ</li>
+<li>Message: How will they convince the person to do what they want?</li>
+<li>Channel: What channel will they use?</li>
+</ul>
+<h2 id="What-Vulnerabilities-that-Social-Engineers-Exploit"><a href="#What-Vulnerabilities-that-Social-Engineers-Exploit" class="headerlink" title="What Vulnerabilities that Social Engineers Exploit?"></a>What Vulnerabilities that Social Engineers Exploit?</h2><ul>
+<li>Unclear responsibility of individuals in an organization</li>
+<li>Imagined benefit or greed</li>
+<li>Trust</li>
+<li>Instilling haste</li>
+<li>Moral responsibility</li>
+<li>Empathy</li>
+<li>Guilt</li>
+<li>Flattery</li>
+<li>Intimidation</li>
+</ul>
+<h2 id="Social-Engineering-Steps"><a href="#Social-Engineering-Steps" class="headerlink" title="Social Engineering Steps"></a>Social Engineering Steps</h2><ul>
+<li>Information Gathering</li>
+<li>Pretexting</li>
+<li>Elicitation</li>
+<li>Manipulation</li>
+</ul>
+<h3 id="Step-1-Information-Gathering"><a href="#Step-1-Information-Gathering" class="headerlink" title="Step 1: Information Gathering"></a>Step 1: Information Gathering</h3><ul>
+<li>Social engineering needs a lot of preparation and a lot of information</li>
+<li>Various ways of doing this:<ul>
+<li>Dumpster diving</li>
+<li>Open source intelligence: using public facing sites to collect info (e.g., social networks, Linkedin, etc.</li>
+<li>Malware (e.g. keylogger, screenshots of the system)</li>
+<li>Shoulder surfing</li>
+<li>Whois</li>
+</ul>
+</li>
+</ul>
+<h3 id="Step-2-Pretexting"><a href="#Step-2-Pretexting" class="headerlink" title="Step 2: Pretexting"></a>Step 2: Pretexting</h3><ul>
+<li>Practice of presenting oneself as someone else in order to obtain private information</li>
+<li>Planning and research leads to success</li>
+<li>Good acting</li>
+<li>Build up a false sense of trust and confidence</li>
+<li>Keeping it simple → more complicated makes it easy to screw up</li>
+<li>Use information that needs no verification • Define the aim</li>
+<li>Plan for different reactions</li>
+</ul>
+<h3 id="Step-3-Elicitation"><a href="#Step-3-Elicitation" class="headerlink" title="Step 3: Elicitation"></a>Step 3: Elicitation</h3><ul>
+<li>The act of getting information without directly asking for it. •</li>
+<li>Social engineers do this by •<ul>
+<li>Exploiting human nature:</li>
+<li>People want to be polite</li>
+<li>People want to appear well-informed</li>
+<li>People want to be appreciated</li>
+<li>Honest people don’t like to withhold information or lie</li>
+</ul>
+</li>
+<li>Understanding how to communicate with people</li>
+<li>Adapting communication to fit situation</li>
+<li>Bonding with the target</li>
+<li>Staying within the character of your pretext</li>
+<li>Using effective questioning techniques</li>
+</ul>
+<h4 id="Questioning-techniques"><a href="#Questioning-techniques" class="headerlink" title="Questioning techniques"></a>Questioning techniques</h4><ul>
+<li>Neutral<ul>
+<li>Doesn’t target the person, no leading or directing (e.g., how do you like the weather today?)</li>
+</ul>
+</li>
+<li>Open<ul>
+<li>Encourages a full meaningful answer using the subject’s knowledge</li>
+<li>E.g., how do you feel about the election candidates?</li>
+</ul>
+</li>
+<li>Closed<ul>
+<li>Gives control of the conversation and allows us to lead where it may or not go</li>
+<li>E.g. who are you going to vote for?</li>
+</ul>
+</li>
+<li>Leading<ul>
+<li>Subtly prompts the respondent to answer in a particular way</li>
+<li>Effective manipulation technique</li>
+<li>Do you have any problems with your boss?</li>
+<li>How fast was the red the car going when it smashed into the blue car?</li>
+</ul>
+</li>
+</ul>
+<h4 id="Pretexting-vs-Elicitation"><a href="#Pretexting-vs-Elicitation" class="headerlink" title="Pretexting vs Elicitation"></a>Pretexting vs Elicitation</h4><ul>
+<li>Pretexting: taking on a persona</li>
+<li>Elicitation: using this persona to extract information</li>
+</ul>
+<h3 id="Step-4-Manipulation-techniques"><a href="#Step-4-Manipulation-techniques" class="headerlink" title="Step 4: Manipulation techniques"></a>Step 4: Manipulation techniques</h3><ul>
+<li><p>Fear then instant relief technique</p>
+<ul>
+<li><p>Hi this is technical support, we detected a virus that could lock all your files.</p>
+</li>
+<li><p>We need to install an anti-virus. Can you tell me your password so we can remove the virus?</p>
+</li>
+</ul>
+</li>
+<li><p>Guilt</p>
+<ul>
+<li>Do someone a favor and then use it against them later</li>
+<li>Using a secret as blackmail or extortion</li>
+</ul>
+</li>
+<li><p>Foot in the Door technique</p>
+</li>
+<li><p>Ask victim to do a very small request first</p>
+</li>
+<li><p>Once they comply, follow with the real larger request.</p>
+</li>
+<li><p>Examples</p>
+<ul>
+<li>Salesperson asks you for the weather. This makes it easier to start a conversation, and makes it more awkward to close the conversation.</li>
+<li>Can you tell me the time? Can you spare some change?</li>
+</ul>
+</li>
+</ul>
+<p>Phishing Email</p>
+<h2 id="The-Future-of-Social-Engineering-by-Sharon-Conheady"><a href="#The-Future-of-Social-Engineering-by-Sharon-Conheady" class="headerlink" title="The Future of Social Engineering by Sharon Conheady"></a>The Future of Social Engineering by Sharon Conheady</h2><ul>
+<li>Same tricks, new technology</li>
+<li>More sophisticated and targeted attacks</li>
+<li>Social networking is an enabler for social engineers</li>
+<li>Technologies can improve&#x2F;automate social engineering attacks</li>
+<li>Social engineering as a service</li>
+</ul>
+<h3 id="Same-tricks-new-technology"><a href="#Same-tricks-new-technology" class="headerlink" title="Same tricks, new technology"></a>Same tricks, new technology</h3><ul>
+<li>20 years ago they were using emails</li>
+<li>Next they were using SMS</li>
+<li>Now social networks</li>
+<li>What’s next?</li>
+<li>Example: Advance Fee Fraud</li>
+</ul>
+<h3 id="More-sophisticated-and-targeted-attacks"><a href="#More-sophisticated-and-targeted-attacks" class="headerlink" title="More sophisticated and targeted attacks"></a>More sophisticated and targeted attacks</h3><ul>
+<li>Example targeted phishing attacks aka spear phishing<ul>
+<li>Phishing attack aimed at a particular person.</li>
+<li>Contains contextual content instead of random messages</li>
+<li>These attacks look more genuine</li>
+<li>Victims are asked to<ul>
+<li>Download malicious attachments</li>
+<li>Reply with sensitive information</li>
+<li>Click on URLs</li>
+<li>Etc.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Social-networking-is-an-enabler-for-social-engineers"><a href="#Social-networking-is-an-enabler-for-social-engineers" class="headerlink" title="Social networking is an enabler for social engineers"></a>Social networking is an enabler for social engineers</h3><ul>
+<li>A huge attack surface.</li>
+<li>Does not only put individuals at risk, but also their affiliations and employers.</li>
+<li>Quick and easy, and can even be automated.</li>
+<li>Low barrier entry point (you don’t have to be tech savvy).</li>
+<li>It is a safer source for the attacker: they would be relying on public available information – nothing wrong in doing that.</li>
+<li>People share information about themselves and even about others on social networks.</li>
+<li>Very easy to impersonate someone or set up a fake profile.</li>
+<li>Example: LinkedIn</li>
+</ul>
+<h3 id="Technologies-can-improve-x2F-automate-social-engineering-attacks"><a href="#Technologies-can-improve-x2F-automate-social-engineering-attacks" class="headerlink" title="Technologies can improve&#x2F;automate social engineering attacks"></a>Technologies can improve&#x2F;automate social engineering attacks</h3><ul>
+<li>Photo editing software<ul>
+<li>Can be used to forge documents, IDs or business cards.</li>
+<li>There are websites that do that for you!</li>
+</ul>
+</li>
+<li>Caller ID spoofing</li>
+<li>Email spoofing</li>
+<li>Small&#x2F;hidden cameras</li>
+<li>Thermal cameras</li>
+</ul>
+<h3 id="Social-Engineering-as-a-Service"><a href="#Social-Engineering-as-a-Service" class="headerlink" title="Social Engineering as a Service"></a>Social Engineering as a Service</h3><ul>
+<li>Outsourcing social engineering through call centers.</li>
+<li>There are telephone services for<ul>
+<li>Professional callers</li>
+<li>Caller ID spoofing</li>
+<li>Available to make calls in US and EU working hours</li>
+</ul>
+</li>
+<li>7$ to 15$</li>
+<li>Most of the ones you will find online are companies doing this service as a form of security consultancy.</li>
+<li>But there are companies that do it for malicious intents.</li>
+</ul>
+<h2 id="Advanced-Persistent-Attacks"><a href="#Advanced-Persistent-Attacks" class="headerlink" title="Advanced Persistent Attacks"></a>Advanced Persistent Attacks</h2><ul>
+<li>A stealthy computer network attack in which a person or group gains unauthorized access to a network and remains undetected for an extended period.</li>
+<li>A malware can be implanted using a USB stick.</li>
+</ul>
+<h2 id="Scam-baiting"><a href="#Scam-baiting" class="headerlink" title="Scam baiting"></a>Scam baiting</h2><ul>
+<li><a target="_blank" rel="noopener" href="http://www.419eater.com/">www.419eater.com</a> e.g.</li>
+<li>Lengthy dialogues to waste scammer’s time that they then wouldn’t use on real victims.</li>
+<li>A guy sent a fake passport with a photo of Star Trek’s Captain Kirk, hoping he could get arrested.</li>
+</ul>
+<h2 id="Mitigations-techniques"><a href="#Mitigations-techniques" class="headerlink" title="Mitigations techniques"></a>Mitigations techniques</h2><ul>
+<li>Understand who are the common targets<ul>
+<li>Junior staff</li>
+<li>Contractors</li>
+<li>Admin staff</li>
+<li>Support staff</li>
+</ul>
+</li>
+<li>Identify valuable assets</li>
+<li>Train employees and to create awareness of potential targets of social engineers.</li>
+<li>Develop scripts and policies, and stick to them no matter what.<ul>
+<li>Check credentials, take your time checking it.</li>
+<li>Don’t let guests roam free in the building.</li>
+<li>Don’t plug in USB thumb drives you find lying around.</li>
+<li>Shred documents rather than just throwing them (you can get very cheap shredders).</li>
+</ul>
+</li>
+<li>Watch for out of character questions (e.g., a delivery man asks for the server room).</li>
+<li>Be aware of what you’re saying (e.g., venting about a boss in a bar) → you’re giving information that helps them pretext.</li>
+<li>Be aware of shoulder surfers when dealing with sensitive data.</li>
+<li>Make audits and learn from them.</li>
+</ul>
+<h3 id="Audits"><a href="#Audits" class="headerlink" title="Audits"></a>Audits</h3><p>A security audit checks vulnerabilities against a checklist to ensure a company complies with its security policy.</p>
+<p>An audit answers “is this company carrying out proper security practices?”</p>
+<h3 id="Penetration-Tests"><a href="#Penetration-Tests" class="headerlink" title="Penetration Tests"></a>Penetration Tests</h3><ul>
+<li>Identifying vulnerabilities in a particular network and attempting to exploit them to penetrate into the system.</li>
+<li>Aim: to determine whether a detected vulnerability is genuine</li>
+<li>A penetration tester is a person who tests for vulnerabilities or unauthorized access to systems.</li>
+<li>Systems range from computer networks to physical access to locations.</li>
+<li>They can utilize phishing, or other techniques such as elicitation, to gain information from unsuspecting employees to get passwords, entry into buildings, or other access into systems.</li>
+<li>Answers: “where are all of the vulnerabilities and can any of these holes be maliciously exploited?”</li>
+</ul>
+<h1 id="Week8-Privacy"><a href="#Week8-Privacy" class="headerlink" title="Week8 Privacy"></a>Week8 Privacy</h1><h2 id="Content-7"><a href="#Content-7" class="headerlink" title="Content"></a>Content</h2><ul>
+<li>What is Privacy?</li>
+<li>Privacy Policies</li>
+<li>Informed consent by design</li>
+<li>5 pitfalls in designing for privacy</li>
+<li>Privacy space framework</li>
+<li>Privacy tools and their challenges</li>
+</ul>
+<h2 id="What-is-Privacy"><a href="#What-is-Privacy" class="headerlink" title="What is Privacy?"></a>What is Privacy?</h2><p>Privacy is related to security, but they are not the same</p>
+<ul>
+<li>Users want to protect their information.</li>
+<li>Should have the right to understand what happens with their data.</li>
+<li>Should have as much control as possible over how it is used.</li>
+</ul>
+<h2 id="How-privacy-is-protected"><a href="#How-privacy-is-protected" class="headerlink" title="How privacy is protected"></a>How privacy is protected</h2><ul>
+<li>Laws</li>
+<li>Self regulation</li>
+<li>Technology</li>
+</ul>
+<h2 id="Privacy-Policies"><a href="#Privacy-Policies" class="headerlink" title="Privacy Policies"></a>Privacy Policies</h2><ul>
+<li>Should tell users everything they need to know about how their data is collected, used and shared.</li>
+<li>They should be clear to users and explain all necessary details without overwhelming them.</li>
+<li>Problems:<ul>
+<li>We know that most people do not read them •</li>
+<li>Those who read them, often do not understand them •</li>
+<li>Some mobile apps have privacy policies that can be printed on &gt;100 A4 pages!</li>
+<li>Slow and hard to read → poor usability!</li>
+</ul>
+</li>
+</ul>
+<h2 id="Informed-Consent-by-Design"><a href="#Informed-Consent-by-Design" class="headerlink" title="Informed Consent by Design"></a>Informed Consent by Design</h2><ul>
+<li>Users should understand what data is being collected and shared, and consent to how it’s used</li>
+<li>Six components that are required for there to be informed consent in a privacy system<ul>
+<li>Disclosure</li>
+<li>Comprehension</li>
+<li>Voluntariness</li>
+<li>Competence</li>
+<li>Agreement</li>
+<li>Minimal distraction</li>
+</ul>
+</li>
+</ul>
+<h2 id="Five-Pitfalls-in-Designing-for-Privacy"><a href="#Five-Pitfalls-in-Designing-for-Privacy" class="headerlink" title="Five Pitfalls in Designing for Privacy"></a>Five Pitfalls in Designing for Privacy</h2><ul>
+<li>Concerning understanding<ul>
+<li>Pitfall 1: Obscuring Potential Information Flow<ul>
+<li>Avoidance: clear concise statements about what is being done with the data</li>
+<li>Example: “This app does not share on your behalf on Facebook</li>
+</ul>
+</li>
+<li>Pitfall 2: Obscuring Actual Information Flow<ul>
+<li>Avoidance: inform the user when information is being used, shared, etc.</li>
+<li>Bad practice example: Google voice search; Good practice examples below</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Concerning Action<ul>
+<li>Pitfall 3: Emphasizing Configuration over Action<ul>
+<li>“Designs should not require excessive configuration to create and maintain privacy. They should enable users to practice privacy management as a natural consequence of their ordinary use of the system”.</li>
+<li>Privacy management should be integrated into the natural workflow of users so that they don’t have to think about it.</li>
+<li>Avoidance: embed privacy configurations into the actions necessary to use the system.</li>
+<li>Examples: mobile app permissions and Facebook’s post visibility</li>
+</ul>
+</li>
+<li>Pitfall 4: Lacking Coarse-Grained Control<ul>
+<li>“Designs should offer an obvious, top-level mechanism for halting and resuming the disclosure of personal information.”</li>
+<li>Bad practice example: it is not straight forward to momentarily disable search history on Amazon, which sometimes results in many irrelevant recommendations.</li>
+<li>Good practice example: Instead of specifying each and everyone who can&#x2F;cannot see your Facebook post, group the audience under lists, or pre-defined labels like “friends”, “friends of friends”, “public”, etc..</li>
+</ul>
+</li>
+<li>Pitfall 5: Inhibiting Established Practice<ul>
+<li>“Designs should beware inhibiting existing social practice.”</li>
+<li>Good practice example: Phone companies can identify your location, but they do not show it to the parties you are communicating with.</li>
+<li>Bad practice example:</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="Privacy-space-framework-by-Benjamin-Brunk"><a href="#Privacy-space-framework-by-Benjamin-Brunk" class="headerlink" title="Privacy space framework by Benjamin Brunk"></a>Privacy space framework by Benjamin Brunk</h2><p>Features of privacy solutions:</p>
+<ul>
+<li>Awareness</li>
+<li>Detection</li>
+<li>Prevention</li>
+<li>Response</li>
+<li>Recovery</li>
+</ul>
+<h3 id="Privacy-by-Awareness"><a href="#Privacy-by-Awareness" class="headerlink" title="Privacy by Awareness"></a>Privacy by Awareness</h3><ul>
+<li>Awareness features are informative and help users monitor what is going on.4</li>
+<li>Aim: inform the user</li>
+<li>Example:<ul>
+<li>Display information about trackers on current webpage, whether location is being sent</li>
+</ul>
+</li>
+</ul>
+<h3 id="Privacy-by-Detection"><a href="#Privacy-by-Detection" class="headerlink" title="Privacy by Detection"></a>Privacy by Detection</h3><ul>
+<li>Tools or features that scan or actively look for potential problems. Often, detection tools are always running in the background; a virus scanner is a common detection tool that looks for malware and for certain dangerous operations being performed in memory.</li>
+<li>Aim: Actively look for problems in the background</li>
+<li>Example:<ul>
+<li>Find trackers on current webpage</li>
+<li>Virus scanner</li>
+<li>Malware detection</li>
+</ul>
+</li>
+</ul>
+<h3 id="Privacy-by-Prevention"><a href="#Privacy-by-Prevention" class="headerlink" title="Privacy by Prevention"></a>Privacy by Prevention</h3><ul>
+<li>A feature or tool that is used as a precaution.</li>
+<li>Aim: Prevent a potential compromise of privacy.</li>
+<li>Example:<ul>
+<li>Encryption.</li>
+<li>Digital signatures.</li>
+<li>Secure deletion of sensitive documents.</li>
+<li>Anonymity tools.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Privacy-by-Response"><a href="#Privacy-by-Response" class="headerlink" title="Privacy by Response"></a>Privacy by Response</h3><ul>
+<li>Taking action after a problem has been detected is a response.</li>
+<li>Aim: Take action to mitigate further privacy problems.</li>
+<li>Example:<ul>
+<li>Cancelling credit card after an unauthorized payment.</li>
+<li>Blocking network traffic from a certain IP</li>
+</ul>
+</li>
+</ul>
+<h3 id="Privacy-by-Recovery"><a href="#Privacy-by-Recovery" class="headerlink" title="Privacy by Recovery"></a>Privacy by Recovery</h3><ul>
+<li>Features and tools that help you get back to normal.</li>
+<li>Example:<ul>
+<li>Restoring to the last known good state.</li>
+<li>Patching bugs that allowed intruders to gain unauthorized access.</li>
+<li>Reinstalling corrupted files.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Challenges-of-Implementing-Privacy-Tools"><a href="#Challenges-of-Implementing-Privacy-Tools" class="headerlink" title="Challenges of Implementing Privacy Tools"></a>Challenges of Implementing Privacy Tools</h2><ul>
+<li>Conveying the purpose of the tool</li>
+<li>Conveying current privacy state</li>
+<li>Configuration</li>
+<li>Avoiding errors, failing safe</li>
+</ul>
+<h3 id="Major-problems-found-by-Leon-et-al-in-most-privacy-tools"><a href="#Major-problems-found-by-Leon-et-al-in-most-privacy-tools" class="headerlink" title="Major problems found by Leon et al. in most privacy tools"></a>Major problems found by Leon et al. in most privacy tools</h3><ul>
+<li>Communication problems and confusing interfaces</li>
+<li>Inappropriate defaults</li>
+<li>Need for feedback</li>
+<li>Users want protections that do not break websites</li>
+</ul>
+<h3 id="Learned-lessons"><a href="#Learned-lessons" class="headerlink" title="Learned lessons"></a>Learned lessons</h3><ul>
+<li>Usable privacy has the same requirements as usable security</li>
+<li>Same usability metrics apply to privacy e.g., efficiency, learnability, memorability and user preference</li>
+</ul>
+<h3 id="Don’t-forget-the-other-side-of-the-story"><a href="#Don’t-forget-the-other-side-of-the-story" class="headerlink" title="Don’t forget the other side of the story"></a>Don’t forget the other side of the story</h3><ul>
+<li>Lawgivers argue that people might<ul>
+<li>Abuse privacy to do bad things</li>
+<li>Commit fraud, evade taxes</li>
+<li>Commit terrorism without being detected</li>
+</ul>
+</li>
+<li>The challenges here are:<ul>
+<li>How to balance privacy and accountability?</li>
+<li>How to balance individual privacy and societal security?</li>
+<li>How to build systems that support this balance?</li>
+</ul>
+</li>
+</ul>
+<h1 id="Others"><a href="#Others" class="headerlink" title="Others"></a>Others</h1><h2 id="1"><a href="#1" class="headerlink" title="1"></a>1</h2><p>Use statistical analysis to accept or reject your hypothesis. This allows you to generalise your claims and prove what you found probably isn’t by chance</p>
+<h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><h3 id="可用和安全的授权准则"><a href="#可用和安全的授权准则" class="headerlink" title="可用和安全的授权准则"></a>可用和安全的授权准则</h3><ul>
+<li><p>匹配最舒适的方式，以最少的权限授予来完成任务</p>
+</li>
+<li><p>根据用户表示同意的行为，授予他人权力。</p>
+</li>
+<li><p>为用户提供减少他人访问用户资源的权限的方法。</p>
+</li>
+<li><p>保持对与用户决策相关的他人权力的准确认识。</p>
+</li>
+<li><p>保持对用户自己访问资源的权限的准确认识。</p>
+</li>
+</ul>
+<h3 id="可用和安全的通信准则"><a href="#可用和安全的通信准则" class="headerlink" title="可用和安全的通信准则"></a>可用和安全的通信准则</h3><ul>
+<li>保护用户与代表用户操纵权限的代理的渠道。</li>
+</ul>
+<h3 id="可用和安全的接口准则"><a href="#可用和安全的接口准则" class="headerlink" title="可用和安全的接口准则"></a>可用和安全的接口准则</h3><ul>
+<li><p>使用户能够以适合用户任务的术语来表达安全的安全策略。</p>
+</li>
+<li><p>沿着与任务相关的界限来区分对象和行动。</p>
+</li>
+<li><p>使用可区分的、真实的外观来展示对象和行动。</p>
+</li>
+<li><p>清楚地指出用户所要做出的决定的后果。</p>
+</li>
+</ul>
+ 
+      </div>
+      <hr />
+
+      
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Twistzz</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://twistzz-xjtlu.github.io/2023/05/21/COMPSCI5060-Human-Centred-Security/">https://twistzz-xjtlu.github.io/2023/05/21/COMPSCI5060-Human-Centred-Security/</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Twistzz</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+      <div class="tag_share" style="display: block">
+        <div class="post-meta__tag-list" style="display: inline-block">
+          
+          <div class="article-tag">
+            
+            <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+              <span class="chip bg-color">研究生</span>
+            </a>
+            
+          </div>
+          
+        </div>
+        <div
+          class="post_share"
+          style="
+            zoom: 80%;
+            width: fit-content;
+            display: inline-block;
+            float: right;
+            margin: -0.15rem 0;
+          "
+        >
+          <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+        </div>
+      </div>
+       <div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">老板大气 老板身体健康</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+ 
+    </div>
+  </div>
+
+          
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/05/21/COMPSCI5060-Human-Centred-Security/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="COMPSCI5060 Human Centred Security">
+                        
+                        <span class="card-title">COMPSCI5060 Human Centred Security</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MSc/" class="post-category">
+                                    MSc
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                        <span class="chip bg-color">研究生</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/05/21/COMPSCI5063-Cyber-Security-Fundamentals/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="COMPSCI5063 Cyber Security Fundamentals">
+                        
+                        <span class="card-title">COMPSCI5063 Cyber Security Fundamentals</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-05-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/MSc/" class="post-category">
+                                    MSc
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%A0%94%E7%A9%B6%E7%94%9F/">
+                        <span class="chip bg-color">研究生</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+ <!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.min.js"></script>
+
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="/libs/aplayer/Meting.min.js"></script>
+
+    
+
+    <div class="container row center-align"
+         style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2023</span>
+            
+            <a href="/about" target="_blank">Twistzz</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            
+            <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">37.9k</span>
+            
+            
+            
+                
+            
+            
+                <span id="busuanzi_container_site_pv">
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
+                    <span id="busuanzi_value_site_pv" class="white-color"></span>
+            </span>
+            
+            
+                <span id="busuanzi_container_site_uv">
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
+                    <span id="busuanzi_value_site_uv" class="white-color"></span>
+            </span>
+            
+            <br>
+
+            <!-- 运行天数提醒. -->
+            
+                <span id="sitetime"> Loading ...</span>
+                <script>
+                    var calcSiteTime = function () {
+                        var seconds = 1000;
+                        var minutes = seconds * 60;
+                        var hours = minutes * 60;
+                        var days = hours * 24;
+                        var years = days * 365;
+                        var today = new Date();
+                        var startYear = "2023";
+                        var startMonth = "4";
+                        var startDate = "14";
+                        var startHour = "0";
+                        var startMinute = "0";
+                        var startSecond = "0";
+                        var todayYear = today.getFullYear();
+                        var todayMonth = today.getMonth() + 1;
+                        var todayDate = today.getDate();
+                        var todayHour = today.getHours();
+                        var todayMinute = today.getMinutes();
+                        var todaySecond = today.getSeconds();
+                        var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                        var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                        var diff = t2 - t1;
+                        var diffYears = Math.floor(diff / years);
+                        var diffDays = Math.floor((diff / days) - diffYears * 365);
+
+                        // 区分是否有年份.
+                        var language = 'zh-CN';
+                        if (startYear === String(todayYear)) {
+                            document.getElementById("year").innerHTML = todayYear;
+                            var daysTip = 'This site has been running for ' + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                daysTip = '本站已运行 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                daysTip = '本站已運行 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = daysTip;
+                        } else {
+                            document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                            var yearsAndDaysTip = 'This site has been running for ' + diffYears + ' years and '
+                                + diffDays + ' days';
+                            if (language === 'zh-CN') {
+                                yearsAndDaysTip = '本站已运行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            } else if (language === 'zh-HK') {
+                                yearsAndDaysTip = '本站已運行 ' + diffYears + ' 年 ' + diffDays + ' 天';
+                            }
+                            document.getElementById("sitetime").innerHTML = yearsAndDaysTip;
+                        }
+                    }
+
+                    calcSiteTime();
+                </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Twistzz-XJTLU" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:twistzz963@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=3027656718" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 3027656718" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 白天和黑夜主题 -->
+<div class="stars-con">
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>  
+</div>
+
+<script>
+    function switchNightMode() {
+        $('<div class="Cuteen_DarkSky"><div class="Cuteen_DarkPlanet"></div></div>').appendTo($('body')),
+        setTimeout(function () {
+            $('body').hasClass('DarkMode') 
+            ? ($('body').removeClass('DarkMode'), localStorage.setItem('isDark', '0'), $('#sum-moon-icon').removeClass("fa-sun").addClass('fa-moon')) 
+            : ($('body').addClass('DarkMode'), localStorage.setItem('isDark', '1'), $('#sum-moon-icon').addClass("fa-sun").removeClass('fa-moon')),
+            
+            setTimeout(function () {
+            $('.Cuteen_DarkSky').fadeOut(1e3, function () {
+                $(this).remove()
+            })
+            }, 2e3)
+        })
+    }
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    
+
+    
+    
+    
+
+    <!-- 雪花特效 -->
+    
+
+    <!-- 鼠标星星特效 -->
+    
+
+     
+        <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+        <script src="/libs/others/TencentCaptcha.js"></script>
+        <button id="TencentCaptcha" data-appid="xxxxxxxxxx" data-cbfn="callback" type="button" hidden></button>
+    
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    <!--腾讯兔小巢-->
+    
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+</body>
+
+</html>
