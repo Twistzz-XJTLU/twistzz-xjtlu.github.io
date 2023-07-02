@@ -4,12 +4,13 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="代码随想录-字符串, Twistzz&#39;Blog">
-    <meta name="description" content="字符串篇344.反转字符串#! /usr/bin/python3
-# -*- coding: utf-8 -*-
-# @Time    : 2023/4/20 12:58
+    <meta name="keywords" content="代码随想录-回溯, Twistzz&#39;Blog">
+    <meta name="description" content="回溯篇组合# -*- coding: utf-8 -*-
+# @Time    : 2023/7/1 21:02
 # @Author  : Twistzz
-from typing i">
+# @File : 组合.py
+class Solution:
+    def co">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +22,7 @@ from typing i">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>代码随想录-字符串 | Twistzz&#39;Blog</title>
+    <title>代码随想录-回溯 | Twistzz&#39;Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -294,12 +295,12 @@ from typing i">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">代码随想录-字符串</h1>
+                    <h1 class="description center-align post-title">代码随想录-回溯</h1>
                 </div>
             </div>
         </div>
@@ -335,8 +336,8 @@ from typing i">
               <span class="chip bg-color">python</span>
             </a>
             
-            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-              <span class="chip bg-color">字符串</span>
+            <a href="/tags/%E5%9B%9E%E6%BA%AF/">
+              <span class="chip bg-color">回溯</span>
             </a>
             
           </div>
@@ -363,20 +364,20 @@ from typing i">
       <div class="post-info">
         
         <div class="post-date info-break-policy">
-          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2023-04-20
+          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2023-07-02
         </div>
          
         <div class="post-date info-break-policy">
-          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-04-21
+          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-07-02
         </div>
          
         <div class="info-break-policy">
-          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 427
+          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 283
         </div>
          
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          2 分
+          1 分
         </div>
          
         <div id="busuanzi_container_page_pv" class="info-break-policy">
@@ -398,113 +399,79 @@ from typing i">
 
     <div class="card-content article-card-content">
       <div id="articleContent">
-        <h1 id="字符串篇"><a href="#字符串篇" class="headerlink" title="字符串篇"></a>字符串篇</h1><h2 id="344-反转字符串"><a href="#344-反转字符串" class="headerlink" title="344.反转字符串"></a>344.反转字符串</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/20 12:58</span>
+        <h1 id="回溯篇"><a href="#回溯篇" class="headerlink" title="回溯篇"></a>回溯篇</h1><h2 id="组合"><a href="#组合" class="headerlink" title="组合"></a>组合</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># @Time    : 2023/7/1 21:02</span>
 <span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">from</span> typing <span class="token keyword">import</span> List
-
-
+<span class="token comment"># @File : 组合.py</span>
 <span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">reverseString</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
-        <span class="token triple-quoted-string string">"""
-        Do not return anything, modify s in-place instead.
-        """</span>
-        <span class="token comment"># for i in range(len(s)//2):</span>
-        <span class="token comment">#     s[i],s[len(s)-i-1]=s[len(s)-i-1],s[i]</span>
-        left<span class="token punctuation">,</span> right <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>
-        <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>
-            s<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">,</span> s<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">=</span> s<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">,</span> s<span class="token punctuation">[</span>left<span class="token punctuation">]</span>
-            left <span class="token operator">+=</span> <span class="token number">1</span>
-            right <span class="token operator">-=</span> <span class="token number">1</span>
+    <span class="token keyword">def</span> <span class="token function">combine</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> k<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        path <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>back_tracking<span class="token punctuation">(</span>n<span class="token punctuation">,</span> k<span class="token punctuation">,</span> res<span class="token punctuation">,</span> path<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> res
+
+    <span class="token keyword">def</span> <span class="token function">back_tracking</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> n<span class="token punctuation">,</span> k<span class="token punctuation">,</span> res<span class="token punctuation">,</span> path<span class="token punctuation">,</span> strt_index<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span> <span class="token operator">==</span> k<span class="token punctuation">:</span>
+            res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>path<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>strt_index<span class="token punctuation">,</span> n <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            path<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>back_tracking<span class="token punctuation">(</span>n<span class="token punctuation">,</span> k<span class="token punctuation">,</span> res<span class="token punctuation">,</span> path<span class="token punctuation">,</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+            path<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="541-反转字符串-II"><a href="#541-反转字符串-II" class="headerlink" title="541. 反转字符串 II"></a>541. 反转字符串 II</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/20 12:59</span>
+<h2 id="组合总和-III"><a href="#组合总和-III" class="headerlink" title="组合总和 III"></a>组合总和 III</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># @Time    : 2023/7/1 22:10</span>
 <span class="token comment"># @Author  : Twistzz</span>
-
+<span class="token comment"># @File : 组合总和 III.py</span>
 <span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">reverseStr</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> k<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">str</span><span class="token punctuation">:</span>
-        ch_list <span class="token operator">=</span> <span class="token punctuation">[</span>ch <span class="token keyword">for</span> ch <span class="token keyword">in</span> s<span class="token punctuation">]</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>ch_list<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token number">2</span> <span class="token operator">*</span> k<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            ch_list<span class="token punctuation">[</span>i<span class="token punctuation">:</span>i <span class="token operator">+</span> k<span class="token punctuation">]</span> <span class="token operator">=</span> ch_list<span class="token punctuation">[</span>i<span class="token punctuation">:</span>i <span class="token operator">+</span> k<span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
-        <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>ch_list<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token keyword">def</span> <span class="token function">combinationSum3</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> k<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        path<span class="token punctuation">,</span> res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>back_tracking<span class="token punctuation">(</span>k<span class="token punctuation">,</span> n<span class="token punctuation">,</span> res<span class="token punctuation">,</span> path<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> res
 
-<h2 id="剑指-Offer-05-替换空格"><a href="#剑指-Offer-05-替换空格" class="headerlink" title="剑指 Offer 05.替换空格"></a>剑指 Offer 05.替换空格</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/20 13:12</span>
+    <span class="token keyword">def</span> <span class="token function">back_tracking</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> k<span class="token punctuation">,</span> n<span class="token punctuation">,</span> res<span class="token punctuation">,</span> path<span class="token punctuation">,</span> cur_sum<span class="token punctuation">,</span> start_index<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span> <span class="token operator">==</span> k<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> cur_sum <span class="token operator">==</span> n<span class="token punctuation">:</span>
+                res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>path<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span>
+
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>start_index<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            path<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+            cur_sum <span class="token operator">+=</span> i
+            self<span class="token punctuation">.</span>back_tracking<span class="token punctuation">(</span>k<span class="token punctuation">,</span> n<span class="token punctuation">,</span> res<span class="token punctuation">,</span> path<span class="token punctuation">,</span> cur_sum<span class="token punctuation">,</span> i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+            cur_sum <span class="token operator">-=</span> i
+            path<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="电话号码的字母组合"><a href="#电话号码的字母组合" class="headerlink" title="电话号码的字母组合"></a>电话号码的字母组合</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># @Time    : 2023/7/1 22:56</span>
 <span class="token comment"># @Author  : Twistzz</span>
-
+<span class="token comment"># @File : 电话号码的字母组合.py</span>
 <span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">replaceSpace</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">str</span><span class="token punctuation">:</span>
-        res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-        <span class="token keyword">for</span> ch <span class="token keyword">in</span> s<span class="token punctuation">:</span>
-            <span class="token keyword">if</span> ch <span class="token operator">==</span> <span class="token string">' '</span><span class="token punctuation">:</span>
-                res<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'%20'</span><span class="token punctuation">)</span>
-            <span class="token keyword">else</span><span class="token punctuation">:</span>
-                res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ch<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> <span class="token string">''</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>res<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>letter_map <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">""</span><span class="token punctuation">,</span> <span class="token string">""</span><span class="token punctuation">,</span> <span class="token string">"abc"</span><span class="token punctuation">,</span> <span class="token string">"def"</span><span class="token punctuation">,</span> <span class="token string">"ghi"</span><span class="token punctuation">,</span> <span class="token string">"jkl"</span><span class="token punctuation">,</span> <span class="token string">"mno"</span><span class="token punctuation">,</span> <span class="token string">"pqrs"</span><span class="token punctuation">,</span> <span class="token string">"tuv"</span><span class="token punctuation">,</span> <span class="token string">"wxyz"</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>path <span class="token operator">=</span> <span class="token string">""</span>
 
-<h2 id="151-翻转字符串里的单词"><a href="#151-翻转字符串里的单词" class="headerlink" title="151.翻转字符串里的单词"></a>151.翻转字符串里的单词</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/20 14:35</span>
-<span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">reverseWords</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">str</span><span class="token punctuation">:</span>
-        s <span class="token operator">=</span> s<span class="token punctuation">.</span>strip<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        left<span class="token punctuation">,</span> right <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>
-        res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-        <span class="token keyword">while</span> left <span class="token operator">>=</span> <span class="token number">0</span><span class="token punctuation">:</span>
-            <span class="token keyword">while</span> left <span class="token operator">>=</span> <span class="token number">0</span> <span class="token keyword">and</span> s<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token string">" "</span><span class="token punctuation">:</span>
-                left <span class="token operator">-=</span> <span class="token number">1</span>
-            res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>s<span class="token punctuation">[</span>left <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">:</span>right <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-            <span class="token keyword">while</span> s<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">" "</span><span class="token punctuation">:</span>
-                left <span class="token operator">-=</span> <span class="token number">1</span>
-            right <span class="token operator">=</span> left
-        <span class="token keyword">return</span> <span class="token string">" "</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>res<span class="token punctuation">)</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token keyword">def</span> <span class="token function">letterCombinations</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> digits<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> digits<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>res
+        self<span class="token punctuation">.</span>back_tracking<span class="token punctuation">(</span>digits<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>res
 
-<h2 id="剑指-Offer58-II-左旋转字符串"><a href="#剑指-Offer58-II-左旋转字符串" class="headerlink" title="剑指 Offer58-II.左旋转字符串"></a>剑指 Offer58-II.左旋转字符串</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/20 14:37</span>
-<span class="token comment"># @Author  : Twistzz</span>
+    <span class="token keyword">def</span> <span class="token function">back_tracking</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> digits<span class="token punctuation">,</span> cur_index<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> cur_index <span class="token operator">==</span> <span class="token builtin">len</span><span class="token punctuation">(</span>digits<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>self<span class="token punctuation">.</span>path<span class="token punctuation">)</span>
+            <span class="token keyword">return</span>
 
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">reverseLeftWords</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">str</span><span class="token punctuation">:</span>
-        <span class="token keyword">return</span> s<span class="token punctuation">[</span>n<span class="token punctuation">:</span><span class="token punctuation">]</span> <span class="token operator">+</span> s<span class="token punctuation">[</span><span class="token punctuation">:</span>n<span class="token punctuation">]</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="28-找出字符串中第一个匹配项的下标"><a href="#28-找出字符串中第一个匹配项的下标" class="headerlink" title="28. 找出字符串中第一个匹配项的下标"></a>28. 找出字符串中第一个匹配项的下标</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/20 15:11</span>
-<span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">strStr</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> haystack<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> needle<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>haystack<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">len</span><span class="token punctuation">(</span>needle<span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> haystack<span class="token punctuation">[</span>i<span class="token punctuation">:</span>i <span class="token operator">+</span> <span class="token builtin">len</span><span class="token punctuation">(</span>needle<span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">==</span> needle<span class="token punctuation">:</span>
-                <span class="token keyword">return</span> i
-        <span class="token keyword">return</span> <span class="token operator">-</span><span class="token number">1</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="459-重复的子字符串"><a href="#459-重复的子字符串" class="headerlink" title="459. 重复的子字符串"></a>459. 重复的子字符串</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/20 23:17</span>
-<span class="token comment"># @Author  : Twistzz</span>
-
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">repeatedSubstringPattern</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
-        l <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span>
-        <span class="token keyword">if</span> <span class="token keyword">not</span> s <span class="token keyword">or</span> l <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">:</span>
-            <span class="token keyword">return</span> <span class="token boolean">False</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> l <span class="token operator">//</span> <span class="token number">2</span> <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            res <span class="token operator">=</span> s<span class="token punctuation">[</span><span class="token punctuation">:</span>i<span class="token punctuation">]</span>
-            <span class="token keyword">if</span> res <span class="token operator">*</span> <span class="token punctuation">(</span>l <span class="token operator">//</span> <span class="token builtin">len</span><span class="token punctuation">(</span>res<span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token operator">==</span> s<span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token boolean">True</span>
-        <span class="token keyword">return</span> <span class="token boolean">False</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        num_index <span class="token operator">=</span> <span class="token builtin">int</span><span class="token punctuation">(</span>digits<span class="token punctuation">[</span>cur_index<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        letters <span class="token operator">=</span> self<span class="token punctuation">.</span>letter_map<span class="token punctuation">[</span>num_index<span class="token punctuation">]</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>letters<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>path <span class="token operator">+=</span> letters<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+            self<span class="token punctuation">.</span>back_tracking<span class="token punctuation">(</span>digits<span class="token punctuation">,</span> cur_index <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span>
+            self<span class="token punctuation">.</span>path <span class="token operator">=</span> self<span class="token punctuation">.</span>path<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
  
       </div>
       <hr />
@@ -530,7 +497,7 @@ from typing i">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://twistzz-xjtlu.github.io/2023/04/20/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%AD%97%E7%AC%A6%E4%B8%B2/">https://twistzz-xjtlu.github.io/2023/04/20/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%AD%97%E7%AC%A6%E4%B8%B2/</a>
+                    <a href="https://twistzz-xjtlu.github.io/2023/07/02/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%9B%9E%E6%BA%AF/">https://twistzz-xjtlu.github.io/2023/07/02/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%9B%9E%E6%BA%AF/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -580,8 +547,8 @@ from typing i">
               <span class="chip bg-color">python</span>
             </a>
             
-            <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-              <span class="chip bg-color">字符串</span>
+            <a href="/tags/%E5%9B%9E%E6%BA%AF/">
+              <span class="chip bg-color">回溯</span>
             </a>
             
           </div>
@@ -651,17 +618,18 @@ from typing i">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/04/21/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%8F%8C%E6%8C%87%E9%92%88/">
+                <a href="/2023/07/02/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%9B%9E%E6%BA%AF/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="代码随想录-双指针">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="代码随想录-回溯">
                         
-                        <span class="card-title">代码随想录-双指针</span>
+                        <span class="card-title">代码随想录-回溯</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -671,9 +639,9 @@ from typing i">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -690,6 +658,7 @@ from typing i">
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -705,8 +674,8 @@ from typing i">
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E5%8F%8C%E6%8C%87%E9%92%88/">
-                        <span class="chip bg-color">双指针</span>
+                    <a href="/tags/%E5%9B%9E%E6%BA%AF/">
+                        <span class="chip bg-color">回溯</span>
                     </a>
                     
                 </div>
@@ -720,13 +689,13 @@ from typing i">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/04/18/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%93%88%E5%B8%8C%E8%A1%A8/">
+                <a href="/2023/06/10/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E8%B4%AA%E5%BF%83/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="代码随想录-哈希表">
+                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="代码随想录-贪心">
                         
-                        <span class="card-title">代码随想录-哈希表</span>
+                        <span class="card-title">代码随想录-贪心</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -737,7 +706,7 @@ from typing i">
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-06-10
                             </span>
                         <span class="publish-author">
                             
@@ -770,8 +739,8 @@ from typing i">
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-                        <span class="chip bg-color">哈希表</span>
+                    <a href="/tags/%E8%B4%AA%E5%BF%83/">
+                        <span class="chip bg-color">贪心</span>
                     </a>
                     
                 </div>
