@@ -5,7 +5,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="排序算法, Twistzz&#39;Blog">
-    <meta name="description" content="">
+    <meta name="description" content="排序算法选择排序思路开启一个循环，每轮从未排序区间选择最小的元素，将其放到已排序区间的末尾
+
+首先在未排序的数组中选出最小的值得索引 然后与对一个元素交换
+然后在剩余未排序中的数组中继续最小的元素放到 刚才排好序元素的后面
+4 3 2 0
+">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -318,11 +323,28 @@
         <div class="col s7">
           
           <div class="article-tag">
-            <span class="chip bg-color">无标签</span>
+            
+            <a href="/tags/%E7%AE%97%E6%B3%95/">
+              <span class="chip bg-color">算法</span>
+            </a>
+            
+            <a href="/tags/python/">
+              <span class="chip bg-color">python</span>
+            </a>
+            
           </div>
           
         </div>
         <div class="col s5 right-align">
+          
+          <div class="post-cate">
+            <i class="fas fa-bookmark fa-fw icon-category"></i>
+            
+            <a href="/categories/Learn/" class="post-category">
+              Learn
+            </a>
+            
+          </div>
           
         </div>
       </div>
@@ -338,12 +360,12 @@
         </div>
          
         <div class="info-break-policy">
-          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 0
+          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 1.6k
         </div>
          
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          1 分
+          7 分
         </div>
          
         <div id="busuanzi_container_page_pv" class="info-break-policy">
@@ -365,7 +387,257 @@
 
     <div class="card-content article-card-content">
       <div id="articleContent">
-         
+        <h1 id="排序算法"><a href="#排序算法" class="headerlink" title="排序算法"></a>排序算法</h1><h2 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><p>开启一个循环，每轮从未排序区间选择最小的元素，将其放到已排序区间的末尾</p>
+<ul>
+<li>首先在未排序的数组中选出最小的值得索引 然后与对一个元素交换</li>
+<li>然后在剩余未排序中的数组中继续最小的元素放到 刚才排好序元素的后面</li>
+<li>4 3 2 0</li>
+<li>0 3 2 4</li>
+<li>0 2 3 4</li>
+</ul>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># @Time    : 2023/7/17 10:19</span>
+<span class="token comment"># @Author  : Twistzz</span>
+<span class="token comment"># @File : 选择排序.py</span>
+
+<span class="token keyword">def</span> <span class="token function">selection_sort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        min_num_index <span class="token operator">=</span> i
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>i<span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">&lt;</span> nums<span class="token punctuation">[</span>min_num_index<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                min_num_index <span class="token operator">=</span> j
+        nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>min_num_index<span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>min_num_index<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    nums <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
+    selection_sort<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><p>通过连续地比较与交换相邻元素实现排序</p>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码 1"></a>代码 1</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># @Time    : 2023/7/17 10:33</span>
+<span class="token comment"># @Author  : Twistzz</span>
+<span class="token comment"># @File : 冒泡排序.py</span>
+
+<span class="token keyword">def</span> <span class="token function">bubble_sort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span> <span class="token operator">-</span> i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    nums <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
+    bubble_sort<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码 2"></a>代码 2</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># @Time    : 2023/7/17 10:33</span>
+<span class="token comment"># @Author  : Twistzz</span>
+<span class="token comment"># @File : 冒泡排序.py</span>
+
+<span class="token keyword">def</span> <span class="token function">bubble_sort</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>arr<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> arr<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+                arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> arr<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    nums <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
+    bubble_sort<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h2><h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><p>在未排序区间选择一个基准元素，将该元素与其左侧已排序区间的元素逐一比较大小，并将该元素插入到正确的位置。</p>
+<ul>
+<li>4 3 2 0</li>
+<li>从索引 1 开始 因为索引 0 就一个数相当于已经是有序的了</li>
+<li>从 3 开始 4 已经是有序的了 3 要插入这个有序队列 因此 3 向左开始进行依次比较</li>
+<li>如果 3 小于 4 那么把四向右移动 因为要把空位留出来给插入的元素</li>
+<li>知道找到比他小的(比如 1)或者已经到数组的头部了 就停止</li>
+<li>3 4 2 0 第一轮结果</li>
+<li>第二轮:</li>
+<li>2 是要排序的 因此向左找</li>
+<li>3 比 2 大 因此 3 向右移动 指针向左移动</li>
+<li>4 比 2 大 因此 4 向右移动 指针向左</li>
+<li>到头了</li>
+<li>2 3 4 0</li>
+</ul>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># @Time    : 2023/7/17 10:52</span>
+<span class="token comment"># @Author  : Twistzz</span>
+<span class="token comment"># @File : 插入排序.py</span>
+
+<span class="token keyword">def</span> <span class="token function">insert_sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        insert_num <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
+        j <span class="token operator">=</span> i <span class="token operator">-</span> <span class="token number">1</span>
+        <span class="token keyword">while</span> j <span class="token operator">>=</span> <span class="token number">0</span> <span class="token keyword">and</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">></span> insert_num<span class="token punctuation">:</span>
+            nums<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span>
+            j <span class="token operator">-=</span> <span class="token number">1</span>
+        nums<span class="token punctuation">[</span>j <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> insert_num
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    nums <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
+    insert_sort<span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h2><h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><p>选择数组中的某个元素作为“基准数”，将所有小于基准数的元素移到其左侧，而大于基准数的元素移到其右侧</p>
+<ul>
+<li>选取数组最左端元素作为基准数，初始化两个指针 <code>i</code> 和 <code>j</code> 分别指向数组的两端</li>
+<li>设置一个循环，在每轮中使用 <code>i</code>（<code>j</code>）分别寻找第一个比基准数大（小）的元素，然后交换这两个元素；</li>
+<li>循环执行步骤 <code>2.</code> ，直到 <code>i</code> 和 <code>j</code> 相遇时停止，最后将基准数交换至两个子数组的分界线；</li>
+</ul>
+<p>相遇点的值一定是小于 pivot 的值</p>
+<h3 id="代码-1-1"><a href="#代码-1-1" class="headerlink" title="代码 1"></a>代码 1</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">def</span> <span class="token function">quick_sort</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>
+        position <span class="token operator">=</span> get_position<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">)</span>
+        <span class="token comment"># 找出基准的位置 这个位置左边的都是小于基准的 右边的都是大于基准的</span>
+        quick_sort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left<span class="token punctuation">,</span> position <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>  <span class="token comment"># 进行递归 左边的数组进行排序 右边的数组也进行排序</span>
+        quick_sort<span class="token punctuation">(</span>arr<span class="token punctuation">,</span> position <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> right<span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">get_position</span><span class="token punctuation">(</span>arr<span class="token punctuation">,</span> left<span class="token punctuation">,</span> right<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    pivot <span class="token operator">=</span> arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span>  <span class="token comment"># 以数组最左边的输作为基准</span>
+    <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>  <span class="token comment"># 从右边开始</span>
+        <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> arr<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">>=</span> pivot<span class="token punctuation">:</span>
+            <span class="token comment"># 如果右边的数大于基准 右指针向左移动 因为要找出小于基准的数 并且放到基准左边</span>
+            right <span class="token operator">-=</span> <span class="token number">1</span>
+        arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>right<span class="token punctuation">]</span>
+        <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> pivot<span class="token punctuation">:</span>
+            <span class="token comment"># 如果右边的数大于基准 右指针向左移动 因为要找出小于基准的数 并且放到基准左边</span>
+            left <span class="token operator">+=</span> <span class="token number">1</span>
+        arr<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">=</span> arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span>
+    arr<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">=</span> pivot  <span class="token comment"># 此时left==right 指针指向同一个位置 这个位置是空的 把基准放到这个位置</span>
+    <span class="token keyword">return</span> left
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    test <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span>
+    quick_sort<span class="token punctuation">(</span>test<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>test<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">)</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>test<span class="token punctuation">)</span>
+
+      <span class="token number">2</span> <span class="token number">4</span> <span class="token number">1</span> <span class="token number">3</span>
+          r          l
+      <span class="token number">1</span> <span class="token number">4</span> <span class="token number">1</span> <span class="token number">3</span>      <span class="token number">2</span> <span class="token number">1</span>  <span class="token number">9</span> <span class="token number">2</span>  <span class="token number">4</span> <span class="token number">3</span>
+        l r
+      <span class="token number">1</span> <span class="token number">4</span> <span class="token number">4</span> <span class="token number">3</span>
+
+      <span class="token number">1</span> <span class="token number">2</span> <span class="token number">4</span> <span class="token number">3</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="代码-2-1"><a href="#代码-2-1" class="headerlink" title="代码 2"></a>代码 2</h3><pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">#! &#x2F;usr&#x2F;bin&#x2F;python3
+# -*- coding: utf-8 -*-
+# @Time    : 2023&#x2F;6&#x2F;17 13:20
+# @Author  : Twistzz
+def sort(num, left, right):
+    if left &lt; right:
+        pos &#x3D; get_position(num, left, right)
+        sort(num, left, pos - 1)
+        sort(num, pos + 1, right)
+
+
+def get_position(num, left, right):
+    pivot &#x3D; left
+    while left &lt; right:
+        while left &lt; right and num[right] &gt;&#x3D; num[pivot]:
+            right -&#x3D; 1
+        while left &lt; right and num[left] &lt;&#x3D; num[pivot]:
+            left +&#x3D; 1
+        num[left], num[right] &#x3D; num[right], num[left]
+    num[left], num[pivot] &#x3D; num[pivot], num[left]
+    return left
+
+
+if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
+    num &#x3D; [5, 1, 1, 2, 0, -1]
+    sort(num, 0, len(num) - 1)
+    print(num)
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="归并排序"><a href="#归并排序" class="headerlink" title="归并排序"></a>归并排序</h2><h3 id="思路-4"><a href="#思路-4" class="headerlink" title="思路"></a>思路</h3><ul>
+<li>类似于二叉树中的后续遍历</li>
+<li><strong>划分阶段</strong>：通过递归不断地将数组从中点处分开，将长数组的排序问题转换为短数组的排序问题；</li>
+<li><strong>合并阶段</strong>：当子数组长度为 1 时终止划分，开始合并，持续地将左右两个较短的有序数组合并为一个较长的有序数组，直至结束；</li>
+</ul>
+<h3 id="代码-1-2"><a href="#代码-1-2" class="headerlink" title="代码 1"></a>代码 1</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># @Time    : 2023/7/17 14:00</span>
+<span class="token comment"># @Author  : Twistzz</span>
+<span class="token comment"># @File : 归并排序.py</span>
+
+<span class="token keyword">def</span> <span class="token function">merge_two_arr</span><span class="token punctuation">(</span>arr1<span class="token punctuation">,</span> arr2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    l1<span class="token punctuation">,</span> l2 <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr1<span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token builtin">len</span><span class="token punctuation">(</span>arr2<span class="token punctuation">)</span>
+    i <span class="token operator">=</span> j <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">while</span> i <span class="token operator">&lt;</span> l1 <span class="token keyword">and</span> j <span class="token operator">&lt;</span> l2<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> arr1<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">&lt;=</span> arr2<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">:</span>
+            res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>arr1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            i <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>arr2<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            j <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">while</span> i <span class="token operator">&lt;</span> l1<span class="token punctuation">:</span>
+        res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>arr1<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        i <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">while</span> j <span class="token operator">&lt;</span> l2<span class="token punctuation">:</span>
+        res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>arr2<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">)</span>
+        j <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> res
+
+
+<span class="token keyword">def</span> <span class="token function">merge_sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> nums
+    mid <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
+    sub1 <span class="token operator">=</span> merge_sort<span class="token punctuation">(</span>nums<span class="token punctuation">[</span><span class="token punctuation">:</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    sub2 <span class="token operator">=</span> merge_sort<span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> merge_two_arr<span class="token punctuation">(</span>sub1<span class="token punctuation">,</span> sub2<span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    nums <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>merge_sort<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h3 id="代码-2-精简版"><a href="#代码-2-精简版" class="headerlink" title="代码 2 精简版"></a>代码 2 精简版</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># -*- coding: utf-8 -*-</span>
+<span class="token comment"># @Time    : 2023/7/17 14:00</span>
+<span class="token comment"># @Author  : Twistzz</span>
+<span class="token comment"># @File : 归并排序.py</span>
+
+<span class="token keyword">def</span> <span class="token function">merge_two_arr</span><span class="token punctuation">(</span>arr1<span class="token punctuation">,</span> arr2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+    <span class="token keyword">while</span> arr1 <span class="token keyword">and</span> arr2<span class="token punctuation">:</span>
+        <span class="token keyword">if</span> arr1<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> arr2<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+            res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>arr1<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>arr2<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">while</span> arr1<span class="token punctuation">:</span>
+        res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>arr1<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">while</span> arr2<span class="token punctuation">:</span>
+        res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>arr2<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> res
+
+
+<span class="token keyword">def</span> <span class="token function">merge_sort</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">&lt;</span> <span class="token number">2</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> nums
+    mid <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span> <span class="token operator">//</span> <span class="token number">2</span>
+    left_arr <span class="token operator">=</span> merge_sort<span class="token punctuation">(</span>nums<span class="token punctuation">[</span><span class="token punctuation">:</span>mid<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    right_arr <span class="token operator">=</span> merge_sort<span class="token punctuation">(</span>nums<span class="token punctuation">[</span>mid<span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> merge_two_arr<span class="token punctuation">(</span>left_arr<span class="token punctuation">,</span> right_arr<span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    nums <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>merge_sort<span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+ 
       </div>
       <hr />
 
@@ -427,7 +699,15 @@
         <div class="post-meta__tag-list" style="display: inline-block">
           
           <div class="article-tag">
-            <span class="chip bg-color">无标签</span>
+            
+            <a href="/tags/%E7%AE%97%E6%B3%95/">
+              <span class="chip bg-color">算法</span>
+            </a>
+            
+            <a href="/tags/python/">
+              <span class="chip bg-color">python</span>
+            </a>
+            
           </div>
           
         </div>
@@ -521,13 +801,29 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Twistzz
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Learn/" class="post-category">
+                                    Learn
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">算法</span>
+                    </a>
+                    
+                    <a href="/tags/python/">
+                        <span class="chip bg-color">python</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -559,11 +855,23 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            Twistzz
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Learn/" class="post-category">
+                                    Learn
+                                </a>
+                            
                             
                         </span>
                     </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/MySQL/">
+                        <span class="chip bg-color">MySQL</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -757,7 +1065,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">41.7k</span>
+                        class="white-color">43.3k</span>
             
             
             
