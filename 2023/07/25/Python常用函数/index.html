@@ -353,16 +353,16 @@ print(a.center(10,">
         </div>
          
         <div class="post-date info-break-policy">
-          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-07-25
+          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-07-26
         </div>
          
         <div class="info-break-policy">
-          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 1.1k
+          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 2.5k
         </div>
          
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          6 分
+          13 分
         </div>
          
         <div id="busuanzi_container_page_pv" class="info-break-policy">
@@ -453,7 +453,7 @@ a  a
 
 ValueError                                Traceback (most recent call last)
 
-Input In [8], in &lt;cell line: 3&gt;()
+Input In [50], in &lt;cell line: 3&gt;()
       1 a=&quot;**ans**&quot;
       2 print(a.index(&quot;ans&quot;))
 ----&gt; 3 print(a.index(&quot;no&quot;))
@@ -615,7 +615,7 @@ this is string example....wow!!!8888888
 
 ValueError                                Traceback (most recent call last)
 
-Input In [25], in &lt;cell line: 3&gt;()
+Input In [67], in &lt;cell line: 3&gt;()
       1 a=&quot;**ans*ans**&quot;
       2 print(a.rindex(&quot;ans&quot;))
 ----&gt; 3 print(a.rindex(&quot;no&quot;))
@@ -722,7 +722,293 @@ str.zfill :  000000this is string example from runoob....wow!!!
 <pre><code>False
 True
 </code></pre>
-<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h2 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h2><h3 id="len-list"><a href="#len-list" class="headerlink" title="len(list)"></a>len(list)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span><span class="token string">"b"</span><span class="token punctuation">,</span><span class="token string">"c"</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<pre><code>3
+</code></pre>
+<h3 id="max-list"><a href="#max-list" class="headerlink" title="max(list)"></a>max(list)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span><span class="token string">"b"</span><span class="token punctuation">,</span><span class="token string">"c"</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">max</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<pre><code>c
+</code></pre>
+<h3 id="min-list"><a href="#min-list" class="headerlink" title="min(list)"></a>min(list)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token string">"a"</span><span class="token punctuation">,</span><span class="token string">"b"</span><span class="token punctuation">,</span><span class="token string">"c"</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">min</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<pre><code>a
+</code></pre>
+<h3 id="list-seq"><a href="#list-seq" class="headerlink" title="list(seq)"></a>list(seq)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">,</span><span class="token string">"b"</span><span class="token punctuation">,</span><span class="token string">"c"</span><span class="token punctuation">)</span>
+b<span class="token operator">=</span><span class="token punctuation">&#123;</span><span class="token string">"a"</span><span class="token punctuation">:</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token string">"b"</span><span class="token punctuation">:</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token string">"c"</span><span class="token punctuation">:</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token string">"d"</span><span class="token punctuation">:</span><span class="token number">4</span><span class="token punctuation">&#125;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;]
+[&#39;a&#39;, &#39;b&#39;, &#39;c&#39;, &#39;d&#39;]
+</code></pre>
+<h3 id="list-append-obj"><a href="#list-append-obj" class="headerlink" title="list.append(obj)"></a>list.append(obj)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Google'</span><span class="token punctuation">,</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Taobao'</span><span class="token punctuation">]</span>
+list1<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token string">'Baidu'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"更新后的列表 : "</span><span class="token punctuation">,</span> list1<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>更新后的列表 :  [&#39;Google&#39;, &#39;Runoob&#39;, &#39;Taobao&#39;, &#39;Baidu&#39;]
+</code></pre>
+<h3 id="list-count-obj"><a href="#list-count-obj" class="headerlink" title="list.count(obj)"></a>list.count(obj)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">aList <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">123</span><span class="token punctuation">,</span> <span class="token string">'Google'</span><span class="token punctuation">,</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Taobao'</span><span class="token punctuation">,</span> <span class="token number">123</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"123 元素个数 : "</span><span class="token punctuation">,</span> aList<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token number">123</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"Runoob 元素个数 : "</span><span class="token punctuation">,</span> aList<span class="token punctuation">.</span>count<span class="token punctuation">(</span><span class="token string">'Runoob'</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>123 元素个数 :  2
+Runoob 元素个数 :  1
+</code></pre>
+<h3 id="list-extend-seq"><a href="#list-extend-seq" class="headerlink" title="list.extend(seq)"></a>list.extend(seq)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Google'</span><span class="token punctuation">,</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Taobao'</span><span class="token punctuation">]</span>
+list2<span class="token operator">=</span><span class="token builtin">list</span><span class="token punctuation">(</span><span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">5</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment"># 创建 0-4 的列表</span>
+list1<span class="token punctuation">.</span>extend<span class="token punctuation">(</span>list2<span class="token punctuation">)</span>  <span class="token comment"># 扩展列表</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"扩展后的列表："</span><span class="token punctuation">,</span> list1<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>扩展后的列表： [&#39;Google&#39;, &#39;Runoob&#39;, &#39;Taobao&#39;, 0, 1, 2, 3, 4]
+</code></pre>
+<h3 id="list-index-obj"><a href="#list-index-obj" class="headerlink" title="list.index(obj)"></a>list.index(obj)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Google'</span><span class="token punctuation">,</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Taobao'</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'Runoob 索引值为'</span><span class="token punctuation">,</span> list1<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token string">'Runoob'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'Taobao 索引值为'</span><span class="token punctuation">,</span> list1<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token string">'Taobao'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list1<span class="token punctuation">.</span>index<span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>Runoob 索引值为 1
+Taobao 索引值为 2
+
+
+
+---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+Input In [85], in &lt;cell line: 4&gt;()
+      2 print (&#39;Runoob 索引值为&#39;, list1.index(&#39;Runoob&#39;))
+      3 print (&#39;Taobao 索引值为&#39;, list1.index(&#39;Taobao&#39;))
+----&gt; 4 print(list1.index(&quot;a&quot;))
+
+
+ValueError: &#39;a&#39; is not in list
+</code></pre>
+<h3 id="list-insert-index-obj"><a href="#list-insert-index-obj" class="headerlink" title="list.insert(index, obj)"></a>list.insert(index, obj)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Google'</span><span class="token punctuation">,</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Taobao'</span><span class="token punctuation">]</span>
+list1<span class="token punctuation">.</span>insert<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token string">'Baidu'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'列表插入元素后为 : '</span><span class="token punctuation">,</span> list1<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>列表插入元素后为 :  [&#39;Google&#39;, &#39;Baidu&#39;, &#39;Runoob&#39;, &#39;Taobao&#39;]
+</code></pre>
+<h3 id="list-pop-index-x3D-1"><a href="#list-pop-index-x3D-1" class="headerlink" title="list.pop([index&#x3D;-1])"></a>list.pop([index&#x3D;-1])</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Google'</span><span class="token punctuation">,</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Taobao'</span><span class="token punctuation">]</span>
+list1<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"列表现在为 : "</span><span class="token punctuation">,</span> list1<span class="token punctuation">)</span>
+list1<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"列表现在为 : "</span><span class="token punctuation">,</span> list1<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>列表现在为 :  [&#39;Google&#39;, &#39;Runoob&#39;]
+列表现在为 :  [&#39;Google&#39;]
+</code></pre>
+<h3 id="list-remove-obj"><a href="#list-remove-obj" class="headerlink" title="list.remove(obj)"></a>list.remove(obj)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Google'</span><span class="token punctuation">,</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Taobao'</span><span class="token punctuation">,</span> <span class="token string">'Baidu'</span><span class="token punctuation">]</span>
+list1<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">'Taobao'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"列表现在为 : "</span><span class="token punctuation">,</span> list1<span class="token punctuation">)</span>
+list1<span class="token punctuation">.</span>remove<span class="token punctuation">(</span><span class="token string">'Baidu'</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"列表现在为 : "</span><span class="token punctuation">,</span> list1<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>列表现在为 :  [&#39;Google&#39;, &#39;Runoob&#39;, &#39;Baidu&#39;]
+列表现在为 :  [&#39;Google&#39;, &#39;Runoob&#39;]
+</code></pre>
+<h3 id="list-reverse"><a href="#list-reverse" class="headerlink" title="list.reverse()"></a>list.reverse()</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Google'</span><span class="token punctuation">,</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Taobao'</span><span class="token punctuation">,</span> <span class="token string">'Baidu'</span><span class="token punctuation">]</span>
+list1<span class="token punctuation">.</span>reverse<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"列表反转后: "</span><span class="token punctuation">,</span> list1<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>list1<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>列表反转后:  [&#39;Baidu&#39;, &#39;Taobao&#39;, &#39;Runoob&#39;, &#39;Google&#39;]
+[&#39;Google&#39;, &#39;Runoob&#39;, &#39;Taobao&#39;, &#39;Baidu&#39;]
+</code></pre>
+<h3 id="list-sort-key-x3D-None-reverse-x3D-False"><a href="#list-sort-key-x3D-None-reverse-x3D-False" class="headerlink" title="list.sort( key&#x3D;None, reverse&#x3D;False)"></a>list.sort( key&#x3D;None, reverse&#x3D;False)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">6</span><span class="token punctuation">,</span><span class="token number">7</span><span class="token punctuation">,</span><span class="token operator">-</span><span class="token number">3</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+a<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>[4, 2, 1, 6, 7, -3]
+[-3, 1, 2, 4, 6, 7]
+</code></pre>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># 获取列表的第二个元素</span>
+<span class="token keyword">def</span> <span class="token function">takeSecond</span><span class="token punctuation">(</span>elem<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">return</span> elem<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+
+<span class="token comment"># 列表</span>
+random <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">(</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+
+<span class="token comment"># 指定第二个元素排序</span>
+random<span class="token punctuation">.</span>sort<span class="token punctuation">(</span>key<span class="token operator">=</span>takeSecond<span class="token punctuation">)</span>
+
+<span class="token comment"># 输出类别</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'排序列表：'</span><span class="token punctuation">,</span> random<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>排序列表： [(4, 1), (2, 2), (1, 3), (3, 4)]
+</code></pre>
+<h3 id="list-clear"><a href="#list-clear" class="headerlink" title="list.clear()"></a>list.clear()</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">list1 <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token string">'Google'</span><span class="token punctuation">,</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Taobao'</span><span class="token punctuation">,</span> <span class="token string">'Baidu'</span><span class="token punctuation">]</span>
+list1<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"列表清空后 : "</span><span class="token punctuation">,</span> list1<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>列表清空后 :  []
+</code></pre>
+<h3 id="list-copy"><a href="#list-copy" class="headerlink" title="list.copy()"></a>list.copy()</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">import</span> copy
+a<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">2</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span><span class="token number">4</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+b<span class="token operator">=</span>a<span class="token punctuation">.</span>copy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+c<span class="token operator">=</span>a<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+d<span class="token operator">=</span>copy<span class="token punctuation">.</span>deepcopy<span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">id</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"*****************"</span><span class="token punctuation">)</span>
+a<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"我被更改了"</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"*****************"</span><span class="token punctuation">)</span>
+a<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token string">"我也被更改了"</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>b<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>c<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>d<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>1691236048128
+1691236048320
+1691235957824
+1691236049024
+*****************
+[&#39;我被更改了&#39;, 2, [3, 4]]
+[1, 2, [3, 4]]
+[1, 2, [3, 4]]
+[1, 2, [3, 4]]
+*****************
+[&#39;我被更改了&#39;, 2, [&#39;我也被更改了&#39;, 4]]
+[1, 2, [&#39;我也被更改了&#39;, 4]]
+[1, 2, [&#39;我也被更改了&#39;, 4]]
+[1, 2, [3, 4]]
+</code></pre>
+<h2 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h2><h3 id="dict-clear"><a href="#dict-clear" class="headerlink" title="dict.clear()"></a>dict.clear()</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">tinydict <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'Name'</span><span class="token punctuation">:</span> <span class="token string">'Zara'</span><span class="token punctuation">,</span> <span class="token string">'Age'</span><span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">&#125;</span>
+
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"字典长度 : %d"</span> <span class="token operator">%</span>  <span class="token builtin">len</span><span class="token punctuation">(</span>tinydict<span class="token punctuation">)</span><span class="token punctuation">)</span>
+tinydict<span class="token punctuation">.</span>clear<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"字典删除后长度 : %d"</span> <span class="token operator">%</span>  <span class="token builtin">len</span><span class="token punctuation">(</span>tinydict<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>字典长度 : 2
+字典删除后长度 : 0
+</code></pre>
+<h3 id="dict-copy"><a href="#dict-copy" class="headerlink" title="dict.copy()"></a>dict.copy()</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">dict1 <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'Name'</span><span class="token punctuation">:</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Age'</span><span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">,</span> <span class="token string">'Class'</span><span class="token punctuation">:</span> <span class="token string">'First'</span><span class="token punctuation">&#125;</span>
+
+dict2 <span class="token operator">=</span> dict1<span class="token punctuation">.</span>copy<span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"新复制的字典为 : "</span><span class="token punctuation">,</span>dict2<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>新复制的字典为 :  &#123;&#39;Name&#39;: &#39;Runoob&#39;, &#39;Age&#39;: 7, &#39;Class&#39;: &#39;First&#39;&#125;
+</code></pre>
+<h3 id="dict-fromkeys"><a href="#dict-fromkeys" class="headerlink" title="dict.fromkeys()"></a>dict.fromkeys()</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">seq <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">,</span> <span class="token string">'age'</span><span class="token punctuation">,</span> <span class="token string">'sex'</span><span class="token punctuation">)</span>
+
+tinydict<span class="token operator">=</span><span class="token builtin">dict</span><span class="token punctuation">.</span>fromkeys<span class="token punctuation">(</span>seq<span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"新的字典为 : %s"</span> <span class="token operator">%</span>  <span class="token builtin">str</span><span class="token punctuation">(</span>tinydict<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+tinydict <span class="token operator">=</span> <span class="token builtin">dict</span><span class="token punctuation">.</span>fromkeys<span class="token punctuation">(</span>seq<span class="token punctuation">,</span> <span class="token number">10</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"新的字典为 : %s"</span> <span class="token operator">%</span>  <span class="token builtin">str</span><span class="token punctuation">(</span>tinydict<span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>---------------------------------------------------------------------------
+
+TypeError                                 Traceback (most recent call last)
+
+Input In [96], in &lt;cell line: 4&gt;()
+      1 seq = (&#39;name&#39;, &#39;age&#39;, &#39;sex&#39;)
+      3 tinydict=dict.fromkeys(seq)
+----&gt; 4 print (&quot;新的字典为 : %s&quot; %  str(tinydict))
+      6 tinydict = dict.fromkeys(seq, 10)
+      7 print (&quot;新的字典为 : %s&quot; %  str(tinydict))
+
+
+TypeError: &#39;str&#39; object is not callable
+</code></pre>
+<h3 id="dict-get-key-default-x3D-None"><a href="#dict-get-key-default-x3D-None" class="headerlink" title="dict.get(key, default&#x3D;None)"></a>dict.get(key, default&#x3D;None)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">tinydict <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'Name'</span><span class="token punctuation">:</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Age'</span><span class="token punctuation">:</span> <span class="token number">27</span><span class="token punctuation">&#125;</span>
+
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"Age : "</span><span class="token punctuation">,</span> tinydict<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'Age'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 没有设置 Sex，也没有设置默认的值，输出 None</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"Sex : "</span><span class="token punctuation">,</span> tinydict<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'Sex'</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+<span class="token comment"># 没有设置 Salary，输出默认的值  0.0</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">'Salary: '</span><span class="token punctuation">,</span> tinydict<span class="token punctuation">.</span>get<span class="token punctuation">(</span><span class="token string">'Salary'</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>Age :  27
+Sex :  None
+Salary:  0.0
+</code></pre>
+<h3 id="dict-items"><a href="#dict-items" class="headerlink" title="dict.items()"></a>dict.items()</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">tinydict <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'Name'</span><span class="token punctuation">:</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Age'</span><span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">&#125;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>tinydict<span class="token punctuation">.</span>items<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+
+<pre><code>dict_items([(&#39;Name&#39;, &#39;Runoob&#39;), (&#39;Age&#39;, 7)])
+</code></pre>
+<h3 id="dict-keys"><a href="#dict-keys" class="headerlink" title="dict.keys()"></a>dict.keys()</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">tinydict <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'Name'</span><span class="token punctuation">:</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Age'</span><span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">&#125;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>tinydict<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span>tinydict<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>dict_keys([&#39;Name&#39;, &#39;Age&#39;])
+[&#39;Name&#39;, &#39;Age&#39;]
+</code></pre>
+<h3 id="dict-setdefault-key-default-x3D-None"><a href="#dict-setdefault-key-default-x3D-None" class="headerlink" title="dict.setdefault(key, default&#x3D;None)"></a>dict.setdefault(key, default&#x3D;None)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">tinydict <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'Name'</span><span class="token punctuation">:</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Age'</span><span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">&#125;</span>
+
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"Age 键的值为 : %s"</span> <span class="token operator">%</span>  tinydict<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span><span class="token string">'Age'</span><span class="token punctuation">,</span> <span class="token boolean">None</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"Sex 键的值为 : %s"</span> <span class="token operator">%</span>  tinydict<span class="token punctuation">.</span>setdefault<span class="token punctuation">(</span><span class="token string">'Sex'</span><span class="token punctuation">,</span> <span class="token string">"male"</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"新字典为："</span><span class="token punctuation">,</span> tinydict<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>Age 键的值为 : 7
+Sex 键的值为 : male
+新字典为： &#123;&#39;Name&#39;: &#39;Runoob&#39;, &#39;Age&#39;: 7, &#39;Sex&#39;: &#39;male&#39;&#125;
+</code></pre>
+<h3 id="dict-update-dict2"><a href="#dict-update-dict2" class="headerlink" title="dict.update(dict2)"></a>dict.update(dict2)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">tinydict <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'Name'</span><span class="token punctuation">:</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Age'</span><span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">&#125;</span>
+tinydict2 <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'Sex'</span><span class="token punctuation">:</span> <span class="token string">'female'</span> <span class="token punctuation">&#125;</span>
+
+tinydict<span class="token punctuation">.</span>update<span class="token punctuation">(</span>tinydict2<span class="token punctuation">)</span>
+<span class="token keyword">print</span> <span class="token punctuation">(</span><span class="token string">"更新字典 tinydict : "</span><span class="token punctuation">,</span> tinydict<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>更新字典 tinydict :  &#123;&#39;Name&#39;: &#39;Runoob&#39;, &#39;Age&#39;: 7, &#39;Sex&#39;: &#39;female&#39;&#125;
+</code></pre>
+<h3 id="dict-values"><a href="#dict-values" class="headerlink" title="dict.values()"></a>dict.values()</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">tinydict <span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'Name'</span><span class="token punctuation">:</span> <span class="token string">'Runoob'</span><span class="token punctuation">,</span> <span class="token string">'Age'</span><span class="token punctuation">:</span> <span class="token number">7</span><span class="token punctuation">&#125;</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>tinydict<span class="token punctuation">.</span>keys<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">list</span><span class="token punctuation">(</span>tinydict<span class="token punctuation">.</span>values<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>dict_keys([&#39;Name&#39;, &#39;Age&#39;])
+[&#39;Runoob&#39;, 7]
+</code></pre>
+<h3 id="pop-key-default"><a href="#pop-key-default" class="headerlink" title="pop(key[,default])"></a>pop(key[,default])</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">site<span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'菜鸟教程'</span><span class="token punctuation">,</span> <span class="token string">'alexa'</span><span class="token punctuation">:</span> <span class="token number">10000</span><span class="token punctuation">,</span> <span class="token string">'url'</span><span class="token punctuation">:</span> <span class="token string">'www.runoob.com'</span><span class="token punctuation">&#125;</span>
+
+element <span class="token operator">=</span> site<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token string">'name'</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'删除的元素为:'</span><span class="token punctuation">,</span> element<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'字典为:'</span><span class="token punctuation">,</span> site<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>删除的元素为: 菜鸟教程
+字典为: &#123;&#39;alexa&#39;: 10000, &#39;url&#39;: &#39;www.runoob.com&#39;&#125;
+</code></pre>
+<h3 id="popitem"><a href="#popitem" class="headerlink" title="popitem()"></a>popitem()</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python">site<span class="token operator">=</span> <span class="token punctuation">&#123;</span><span class="token string">'name'</span><span class="token punctuation">:</span> <span class="token string">'菜鸟教程'</span><span class="token punctuation">,</span> <span class="token string">'alexa'</span><span class="token punctuation">:</span> <span class="token number">10000</span><span class="token punctuation">,</span> <span class="token string">'url'</span><span class="token punctuation">:</span> <span class="token string">'www.runoob.com'</span><span class="token punctuation">&#125;</span>
+
+<span class="token comment"># ('url': 'www.runoob.com') 最后插入会被删除</span>
+result <span class="token operator">=</span> site<span class="token punctuation">.</span>popitem<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'返回值 = '</span><span class="token punctuation">,</span> result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'site = '</span><span class="token punctuation">,</span> site<span class="token punctuation">)</span>
+
+<span class="token comment"># 插入新元素</span>
+site<span class="token punctuation">[</span><span class="token string">'nickname'</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token string">'Runoob'</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'site = '</span><span class="token punctuation">,</span> site<span class="token punctuation">)</span>
+
+<span class="token comment"># 现在 ('nickname', 'Runoob') 是最后插入的元素</span>
+result <span class="token operator">=</span> site<span class="token punctuation">.</span>popitem<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'返回值 = '</span><span class="token punctuation">,</span> result<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">'site = '</span><span class="token punctuation">,</span> site<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<pre><code>返回值 =  (&#39;url&#39;, &#39;www.runoob.com&#39;)
+site =  &#123;&#39;name&#39;: &#39;菜鸟教程&#39;, &#39;alexa&#39;: 10000&#125;
+site =  &#123;&#39;name&#39;: &#39;菜鸟教程&#39;, &#39;alexa&#39;: 10000, &#39;nickname&#39;: &#39;Runoob&#39;&#125;
+返回值 =  (&#39;nickname&#39;, &#39;Runoob&#39;)
+site =  &#123;&#39;name&#39;: &#39;菜鸟教程&#39;, &#39;alexa&#39;: 10000&#125;
+</code></pre>
  
       </div>
       <hr />
@@ -1143,7 +1429,7 @@ True
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">46.1k</span>
+                        class="white-color">47.5k</span>
             
             
             
