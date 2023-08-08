@@ -5,10 +5,10 @@
 <head>
     <meta charset="utf-8">
     <meta name="keywords" content="代码随想录-贪心, Twistzz&#39;Blog">
-    <meta name="description" content="贪心篇121 买卖股票的最佳时机class Solution:
-    def maxProfit(self, prices: List[int]) -&gt; int:
-        profit=0
-        min_price=fl">
+    <meta name="description" content="贪心篇455. 分发饼干思路代码class Solution:
+    def findContentChildren(self, g, s):
+        g.sort()  # 将孩子的贪心因子排序
+        s.sort()">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -366,11 +366,11 @@
         </div>
          
         <div class="post-date info-break-policy">
-          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-06-10
+          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-08-07
         </div>
          
         <div class="info-break-policy">
-          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 85
+          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 119
         </div>
          
         <div class="info-break-policy">
@@ -397,22 +397,20 @@
 
     <div class="card-content article-card-content">
       <div id="articleContent">
-        <h1 id="贪心篇"><a href="#贪心篇" class="headerlink" title="贪心篇"></a>贪心篇</h1><h2 id="121-买卖股票的最佳时机"><a href="#121-买卖股票的最佳时机" class="headerlink" title="121 买卖股票的最佳时机"></a>121 买卖股票的最佳时机</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> prices<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
-        profit<span class="token operator">=</span><span class="token number">0</span>
-        min_price<span class="token operator">=</span><span class="token builtin">float</span><span class="token punctuation">(</span><span class="token string">"inf"</span><span class="token punctuation">)</span>
-        <span class="token keyword">for</span> price <span class="token keyword">in</span> prices<span class="token punctuation">:</span>
-            min_price<span class="token operator">=</span><span class="token builtin">min</span><span class="token punctuation">(</span>min_price<span class="token punctuation">,</span>price<span class="token punctuation">)</span>
-            profit<span class="token operator">=</span><span class="token builtin">max</span><span class="token punctuation">(</span>profit<span class="token punctuation">,</span>price<span class="token operator">-</span>min_price<span class="token punctuation">)</span>
-        <span class="token keyword">return</span> profit<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        <h1 id="贪心篇"><a href="#贪心篇" class="headerlink" title="贪心篇"></a>贪心篇</h1><h2 id="455-分发饼干"><a href="#455-分发饼干" class="headerlink" title="455. 分发饼干"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/assign-cookies/">455. 分发饼干</a></h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">findContentChildren</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> g<span class="token punctuation">,</span> s<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        g<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 将孩子的贪心因子排序</span>
+        s<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># 将饼干的尺寸排序</span>
+        index <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>s<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token number">1</span>  <span class="token comment"># 饼干数组的下标，从最后一个饼干开始</span>
+        result <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># 满足孩子的数量</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>g<span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">:</span>  <span class="token comment"># 遍历胃口，从最后一个孩子开始</span>
+            <span class="token keyword">if</span> index <span class="token operator">>=</span> <span class="token number">0</span> <span class="token keyword">and</span> s<span class="token punctuation">[</span>index<span class="token punctuation">]</span> <span class="token operator">>=</span> g<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">:</span>  <span class="token comment"># 遍历饼干</span>
+                result <span class="token operator">+=</span> <span class="token number">1</span>
+                index <span class="token operator">-=</span> <span class="token number">1</span>
+        <span class="token keyword">return</span> result<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="122-买卖股票的最佳时机-II"><a href="#122-买卖股票的最佳时机-II" class="headerlink" title="122 买卖股票的最佳时机 II"></a>122 买卖股票的最佳时机 II</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">maxProfit</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> prices<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
-        res<span class="token operator">=</span><span class="token number">0</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>prices<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span>prices<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">></span><span class="token number">0</span><span class="token punctuation">:</span>
-                res<span class="token operator">+=</span>prices<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span>prices<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
-        <span class="token keyword">return</span> res<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="376-摆动序列"><a href="#376-摆动序列" class="headerlink" title="376. 摆动序列"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/wiggle-subsequence/">376. 摆动序列</a></h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-none"><code class="language-none">	<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
  
       </div>
       <hr />
@@ -875,7 +873,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.5k</span>
+                        class="white-color">61.9k</span>
             
             
             

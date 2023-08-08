@@ -368,16 +368,16 @@
         </div>
          
         <div class="post-date info-break-policy">
-          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-08-06
+          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-08-07
         </div>
          
         <div class="info-break-policy">
-          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 4.3k
+          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 4.4k
         </div>
          
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          17 分
+          18 分
         </div>
          
         <div id="busuanzi_container_page_pv" class="info-break-policy">
@@ -715,9 +715,7 @@
         num<span class="token operator">=</span><span class="token builtin">int</span><span class="token punctuation">(</span>s<span class="token punctuation">[</span>left<span class="token punctuation">:</span>right<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
         <span class="token keyword">return</span> num<span class="token operator">>=</span><span class="token number">0</span> <span class="token keyword">and</span> num<span class="token operator">&lt;=</span><span class="token number">255</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="491-递增子序列"><a href="#491-递增子序列" class="headerlink" title="491. 递增子序列"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/non-decreasing-subsequences/">491. 递增子序列</a></h2><h3 id="思路-9"><a href="#思路-9" class="headerlink" title="思路"></a>思路</h3><ul>
-<li></li>
-</ul>
+<h2 id="491-递增子序列"><a href="#491-递增子序列" class="headerlink" title="491. 递增子序列"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/non-decreasing-subsequences/">491. 递增子序列</a></h2><h3 id="思路-9"><a href="#思路-9" class="headerlink" title="思路"></a>思路</h3><p>- </p>
 <h3 id="代码-9"><a href="#代码-9" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">findSubsequences</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
         result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
@@ -772,6 +770,31 @@
             self<span class="token punctuation">.</span>backtracking<span class="token punctuation">(</span>nums<span class="token punctuation">,</span> path<span class="token punctuation">,</span> used<span class="token punctuation">,</span> result<span class="token punctuation">)</span>
             path<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
             used<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">False</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="47-全排列-II"><a href="#47-全排列-II" class="headerlink" title="47. 全排列 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/permutations-ii/">47. 全排列 II</a></h2><h3 id="思路-11"><a href="#思路-11" class="headerlink" title="思路"></a>思路</h3><p>- </p>
+<p><img src="https://code-thinking-1253855093.file.myqcloud.com/pics/20201124201331223.png" alt="47.全排列II1"></p>
+<h3 id="代码-11"><a href="#代码-11" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">permuteUnique</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        nums<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        path<span class="token punctuation">,</span>res<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+        used<span class="token operator">=</span><span class="token punctuation">[</span><span class="token boolean">False</span><span class="token punctuation">]</span><span class="token operator">*</span><span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>backtracking<span class="token punctuation">(</span>nums<span class="token punctuation">,</span>path<span class="token punctuation">,</span>res<span class="token punctuation">,</span>used<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> res
+    <span class="token keyword">def</span> <span class="token function">backtracking</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>nums<span class="token punctuation">,</span>path<span class="token punctuation">,</span>res<span class="token punctuation">,</span>used<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token builtin">len</span><span class="token punctuation">(</span>path<span class="token punctuation">)</span><span class="token operator">==</span><span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>path<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> 
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span>  i<span class="token operator">></span><span class="token number">0</span> <span class="token keyword">and</span>  nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">==</span>nums<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">and</span> used<span class="token punctuation">[</span>i<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">==</span><span class="token boolean">False</span><span class="token punctuation">:</span>
+                <span class="token keyword">continue</span>
+            <span class="token keyword">if</span> used<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                <span class="token keyword">continue</span>
+            path<span class="token punctuation">.</span>append<span class="token punctuation">(</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            used<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token boolean">True</span>
+            self<span class="token punctuation">.</span>backtracking<span class="token punctuation">(</span>nums<span class="token punctuation">,</span>path<span class="token punctuation">,</span>res<span class="token punctuation">,</span>used<span class="token punctuation">)</span>
+            path<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            used<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">=</span><span class="token boolean">False</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
  
       </div>
       <hr />
@@ -1222,7 +1245,7 @@
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.5k</span>
+                        class="white-color">61.9k</span>
             
             
             

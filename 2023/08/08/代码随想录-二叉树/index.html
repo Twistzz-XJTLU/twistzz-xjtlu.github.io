@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="代码随想录-二叉树V2, Twistzz&#39;Blog">
+    <meta name="keywords" content="代码随想录-二叉树, Twistzz&#39;Blog">
     <meta name="description" content="代码随想录 -二叉树篇递归三部曲 牢记
 确定递归函数的参数和返回值
 确定终止条件
@@ -25,7 +25,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>代码随想录-二叉树V2 | Twistzz&#39;Blog</title>
+    <title>代码随想录-二叉树 | Twistzz&#39;Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -298,12 +298,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/2.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">代码随想录-二叉树V2</h1>
+                    <h1 class="description center-align post-title">代码随想录-二叉树</h1>
                 </div>
             </div>
         </div>
@@ -367,20 +367,20 @@
       <div class="post-info">
         
         <div class="post-date info-break-policy">
-          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2023-07-26
+          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2023-08-08
         </div>
          
         <div class="post-date info-break-policy">
-          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-08-02
+          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-08-08
         </div>
          
         <div class="info-break-policy">
-          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 7.7k
+          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 8.4k
         </div>
          
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          32 分
+          36 分
         </div>
          
         <div id="busuanzi_container_page_pv" class="info-break-policy">
@@ -855,11 +855,11 @@ class Solution:
 
 <h2 id="404-左叶子之和"><a href="#404-左叶子之和" class="headerlink" title="404. 左叶子之和"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/sum-of-left-leaves/">404. 左叶子之和</a></h2><h3 id="思路-15"><a href="#思路-15" class="headerlink" title="思路"></a>思路</h3><ul>
 <li>本体要求左叶子之和 有些特殊 平时都是判断本节点 但是根据当前节点我们不能判断是否是叶子节点</li>
-<li>所以我们要通过父节点来进行判断	</li>
+<li>所以我们要通过父节点来进行判断</li>
 <li>采用后续遍历 先递归调用左右孩子 分别求出左孩子的左叶子之和 和右孩子的左叶子之和</li>
 <li>然后我求出当前节点的左叶子之和</li>
-<li>如果当前节点的左孩子有 而且左孩子的左孩子是空 左孩子的右孩子是空 那就代表当前节点的左孩子是我们要求的点 </li>
-<li>用mid_sum记录当前值</li>
+<li>如果当前节点的左孩子有 而且左孩子的左孩子是空 左孩子的右孩子是空 那就代表当前节点的左孩子是我们要求的点</li>
+<li>用 mid_sum 记录当前值</li>
 <li>最后返回三者之和</li>
 </ul>
 <h3 id="代码-14"><a href="#代码-14" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for a binary tree node.</span>
@@ -881,7 +881,7 @@ class Solution:
 
 <h2 id="513-找树左下角的值"><a href="#513-找树左下角的值" class="headerlink" title="513. 找树左下角的值"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-bottom-left-tree-value/">513. 找树左下角的值</a></h2><h3 id="思路-16"><a href="#思路-16" class="headerlink" title="思路"></a>思路</h3><ul>
 <li>本体使用层序遍历比较简单</li>
-<li>记录每一层的第一个值 </li>
+<li>记录每一层的第一个值</li>
 <li>进行层序遍历</li>
 <li>最后遍历的一层的第一个值就是我们要的答案</li>
 </ul>
@@ -911,11 +911,11 @@ class Solution:
 <h2 id="112-路径总和"><a href="#112-路径总和" class="headerlink" title="112. 路径总和"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/path-sum/">112. 路径总和</a></h2><h3 id="思路-17"><a href="#思路-17" class="headerlink" title="思路"></a>思路</h3><ul>
 <li>本体采用精简代码版本比较好理解和书写</li>
 <li>采用前序遍历</li>
-<li>通过当前节点是空那么就返回False 为什么? 因为通过遍历到了当前节点 意味着<code>targetSum</code>还没有被减到0</li>
-<li>那就意味着我们还需要找到一个值让<code>targetSum</code>去减 但是当前节点都是空了 肯定<code>targetSum </code>不能再减少了 所以就返回False</li>
-<li>然后接着判断 如果当前节点是叶子几点也就是当前节点的左右孩子都是空 </li>
-<li>而且当前节点的值就是<code>targetSum</code>的值 那么就代表着<code>targetSum</code>减去当前节点的值是0 所以找到了这条路径 于是就返回True</li>
-<li>然后接着判断左右孩子 如果左右孩子中有一个是True 就返回True</li>
+<li>通过当前节点是空那么就返回 False 为什么? 因为通过遍历到了当前节点 意味着<code>targetSum</code>还没有被减到 0</li>
+<li>那就意味着我们还需要找到一个值让<code>targetSum</code>去减 但是当前节点都是空了 肯定<code>targetSum </code>不能再减少了 所以就返回 False</li>
+<li>然后接着判断 如果当前节点是叶子几点也就是当前节点的左右孩子都是空</li>
+<li>而且当前节点的值就是<code>targetSum</code>的值 那么就代表着<code>targetSum</code>减去当前节点的值是 0 所以找到了这条路径 于是就返回 True</li>
+<li>然后接着判断左右孩子 如果左右孩子中有一个是 True 就返回 True</li>
 </ul>
 <h3 id="代码-精简版本"><a href="#代码-精简版本" class="headerlink" title="代码(精简版本)"></a>代码(精简版本)</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for a binary tree node.</span>
 <span class="token comment"># class TreeNode:</span>
@@ -933,15 +933,15 @@ class Solution:
 
 <h2 id="113-路径总和-II"><a href="#113-路径总和-II" class="headerlink" title="113. 路径总和 II"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/path-sum-ii/">113. 路径总和 II</a></h2><h3 id="思路-18"><a href="#思路-18" class="headerlink" title="思路"></a>思路</h3><ul>
 <li>本题使用前序遍历 判断逻辑是看所剩的值是否和当前节点的值一样大并且该节点是叶子节点</li>
-<li>首先要定义path和res变量 分别存储每条路径和最后结果</li>
-<li>进入循环 如果当前节点是空的话那个就什么都不敢 res不用动</li>
-<li>所以经过是否为空判断后 那么此节点一定不是空 所以加入path路径中 并且total_sum减少相应的值</li>
-<li>如果该节点是叶子节点并且total_sum是0了(因为我们total_sum先减去了当前节点的值)</li>
+<li>首先要定义 path 和 res 变量 分别存储每条路径和最后结果</li>
+<li>进入循环 如果当前节点是空的话那个就什么都不敢 res 不用动</li>
+<li>所以经过是否为空判断后 那么此节点一定不是空 所以加入 path 路径中 并且 total_sum 减少相应的值</li>
+<li>如果该节点是叶子节点并且 total_sum 是 0 了(因为我们 total_sum 先减去了当前节点的值)</li>
 <li>然后判断左右节点</li>
-<li>最后一定要记得path pop 为什么要pop?</li>
-<li>因为我们当前节点一开始被加入到了path中 path会一直存储这这个值</li>
+<li>最后一定要记得 path pop 为什么要 pop?</li>
+<li>因为我们当前节点一开始被加入到了 path 中 path 会一直存储这这个值</li>
 <li>假设我们当前遍历的节点是左孩子 遍历完之后 我们就要遍历右孩子了</li>
-<li>但是在遍历右孩子之前 我们要把左孩子pop出去 因为这不是一条路径 我们遍历右孩子的到时候path最后的值应该是根节点 而不是左节点</li>
+<li>但是在遍历右孩子之前 我们要把左孩子 pop 出去 因为这不是一条路径 我们遍历右孩子的到时候 path 最后的值应该是根节点 而不是左节点</li>
 </ul>
 <h3 id="代码-16"><a href="#代码-16" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for a binary tree node.</span>
 <span class="token comment"># class TreeNode:</span>
@@ -956,7 +956,7 @@ class Solution:
         <span class="token keyword">return</span> res
     <span class="token keyword">def</span> <span class="token function">backtracking</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>node<span class="token punctuation">,</span>total_sum<span class="token punctuation">,</span>path<span class="token punctuation">,</span>res<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">if</span> <span class="token keyword">not</span> node<span class="token punctuation">:</span>
-            <span class="token keyword">return</span> 
+            <span class="token keyword">return</span>
         path<span class="token punctuation">.</span>append<span class="token punctuation">(</span>node<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
         total_sum<span class="token operator">-=</span>node<span class="token punctuation">.</span>val
         <span class="token keyword">if</span> node<span class="token punctuation">.</span>left <span class="token keyword">is</span> <span class="token boolean">None</span> <span class="token keyword">and</span> node<span class="token punctuation">.</span>right <span class="token keyword">is</span> <span class="token boolean">None</span> <span class="token keyword">and</span> total_sum<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">:</span>
@@ -969,13 +969,13 @@ class Solution:
 <li>本题采用前序遍历 首先我们确定中间节点 然后递归调用函数 确定中间节点的左右节点</li>
 <li>我们知道了中序和后续 这意味着什么</li>
 <li>意味着根据后续的最后一个元素可以判断当前谁是根元素</li>
-<li>我们根据当前根元素 获取当前根元素代中序数组中的索引 这样我们就知道中序数组怎么切了 </li>
+<li>我们根据当前根元素 获取当前根元素代中序数组中的索引 这样我们就知道中序数组怎么切了</li>
 <li>为什么要切 因为切了之后我们才知道数组的哪一部分是当前节点的左孩子们 当前节点的右孩子们</li>
 <li>切完中序数组之后我们就要切后续数组 那么后序数组怎么切呢</li>
 <li>中序数组 因为我们知道谁是根节点了 我们就可以找到根节点的中序数组中的位置 然后切割 那后序数组呢</li>
 <li>后序数组我们要根据中序数组切割后的左孩子们构成的数组的长度进行切割 因为我们切割前序数组后会用变量存储左前序数组和右前序数组</li>
 <li>后序数组切割的时候 左后序数组是从零开始到左前序数组的长度 为什么?</li>
-<li>因为左前序数组的长度我们已经知道了 就意味着当前节点的左孩子的数量我们知道了 </li>
+<li>因为左前序数组的长度我们已经知道了 就意味着当前节点的左孩子的数量我们知道了</li>
 <li>牢记等式: 中序数字和数量&#x3D;后序数组的数量 所以后序左数组就是<code>[0:len(left_inorder)]</code></li>
 <li>那后序右数组呢 <code>len(left_inorder):-1</code> 一定要注意是到-1 而不是最后</li>
 <li>因为最后一个元素是当前的根节点 不是我们需要的</li>
@@ -997,7 +997,7 @@ class Solution:
         split_index<span class="token operator">=</span>inorder<span class="token punctuation">.</span>index<span class="token punctuation">(</span>root_val<span class="token punctuation">)</span>
         left_inorder<span class="token operator">=</span>inorder<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span>split_index<span class="token punctuation">]</span>
         right_inorder<span class="token operator">=</span>inorder<span class="token punctuation">[</span>split_index<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
-        
+
         left_postorder<span class="token operator">=</span>postorder<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">:</span><span class="token builtin">len</span><span class="token punctuation">(</span>left_inorder<span class="token punctuation">)</span><span class="token punctuation">]</span>
         right_postorder<span class="token operator">=</span>postorder<span class="token punctuation">[</span><span class="token builtin">len</span><span class="token punctuation">(</span>left_inorder<span class="token punctuation">)</span><span class="token punctuation">:</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span>
 
@@ -1008,7 +1008,7 @@ class Solution:
 
 <h2 id="105-从前序与中序遍历序列构造二叉树"><a href="#105-从前序与中序遍历序列构造二叉树" class="headerlink" title="105. 从前序与中序遍历序列构造二叉树"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/construct-binary-tree-from-preorder-and-inorder-traversal/">105. 从前序与中序遍历序列构造二叉树</a></h2><h3 id="思路-20"><a href="#思路-20" class="headerlink" title="思路"></a>思路</h3><ul>
 <li>和上一题思路已经</li>
-<li>主要前序切得时候一定要加上1 因为1是最开始的 要跳过 所以都要加1</li>
+<li>主要前序切得时候一定要加上 1 因为 1 是最开始的 要跳过 所以都要加 1</li>
 </ul>
 <h3 id="代码-18"><a href="#代码-18" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for a binary tree node.</span>
 <span class="token comment"># class TreeNode:</span>
@@ -1036,7 +1036,7 @@ class Solution:
 
 <h2 id="654-最大二叉树"><a href="#654-最大二叉树" class="headerlink" title="654. 最大二叉树"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-binary-tree/">654. 最大二叉树</a></h2><h3 id="思路-21"><a href="#思路-21" class="headerlink" title="思路"></a>思路</h3><ul>
 <li>首先求出最大值和最大值的下表</li>
-<li>然后根据最大值简历根节点 根据最大值下表切割nums</li>
+<li>然后根据最大值简历根节点 根据最大值下表切割 nums</li>
 <li>然后递归调用函数求出当前节点的左孩子和当前节点的右孩子</li>
 <li>最后返回根节点</li>
 </ul>
@@ -1088,7 +1088,7 @@ class Solution:
 <li>采用前序遍历</li>
 </ul>
 </li>
-<li>递归函数的终止条件 如果当前节点是空 那么就返回None</li>
+<li>递归函数的终止条件 如果当前节点是空 那么就返回 None</li>
 <li>如果当前节点的值等于要求的值 那么久返回当前节点 (这点和上一点可以合并)</li>
 <li>如果判断当前节点的值和需要求的值得大小关系 然后递归调用</li>
 <li>注意我们要用变量存储这最后结果 因为我们要返回这个结果</li>
@@ -1102,7 +1102,7 @@ class Solution:
 <span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
     <span class="token keyword">def</span> <span class="token function">searchBST</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">,</span> val<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">:</span>
         <span class="token keyword">if</span> <span class="token keyword">not</span> root<span class="token punctuation">:</span>
-            <span class="token keyword">return</span> 
+            <span class="token keyword">return</span>
         <span class="token keyword">if</span> root<span class="token punctuation">.</span>val<span class="token operator">==</span>val<span class="token punctuation">:</span>
             <span class="token keyword">return</span> root
         <span class="token keyword">if</span> root<span class="token punctuation">.</span>val<span class="token operator">></span>val<span class="token punctuation">:</span>
@@ -1111,22 +1111,22 @@ class Solution:
             res<span class="token operator">=</span>self<span class="token punctuation">.</span>searchBST<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">,</span>val<span class="token punctuation">)</span>
         <span class="token keyword">return</span> res<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="98-验证二叉搜索树"><a href="#98-验证二叉搜索树" class="headerlink" title="98. 验证二叉搜索树"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/validate-binary-search-tree/">98. 验证二叉搜索树</a></h2><h3 id="思路-24"><a href="#思路-24" class="headerlink" title="思路"></a>思路</h3><h4 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h4><ul>
+<h2 id="98-验证二叉搜索树"><a href="#98-验证二叉搜索树" class="headerlink" title="98. 验证二叉搜索树"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/validate-binary-search-tree/">98. 验证二叉搜索树</a></h2><h3 id="思路-24"><a href="#思路-24" class="headerlink" title="思路"></a>思路</h3><h4 id="方法-1"><a href="#方法-1" class="headerlink" title="方法 1"></a>方法 1</h4><ul>
 <li>设定一个最大值 不断更新最大值进行判断</li>
-<li>首先递归函数的终止条件 如果当前节点是空 那么空节点也可以是二叉搜索树 所以返回True</li>
+<li>首先递归函数的终止条件 如果当前节点是空 那么空节点也可以是二叉搜索树 所以返回 True</li>
 <li>然后使用中序遍历 先判断做左孩子们的情况 然后判断中间节点 然后判断右孩子们的情况</li>
 <li>如果当前节点大于最大值 要把当前节点的值设为最大值</li>
-<li>如果当前节点小于等于最大值 证明这不是二叉搜索树 </li>
+<li>如果当前节点小于等于最大值 证明这不是二叉搜索树</li>
 <li>因为我们先遍历了左孩们 而孩子们的值得最大值应该小于当前节点(也就是根节点的值) 等于也不行</li>
-<li>如果前节点小于等于最大值 我们就返回False </li>
+<li>如果前节点小于等于最大值 我们就返回 False</li>
 <li>然后我们判断右孩子们 判断右孩子和判断中间节点一样</li>
 <li>因为右孩子也是一定需要大于目前为止的最大值 如果不大于就说明不是二叉搜索树</li>
-<li>最后判断是否左右孩子都满足 要使用and</li>
+<li>最后判断是否左右孩子都满足 要使用 and</li>
 </ul>
-<h4 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h4><ul>
+<h4 id="方法-2"><a href="#方法-2" class="headerlink" title="方法 2"></a>方法 2</h4><ul>
 <li>使用中序遍历 转换成数组判断</li>
-<li>但是使用这种方法一定不要忘记判断相等情况 </li>
-<li>因为如果遍历后的数组中存在连续的两个数相等的情况那也不是二叉搜索时 </li>
+<li>但是使用这种方法一定不要忘记判断相等情况</li>
+<li>因为如果遍历后的数组中存在连续的两个数相等的情况那也不是二叉搜索时</li>
 <li>因此需要<code>if res[i]&lt;=res[i-1]</code> 这样</li>
 </ul>
 <h3 id="代码-22"><a href="#代码-22" class="headerlink" title="代码"></a>代码</h3><h4 id="设定最大值，进行比较"><a href="#设定最大值，进行比较" class="headerlink" title="设定最大值，进行比较"></a>设定最大值，进行比较</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for a binary tree node.</span>
@@ -1167,23 +1167,23 @@ class Solution:
         <span class="token keyword">if</span> <span class="token keyword">not</span> root<span class="token punctuation">:</span>
             <span class="token keyword">return</span> <span class="token boolean">None</span>
         self<span class="token punctuation">.</span>traversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span>res<span class="token punctuation">)</span>
-        res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">.</span>val<span class="token punctuation">)</span>  
+        res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>traversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">,</span>res<span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-<h2 id="530-二叉搜索树的最小绝对差"><a href="#530-二叉搜索树的最小绝对差" class="headerlink" title="530. 二叉搜索树的最小绝对差"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-absolute-difference-in-bst/">530. 二叉搜索树的最小绝对差</a></h2><h3 id="思路-25"><a href="#思路-25" class="headerlink" title="思路"></a>思路</h3><h4 id="方法1-1"><a href="#方法1-1" class="headerlink" title="方法1"></a>方法1</h4><ul>
-<li>通过一个格外的pre指针</li>
-<li>注意 这个指针和result一定要定义为全局变量 因为这两个是不可变类型 不想list一样</li>
+<h2 id="530-二叉搜索树的最小绝对差"><a href="#530-二叉搜索树的最小绝对差" class="headerlink" title="530. 二叉搜索树的最小绝对差"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/minimum-absolute-difference-in-bst/">530. 二叉搜索树的最小绝对差</a></h2><h3 id="思路-25"><a href="#思路-25" class="headerlink" title="思路"></a>思路</h3><h4 id="方法-1-1"><a href="#方法-1-1" class="headerlink" title="方法 1"></a>方法 1</h4><ul>
+<li>通过一个格外的 pre 指针</li>
+<li>注意 这个指针和 result 一定要定义为全局变量 因为这两个是不可变类型 不想 list 一样</li>
 <li>如果当前是空那么就返回 什么也不干</li>
 <li>然后递归调用左孩子们</li>
-<li>递归调用完左孩子们后 如果pre不是空的 那么我们就要去当前节点与pre节点的差 和result中小的值</li>
-<li>然后pre节点等于当前节点 相当于移动pre节点</li>
+<li>递归调用完左孩子们后 如果 pre 不是空的 那么我们就要去当前节点与 pre 节点的差 和 result 中小的值</li>
+<li>然后 pre 节点等于当前节点 相当于移动 pre 节点</li>
 <li>然后递归调用右孩子们</li>
-<li>最后返回result结果</li>
+<li>最后返回 result 结果</li>
 </ul>
-<h4 id="方法2-1"><a href="#方法2-1" class="headerlink" title="方法2"></a>方法2</h4><ul>
-<li>使用中序遍历 </li>
-<li>变成list 然后在list中进行中判断</li>
+<h4 id="方法-2-1"><a href="#方法-2-1" class="headerlink" title="方法 2"></a>方法 2</h4><ul>
+<li>使用中序遍历</li>
+<li>变成 list 然后在 list 中进行中判断</li>
 </ul>
 <h3 id="代码-23"><a href="#代码-23" class="headerlink" title="代码"></a>代码</h3><h4 id="使用额外指针"><a href="#使用额外指针" class="headerlink" title="使用额外指针"></a>使用额外指针</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for a binary tree node.</span>
 <span class="token comment"># class TreeNode:</span>
@@ -1226,13 +1226,122 @@ class Solution:
 
     <span class="token keyword">def</span> <span class="token function">traversal</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span>root<span class="token punctuation">,</span>res<span class="token punctuation">)</span><span class="token punctuation">:</span>
         <span class="token keyword">if</span> <span class="token keyword">not</span> root<span class="token punctuation">:</span>
-            <span class="token keyword">return</span> 
+            <span class="token keyword">return</span>
         self<span class="token punctuation">.</span>traversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span>res<span class="token punctuation">)</span>
         res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>root<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
         self<span class="token punctuation">.</span>traversal<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">,</span>res<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
+<h2 id="236-二叉树的最近公共祖先"><a href="#236-二叉树的最近公共祖先" class="headerlink" title="236. 二叉树的最近公共祖先"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-tree/">236. 二叉树的最近公共祖先</a></h2><h3 id="思路-26"><a href="#思路-26" class="headerlink" title="思路"></a>思路</h3><ul>
+<li>本题采用后序遍历 因为要从最底下向上查找</li>
+<li>先获取左右节点的情况 在根据当前节点和左右节点的情况进行判断</li>
+<li>如下图所示进行分类讨论</li>
+</ul>
+<p><img src="https://cdn.staticaly.com/gh/Twistzz-XJTLU/picx-images-hosting@master/20230803/FireShot-Capture-051---%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%A5%96%E5%85%88%E3%80%90%E5%9F%BA%E7%A1%80%E7%AE%97%E6%B3%95%E7%B2%BE%E8%AE%B2-12%E3%80%91_%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9_bilibili---www.bilibili.com.xdo62vs29nk.webp"></p>
+<h3 id="代码-24"><a href="#代码-24" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for a binary tree node.</span>
+<span class="token comment"># class TreeNode:</span>
+<span class="token comment">#     def __init__(self, x):</span>
+<span class="token comment">#         self.val = x</span>
+<span class="token comment">#         self.left = None</span>
+<span class="token comment">#         self.right = None</span>
 
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">lowestCommonAncestor</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">:</span> <span class="token string">'TreeNode'</span><span class="token punctuation">,</span> p<span class="token punctuation">:</span> <span class="token string">'TreeNode'</span><span class="token punctuation">,</span> q<span class="token punctuation">:</span> <span class="token string">'TreeNode'</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token string">'TreeNode'</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> root <span class="token keyword">or</span> root<span class="token operator">==</span>p <span class="token keyword">or</span> root<span class="token operator">==</span>q<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> root
+        left<span class="token operator">=</span>self<span class="token punctuation">.</span>lowestCommonAncestor<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span>p<span class="token punctuation">,</span>q<span class="token punctuation">)</span>
+        right<span class="token operator">=</span>self<span class="token punctuation">.</span>lowestCommonAncestor<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">,</span>p<span class="token punctuation">,</span>q<span class="token punctuation">)</span>
 
+        <span class="token keyword">if</span> left <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span> <span class="token keyword">and</span> right <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> root
+        <span class="token keyword">if</span> left <span class="token keyword">is</span> <span class="token boolean">None</span> <span class="token keyword">and</span> right <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> right
+        <span class="token keyword">if</span> left <span class="token keyword">is</span> <span class="token keyword">not</span> <span class="token boolean">None</span> <span class="token keyword">and</span> right <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> left
+        <span class="token keyword">return</span> <span class="token boolean">None</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="235-二叉搜索树的最近公共祖先"><a href="#235-二叉搜索树的最近公共祖先" class="headerlink" title="235. 二叉搜索树的最近公共祖先"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/lowest-common-ancestor-of-a-binary-search-tree/">235. 二叉搜索树的最近公共祖先</a></h2><h3 id="思路-27"><a href="#思路-27" class="headerlink" title="思路"></a>思路</h3><ul>
+<li>只要从上到下去遍历，遇到 cur 节点是数值在[p, q]区间中则一定可以说明该节点 cur 就是 q 和 p 的公共祖先。 那问题来了，<strong>一定是最近公共祖先吗</strong>？</li>
+<li>是的 理解这一点就可以作出本题</li>
+</ul>
+<h3 id="代码-25"><a href="#代码-25" class="headerlink" title="代码"></a>代码</h3><h4 id="迭代法"><a href="#迭代法" class="headerlink" title="迭代法"></a>迭代法</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for a binary tree node.</span>
+<span class="token comment"># class TreeNode:</span>
+<span class="token comment">#     def __init__(self, x):</span>
+<span class="token comment">#         self.val = x</span>
+<span class="token comment">#         self.left = None</span>
+<span class="token comment">#         self.right = None</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">lowestCommonAncestor</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">:</span> <span class="token string">'TreeNode'</span><span class="token punctuation">,</span> p<span class="token punctuation">:</span> <span class="token string">'TreeNode'</span><span class="token punctuation">,</span> q<span class="token punctuation">:</span> <span class="token string">'TreeNode'</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token string">'TreeNode'</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> root<span class="token punctuation">.</span>val<span class="token operator">&lt;</span>q<span class="token punctuation">.</span>val <span class="token keyword">and</span> root<span class="token punctuation">.</span>val<span class="token operator">&lt;</span>p<span class="token punctuation">.</span>val<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>lowestCommonAncestor<span class="token punctuation">(</span>root<span class="token punctuation">.</span>right<span class="token punctuation">,</span>p<span class="token punctuation">,</span>q<span class="token punctuation">)</span>
+        <span class="token keyword">elif</span> root<span class="token punctuation">.</span>val<span class="token operator">></span>q<span class="token punctuation">.</span>val <span class="token keyword">and</span> root<span class="token punctuation">.</span>val<span class="token operator">></span>p<span class="token punctuation">.</span>val<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>lowestCommonAncestor<span class="token punctuation">(</span>root<span class="token punctuation">.</span>left<span class="token punctuation">,</span>p<span class="token punctuation">,</span>q<span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> root
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h4 id="递归法"><a href="#递归法" class="headerlink" title="递归法"></a>递归法</h4><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment"># Definition for a binary tree node.</span>
+<span class="token comment"># class TreeNode:</span>
+<span class="token comment">#     def __init__(self, x):</span>
+<span class="token comment">#         self.val = x</span>
+<span class="token comment">#         self.left = None</span>
+<span class="token comment">#         self.right = None</span>
+
+<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">lowestCommonAncestor</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">:</span> <span class="token string">'TreeNode'</span><span class="token punctuation">,</span> p<span class="token punctuation">:</span> <span class="token string">'TreeNode'</span><span class="token punctuation">,</span> q<span class="token punctuation">:</span> <span class="token string">'TreeNode'</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token string">'TreeNode'</span><span class="token punctuation">:</span>
+        <span class="token keyword">while</span> root<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> root<span class="token punctuation">.</span>val<span class="token operator">></span>p<span class="token punctuation">.</span>val <span class="token keyword">and</span> root<span class="token punctuation">.</span>val<span class="token operator">></span>q<span class="token punctuation">.</span>val<span class="token punctuation">:</span>
+                root<span class="token operator">=</span>root<span class="token punctuation">.</span>left
+            <span class="token keyword">elif</span> root<span class="token punctuation">.</span>val<span class="token operator">&lt;</span>p<span class="token punctuation">.</span>val <span class="token keyword">and</span> root<span class="token punctuation">.</span>val<span class="token operator">&lt;</span>q<span class="token punctuation">.</span>val<span class="token punctuation">:</span>
+                root<span class="token operator">=</span>root<span class="token punctuation">.</span>right
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                <span class="token keyword">return</span> root<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="501-二叉搜索树中的众数"><a href="#501-二叉搜索树中的众数" class="headerlink" title="501. 二叉搜索树中的众数"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-mode-in-binary-search-tree/">501. 二叉搜索树中的众数</a></h2><h3 id="思路-28"><a href="#思路-28" class="headerlink" title="思路"></a>思路</h3><ul>
+<li>利用二叉搜索树的性质</li>
+<li>使用中序遍历</li>
+<li>或者可以使用暴力搜索 然后进行排序取出众数</li>
+</ul>
+<h3 id="代码-26"><a href="#代码-26" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>maxCount <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># 最大频率</span>
+        self<span class="token punctuation">.</span>count <span class="token operator">=</span> <span class="token number">0</span>  <span class="token comment"># 统计频率</span>
+        self<span class="token punctuation">.</span>pre <span class="token operator">=</span> <span class="token boolean">None</span>
+        self<span class="token punctuation">.</span>result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">searchBST</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> cur<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> cur <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span>
+
+        self<span class="token punctuation">.</span>searchBST<span class="token punctuation">(</span>cur<span class="token punctuation">.</span>left<span class="token punctuation">)</span>  <span class="token comment"># 左</span>
+        <span class="token comment"># 中</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>pre <span class="token keyword">is</span> <span class="token boolean">None</span><span class="token punctuation">:</span>  <span class="token comment"># 第一个节点</span>
+            self<span class="token punctuation">.</span>count <span class="token operator">=</span> <span class="token number">1</span>
+        <span class="token keyword">elif</span> self<span class="token punctuation">.</span>pre<span class="token punctuation">.</span>val <span class="token operator">==</span> cur<span class="token punctuation">.</span>val<span class="token punctuation">:</span>  <span class="token comment"># 与前一个节点数值相同</span>
+            self<span class="token punctuation">.</span>count <span class="token operator">+=</span> <span class="token number">1</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>  <span class="token comment"># 与前一个节点数值不同</span>
+            self<span class="token punctuation">.</span>count <span class="token operator">=</span> <span class="token number">1</span>
+        self<span class="token punctuation">.</span>pre <span class="token operator">=</span> cur  <span class="token comment"># 更新上一个节点</span>
+
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>count <span class="token operator">==</span> self<span class="token punctuation">.</span>maxCount<span class="token punctuation">:</span>  <span class="token comment"># 如果与最大值频率相同，放进result中</span>
+            self<span class="token punctuation">.</span>result<span class="token punctuation">.</span>append<span class="token punctuation">(</span>cur<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>count <span class="token operator">></span> self<span class="token punctuation">.</span>maxCount<span class="token punctuation">:</span>  <span class="token comment"># 如果计数大于最大值频率</span>
+            self<span class="token punctuation">.</span>maxCount <span class="token operator">=</span> self<span class="token punctuation">.</span>count  <span class="token comment"># 更新最大频率</span>
+            self<span class="token punctuation">.</span>result <span class="token operator">=</span> <span class="token punctuation">[</span>cur<span class="token punctuation">.</span>val<span class="token punctuation">]</span>  <span class="token comment"># 很关键的一步，不要忘记清空result，之前result里的元素都失效了</span>
+
+        self<span class="token punctuation">.</span>searchBST<span class="token punctuation">(</span>cur<span class="token punctuation">.</span>right<span class="token punctuation">)</span>  <span class="token comment"># 右</span>
+        <span class="token keyword">return</span>
+
+    <span class="token keyword">def</span> <span class="token function">findMode</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>count <span class="token operator">=</span> <span class="token number">0</span>
+        self<span class="token punctuation">.</span>maxCount <span class="token operator">=</span> <span class="token number">0</span>
+        self<span class="token punctuation">.</span>pre <span class="token operator">=</span> <span class="token boolean">None</span>  <span class="token comment"># 记录前一个节点</span>
+        self<span class="token punctuation">.</span>result <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+        self<span class="token punctuation">.</span>searchBST<span class="token punctuation">(</span>root<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>result<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
  
       </div>
       <hr />
@@ -1258,7 +1367,7 @@ class Solution:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://twistzz-xjtlu.github.io/2023/07/26/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E4%BA%8C%E5%8F%89%E6%A0%91V2/">https://twistzz-xjtlu.github.io/2023/07/26/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E4%BA%8C%E5%8F%89%E6%A0%91V2/</a>
+                    <a href="https://twistzz-xjtlu.github.io/2023/08/08/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E4%BA%8C%E5%8F%89%E6%A0%91/">https://twistzz-xjtlu.github.io/2023/08/08/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E4%BA%8C%E5%8F%89%E6%A0%91/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -1384,13 +1493,13 @@ class Solution:
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2023/07/26/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E4%BA%8C%E5%8F%89%E6%A0%91V2/">
+                <a href="/2023/08/08/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E4%BA%8C%E5%8F%89%E6%A0%91/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="代码随想录-二叉树V2">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="代码随想录-二叉树">
                         
-                        <span class="card-title">代码随想录-二叉树V2</span>
+                        <span class="card-title">代码随想录-二叉树</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1401,7 +1510,7 @@ class Solution:
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-07-26
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-08
                             </span>
                         <span class="publish-author">
                             
@@ -1681,7 +1790,7 @@ class Solution:
             <br>
             
                 &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                        class="white-color">62.5k</span>
+                        class="white-color">61.9k</span>
             
             
             
