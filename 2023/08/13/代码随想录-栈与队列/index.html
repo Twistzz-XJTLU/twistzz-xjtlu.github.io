@@ -4,12 +4,12 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="代码随想录-哈希表, Twistzz&#39;Blog">
-    <meta name="description" content="代码随想录-哈希表242.有效的字母异位词#! /usr/bin/python3
+    <meta name="keywords" content="代码随想录-栈与队列, Twistzz&#39;Blog">
+    <meta name="description" content="栈与队列篇232. 用栈实现队列#! /usr/bin/python3
 # -*- coding: utf-8 -*-
-# @Time    : 2023/4/18 14:38
+# @Time    : 2023/4/22 12:16
 # @Author  : Twistzz
-class">
+class MyQu">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +21,7 @@ class">
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>代码随想录-哈希表 | Twistzz&#39;Blog</title>
+    <title>代码随想录-栈与队列 | Twistzz&#39;Blog</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -294,12 +294,12 @@ class">
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">代码随想录-哈希表</h1>
+                    <h1 class="description center-align post-title">代码随想录-栈与队列</h1>
                 </div>
             </div>
         </div>
@@ -335,8 +335,12 @@ class">
               <span class="chip bg-color">python</span>
             </a>
             
-            <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-              <span class="chip bg-color">哈希表</span>
+            <a href="/tags/%E6%A0%88/">
+              <span class="chip bg-color">栈</span>
+            </a>
+            
+            <a href="/tags/%E9%98%9F%E5%88%97/">
+              <span class="chip bg-color">队列</span>
             </a>
             
           </div>
@@ -363,20 +367,20 @@ class">
       <div class="post-info">
         
         <div class="post-date info-break-policy">
-          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2023-04-18
+          <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp; 2023-08-13
         </div>
          
         <div class="post-date info-break-policy">
-          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-04-21
+          <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp; 2023-08-13
         </div>
          
         <div class="info-break-policy">
-          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 647
+          <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp; 1.2k
         </div>
          
         <div class="info-break-policy">
           <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-          3 分
+          5 分
         </div>
          
         <div id="busuanzi_container_page_pv" class="info-break-policy">
@@ -398,182 +402,176 @@ class">
 
     <div class="card-content article-card-content">
       <div id="articleContent">
-        <h1 id="代码随想录-哈希表"><a href="#代码随想录-哈希表" class="headerlink" title="代码随想录-哈希表"></a>代码随想录-哈希表</h1><h2 id="242-有效的字母异位词"><a href="#242-有效的字母异位词" class="headerlink" title="242.有效的字母异位词"></a>242.有效的字母异位词</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
+        <h1 id="栈与队列篇"><a href="#栈与队列篇" class="headerlink" title="栈与队列篇"></a>栈与队列篇</h1><h2 id="232-用栈实现队列"><a href="#232-用栈实现队列" class="headerlink" title="232. 用栈实现队列"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/implement-queue-using-stacks/">232. 用栈实现队列</a></h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
 <span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/18 14:38</span>
+<span class="token comment"># @Time    : 2023/4/22 12:16</span>
 <span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">isAnagram</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> t<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
-        <span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-            <span class="token keyword">def</span> <span class="token function">isAnagram</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">,</span> t<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
-                <span class="token comment"># if len(s)!=len(t):</span>
-                <span class="token comment">#     return False</span>
-                <span class="token comment"># hash_map=&#123;&#125;</span>
-                <span class="token comment"># for char in s:</span>
-                <span class="token comment">#     if char not in hash_map:</span>
-                <span class="token comment">#         hash_map[char]=1</span>
-                <span class="token comment">#     else:</span>
-                <span class="token comment">#         hash_map[char]+=1</span>
-                <span class="token comment"># for char in t:</span>
-                <span class="token comment">#     if char not in hash_map:</span>
-                <span class="token comment">#         return False</span>
-                <span class="token comment">#     else:</span>
-                <span class="token comment">#         if hash_map[char]==1:</span>
-                <span class="token comment">#             hash_map.pop(char)</span>
-                <span class="token comment">#         else:</span>
-                <span class="token comment">#             hash_map[char]-=1</span>
-                <span class="token comment"># return len(hash_map)==0</span>
+<span class="token keyword">class</span> <span class="token class-name">MyQueue</span><span class="token punctuation">:</span>
 
-                record <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token number">26</span>
-                <span class="token keyword">for</span> i <span class="token keyword">in</span> s<span class="token punctuation">:</span>
-                    <span class="token comment"># 并不需要记住字符a的ASCII，只要求出一个相对数值就可以了</span>
-                    record<span class="token punctuation">[</span><span class="token builtin">ord</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">+=</span> <span class="token number">1</span>
-                <span class="token keyword">for</span> i <span class="token keyword">in</span> t<span class="token punctuation">:</span>
-                    record<span class="token punctuation">[</span><span class="token builtin">ord</span><span class="token punctuation">(</span>i<span class="token punctuation">)</span> <span class="token operator">-</span> <span class="token builtin">ord</span><span class="token punctuation">(</span><span class="token string">"a"</span><span class="token punctuation">)</span><span class="token punctuation">]</span> <span class="token operator">-=</span> <span class="token number">1</span>
-                <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">26</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
-                    <span class="token keyword">if</span> record<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">:</span>
-                        <span class="token comment"># record数组如果有的元素不为零0，说明字符串s和t 一定是谁多了字符或者谁少了字符。</span>
-                        <span class="token keyword">return</span> <span class="token boolean">False</span>
-                <span class="token keyword">return</span> <span class="token boolean">True</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>stack_in <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+        self<span class="token punctuation">.</span>stack_out <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">push</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>stack_in<span class="token punctuation">.</span>append<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">pop</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>empty<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">None</span>
+        <span class="token keyword">if</span> self<span class="token punctuation">.</span>stack_out<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>stack_out<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        <span class="token keyword">else</span><span class="token punctuation">:</span>
+            <span class="token keyword">for</span> _ <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>stack_in<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                self<span class="token punctuation">.</span>stack_out<span class="token punctuation">.</span>append<span class="token punctuation">(</span>self<span class="token punctuation">.</span>stack_in<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">return</span> self<span class="token punctuation">.</span>stack_out<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">peek</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        ans <span class="token operator">=</span> self<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>stack_out<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ans<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> ans
+
+    <span class="token keyword">def</span> <span class="token function">empty</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>stack_in <span class="token keyword">and</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>stack_out<span class="token punctuation">:</span>
+            <span class="token keyword">return</span> <span class="token boolean">True</span>
+        <span class="token keyword">return</span> <span class="token boolean">False</span>
+
+<span class="token comment"># Your MyQueue object will be instantiated and called as such:</span>
+<span class="token comment"># obj = MyQueue()</span>
+<span class="token comment"># obj.push(x)</span>
+<span class="token comment"># param_2 = obj.pop()</span>
+<span class="token comment"># param_3 = obj.peek()</span>
+<span class="token comment"># param_4 = obj.empty()</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="225-用队列实现栈"><a href="#225-用队列实现栈" class="headerlink" title="225. 用队列实现栈"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/implement-stack-using-queues/">225. 用队列实现栈</a></h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">from</span> collections <span class="token keyword">import</span> deque
+<span class="token keyword">class</span> <span class="token class-name">MyStack</span><span class="token punctuation">:</span>
+
+<span class="token comment"># stack 1 2 3</span>
+<span class="token comment"># out 1 2</span>
+<span class="token comment"># tmp 3</span>
 
 
+    <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>queue_out<span class="token operator">=</span>deque<span class="token punctuation">(</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>queue_tmp<span class="token operator">=</span>deque<span class="token punctuation">(</span><span class="token punctuation">)</span>
 
-<h2 id="349-两个数组的交集"><a href="#349-两个数组的交集" class="headerlink" title="349. 两个数组的交集"></a>349. 两个数组的交集</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/18 14:29</span>
-<span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">from</span> typing <span class="token keyword">import</span> List
+    <span class="token keyword">def</span> <span class="token function">push</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> x<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token boolean">None</span><span class="token punctuation">:</span>
+        self<span class="token punctuation">.</span>queue_tmp<span class="token punctuation">.</span>append<span class="token punctuation">(</span>x<span class="token punctuation">)</span>
+        <span class="token keyword">while</span> self<span class="token punctuation">.</span>queue_out<span class="token punctuation">:</span>
+            self<span class="token punctuation">.</span>queue_tmp<span class="token punctuation">.</span>append<span class="token punctuation">(</span>self<span class="token punctuation">.</span>queue_out<span class="token punctuation">.</span>popleft<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        self<span class="token punctuation">.</span>queue_out<span class="token punctuation">,</span>self<span class="token punctuation">.</span>queue_tmp<span class="token operator">=</span>self<span class="token punctuation">.</span>queue_tmp<span class="token punctuation">,</span>self<span class="token punctuation">.</span>queue_out
+    <span class="token keyword">def</span> <span class="token function">pop</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>queue_out<span class="token punctuation">.</span>popleft<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">def</span> <span class="token function">top</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>queue_out<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+
+    <span class="token keyword">def</span> <span class="token function">empty</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+        <span class="token keyword">return</span> <span class="token keyword">not</span> self<span class="token punctuation">.</span>queue_out
 
 
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">intersection</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums1<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> nums2<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-        set1 <span class="token operator">=</span> <span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-        res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-        <span class="token keyword">for</span> num <span class="token keyword">in</span> nums1<span class="token punctuation">:</span>
-            <span class="token keyword">if</span> num <span class="token keyword">not</span> <span class="token keyword">in</span> set1<span class="token punctuation">:</span>
-                set1<span class="token punctuation">.</span>add<span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+<span class="token comment"># Your MyStack object will be instantiated and called as such:</span>
+<span class="token comment"># obj = MyStack()</span>
+<span class="token comment"># obj.push(x)</span>
+<span class="token comment"># param_2 = obj.pop()</span>
+<span class="token comment"># param_3 = obj.top()</span>
+<span class="token comment"># param_4 = obj.empty()</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="20-有效的括号"><a href="#20-有效的括号" class="headerlink" title="20. 有效的括号"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/valid-parentheses/">20. 有效的括号</a></h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ul>
+<li>利用栈 如果遍历道德元素是右半个括号并且栈不为空</li>
+<li>那么就看栈顶元素是否是左半括号, 如果是那么 pop 栈顶元素 如果不是则直接返回 False 因为构不成有效括号</li>
+<li>如果不是右半个括号就直接入栈</li>
+<li>最后判断栈是否是空 (因为有可能都是左括号)</li>
+<li>注意字典存储的括号是反着存的</li>
+</ul>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">isValid</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
+        search_dic<span class="token operator">=</span><span class="token punctuation">&#123;</span><span class="token string">")"</span><span class="token punctuation">:</span><span class="token string">"("</span><span class="token punctuation">,</span><span class="token string">"&#125;"</span><span class="token punctuation">:</span><span class="token string">"&#123;"</span><span class="token punctuation">,</span><span class="token string">"]"</span><span class="token punctuation">:</span><span class="token string">"["</span><span class="token punctuation">&#125;</span>
+        stack<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> ch <span class="token keyword">in</span> s<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> stack <span class="token keyword">and</span>  ch <span class="token keyword">in</span> search_dic<span class="token punctuation">:</span>
+                <span class="token keyword">if</span> stack<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">==</span>search_dic<span class="token punctuation">[</span>ch<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                    stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                <span class="token keyword">else</span><span class="token punctuation">:</span>
+                    <span class="token keyword">return</span> <span class="token boolean">False</span>
             <span class="token keyword">else</span><span class="token punctuation">:</span>
-                <span class="token keyword">continue</span>
-        <span class="token keyword">for</span> num <span class="token keyword">in</span> nums2<span class="token punctuation">:</span>
-            <span class="token keyword">if</span> num <span class="token keyword">in</span> set1<span class="token punctuation">:</span>
-                res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>num<span class="token punctuation">)</span>
-                set1<span class="token punctuation">.</span>remove<span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+                stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ch<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token keyword">not</span> stack
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="1047-删除字符串中的所有相邻重复项"><a href="#1047-删除字符串中的所有相邻重复项" class="headerlink" title="1047. 删除字符串中的所有相邻重复项"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/remove-all-adjacent-duplicates-in-string/">1047. 删除字符串中的所有相邻重复项</a></h2><h3 id="思路-1"><a href="#思路-1" class="headerlink" title="思路"></a>思路</h3><ul>
+<li>利用栈</li>
+<li>遍历所有元素 如果栈不为空且该元素和栈顶元素一样那么弹出栈顶元素 因为重复了</li>
+<li>否则把遍历到的元素入栈</li>
+</ul>
+<h3 id="代码-1"><a href="#代码-1" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">removeDuplicates</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> s<span class="token punctuation">:</span> <span class="token builtin">str</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">str</span><span class="token punctuation">:</span>
+        stack<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> ch <span class="token keyword">in</span> s<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> stack <span class="token keyword">and</span> stack<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">==</span>ch<span class="token punctuation">:</span>
+                stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
             <span class="token keyword">else</span><span class="token punctuation">:</span>
-                <span class="token keyword">continue</span>
-        <span class="token keyword">return</span> res
+                stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>ch<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> <span class="token string">""</span><span class="token punctuation">.</span>join<span class="token punctuation">(</span>stack<span class="token punctuation">)</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="150-逆波兰表达式求值"><a href="#150-逆波兰表达式求值" class="headerlink" title="150. 逆波兰表达式求值"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/evaluate-reverse-polish-notation/">150. 逆波兰表达式求值</a></h2><h3 id="思路-2"><a href="#思路-2" class="headerlink" title="思路"></a>思路</h3><ul>
+<li>利用栈</li>
+<li>遍历元素 如果是操作符就执行相应操作</li>
+<li>如果是数字就入栈</li>
+<li>注意 执行相应操作的时候注意出栈的顺序</li>
+<li>例如 13 5 &#x2F; 先出栈的是 5 后出栈的是 13 但是计算顺序是 13&#x2F;5 所以 后出栈的元素 &#x2F; 先出栈的元素</li>
+</ul>
+<h3 id="代码-2"><a href="#代码-2" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">evalRPN</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> tokens<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">str</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        stack<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> ch <span class="token keyword">in</span> tokens<span class="token punctuation">:</span>
+            <span class="token keyword">if</span> ch<span class="token operator">==</span><span class="token string">"+"</span><span class="token punctuation">:</span>
+                num1<span class="token operator">=</span>stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                num2<span class="token operator">=</span>stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>num1<span class="token operator">+</span>num2<span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> ch<span class="token operator">==</span><span class="token string">"-"</span><span class="token punctuation">:</span>
+                num1<span class="token operator">=</span>stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                num2<span class="token operator">=</span>stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>num2<span class="token operator">-</span>num1<span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> ch<span class="token operator">==</span><span class="token string">"*"</span><span class="token punctuation">:</span>
+                num1<span class="token operator">=</span>stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                num2<span class="token operator">=</span>stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span>num1<span class="token operator">*</span>num2<span class="token punctuation">)</span>
+            <span class="token keyword">elif</span> ch<span class="token operator">==</span><span class="token string">"/"</span><span class="token punctuation">:</span>
+                num1<span class="token operator">=</span>stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                num2<span class="token operator">=</span>stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+                stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">(</span>num2<span class="token operator">/</span>num1<span class="token punctuation">)</span><span class="token punctuation">)</span>
+            <span class="token keyword">else</span><span class="token punctuation">:</span>
+                stack<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token builtin">int</span><span class="token punctuation">(</span>ch<span class="token punctuation">)</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> stack<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
-
-
-<h2 id="第202题-快乐数"><a href="#第202题-快乐数" class="headerlink" title="第202题. 快乐数"></a>第202题. 快乐数</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/18 15:26</span>
-<span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">isHappy</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> n<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">bool</span><span class="token punctuation">:</span>
-        <span class="token keyword">def</span> <span class="token function">cal_sum</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            res<span class="token operator">=</span><span class="token number">0</span>
-            <span class="token keyword">while</span> num<span class="token punctuation">:</span>
-                res<span class="token operator">+=</span><span class="token punctuation">(</span>num<span class="token operator">%</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token operator">**</span><span class="token number">2</span>
-                num<span class="token operator">=</span>num<span class="token operator">//</span><span class="token number">10</span>
-            <span class="token keyword">return</span> res
-        search_set<span class="token operator">=</span><span class="token builtin">set</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token comment"># while True:</span>
-        <span class="token comment">#     n=cal_sum(n)</span>
-        <span class="token comment">#     if n==1:</span>
-        <span class="token comment">#        return True</span>
-        <span class="token comment">#     if n not in search_set:</span>
-        <span class="token comment">#        search_set.add(n)</span>
-        <span class="token comment">#     else:</span>
-        <span class="token comment">#         return False</span>
-
-        <span class="token keyword">while</span> n<span class="token operator">!=</span><span class="token number">1</span><span class="token punctuation">:</span>
-            n<span class="token operator">=</span>cal_sum<span class="token punctuation">(</span>n<span class="token punctuation">)</span>
-            <span class="token keyword">if</span> n <span class="token keyword">not</span> <span class="token keyword">in</span> search_set<span class="token punctuation">:</span>
-               search_set<span class="token punctuation">.</span>add<span class="token punctuation">(</span>n<span class="token punctuation">)</span>
-            <span class="token keyword">else</span><span class="token punctuation">:</span>
-                <span class="token keyword">return</span> <span class="token boolean">False</span>
-        <span class="token keyword">return</span> <span class="token boolean">True</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="第15题-三数之和"><a href="#第15题-三数之和" class="headerlink" title="第15题. 三数之和"></a>第15题. 三数之和</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/19 12:16</span>
-<span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">from</span> typing <span class="token keyword">import</span> List
-
-
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">threeSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-        res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-        l <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
-        <span class="token keyword">if</span> l <span class="token operator">&lt;</span> <span class="token number">3</span><span class="token punctuation">:</span>
-            <span class="token keyword">return</span> res
-        nums<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span>
-                <span class="token keyword">break</span>
-            <span class="token keyword">if</span> i <span class="token operator">></span> <span class="token number">0</span> <span class="token keyword">and</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                <span class="token keyword">continue</span>
-            left <span class="token operator">=</span> i <span class="token operator">+</span> <span class="token number">1</span>
-            right <span class="token operator">=</span> l <span class="token operator">-</span> <span class="token number">1</span>
-            <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>
-                total <span class="token operator">=</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span>
-                <span class="token keyword">if</span> total <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">:</span>
-                    left <span class="token operator">+=</span> <span class="token number">1</span>
-                <span class="token keyword">elif</span> total <span class="token operator">></span> <span class="token number">0</span><span class="token punctuation">:</span>
-                    right <span class="token operator">-=</span> <span class="token number">1</span>
-                <span class="token keyword">else</span><span class="token punctuation">:</span>
-                    res<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-                    left <span class="token operator">+=</span> <span class="token number">1</span>
-                    right <span class="token operator">-=</span> <span class="token number">1</span>
-                    <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>left <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                        left <span class="token operator">+=</span> <span class="token number">1</span>
-                    <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>right <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                        right <span class="token operator">-=</span> <span class="token number">1</span>
-        <span class="token keyword">return</span> res
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-<h2 id="第18题-四数之和"><a href="#第18题-四数之和" class="headerlink" title="第18题. 四数之和"></a>第18题. 四数之和</h2><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token comment">#! /usr/bin/python3</span>
-<span class="token comment"># -*- coding: utf-8 -*-</span>
-<span class="token comment"># @Time    : 2023/4/19 14:03</span>
-<span class="token comment"># @Author  : Twistzz</span>
-<span class="token keyword">from</span> typing <span class="token keyword">import</span> List
-
-
-<span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
-    <span class="token keyword">def</span> <span class="token function">fourSum</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> target<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span>List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-        res <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
-        l <span class="token operator">=</span> <span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span>
-        nums<span class="token punctuation">.</span>sort<span class="token punctuation">(</span><span class="token punctuation">)</span>
-        <span class="token keyword">if</span> l <span class="token operator">&lt;</span> <span class="token number">4</span><span class="token punctuation">:</span>
-            <span class="token keyword">return</span> res
-        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>l<span class="token punctuation">)</span><span class="token punctuation">:</span>
-            <span class="token keyword">if</span> i <span class="token operator">></span> <span class="token number">0</span> <span class="token keyword">and</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                <span class="token keyword">continue</span>
-            <span class="token keyword">for</span> j <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">,</span> l<span class="token punctuation">)</span><span class="token punctuation">:</span>
-                <span class="token keyword">if</span> j <span class="token operator">></span> i <span class="token operator">+</span> <span class="token number">1</span> <span class="token keyword">and</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>j <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                    <span class="token keyword">continue</span>
-                left <span class="token operator">=</span> j <span class="token operator">+</span> <span class="token number">1</span>
-                right <span class="token operator">=</span> l <span class="token operator">-</span> <span class="token number">1</span>
-                <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right<span class="token punctuation">:</span>
-                    total <span class="token operator">=</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">+</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span>
-                    <span class="token keyword">if</span> total <span class="token operator">&lt;</span> target<span class="token punctuation">:</span>
-                        left <span class="token operator">+=</span> <span class="token number">1</span>
-                    <span class="token keyword">elif</span> total <span class="token operator">></span> target<span class="token punctuation">:</span>
-                        right <span class="token operator">-=</span> <span class="token number">1</span>
-                    <span class="token keyword">else</span><span class="token punctuation">:</span>
-                        res<span class="token punctuation">.</span>append<span class="token punctuation">(</span><span class="token punctuation">[</span>nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span><span class="token punctuation">,</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-                        left <span class="token operator">+=</span> <span class="token number">1</span>
-                        right <span class="token operator">-=</span> <span class="token number">1</span>
-                        <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> nums<span class="token punctuation">[</span>left<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>left <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                            left <span class="token operator">+=</span> <span class="token number">1</span>
-                        <span class="token keyword">while</span> left <span class="token operator">&lt;</span> right <span class="token keyword">and</span> nums<span class="token punctuation">[</span>right<span class="token punctuation">]</span> <span class="token operator">==</span> nums<span class="token punctuation">[</span>right <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
-                            right <span class="token operator">-=</span> <span class="token number">1</span>
-        <span class="token keyword">return</span> res
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<h2 id="239-滑动窗口最大值"><a href="#239-滑动窗口最大值" class="headerlink" title="239. 滑动窗口最大值"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/sliding-window-maximum/">239. 滑动窗口最大值</a></h2><h3 id="思路-3"><a href="#思路-3" class="headerlink" title="思路"></a>思路</h3><ul>
+<li>首先窗口向右滑动的过程就是将窗口最左侧的元素删除，同时在窗口的最右侧添加一个新的元素，这就要用到双端队列，然后找双端队列中的最大元素。</li>
+<li>那我们就可以只在队列中保留可能成为窗口最大元素的元素，去掉不可能成为窗口中最大元素的元素。</li>
+<li>通过一个双向队列维护一个滑动窗口 窗口最左侧也就是队列的头部存放的是最大值</li>
+<li>注意队列中存储的是窗口值的索引 而不是窗口的真正的值</li>
+<li>首先要判断对列是否满了 如果就要移除最左边的</li>
+<li>如何判断队列是否满了呢 通过窗口最左侧的指针判断 如果当前队列最左侧存储的下标等于 i-k 的值，代表目前队列已满</li>
+<li>这句话是为什么呢 i-k 就相当于窗口的最左端 queue[0]是队列的头部也就是最左端 我们一定能保证队列的最左端是最先出现的元素也是最大的元素 因此两者相等的时候代表窗口刚向右移动(上一轮窗口最左侧是是队头元素)</li>
+<li>然后添加元素 添加元素的时候 判断队尾元素也就是右侧元素是否比自己小 如果比自己小那就不断移除(因为队头是最大的元素) 如果比自己大就可以直接添加</li>
+<li>如果遍历的长度等于 k 了 从此时开始没多遍历一个元素就要求一次 res 代表一个最大值</li>
+<li>特殊情况 如果 k&#x3D;&#x3D;1 直接返回原数组就可以</li>
+</ul>
+<h3 id="代码-3"><a href="#代码-3" class="headerlink" title="代码"></a>代码</h3><pre class="line-numbers language-python" data-language="python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">maxSlidingWindow</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> nums<span class="token punctuation">:</span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">,</span> k<span class="token punctuation">:</span> <span class="token builtin">int</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> List<span class="token punctuation">[</span><span class="token builtin">int</span><span class="token punctuation">]</span><span class="token punctuation">:</span>
+        <span class="token keyword">if</span> k<span class="token operator">==</span><span class="token number">1</span><span class="token punctuation">:</span>
+            <span class="token keyword">return</span> nums
+        res<span class="token punctuation">,</span>queue<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token punctuation">[</span><span class="token punctuation">]</span>
+        <span class="token keyword">for</span> i <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>nums<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> queue <span class="token keyword">and</span> queue<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">==</span>i<span class="token operator">-</span>k<span class="token punctuation">:</span>
+                queue<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span>
+            <span class="token keyword">while</span> queue <span class="token keyword">and</span> nums<span class="token punctuation">[</span>queue<span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token operator">&lt;</span> nums<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">:</span>
+                queue<span class="token punctuation">.</span>pop<span class="token punctuation">(</span><span class="token punctuation">)</span>
+            queue<span class="token punctuation">.</span>append<span class="token punctuation">(</span>i<span class="token punctuation">)</span>
+            <span class="token keyword">if</span> i<span class="token operator">>=</span>k<span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">:</span>
+                res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>nums<span class="token punctuation">[</span>queue<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+        <span class="token keyword">return</span> res<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
  
       </div>
       <hr />
@@ -599,7 +597,7 @@ class">
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://twistzz-xjtlu.github.io/2023/04/18/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%93%88%E5%B8%8C%E8%A1%A8/">https://twistzz-xjtlu.github.io/2023/04/18/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%93%88%E5%B8%8C%E8%A1%A8/</a>
+                    <a href="https://twistzz-xjtlu.github.io/2023/08/13/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/">https://twistzz-xjtlu.github.io/2023/08/13/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -649,8 +647,12 @@ class">
               <span class="chip bg-color">python</span>
             </a>
             
-            <a href="/tags/%E5%93%88%E5%B8%8C%E8%A1%A8/">
-              <span class="chip bg-color">哈希表</span>
+            <a href="/tags/%E6%A0%88/">
+              <span class="chip bg-color">栈</span>
+            </a>
+            
+            <a href="/tags/%E9%98%9F%E5%88%97/">
+              <span class="chip bg-color">队列</span>
             </a>
             
           </div>
@@ -720,17 +722,18 @@ class">
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/04/20/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+                <a href="/2023/08/13/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="代码随想录-字符串">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="代码随想录-栈与队列">
                         
-                        <span class="card-title">代码随想录-字符串</span>
+                        <span class="card-title">代码随想录-栈与队列</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -740,9 +743,9 @@ class">
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-04-20
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-13
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
@@ -759,6 +762,7 @@ class">
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -774,8 +778,12 @@ class">
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E5%AD%97%E7%AC%A6%E4%B8%B2/">
-                        <span class="chip bg-color">字符串</span>
+                    <a href="/tags/%E6%A0%88/">
+                        <span class="chip bg-color">栈</span>
+                    </a>
+                    
+                    <a href="/tags/%E9%98%9F%E5%88%97/">
+                        <span class="chip bg-color">队列</span>
                     </a>
                     
                 </div>
@@ -789,13 +797,13 @@ class">
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/04/17/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E9%93%BE%E8%A1%A8/">
+                <a href="/2023/08/08/%E4%BB%A3%E7%A0%81%E9%9A%8F%E6%83%B3%E5%BD%95-%E4%BA%8C%E5%8F%89%E6%A0%91/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/22.jpg" class="responsive-img" alt="代码随想录_链表">
+                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="代码随想录-二叉树">
                         
-                        <span class="card-title">代码随想录_链表</span>
+                        <span class="card-title">代码随想录-二叉树</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -806,7 +814,7 @@ class">
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-04-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-08
                             </span>
                         <span class="publish-author">
                             
@@ -839,8 +847,8 @@ class">
                         <span class="chip bg-color">python</span>
                     </a>
                     
-                    <a href="/tags/%E9%93%BE%E8%A1%A8/">
-                        <span class="chip bg-color">链表</span>
+                    <a href="/tags/%E4%BA%8C%E5%8F%89%E6%A0%91/">
+                        <span class="chip bg-color">二叉树</span>
                     </a>
                     
                 </div>
